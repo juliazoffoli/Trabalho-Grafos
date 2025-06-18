@@ -228,3 +228,17 @@ bool Gerenciador::pergunta_imprimir_arquivo(string nome_arquivo) {
             return pergunta_imprimir_arquivo(nome_arquivo);
     }
 }
+
+bool Gerenciador::lerArquivoConstruirGrafo(ifstream& arquivo, Grafo* grafo) {
+    
+    //implementar a leitura do arquivo e construção do grafo
+
+    return;
+
+}
+
+void Gerenciador::imprimirGrafo(Grafo* grafo) {
+     //implementar a impressão do grafo
+
+     return;
+}   
