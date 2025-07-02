@@ -10,7 +10,7 @@ Orientações de formado das instâncias:
 <direcionado> --> 1 se direcionado, 0 se não direcionado;
 <ponderado_aresta> --> 1 se ponderado nas arestas, 0 se não ponderado nas arestas;
 <ponderado_vertices> --> 1 se ponderado nos vértices> 0 se não ponderado nos vértices>
-<#_vertices> --> Ordem so grafo
+<#_vertices> --> Ordem do grafo
 <lista_vertices>
     <id> - se não ponderado
     <id peso> - se ponderado

@@ -16,6 +16,15 @@ public:
     Grafo();
     ~Grafo();
 
+    void set_ordem(int ordem) { this->ordem = ordem; }
+    int get_ordem() { return this->ordem; }
+    void set_direcionado(bool direcionado) { this->in_direcionado = direcionado; }
+    bool get_direcionado() { return this->in_direcionado; }
+    void set_ponderado_aresta(bool ponderado) { this->in_ponderado_aresta = ponderado; }
+    bool get_ponderado_aresta() { return this->in_ponderado_aresta; }
+    void set_ponderado_vertice(bool ponderado) { this->in_ponderado_vertice = ponderado; }
+    bool get_ponderado_vertice() { return this->in_ponderado_vertice; }
+
     vector<char> fecho_transitivo_direto(char id_no); // a
     vector<char> fecho_transitivo_indireto(char id_no); // b
     vector<char> caminho_minimo_dijkstra(char id_no_a, char id_no_b); // c

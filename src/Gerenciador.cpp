@@ -231,14 +231,126 @@ bool Gerenciador::pergunta_imprimir_arquivo(string nome_arquivo) {
 
 bool Gerenciador::lerArquivoConstruirGrafo(ifstream& arquivo, Grafo* grafo) {
     
-    //implementar a leitura do arquivo e construção do grafo
+    int ordem;
+    bool direcionado, ponderado_aresta, ponderado_vertice;
 
-    return;
+    arquivo >> direcionado >> ponderado_aresta >> ponderado_vertice;
+    arquivo >> ordem;
+
+    grafo->set_ordem(ordem);
+    grafo->set_direcionado(direcionado);
+    grafo->set_ponderado_aresta(ponderado_aresta);
+    grafo->set_ponderado_vertice(ponderado_vertice);
+
+    // Ler os vértices
+    if(ponderado_vertice) {
+        for(int i = 0; i < ordem; i++) {
+            char id;
+            int peso;
+            
+            arquivo >> id >> peso;
+            
+            No* no = new No(id, peso);
+            grafo->lista_adj.push_back(no);
+        }
+    } else {
+        for(int i = 0; i < ordem; i++) {
+            char id;
+            arquivo >> id;
+            
+            No* no = new No(id);
+            grafo->lista_adj.push_back(no);
+        }
+    }
+
+    // Ler as arestas
+    if(ponderado_aresta) {
+        for(int i = 0; i < ordem; i++) {
+            char id_1, id_2;
+            int peso;
+            
+            arquivo >> id_1 >> id_2 >> peso;
+
+            // Encontrar os nós correspondentes
+            No* no_1 = nullptr;
+            No* no_2 = nullptr;
+            for(No* no : grafo->lista_adj) {
+                if(no->id == id_1) no_1 = no;
+                if(no->id == id_2) no_2 = no;
+            }
+
+            if(no_1 && no_2) {
+                Aresta* aresta = new Aresta(peso);
+                aresta->id_1 = id_1;
+                no_1->arestas.push_back(aresta);
+                if(!direcionado) {
+                    aresta->id_2 = id_2;
+                    no_2->arestas.push_back(aresta); // Se não direcionado, adiciona a aresta também ao nó b
+                } else {
+                    aresta->id_no_alvo = id_2;
+                }
+            } else {
+                cerr << "Erro: Aresta entre nós inexistentes: " << id_1 << " e " << id_2 << endl;
+                return false;
+            }
+        }
+    } else {
+        for(int i = 0; i < ordem; i++) {
+            char id_1, id_2;
+            
+            arquivo >> id_1 >> id_2;
+
+            // Encontrar os nós correspondentes
+            No* no_1 = nullptr;
+            No* no_2 = nullptr;
+            for(No* no : grafo->lista_adj) {
+                if(no->id == id_1) no_1 = no;
+                if(no->id == id_2) no_2 = no;
+            }
+
+            if(no_1 && no_2) {
+                Aresta* aresta = new Aresta();
+                aresta->id_1 = id_1;
+                no_1->arestas.push_back(aresta);
+                if(!direcionado) {
+                    aresta->id_2 = id_2;
+                    no_2->arestas.push_back(aresta); // Se não direcionado, adiciona a aresta também ao nó b
+                } else {
+                    aresta->id_no_alvo = id_2;
+                }
+            } else {
+                cerr << "Erro: Aresta entre nós inexistentes: " << id_1 << " e " << id_2 << endl;
+                return false;
+            }
+        }
+    }
+
+    return true;
 
 }
 
 void Gerenciador::imprimirGrafo(Grafo* grafo) {
-     //implementar a impressão do grafo
+    
+    cout << "Grafo:" << endl;
+    cout << "Ordem: " << grafo->get_ordem() << endl;
+    cout << "Direcionado: " << (grafo->get_direcionado() ? "Sim" : "Não") << endl;
+    cout << "Ponderado Aresta: " << (grafo->get_ponderado_aresta() ? "Sim" : "Não") << endl;
+    cout << "Ponderado Vertice: " << (grafo->get_ponderado_vertice() ? "Sim" : "Não") << endl;
+    cout << "Lista de Adjacência:" << endl;
+    for(No* no : grafo->lista_adj) {
+        cout << "No " << no->id << " (Peso: " << no->peso << ") \n";
+    }
+    
+    for (No* no : grafo->lista_adj) {
+        for(Aresta* aresta : no->arestas) {
+            if(grafo->get_ponderado_aresta()) {
+                cout << "(" << aresta->id_1 << " -> " << aresta->id_2 << ", Peso: " << aresta->peso << ") \n";
+            } else {
+                cout << "(" << aresta->id_1 << " -> " << aresta->id_2 << ") \n";
+            }
+        }
+        cout << endl;
+    }
 
-     return;
+    return;
 }   

@@ -2,9 +2,16 @@
 
 
 Grafo::Grafo() {
+    this->ordem = 0;
+    this->in_direcionado = false;
+    this->in_ponderado_aresta = false;
+    this->in_ponderado_vertice = false;
+
+    this->lista_adj = vector<No*>();
 }
 
 Grafo::~Grafo() {
+
 }
 
 vector<char> Grafo::fecho_transitivo_direto(char id_no) {
