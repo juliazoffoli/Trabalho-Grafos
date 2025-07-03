@@ -12,6 +12,7 @@ void Gerenciador::comandos(Grafo* grafo) {
     cout<<"(f) Arvore Geradora Minima (Algoritmo de Kruskal);"<<endl;
     cout<<"(g) Arvore de caminhamento em profundidade;"<<endl;
     cout<<"(h) Raio, diametro, centro e periferia do grafo;"<<endl;
+    cout<<"(i) Lista de Adjacencia" << endl;
     cout<<"(0) Sair;"<<endl<<endl;
 
     char resp;
@@ -21,10 +22,12 @@ void Gerenciador::comandos(Grafo* grafo) {
 
             char id_no = get_id_entrada();
             vector<char> fecho_transitivo_direto = grafo->fecho_transitivo_direto(id_no);
-            cout<<"Metodo de impressao em tela nao implementado"<<endl<<endl;
+            
+            
+            cout<<"\nMetodo de impressao em tela nao implementado"<<endl<<endl;
 
             if(pergunta_imprimir_arquivo("fecho_trans_dir.txt")) {
-                cout<<"Metodo de impressao em arquivo nao implementado"<<endl<<endl;
+                cout<<"\nMetodo de impressao em arquivo nao implementado"<<endl<<endl;
             }
 
 
@@ -149,13 +152,9 @@ void Gerenciador::comandos(Grafo* grafo) {
             break;
         }
         case 'i': {
-
-            vector<char> articulacao = grafo->vertices_de_articulacao();
-            cout<<"Metodo de impressao em tela nao implementado"<<endl<<endl;
-
-            if(pergunta_imprimir_arquivo("arvore_caminhamento_profundidade.txt")) {
-                cout<<"Metodo de impressao em arquivo nao implementado"<<endl;
-            }
+            cout << "Lista de Adjacencia:" << endl;
+            grafo->imprime_ListaAdj();
+            cout << endl;
 
             break;
         }
@@ -336,21 +335,5 @@ void Gerenciador::imprimirGrafo(Grafo* grafo) {
     cout << "Direcionado: " << (grafo->get_direcionado() ? "Sim" : "Não") << endl;
     cout << "Ponderado Aresta: " << (grafo->get_ponderado_aresta() ? "Sim" : "Não") << endl;
     cout << "Ponderado Vertice: " << (grafo->get_ponderado_vertice() ? "Sim" : "Não") << endl;
-    cout << "Lista de Adjacência:" << endl;
-    for(No* no : grafo->lista_adj) {
-        cout << "No " << no->id << " (Peso: " << no->peso << ") \n";
-    }
-    
-    for (No* no : grafo->lista_adj) {
-        for(Aresta* aresta : no->arestas) {
-            if(grafo->get_ponderado_aresta()) {
-                cout << "(" << aresta->id_1 << " -> " << aresta->id_2 << ", Peso: " << aresta->peso << ") \n";
-            } else {
-                cout << "(" << aresta->id_1 << " -> " << aresta->id_2 << ") \n";
-            }
-        }
-        cout << endl;
-    }
-
     return;
-}   
+} 

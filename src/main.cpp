@@ -51,16 +51,6 @@ int main(int argc, char *argv[]) {
     Gerenciador::imprimirGrafo(grafo);
     arquivo.close();
 
-    cout << "Lista de Adjacencia:" << endl;
-    for(No* no : grafo->lista_adj) {
-        cout << "No " << no->id << ": ";
-        vector<No*> vizinhos = no->get_vizinhos();
-        for(No* vizinho : vizinhos) {
-            cout << vizinho->id << " ";
-        }
-        cout << endl;
-    }
-
     Gerenciador::comandos(grafo);
 
     delete grafo;

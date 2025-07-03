@@ -14,8 +14,45 @@ Grafo::~Grafo() {
 
 }
 
+void Grafo::imprime_ListaAdj() {
+    for (No* no : this->lista_adj) {
+        cout << "No " << no->id << ": ";
+        vector<No*> vizinhos = no->get_vizinhos();
+        for (No* vizinho : vizinhos) {
+            cout << vizinho->id << " ";
+        }
+        cout << endl;
+    }
+}
+
 vector<char> Grafo::fecho_transitivo_direto(char id_no) {
-    cout<<"Metodo nao implementado"<<endl;
+    cout<<"Não sei se a implementação ta certa!!!"<<endl;
+    cout <<"Arrumar pra não adicionar ids repetidos "<<endl;
+
+    vector<char> ids;
+    for (No* no : this->lista_adj) {
+        if (no->id == id_no) {
+            vector<No*> vizinhos = no->get_vizinhos();
+            for (No* vizinho : vizinhos) {
+                ids.push_back(vizinho->id);
+            }
+            break;
+        }
+    }
+    for (char id : ids) {
+        for (No* no : this->lista_adj) {
+            if (no->id == id) {
+                vector<No*> vizinhos = no->get_vizinhos();
+                for (No* vizinho : vizinhos) 
+                    ids.push_back(vizinho->id);
+            }
+        }
+    }
+
+    for (char id : ids) {
+        cout << id << " ";
+    }
+
     return {};
 }
 
