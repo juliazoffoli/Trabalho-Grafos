@@ -15,6 +15,8 @@ public:
     char id;
     int peso;
     vector<Aresta*> arestas;
+
+    vector<No*> get_vizinhos();
 };
 
 
