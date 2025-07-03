@@ -26,31 +26,59 @@ void Grafo::imprime_ListaAdj() {
 }
 
 vector<char> Grafo::fecho_transitivo_direto(char id_no) {
-    cout<<"Não sei se a implementação ta certa!!!"<<endl;
-    cout <<"Arrumar pra não adicionar ids repetidos "<<endl;
-
     vector<char> ids;
+    vector<No*> nos_visitados;
+
     for (No* no : this->lista_adj) {
         if (no->id == id_no) {
             vector<No*> vizinhos = no->get_vizinhos();
             for (No* vizinho : vizinhos) {
-                ids.push_back(vizinho->id);
+
+                // Adicionar vizinho apenas se ele não estiver em nos_visitados:
+                bool ja_adicionado = false;
+                for (No* visitado : nos_visitados) {
+                    if (visitado->id == vizinho->id || vizinho->id == id_no) {
+                        ja_adicionado = true;
+                        break;
+                    }
+                }
+                if(!ja_adicionado) {
+                    ids.push_back(vizinho->id);
+                    nos_visitados.push_back(vizinho);
+                }
+                
             }
             break;
         }
     }
+
+
     for (char id : ids) {
         for (No* no : this->lista_adj) {
             if (no->id == id) {
-                vector<No*> vizinhos = no->get_vizinhos();
-                for (No* vizinho : vizinhos) 
-                    ids.push_back(vizinho->id);
+                vector<No*> vizinho = no->get_vizinhos();
+
+                for (No* vizinho : vizinho) {
+                // Adicionar vizinho apenas se ele não estiver em nos_visitados:
+                    bool ja_adicionado = false;
+                    for (No* visitado : nos_visitados) {
+                        if (visitado->id == vizinho->id || vizinho->id == id_no) {
+                            ja_adicionado = true;
+                            break;
+                        }
+                    }
+                    if(!ja_adicionado) {
+                        ids.push_back(vizinho->id);
+                        nos_visitados.push_back(vizinho);
+                    }
+                }
             }
         }
     }
+    
 
     for (char id : ids) {
-        cout << id << " ";
+        cout << id << ", ";
     }
 
     return {};
