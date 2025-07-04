@@ -1,4 +1,9 @@
-Orientações de formado das instâncias:
+Nomeação das instâncias:
+g_<ordem do grafo>_<densidade de arestas>_<in_direcionado>_<in_orientado_aresta>_<#>.txt
+g_5_0.40_0_0_0.txt
+
+
+Formado das instâncias:
 
 <direcionado> <ponderado_aresta> <ponderado_vertice>
 <#_vertices>
@@ -10,7 +15,7 @@ Orientações de formado das instâncias:
 <direcionado> --> 1 se direcionado, 0 se não direcionado;
 <ponderado_aresta> --> 1 se ponderado nas arestas, 0 se não ponderado nas arestas;
 <ponderado_vertices> --> 1 se ponderado nos vértices> 0 se não ponderado nos vértices>
-<#_vertices> --> Ordem do grafo
+<#_vertices> --> Ordem so grafo
 <lista_vertices>
     <id> - se não ponderado
     <id peso> - se ponderado

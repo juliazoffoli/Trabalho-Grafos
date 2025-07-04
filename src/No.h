@@ -17,6 +17,8 @@ public:
     vector<Aresta*> arestas;
 
     vector<No*> get_vizinhos();
+    vector<No*> get_anteriores_direcionado();
+    vector<Aresta*> get_arestas() { return arestas; }
 };
 
 

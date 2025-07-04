@@ -1,5 +1,7 @@
 #include "Grafo.h"
-
+#include <stack>
+#include <queue>
+#include <iostream>
 
 Grafo::Grafo() {
     this->ordem = 0;
@@ -25,49 +27,33 @@ void Grafo::imprime_ListaAdj() {
     }
 }
 
+
 vector<char> Grafo::fecho_transitivo_direto(char id_no) {
     vector<char> ids;
     vector<No*> nos_visitados;
 
     for (No* no : this->lista_adj) {
         if (no->id == id_no) {
-            vector<No*> vizinhos = no->get_vizinhos();
-            for (No* vizinho : vizinhos) {
-
-                // Adicionar vizinho apenas se ele não estiver em nos_visitados:
-                bool ja_adicionado = false;
-                for (No* visitado : nos_visitados) {
-                    if (visitado->id == vizinho->id || vizinho->id == id_no) {
-                        ja_adicionado = true;
-                        break;
-                    }
-                }
-                if(!ja_adicionado) {
-                    ids.push_back(vizinho->id);
-                    nos_visitados.push_back(vizinho);
-                }
-                
+            for (No* vizinho : no->get_vizinhos()) {
+                ids.push_back(vizinho->id);
+                nos_visitados.push_back(vizinho);
             }
-            break;
         }
     }
-
 
     for (char id : ids) {
         for (No* no : this->lista_adj) {
             if (no->id == id) {
-                vector<No*> vizinho = no->get_vizinhos();
-
-                for (No* vizinho : vizinho) {
-                // Adicionar vizinho apenas se ele não estiver em nos_visitados:
+                for (No* vizinho : no->get_vizinhos()) {
+                    // Adicionar vizinho apenas se ele não estiver em nos_visitados:
                     bool ja_adicionado = false;
                     for (No* visitado : nos_visitados) {
-                        if (visitado->id == vizinho->id || vizinho->id == id_no) {
+                        if (visitado->id == vizinho->id) {
                             ja_adicionado = true;
                             break;
                         }
                     }
-                    if(!ja_adicionado) {
+                    if(!ja_adicionado && vizinho->id != id_no) {
                         ids.push_back(vizinho->id);
                         nos_visitados.push_back(vizinho);
                     }
@@ -76,18 +62,99 @@ vector<char> Grafo::fecho_transitivo_direto(char id_no) {
         }
     }
     
+    return ids;
+}
+
+vector<char> Grafo::fecho_transitivo_indireto(char id_no) {
+    vector<char> ids;
+    vector<No*> nos_visitados;
+
+    for (No* no : this->lista_adj) {
+        if (no->id == id_no) {
+            for (No* anterior : no->get_anteriores_direcionado()) {
+                ids.push_back(anterior->id);
+                nos_visitados.push_back(anterior);
+            }
+        }
+    }
 
     for (char id : ids) {
-        cout << id << ", ";
+        for (No* no : this->lista_adj) {
+            if (no->id == id) {
+                for (No* anterior : no->get_anteriores_direcionado()) {
+                    // Adicionar vizinho apenas se ele não estiver em nos_visitados:
+                    bool ja_adicionado = false;
+                    for (No* visitado : nos_visitados) {
+                        if (visitado->id == anterior->id) {
+                            ja_adicionado = true;
+                            break;
+                        }
+                    }
+                    if(!ja_adicionado && anterior->id != id_no) {
+                        ids.push_back(anterior->id);
+                        nos_visitados.push_back(anterior);
+                    }
+                }
+            }
+        }
+    }
+    
+    return ids;
+}
+
+/*
+vector<char> Grafo::fecho_transitivo_indireto(char id_no) {
+    vector<char> ids;
+    vector<No*> nos_visitados;
+
+    for (No* no : this->lista_adj) {
+        for (Aresta* aresta : no->arestas) {
+            if (aresta->id_no_alvo == id_no){
+                // Adicionar o nó de origem da aresta ao vetor de ids
+                bool ja_adicionado = false;
+                for (No* visitado : nos_visitados) {
+                    if (visitado->id == no->id || visitado->id == id_no) {
+                        ja_adicionado = true;
+                        break;
+                    }
+                }
+                if(!ja_adicionado) {
+                    ids.push_back(no->id);
+                    nos_visitados.push_back(no);
+                }
+            }
+        }
+    }
+
+    for (char id : ids) {
+        for (No* no : this->lista_adj) {
+            for (Aresta* aresta : no->arestas) {
+                if (aresta->id_no_alvo == id_no){
+                    // Adicionar o nó de origem da aresta ao vetor de ids
+                    bool ja_adicionado = false;
+                    for (No* visitado : nos_visitados) {
+                        if (visitado->id || visitado->id == id_no) {
+                            ja_adicionado = true;
+                            break;
+                        }
+                    }
+                    if(!ja_adicionado) {
+                        ids.push_back(no->id);
+                        nos_visitados.push_back(no);
+                    }
+                }
+            }
+        }
+    }
+
+    cout << "Fecho transitivo indireto: " << endl;;
+    for (char id : ids) {
+            cout << id << ", ";
     }
 
     return {};
 }
-
-vector<char> Grafo::fecho_transitivo_indireto(char id_no) {
-    cout<<"Metodo nao implementado"<<endl;
-    return {};
-}
+*/
 
 vector<char> Grafo::caminho_minimo_dijkstra(char id_no_a, char id_no_b) {
     cout<<"Metodo nao implementado"<<endl;
