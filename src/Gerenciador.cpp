@@ -22,13 +22,18 @@ void Gerenciador::comandos(Grafo* grafo) {
 
             char id_no = get_id_entrada();
             vector<char> fecho_transitivo_direto = grafo->fecho_transitivo_direto(id_no);
+           
+            cout << "Fecho transitivo direto do no " << id_no << ": ";
+            bool primeiro = true;
 
-            cout<<"Fecho transitivo direto do no "<<id_no<<": ";
             for (char id : fecho_transitivo_direto) {
-                cout << id << ", ";
+                if (!primeiro) {
+                    cout << ", ";
+                }
+                cout << id;
+                primeiro = false;
             }
-
-
+            cout << endl;
             
             cout<<"\nMetodo de impressao em tela nao implementado"<<endl<<endl;
 
@@ -44,10 +49,18 @@ void Gerenciador::comandos(Grafo* grafo) {
             char id_no = get_id_entrada();
             vector<char> fecho_transitivo_indireto = grafo->fecho_transitivo_indireto(id_no);
 
-            cout<<"Fecho transitivo indireto do no "<<id_no<<": ";
+            
+            cout << "Fecho transitivo indireto do no " << id_no << ": ";
+            bool primeiro = true;
+
             for (char id : fecho_transitivo_indireto) {
-                cout << id << ", ";
+                if (!primeiro) {
+                    cout << ", ";
+                }
+                cout << id;
+                primeiro = false;
             }
+            cout << endl;
 
             cout<<"Metodo de impressao em tela nao implementado"<<endl<<endl;
 

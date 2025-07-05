@@ -20,10 +20,16 @@ Grafo::~Grafo() {
 
 void Grafo::imprime_ListaAdj() {
     for (No* no : lista_adj) {
-        cout << "No " << no->id << ": ";
-        for (Aresta* aresta : no->arestas) {
-            cout << aresta->no_destino->get_id() << " ";
+        cout << no->id << ": ";
+        
+        // Imprime todas as arestas exceto a última com " -> "
+        for (size_t i = 0; i < no->arestas.size(); ++i) {
+            cout << no->arestas[i]->no_destino->get_id();
+            if (i != no->arestas.size() - 1) { // Se não for o último elemento
+                cout << " -> ";
+            }
         }
+        
         cout << endl;
     }
 }
@@ -38,6 +44,8 @@ No* Grafo::buscarNo(char id_no) {
 }
 
 /*
+// O método abaixo também funciona, mas é menos eficiente que o novo método (não comentado)
+
 vector<char> Grafo::fecho_transitivo_direto(char id_no) {
     vector<char> ids;
     vector<No*> nos_visitados;
