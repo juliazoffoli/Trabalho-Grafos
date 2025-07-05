@@ -295,7 +295,7 @@ bool Gerenciador::lerArquivoConstruirGrafo(ifstream& arquivo, Grafo* grafo) {
                 if(no->id == id_2) no_2 = no;
             }
 
-            if(no_1 && no_2) {
+            if(no_1 && no_2) { //Conferindo se os nós existem
                 Aresta* aresta = new Aresta(peso);
                 aresta->id_1 = id_1;
                 no_1->arestas.push_back(aresta);

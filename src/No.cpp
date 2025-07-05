@@ -4,10 +4,10 @@ vector<No*> No::get_vizinhos() {
     vector<No*> vizinhos;
     for (Aresta* aresta : arestas) {
         No* vizinho = nullptr;
-        if (aresta->id_1 == id && aresta->id_2 != '\0') {
+        if (aresta->id_1 == id && aresta->id_2 != '\0') { //Não direcionado
             vizinho = new No(aresta->id_2, aresta->peso);
         } else {
-            vizinho = new No(aresta->id_1, aresta->peso);
+            vizinho = new No(aresta->id_no_alvo, aresta->peso); //Direcionado
         }
         vizinhos.push_back(vizinho);
     }
