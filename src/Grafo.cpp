@@ -16,6 +16,8 @@ Grafo::~Grafo() {
 
 }
 
+
+
 void Grafo::imprime_ListaAdj() {
     for (No* no : this->lista_adj) {
         cout << "No " << no->id << ": ";
@@ -25,6 +27,15 @@ void Grafo::imprime_ListaAdj() {
         }
         cout << endl;
     }
+}
+
+No* Grafo::buscarNo(char id_no) {
+    for (No* no : this->lista_adj) {
+        if (no->id == id_no) {
+            return no;
+        }
+    }
+    return nullptr; // Retorna nullptr se o nó não for encontrado
 }
 
 
@@ -68,36 +79,6 @@ vector<char> Grafo::fecho_transitivo_direto(char id_no) {
 vector<char> Grafo::fecho_transitivo_indireto(char id_no) {
     vector<char> ids;
     vector<No*> nos_visitados;
-
-    for (No* no : this->lista_adj) {
-        if (no->id == id_no) {
-            for (No* anterior : no->get_anteriores_direcionado()) {
-                ids.push_back(anterior->id);
-                nos_visitados.push_back(anterior);
-            }
-        }
-    }
-
-    for (char id : ids) {
-        for (No* no : this->lista_adj) {
-            if (no->id == id) {
-                for (No* anterior : no->get_anteriores_direcionado()) {
-                    // Adicionar vizinho apenas se ele não estiver em nos_visitados:
-                    bool ja_adicionado = false;
-                    for (No* visitado : nos_visitados) {
-                        if (visitado->id == anterior->id) {
-                            ja_adicionado = true;
-                            break;
-                        }
-                    }
-                    if(!ja_adicionado && anterior->id != id_no) {
-                        ids.push_back(anterior->id);
-                        nos_visitados.push_back(anterior);
-                    }
-                }
-            }
-        }
-    }
     
     return ids;
 }

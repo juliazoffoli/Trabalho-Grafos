@@ -25,6 +25,7 @@ public:
     void set_ponderado_vertice(bool ponderado) { this->in_ponderado_vertice = ponderado; }
     bool get_ponderado_vertice() { return this->in_ponderado_vertice; }
 
+    No* buscarNo(char id_no);
     vector<char> fecho_transitivo_direto(char id_no); // a
     vector<char> fecho_transitivo_indireto(char id_no); // b
     vector<char> caminho_minimo_dijkstra(char id_no_a, char id_no_b); // c

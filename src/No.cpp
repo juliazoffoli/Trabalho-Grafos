@@ -1,19 +1,17 @@
 #include "No.h"
+#include <iostream>
 
 vector<No*> No::get_vizinhos() {
     vector<No*> vizinhos;
     for (Aresta* aresta : arestas) {
         No* vizinho = nullptr;
-        if (aresta->id_1 == id && aresta->id_2 != '\0') { //Não direcionado
-            vizinho = new No(aresta->id_2, aresta->peso);
-        } else {
-            vizinho = new No(aresta->id_no_alvo, aresta->peso); //Direcionado
-        }
+        vizinho = aresta->no_destino; 
         vizinhos.push_back(vizinho);
     }
+
     return vizinhos;
 }
-
+/*
 vector<No*> No::get_anteriores_direcionado() {
     vector<No*> anteriores;
 
@@ -26,3 +24,4 @@ vector<No*> No::get_anteriores_direcionado() {
     }
     return anteriores;
 }
+*/

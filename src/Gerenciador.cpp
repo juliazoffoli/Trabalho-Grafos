@@ -296,15 +296,11 @@ bool Gerenciador::lerArquivoConstruirGrafo(ifstream& arquivo, Grafo* grafo) {
             }
 
             if(no_1 && no_2) { //Conferindo se os nós existem
-                Aresta* aresta = new Aresta(peso);
-                aresta->id_1 = id_1;
+                Aresta* aresta = new Aresta(no_1, no_2, peso);
                 no_1->arestas.push_back(aresta);
                 if(!direcionado) {
-                    aresta->id_2 = id_2;
                     no_2->arestas.push_back(aresta); // Se não direcionado, adiciona a aresta também ao nó b
-                } else {
-                    aresta->id_no_alvo = id_2;
-                }
+                } 
             } else {
                 cerr << "Erro: Aresta entre nós inexistentes: " << id_1 << " e " << id_2 << endl;
                 return false;
@@ -324,16 +320,12 @@ bool Gerenciador::lerArquivoConstruirGrafo(ifstream& arquivo, Grafo* grafo) {
                 if(no->id == id_2) no_2 = no;
             }
 
-            if(no_1 && no_2) {
-                Aresta* aresta = new Aresta();
-                aresta->id_1 = id_1;
+            if(no_1 && no_2) { //Conferindo se os nós existem
+                Aresta* aresta = new Aresta(no_1, no_2);
                 no_1->arestas.push_back(aresta);
                 if(!direcionado) {
-                    aresta->id_2 = id_2;
                     no_2->arestas.push_back(aresta); // Se não direcionado, adiciona a aresta também ao nó b
-                } else {
-                    aresta->id_no_alvo = id_2;
-                }
+                } 
             } else {
                 cerr << "Erro: Aresta entre nós inexistentes: " << id_1 << " e " << id_2 << endl;
                 return false;

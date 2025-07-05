@@ -1,3 +1,4 @@
+/*
 #ifndef ARESTA_H
 #define ARESTA_H
 
@@ -15,5 +16,22 @@ public:
 };
 
 
-
 #endif //ARESTA_H
+*/
+
+#ifndef ARESTA_H
+#define ARESTA_H
+
+class No; // Forward declaration
+
+class Aresta {
+public:
+    Aresta(No* origem, No* destino, int peso = 0) : no_origem(origem), no_destino(destino), peso(peso) {}
+
+    No* no_origem = nullptr;
+    No* no_destino = nullptr;
+    int peso;
+};
+
+#endif // ARESTA_H
+
