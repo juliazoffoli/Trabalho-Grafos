@@ -42,15 +42,7 @@ void Gerenciador::comandos(Grafo* grafo) {
 
         case 'b':{
             char id_no = get_id_entrada();
-            vector<char> fecho_transitivo_indireto = {};
-
-            if (!grafo->get_direcionado()) {
-                fecho_transitivo_indireto = grafo->fecho_transitivo_direto(id_no);
-            }
-            else {
-                fecho_transitivo_indireto = grafo->fecho_transitivo_indireto(id_no);
-            }
-            
+            vector<char> fecho_transitivo_indireto = grafo->fecho_transitivo_indireto(id_no);
 
             cout<<"Fecho transitivo indireto do no "<<id_no<<": ";
             for (char id : fecho_transitivo_indireto) {
@@ -281,7 +273,7 @@ bool Gerenciador::lerArquivoConstruirGrafo(ifstream& arquivo, Grafo* grafo) {
 
     // Ler as arestas
     if(ponderado_aresta) {
-        for(int i = 0; i < ordem; i++) {
+        for(int i = 0; i < ordem-1; i++) {
             char id_1, id_2;
             int peso;
             
@@ -307,7 +299,7 @@ bool Gerenciador::lerArquivoConstruirGrafo(ifstream& arquivo, Grafo* grafo) {
             }
         }
     } else {
-        for(int i = 0; i < ordem; i++) {
+        for(int i = 0; i < ordem-1; i++) {
             char id_1, id_2;
             
             arquivo >> id_1 >> id_2;

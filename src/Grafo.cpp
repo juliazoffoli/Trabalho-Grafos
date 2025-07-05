@@ -2,6 +2,7 @@
 #include <stack>
 #include <queue>
 #include <iostream>
+#include <unordered_set>
 
 Grafo::Grafo() {
     this->ordem = 0;
@@ -17,13 +18,11 @@ Grafo::~Grafo() {
 }
 
 
-
 void Grafo::imprime_ListaAdj() {
-    for (No* no : this->lista_adj) {
+    for (No* no : lista_adj) {
         cout << "No " << no->id << ": ";
-        vector<No*> vizinhos = no->get_vizinhos();
-        for (No* vizinho : vizinhos) {
-            cout << vizinho->id << " ";
+        for (Aresta* aresta : no->arestas) {
+            cout << aresta->no_destino->get_id() << " ";
         }
         cout << endl;
     }
@@ -38,7 +37,7 @@ No* Grafo::buscarNo(char id_no) {
     return nullptr; // Retorna nullptr se o nó não for encontrado
 }
 
-
+/*
 vector<char> Grafo::fecho_transitivo_direto(char id_no) {
     vector<char> ids;
     vector<No*> nos_visitados;
@@ -75,67 +74,86 @@ vector<char> Grafo::fecho_transitivo_direto(char id_no) {
     
     return ids;
 }
+*/
 
-vector<char> Grafo::fecho_transitivo_indireto(char id_no) {
+vector<char> Grafo::fecho_transitivo_direto(char id_no) {
     vector<char> ids;
-    vector<No*> nos_visitados;
-    
+    unordered_set<char> visitados;
+    queue<char> fila;
+
+    // Encontra o nó inicial
+    for (No* no : lista_adj) {
+        if (no->id == id_no) {
+            // Adiciona vizinhos diretos
+            for (No* vizinho : no->get_vizinhos()) {
+                if (visitados.insert(vizinho->id).second) { // Se não foi visitado
+                    fila.push(vizinho->id);
+                    ids.push_back(vizinho->id);
+                }
+            }
+            break;
+        }
+    }
+
+    // Busca em largura (BFS) para sucessores transitivos
+    while (!fila.empty()) {
+        char atual = fila.front();
+        fila.pop();
+
+        for (No* no : lista_adj) {
+            if (no->id == atual) {
+                for (No* vizinho : no->get_vizinhos()) {
+                    if (visitados.insert(vizinho->id).second) { // Se não foi visitado
+                        fila.push(vizinho->id);
+                        ids.push_back(vizinho->id);
+                    }
+                }
+                break;
+            }
+        }
+    }
+
     return ids;
 }
 
-/*
 vector<char> Grafo::fecho_transitivo_indireto(char id_no) {
     vector<char> ids;
-    vector<No*> nos_visitados;
-
-    for (No* no : this->lista_adj) {
+    unordered_set<char> visitados; // Mais eficiente que vector
+    queue<char> fila;
+    
+    // Primeiro encontra todos os predecessores diretos
+    for (No* no : lista_adj) {
         for (Aresta* aresta : no->arestas) {
-            if (aresta->id_no_alvo == id_no){
-                // Adicionar o nó de origem da aresta ao vetor de ids
-                bool ja_adicionado = false;
-                for (No* visitado : nos_visitados) {
-                    if (visitado->id == no->id || visitado->id == id_no) {
-                        ja_adicionado = true;
-                        break;
-                    }
-                }
-                if(!ja_adicionado) {
-                    ids.push_back(no->id);
-                    nos_visitados.push_back(no);
+            if (aresta->no_destino->get_id() == id_no) {
+                char id_origem = aresta->no_origem->get_id();
+                if (visitados.insert(id_origem).second) { // Se não estava visitado
+                    fila.push(id_origem);
+                    ids.push_back(id_origem);
                 }
             }
         }
     }
-
-    for (char id : ids) {
-        for (No* no : this->lista_adj) {
+    
+    // Agora busca predecessores dos predecessores (transitivo)
+    while (!fila.empty()) {
+        char atual = fila.front();
+        fila.pop();
+        
+        for (No* no : lista_adj) {
             for (Aresta* aresta : no->arestas) {
-                if (aresta->id_no_alvo == id_no){
-                    // Adicionar o nó de origem da aresta ao vetor de ids
-                    bool ja_adicionado = false;
-                    for (No* visitado : nos_visitados) {
-                        if (visitado->id || visitado->id == id_no) {
-                            ja_adicionado = true;
-                            break;
-                        }
-                    }
-                    if(!ja_adicionado) {
-                        ids.push_back(no->id);
-                        nos_visitados.push_back(no);
+                if (aresta->no_destino->get_id() == atual) {
+                    char id_origem = aresta->no_origem->get_id();
+                    if (visitados.insert(id_origem).second) { // Se não estava visitado
+                        fila.push(id_origem);
+                        ids.push_back(id_origem);
                     }
                 }
             }
         }
     }
-
-    cout << "Fecho transitivo indireto: " << endl;;
-    for (char id : ids) {
-            cout << id << ", ";
-    }
-
-    return {};
+    
+    return ids;
 }
-*/
 
 vector<char> Grafo::caminho_minimo_dijkstra(char id_no_a, char id_no_b) {
     cout<<"Metodo nao implementado"<<endl;
