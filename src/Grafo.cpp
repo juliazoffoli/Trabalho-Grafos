@@ -183,10 +183,43 @@ Grafo * Grafo::arvore_geradora_minima_kruskal(vector<char> ids_nos) {
     return nullptr;
 }
 
-Grafo * Grafo::arvore_caminhamento_profundidade(char id_no) {
-    cout<<"Metodo nao implementado"<<endl;
-    return nullptr;
+Grafo* Grafo::arvore_caminhamento_profundidade(char id_no) {
+    Grafo* acp = new Grafo();
+    No* inicio_original = buscarNo(id_no);
+    if (!inicio_original) return acp;
+
+    for (No* no : lista_adj) { // reseta nós visitados
+        no->visitado = false;
+    }
+
+    stack<pair<No*, No*>> pilha; // pares: <nó original, nó na acp>
+    
+    No* inicio_acp = new No(inicio_original->id);
+    acp->lista_adj.push_back(inicio_acp);
+    inicio_original->visitado = true;
+    
+    pilha.push({inicio_original, inicio_acp});
+
+    while (!pilha.empty()) {
+        auto [atual_original, atual_acp] = pilha.top();
+        pilha.pop();
+
+        for (Aresta* aresta : atual_original->arestas) {
+            No* vizinho_original = aresta->no_destino;
+            
+            if (!vizinho_original->visitado) { //exploração de vizinhos, se o vizinho nao foi visitado, marca como visitado e o adiciona à acp
+                vizinho_original->visitado = true;
+                
+                No* vizinho_acp = new No(vizinho_original->id);
+                acp->lista_adj.push_back(vizinho_acp);
+                atual_acp->adicionar_aresta(vizinho_acp, vizinho_acp->peso);
+                pilha.push({vizinho_original, vizinho_acp});
+            }
+        }
+    }
+    return acp;
 }
+
 
 int Grafo::raio() {
     cout<<"Metodo nao implementado"<<endl;

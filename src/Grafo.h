@@ -40,7 +40,6 @@ public:
     vector<char> vertices_de_articulacao(); // i
     void imprime_ListaAdj(); 
 
-
     int ordem;
     bool in_direcionado;
     bool in_ponderado_aresta;

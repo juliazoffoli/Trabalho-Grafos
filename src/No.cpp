@@ -1,5 +1,13 @@
 #include "No.h"
+#include "Aresta.h"
 #include <iostream>
+
+
+void No::adicionar_aresta(No* destino, int peso) {
+    Aresta* a = new Aresta(this, destino, peso);
+    this->arestas.push_back(a);
+}
+
 
 vector<No*> No::get_vizinhos() {
     vector<No*> vizinhos;
