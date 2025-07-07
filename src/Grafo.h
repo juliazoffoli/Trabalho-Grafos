@@ -33,10 +33,12 @@ public:
     Grafo* arvore_geradora_minima_prim(vector<char> ids_nos); // e
     Grafo* arvore_geradora_minima_kruskal(vector<char> ids_nos); // f
     Grafo* arvore_caminhamento_profundidade(char id_no); // g
+
     int raio(); // h 1
     int diametro(); // h 2
     vector<char> centro(); // h 3
     vector<char> periferia(); // h 4
+    
     vector<char> vertices_de_articulacao(); // i
     void imprime_ListaAdj(); 
 
@@ -46,6 +48,9 @@ public:
     bool in_ponderado_aresta;
     bool in_ponderado_vertice;
     vector<No*> lista_adj;
+
+private:
+    vector<int> calcular_excentricidades();
 };
 
 

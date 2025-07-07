@@ -12,7 +12,8 @@ void Gerenciador::comandos(Grafo* grafo) {
     cout<<"(f) Arvore Geradora Minima (Algoritmo de Kruskal);"<<endl;
     cout<<"(g) Arvore de caminhamento em profundidade;"<<endl;
     cout<<"(h) Raio, diametro, centro e periferia do grafo;"<<endl;
-    cout<<"(i) Lista de Adjacencia" << endl;
+    cout<<"(i) Vertices de Articulacao" << endl;
+    cout<<"(j) Lista de Adjacencia" << endl;
     cout<<"(0) Sair;"<<endl<<endl;
 
     char resp;
@@ -75,12 +76,34 @@ void Gerenciador::comandos(Grafo* grafo) {
             char id_no_1 = get_id_entrada();
             char id_no_2 = get_id_entrada();
             vector<char> caminho_minimo_dijkstra = grafo->caminho_minimo_dijkstra(id_no_1,id_no_2);
-            cout<<"Metodo de impressao em tela nao implementado"<<endl<<endl;
+            bool primeiro = true;
 
-            if(pergunta_imprimir_arquivo("caminho_minimo_dijkstra.txt")) {
-                cout<<"Metodo de impressao em arquivo nao implementado"<<endl;
+            if(caminho_minimo_dijkstra.empty()) {
+                cout << "Nao existe caminho entre os nos informados." << endl;
+            } else {
+                cout << "Caminho minimo (Dijkstra): ";
+                for (char id : caminho_minimo_dijkstra) {
+                    if (!primeiro)
+                        cout << ", ";
+                    cout << id;
+                    primeiro = false;
+                }
+                cout << endl;
             }
 
+            if(pergunta_imprimir_arquivo("caminho_minimo_dijkstra.txt")) {
+                ofstream arquivo("caminho_minimo_dijkstra.txt");
+                if (!arquivo) {
+                    cout << "Erro ao abrir arquivo." << endl;
+                } else {
+                    for (char id : caminho_minimo_dijkstra) {
+                        arquivo << id << " ";
+                    }
+                    arquivo << endl;
+                    arquivo.close();
+                    cout << "Caminho salvo em caminho_minimo_dijkstra.txt" << endl;
+                }
+            }
 
             break;
         }
@@ -90,15 +113,38 @@ void Gerenciador::comandos(Grafo* grafo) {
             char id_no_1 = get_id_entrada();
             char id_no_2 = get_id_entrada();
             vector<char> caminho_minimo_floyd = grafo->caminho_minimo_floyd(id_no_1,id_no_2);
-            cout<<"Metodo de impressao em tela nao implementado"<<endl<<endl;
+            bool primeiro = true;
 
-            if(pergunta_imprimir_arquivo("caminho_minimo_floyd.txt")) {
-                cout<<"Metodo de impressao em arquivo nao implementado"<<endl;
+            if(caminho_minimo_floyd.empty()) {
+                cout << "Nao existe caminho entre os nos informados." << endl;
+            } else {
+                cout << "Caminho minimo (Floyd): ";
+                for (char id : caminho_minimo_floyd) {
+                    if (!primeiro)
+                        cout << ", ";
+                    cout << id;
+                    primeiro = false;
+                }
+                cout << endl;
             }
 
+            if(pergunta_imprimir_arquivo("caminho_minimo_floyd.txt")) {
+                ofstream arquivo("caminho_minimo_floyd.txt");
+                if (!arquivo) {
+                    cout << "Erro ao abrir arquivo." << endl;
+                } else {
+                    for (char id : caminho_minimo_floyd) {
+                        arquivo << id << " ";
+                    }
+                    arquivo << endl;
+                    arquivo.close();
+                    cout << "Caminho salvo em caminho_minimo_floyd.txt" << endl;
+                }
+            }
 
             break;
         }
+
         case 'e': {
             int tam;
             cout << "Digite o tamanho do subconjunto: ";
@@ -168,10 +214,29 @@ void Gerenciador::comandos(Grafo* grafo) {
 
             char id_no = get_id_entrada();
             Grafo* arvore_caminhamento_profundidade = grafo->arvore_caminhamento_profundidade(id_no);
-            cout<<"Metodo de impressao em tela nao implementado"<<endl<<endl;
+            arvore_caminhamento_profundidade->imprime_ListaAdj();
 
             if(pergunta_imprimir_arquivo("arvore_caminhamento_profundidade.txt")) {
-                cout<<"Metodo de impressao em arquivo nao implementado"<<endl;
+                ofstream out("arvore_caminhamento_profundidade.txt");
+                if (!out) {
+                    cout << "Erro ao abrir arquivo." << endl;
+                } else {
+                    out << "Arvore Caminhamento Profundidade: " << endl;
+                    
+                    for (No* no : arvore_caminhamento_profundidade->lista_adj) {
+                        out << no->id << ": ";
+                        for (size_t i = 0; i < no->arestas.size(); ++i) {
+                            out << no->arestas[i]->no_destino->get_id();
+                            if (i != no->arestas.size() - 1) {
+                                out << " -> ";
+                            }
+                        }
+                        out << endl;
+                    }
+
+                    out.close();
+                    cout << "Salvo em arvore_caminhamento_profundidade.txt." << endl;
+                }
             }
 
             delete arvore_caminhamento_profundidade;
@@ -179,6 +244,51 @@ void Gerenciador::comandos(Grafo* grafo) {
         }
 
         case 'h': {
+            int raio = grafo->raio();
+            int diametro = grafo->diametro();
+            vector<char> centro = grafo->centro();
+            vector<char> periferia = grafo->periferia();
+
+            cout << "\nRaio: " << raio << endl;
+            cout << "Diametro: " << diametro << endl;
+
+            cout << "Centro: ";
+            for (char c : centro)
+                cout << c << " ";
+            cout << endl;
+
+            cout << "Periferia: ";
+            for (char p : periferia)
+                cout << p << " ";
+            cout << endl;
+
+            if (pergunta_imprimir_arquivo("medidas_grafo.txt")) {
+                ofstream out("medidas_grafo.txt");
+                if (!out) {
+                    cout << "Erro ao abrir arquivo." << endl;
+                } else {
+                    out << "Raio: " << raio << endl;
+                    out << "Diametro: " << diametro << endl;
+
+                    out << "Centro: ";
+                    for (char c : centro)
+                        out << c << " ";
+                    out << endl;
+
+                    out << "Periferia: ";
+                    for (char p : periferia)
+                        out << p << " ";
+                    out << endl;
+
+                    out.close();
+                    cout << "Medidas salvas em medidas_grafo.txt" << endl;
+                }
+            }
+
+            break;
+        }
+
+        case 'i': {
             vector<char> articulacao = grafo->vertices_de_articulacao();
             cout<<"Metodo de impressao em tela nao implementado"<<endl<<endl;
 
@@ -188,7 +298,8 @@ void Gerenciador::comandos(Grafo* grafo) {
 
             break;
         }
-        case 'i': {
+
+        case 'j': {
             cout << "Lista de Adjacencia:" << endl;
             grafo->imprime_ListaAdj();
             cout << endl;
@@ -343,9 +454,10 @@ bool Gerenciador::lerArquivoConstruirGrafo(ifstream& arquivo, Grafo* grafo) {
             if(no_1 && no_2) { //Conferindo se os nós existem
                 Aresta* aresta = new Aresta(no_1, no_2);
                 no_1->arestas.push_back(aresta);
-                if(!direcionado) {
-                    no_2->arestas.push_back(aresta); // Se não direcionado, adiciona a aresta também ao nó b
-                } 
+                if (!direcionado) {
+                    Aresta* aresta2 = new Aresta(no_2, no_1);
+                    no_2->arestas.push_back(aresta2);
+                }
             } else {
                 cerr << "Erro: Aresta entre nós inexistentes: " << id_1 << " e " << id_2 << endl;
                 return false;

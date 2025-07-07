@@ -15,11 +15,13 @@ public:
     char id;
     int peso;
     vector<Aresta*> arestas;
+    bool visitado;
 
     vector<No*> get_vizinhos();
     vector<No*> get_anteriores_direcionado();
     vector<Aresta*> get_arestas() { return arestas; }
     char get_id() { return id; }
+    void adicionar_aresta(No* destino, int peso);
 };
 
 
