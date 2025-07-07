@@ -329,24 +329,66 @@ Grafo * Grafo::arvore_caminhamento_profundidade(char id_no) {
     return nullptr;
 }
 
+vector<int> Grafo::calcular_excentricidades() {
+    int n = lista_adj.size();
+    vector<int> excentricidade(n, 0);
+
+    for (int i = 0; i < n; ++i) {
+        char origem_id = lista_adj[i]->get_id();
+        int max_dist = 0;
+
+        for (int j = 0; j < n; ++j) {
+            if (i == j) continue;
+
+            char destino_id = lista_adj[j]->get_id();
+            vector<char> caminho = caminho_minimo_floyd(origem_id, destino_id);
+
+            if (caminho.empty())
+                continue; // sem caminho → ignora ou trata como infinito
+
+            int dist = caminho.size() - 1;
+            max_dist = max(max_dist, dist);
+        }
+
+        excentricidade[i] = max_dist;
+    }
+
+    return excentricidade;
+}
+
+
 int Grafo::raio() {
-    cout<<"Metodo nao implementado"<<endl;
-    return 0;
+    vector<int> exc = calcular_excentricidades();
+    return *min_element(exc.begin(), exc.end());
 }
 
 int Grafo::diametro() {
-    cout<<"Metodo nao implementado"<<endl;
-    return 0;
+    vector<int> exc = calcular_excentricidades();
+    return *max_element(exc.begin(), exc.end());
 }
 
 vector<char> Grafo::centro() {
-    cout<<"Metodo nao implementado"<<endl;
-    return {};
+     vector<int> exc = calcular_excentricidades();
+    int r = *min_element(exc.begin(), exc.end());
+
+    vector<char> centro;
+    for (size_t i = 0; i < exc.size(); ++i)
+        if (exc[i] == r)
+            centro.push_back(lista_adj[i]->get_id());
+
+    return centro;
 }
 
 vector<char> Grafo::periferia() {
-    cout<<"Metodo nao implementado"<<endl;
-    return {};
+    vector<int> exc = calcular_excentricidades();
+    int d = *max_element(exc.begin(), exc.end());
+
+    vector<char> periferia;
+    for (size_t i = 0; i < exc.size(); ++i)
+        if (exc[i] == d)
+            periferia.push_back(lista_adj[i]->get_id());
+
+    return periferia;
 }
 
 vector<char> Grafo::vertices_de_articulacao() {
