@@ -3,6 +3,9 @@
 #include <queue>
 #include <iostream>
 #include <unordered_set>
+#include <unordered_map>
+#include <limits>
+#include <algorithm>
 
 Grafo::Grafo() {
     this->ordem = 0;
@@ -164,8 +167,85 @@ vector<char> Grafo::fecho_transitivo_indireto(char id_no) {
 }
 
 vector<char> Grafo::caminho_minimo_dijkstra(char id_no_a, char id_no_b) {
-    cout<<"Metodo nao implementado"<<endl;
-    return {};
+    // π(j): mapa de distâncias mínimas
+    unordered_map<char, int> pi;
+    unordered_map<char, char> anterior;
+
+    vector<char> S_barra; // Conjunto S̅
+    vector<char> todos_ids;
+
+    // Inicializa distâncias e S̅
+    for (No* no : lista_adj) {
+        char id = no->get_id();
+        todos_ids.push_back(id);
+        if (id != id_no_a) {
+            pi[id] = numeric_limits<int>::max(); // ∞
+            S_barra.push_back(id);
+        } else {
+            pi[id] = 0;
+        }
+    }
+
+    // Inicializa π(j) com c_1j se j ∈ Γ⁺(1), ∞ caso contrário
+    No* origem = buscarNo(id_no_a);
+    if (!origem) return {};
+
+    for (Aresta* aresta : origem->get_arestas()) {
+        char vizinho = aresta->no_destino->get_id();
+        int custo = in_ponderado_aresta ? aresta->peso : 1;
+        pi[vizinho] = custo;
+        anterior[vizinho] = id_no_a;
+    }
+
+    // Enquanto S̅ ≠ ∅ faça
+    while (!S_barra.empty()) {
+        // Selecionar j ∈ S̅ tal que π(j) é mínimo
+        char j_min = 0;
+        int menor_pi = numeric_limits<int>::max();
+        for (char j : S_barra) {
+            if (pi[j] < menor_pi) {
+                menor_pi = pi[j];
+                j_min = j;
+            }
+        }
+
+        if (j_min == 0) break; // Todos são ∞, acabou
+
+        // S̅ ← S̅ − {j}
+        S_barra.erase(remove(S_barra.begin(), S_barra.end(), j_min), S_barra.end());
+
+        No* no_j = buscarNo(j_min);
+        if (!no_j) continue;
+
+        // Para ∀k ∈ S̅ e k ∈ Γ⁺(j) faça
+        for (Aresta* aresta : no_j->get_arestas()) {
+            char k = aresta->no_destino->get_id();
+            if (find(S_barra.begin(), S_barra.end(), k) == S_barra.end())
+                continue; // k não está mais em S̅
+
+            int custo_jk = in_ponderado_aresta ? aresta->peso : 1;
+
+            // π(k) ← min(π(k), π(j) + c_jk)
+            int novo_valor = pi[j_min] + custo_jk;
+            if (novo_valor < pi[k]) {
+                pi[k] = novo_valor;
+                anterior[k] = j_min;
+            }
+        }
+    }
+
+    // Reconstrução do caminho
+    vector<char> caminho;
+    if (pi[id_no_b] == numeric_limits<int>::max())
+        return caminho; // Sem caminho
+
+    for (char at = id_no_b; at != id_no_a; at = anterior[at]) {
+        caminho.push_back(at);
+    }
+    caminho.push_back(id_no_a);
+    reverse(caminho.begin(), caminho.end());
+
+    return caminho;
 }
 
 vector<char> Grafo::caminho_minimo_floyd(char id_no, char id_no_b) {
