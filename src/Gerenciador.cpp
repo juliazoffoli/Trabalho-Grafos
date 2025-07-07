@@ -75,12 +75,30 @@ void Gerenciador::comandos(Grafo* grafo) {
             char id_no_1 = get_id_entrada();
             char id_no_2 = get_id_entrada();
             vector<char> caminho_minimo_dijkstra = grafo->caminho_minimo_dijkstra(id_no_1,id_no_2);
-            cout<<"Metodo de impressao em tela nao implementado"<<endl<<endl;
 
-            if(pergunta_imprimir_arquivo("caminho_minimo_dijkstra.txt")) {
-                cout<<"Metodo de impressao em arquivo nao implementado"<<endl;
+            if (caminho_minimo_dijkstra.empty()) {
+                cout << "Nao existe caminho entre os nos informados." << endl;
+            } else {
+                cout << "Caminho minimo (Dijkstra): ";
+                for (char id : caminho_minimo_dijkstra) {
+                    cout << id << " ";
+                }
+                cout << endl;
             }
 
+            if(pergunta_imprimir_arquivo("caminho_minimo_dijkstra.txt")) {
+                ofstream arquivo("caminho_minimo_dijkstra.txt");
+                if (!arquivo) {
+                    cout << "Erro ao abrir arquivo." << endl;
+                } else {
+                    for (char id : caminho_minimo_dijkstra) {
+                        arquivo << id << " ";
+                    }
+                    arquivo << endl;
+                    arquivo.close();
+                    cout << "Caminho salvo em caminho_minimo_dijkstra.txt" << endl;
+                }
+            }
 
             break;
         }
@@ -90,15 +108,34 @@ void Gerenciador::comandos(Grafo* grafo) {
             char id_no_1 = get_id_entrada();
             char id_no_2 = get_id_entrada();
             vector<char> caminho_minimo_floyd = grafo->caminho_minimo_floyd(id_no_1,id_no_2);
-            cout<<"Metodo de impressao em tela nao implementado"<<endl<<endl;
-
-            if(pergunta_imprimir_arquivo("caminho_minimo_floyd.txt")) {
-                cout<<"Metodo de impressao em arquivo nao implementado"<<endl;
+            
+            if (caminho_minimo_floyd.empty()) {
+                cout << "Nao existe caminho entre os nos informados." << endl;
+            } else {
+                cout << "Caminho minimo (Floyd): ";
+                for (char id : caminho_minimo_floyd) {
+                    cout << id << " ";
+                }
+                cout << endl;
             }
 
+            if(pergunta_imprimir_arquivo("caminho_minimo_floyd.txt")) {
+                ofstream arquivo("caminho_minimo_floyd.txt");
+                if (!arquivo) {
+                    cout << "Erro ao abrir arquivo." << endl;
+                } else {
+                    for (char id : caminho_minimo_floyd) {
+                        arquivo << id << " ";
+                    }
+                    arquivo << endl;
+                    arquivo.close();
+                    cout << "Caminho salvo em caminho_minimo_floyd.txt" << endl;
+                }
+            }
 
             break;
         }
+
         case 'e': {
 
             int tam;
