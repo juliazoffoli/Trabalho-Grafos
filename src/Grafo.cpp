@@ -249,8 +249,69 @@ vector<char> Grafo::caminho_minimo_dijkstra(char id_no_a, char id_no_b) {
 }
 
 vector<char> Grafo::caminho_minimo_floyd(char id_no, char id_no_b) {
-    cout<<"Metodo nao implementado"<<endl;
-    return {};
+    int INF = numeric_limits<int>::max();
+    vector<char> vertices;
+
+    // Passo 1: Mapeamento dos IDs para índices
+    unordered_map<char, int> id_to_idx;
+    unordered_map<int, char> idx_to_id;
+
+    int n = lista_adj.size();
+    for (int i = 0; i < n; ++i) {
+        char id = lista_adj[i]->get_id();
+        id_to_idx[id] = i;
+        idx_to_id[i] = id;
+        vertices.push_back(id);
+    }
+
+    // Passo 2: Inicialização da matriz de distâncias e predecessores
+    vector<vector<int>> dist(n, vector<int>(n, INF));
+    vector<vector<int>> pred(n, vector<int>(n, -1));
+
+    for (int i = 0; i < n; ++i) {
+        dist[i][i] = 0;
+        No* no = lista_adj[i];
+
+        for (Aresta* aresta : no->get_arestas()) {
+            int j = id_to_idx[aresta->no_destino->get_id()];
+            int peso = in_ponderado_aresta ? aresta->peso : 1;
+            dist[i][j] = peso;
+            pred[i][j] = i;
+        }
+    }
+
+    // Passo 3: Algoritmo de Floyd-Warshall
+    for (int k = 0; k < n; ++k) {
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < n; ++j) {
+                if (dist[i][k] != INF && dist[k][j] != INF) {
+                    if (dist[i][k] + dist[k][j] < dist[i][j]) {
+                        dist[i][j] = dist[i][k] + dist[k][j];
+                        pred[i][j] = pred[k][j];
+                    }
+                }
+            }
+        }
+    }
+
+    // Passo 4: Reconstrução do caminho de id_no até id_no_b
+    int origem = id_to_idx[id_no];
+    int destino = id_to_idx[id_no_b];
+
+    if (dist[origem][destino] == INF) return {}; // Sem caminho
+
+    vector<char> caminho;
+    int atual = destino;
+
+    while (atual != origem) {
+        caminho.push_back(idx_to_id[atual]);
+        atual = pred[origem][atual];
+        if (atual == -1) return {}; // Caminho quebrado
+    }
+
+    caminho.push_back(id_no);
+    reverse(caminho.begin(), caminho.end());
+    return caminho;
 }
 
 Grafo * Grafo::arvore_geradora_minima_prim(vector<char> ids_nos) {
