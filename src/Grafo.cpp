@@ -324,9 +324,45 @@ Grafo * Grafo::arvore_geradora_minima_kruskal(vector<char> ids_nos) {
     return nullptr;
 }
 
-Grafo * Grafo::arvore_caminhamento_profundidade(char id_no) {
-    cout<<"Metodo nao implementado"<<endl;
-    return nullptr;
+Grafo* Grafo::arvore_caminhamento_profundidade(char id_no) {
+    Grafo* acp = new Grafo();
+    No* inicio_original = buscarNo(id_no);
+    if (!inicio_original) return acp;
+
+    for (No* no : lista_adj)
+        no->visitado = false;
+
+    stack<pair<No*, No*>> pilha;
+
+    No* inicio_acp = new No(inicio_original->id);
+    acp->lista_adj.push_back(inicio_acp);
+    inicio_original->visitado = true;
+
+    pilha.push({inicio_original, inicio_acp});
+
+    while (!pilha.empty()) {
+        auto [atual_original, atual_acp] = pilha.top();
+        pilha.pop();
+
+        for (Aresta* aresta : atual_original->arestas) {
+            No* vizinho_original = aresta->no_destino;
+
+            if (!vizinho_original->visitado) {
+                vizinho_original->visitado = true;
+
+                No* vizinho_acp = new No(vizinho_original->id);
+                acp->lista_adj.push_back(vizinho_acp);
+
+                atual_acp->adicionar_aresta(vizinho_acp, aresta->peso);
+                if (!in_direcionado)
+                    vizinho_acp->adicionar_aresta(atual_acp, aresta->peso);
+
+                pilha.push({vizinho_original, vizinho_acp});
+            }
+        }
+    }
+
+    return acp;
 }
 
 vector<int> Grafo::calcular_excentricidades() {

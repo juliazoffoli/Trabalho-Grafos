@@ -199,10 +199,29 @@ void Gerenciador::comandos(Grafo* grafo) {
 
             char id_no = get_id_entrada();
             Grafo* arvore_caminhamento_profundidade = grafo->arvore_caminhamento_profundidade(id_no);
-            cout<<"Metodo de impressao em tela nao implementado"<<endl<<endl;
+            arvore_caminhamento_profundidade->imprime_ListaAdj();
 
             if(pergunta_imprimir_arquivo("arvore_caminhamento_profundidade.txt")) {
-                cout<<"Metodo de impressao em arquivo nao implementado"<<endl;
+                ofstream out("arvore_caminhamento_profundidade.txt");
+                if (!out) {
+                    cout << "Erro ao abrir arquivo." << endl;
+                } else {
+                    out << "Arvore Caminhamento Profundidade: " << endl;
+                    
+                    for (No* no : arvore_caminhamento_profundidade->lista_adj) {
+                        out << no->id << ": ";
+                        for (size_t i = 0; i < no->arestas.size(); ++i) {
+                            out << no->arestas[i]->no_destino->get_id();
+                            if (i != no->arestas.size() - 1) {
+                                out << " -> ";
+                            }
+                        }
+                        out << endl;
+                    }
+
+                    out.close();
+                    cout << "Salvo em arvore_caminhamento_profundidade.txt." << endl;
+                }
             }
 
             delete arvore_caminhamento_profundidade;
@@ -420,9 +439,10 @@ bool Gerenciador::lerArquivoConstruirGrafo(ifstream& arquivo, Grafo* grafo) {
             if(no_1 && no_2) { //Conferindo se os nós existem
                 Aresta* aresta = new Aresta(no_1, no_2);
                 no_1->arestas.push_back(aresta);
-                if(!direcionado) {
-                    no_2->arestas.push_back(aresta); // Se não direcionado, adiciona a aresta também ao nó b
-                } 
+                if (!direcionado) {
+                    Aresta* aresta2 = new Aresta(no_2, no_1);
+                    no_2->arestas.push_back(aresta2);
+                }
             } else {
                 cerr << "Erro: Aresta entre nós inexistentes: " << id_1 << " e " << id_2 << endl;
                 return false;
