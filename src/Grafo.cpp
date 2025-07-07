@@ -473,9 +473,22 @@ Grafo * Grafo::arvore_geradora_minima_prim(vector<char> ids_nos) {
 
 
 
-    cout << "\nArestas da Arvore Geradora Minima (Prim):\n";
-    for (Aresta* a : arestas_agm) {
-        cout << a->no_origem->id << " - " << a->no_destino->id << " (peso " << a->peso << ")\n";
+    cout << "\nLista de Adjacência da AGM(PRIM):\n";
+    for (No* no : agm->lista_adj) {
+        cout << no->id << ": ";
+        vector<string> vizinhos;
+
+        for (Aresta* a : no->arestas) {
+            char vizinho = (a->no_origem->id == no->id) ? a->no_destino->id : a->no_origem->id;
+            vizinhos.push_back(string(1, vizinho));
+        }
+
+        for (int i = 0; i < vizinhos.size(); ++i) {
+            cout << vizinhos[i];
+            if (i != vizinhos.size() - 1)
+                cout << " -> ";
+        }
+        cout << "\n";
     }
 
     return agm;
@@ -609,10 +622,24 @@ Grafo * Grafo::arvore_geradora_minima_kruskal(vector<char> ids_nos) {
     }
 
 
-     cout << "\nArestas da Arvore Geradora Minima (Kruskal):\n";
-    for (Aresta* a : arestas_agm) {
-        cout << a->no_origem->id << " - " << a->no_destino->id << " (peso " << a->peso << ")\n";
+    cout << "\nLista de Adjacência da AGM(Kruskal):\n";
+    for (No* no : agm->lista_adj) {
+        cout << no->id << ": ";
+        vector<string> vizinhos;
+
+        for (Aresta* a : no->arestas) {
+            char vizinho = (a->no_origem->id == no->id) ? a->no_destino->id : a->no_origem->id;
+            vizinhos.push_back(string(1, vizinho));
+        }
+
+        for (int i = 0; i < vizinhos.size(); ++i) {
+            cout << vizinhos[i];
+            if (i != vizinhos.size() - 1)
+                cout << " -> ";
+        }
+        cout << "\n";
     }
+
 
     return agm;
 }
