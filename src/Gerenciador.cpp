@@ -100,53 +100,68 @@ void Gerenciador::comandos(Grafo* grafo) {
             break;
         }
         case 'e': {
-
             int tam;
-            cout<<"Digite o tamanho do subconjunto: ";
-            cin>>tam;
+            cout << "Digite o tamanho do subconjunto: ";
+            cin >> tam;
 
-            if(tam > 0 && tam <= grafo->ordem) {
+            if (tam > 0 && tam <= grafo->ordem) {
+                vector<char> ids = get_conjunto_ids(grafo, tam);
+                Grafo* agm_prim = grafo->arvore_geradora_minima_prim(ids);
 
-                vector<char> ids = get_conjunto_ids(grafo,tam);
-                Grafo* arvore_geradora_minima_prim = grafo->arvore_geradora_minima_prim(ids);
-                cout<<"Metodo de impressao em tela nao implementado"<<endl<<endl;
-
-                if(pergunta_imprimir_arquivo("agm_prim.txt")) {
-                    cout<<"Metodo de impressao em arquivo nao implementado"<<endl;
+                if (pergunta_imprimir_arquivo("agm_prim.txt")) {
+                    ofstream arquivo("agm_prim.txt");
+                    for (No* no : agm_prim->lista_adj) {
+                        for (Aresta* a : no->arestas) {
+                            char u = a->no_origem->id;
+                            char v = a->no_destino->id;
+                            if (u < v) { // evitar duplicidade
+                                arquivo << u << " - " << v << " (peso " << a->peso << ")\n";
+                            }
+                        }
+                    }
+                    arquivo.close();
+                    cout << "Arquivo agm_prim.txt gerado.\n";
                 }
 
-                delete arvore_geradora_minima_prim;
-
-            }else {
-                cout<<"Valor invalido"<<endl;
+                delete agm_prim;
+            } else {
+                cout << "Valor invalido\n";
             }
-
             break;
         }
 
         case 'f': {
-
             int tam;
-            cout<<"Digite o tamanho do subconjunto: ";
-            cin>>tam;
+            cout << "Digite o tamanho do subconjunto: ";
+            cin >> tam;
 
-            if(tam > 0 && tam <= grafo->ordem) {
+            if (tam > 0 && tam <= grafo->ordem) {
+                vector<char> ids = get_conjunto_ids(grafo, tam);
+                Grafo* agm_kruskal = grafo->arvore_geradora_minima_kruskal(ids);
 
-                vector<char> ids = get_conjunto_ids(grafo,tam);
-                Grafo* arvore_geradora_minima_kruskal = grafo->arvore_geradora_minima_kruskal(ids);
-                cout<<"Metodo de impressao em tela nao implementado"<<endl<<endl;
-
-                if(pergunta_imprimir_arquivo("agm_kruskal.txt")) {
-                    cout<<"Metodo de impressao em arquivo nao implementado"<<endl;
+                if (pergunta_imprimir_arquivo("agm_kruskal.txt")) {
+                    ofstream arquivo("agm_kruskal.txt");
+                    for (No* no : agm_kruskal->lista_adj) {
+                        for (Aresta* a : no->arestas) {
+                            char u = a->no_origem->id;
+                            char v = a->no_destino->id;
+                            if (u < v) { // evitar duplicidade
+                                arquivo << u << " - " << v << " (peso " << a->peso << ")\n";
+                            }
+                        }
+                    }
+                    arquivo.close();
+                    cout << "Arquivo agm_kruskal.txt gerado.\n";
                 }
 
-                delete arvore_geradora_minima_kruskal;
-
-            }else {
-                cout<<"Valor invalido"<<endl;
+                delete agm_kruskal;
+            } else {
+                cout << "Valor invalido\n";
             }
+    break;
 
-            break;
+
+
         }
 
         case 'g': {
