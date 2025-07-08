@@ -92,31 +92,35 @@ vector<char> Grafo::fecho_transitivo_direto(char id_no) {
     unordered_set<char> visitados;
     queue<char> fila;
 
-    // Encontra o nó inicial
-    for (No* no : lista_adj) {
-        if (no->id == id_no) {
-            // Adiciona vizinhos diretos
-            for (No* vizinho : no->get_vizinhos()) {
-                if (visitados.insert(vizinho->id).second) { // Se não foi visitado
-                    fila.push(vizinho->id);
-                    ids.push_back(vizinho->id);
-                }
-            }
-            break;
-        }
-    }
+    // Adiciona o nó inicial
+    fila.push(id_no);
+    visitados.insert(id_no);
+    ids.push_back(id_no);
 
-    // Busca em largura (BFS) para sucessores transitivos
     while (!fila.empty()) {
         char atual = fila.front();
         fila.pop();
 
+        // Encontra o nó atual na lista de adjacência
         for (No* no : lista_adj) {
             if (no->id == atual) {
-                for (No* vizinho : no->get_vizinhos()) {
-                    if (visitados.insert(vizinho->id).second) { // Se não foi visitado
-                        fila.push(vizinho->id);
-                        ids.push_back(vizinho->id);
+                // Processa todas as arestas
+                for (Aresta* aresta : no->arestas) {
+                    char vizinho = aresta->no_destino->id;
+                    
+                    // Se o grafo é não direcionado, considera a aresta nos dois sentidos
+                    if (!in_direcionado) {
+                        // Para grafos não direcionados, o destino pode ser a origem
+                        if (aresta->no_origem->id == atual) {
+                            vizinho = aresta->no_destino->id;
+                        } else {
+                            vizinho = aresta->no_origem->id;
+                        }
+                    }
+
+                    if (visitados.insert(vizinho).second) {
+                        fila.push(vizinho);
+                        ids.push_back(vizinho);
                     }
                 }
                 break;
@@ -129,40 +133,45 @@ vector<char> Grafo::fecho_transitivo_direto(char id_no) {
 
 vector<char> Grafo::fecho_transitivo_indireto(char id_no) {
     vector<char> ids;
-    unordered_set<char> visitados; // Mais eficiente que vector
-    queue<char> fila;
-    
-    // Primeiro encontra todos os predecessores diretos
-    for (No* no : lista_adj) {
-        for (Aresta* aresta : no->arestas) {
-            if (aresta->no_destino->get_id() == id_no) {
-                char id_origem = aresta->no_origem->get_id();
-                if (visitados.insert(id_origem).second) { // Se não estava visitado
-                    fila.push(id_origem);
-                    ids.push_back(id_origem);
-                }
-            }
-        }
-    }
-    
-    // Agora busca predecessores dos predecessores (transitivo)
-    while (!fila.empty()) {
-        char atual = fila.front();
-        fila.pop();
+    if (in_direcionado) {
+        // Implementação original para grafos direcionados
+        unordered_set<char> visitados;
+        queue<char> fila;
         
+        // Predecessores diretos
         for (No* no : lista_adj) {
             for (Aresta* aresta : no->arestas) {
-                if (aresta->no_destino->get_id() == atual) {
+                if (aresta->no_destino->get_id() == id_no) {
                     char id_origem = aresta->no_origem->get_id();
-                    if (visitados.insert(id_origem).second) { // Se não estava visitado
+                    if (visitados.insert(id_origem).second) {
                         fila.push(id_origem);
                         ids.push_back(id_origem);
                     }
                 }
             }
         }
+        
+        // Predecessores transitivos
+        while (!fila.empty()) {
+            char atual = fila.front();
+            fila.pop();
+            
+            for (No* no : lista_adj) {
+                for (Aresta* aresta : no->arestas) {
+                    if (aresta->no_destino->get_id() == atual) {
+                        char id_origem = aresta->no_origem->get_id();
+                        if (visitados.insert(id_origem).second) {
+                            fila.push(id_origem);
+                            ids.push_back(id_origem);
+                        }
+                    }
+                }
+            }
+        }
+    } else {
+        // Para grafos não direcionados, retorna o próprio nó
+        ids.push_back(id_no);
     }
-    
     return ids;
 }
 
@@ -494,6 +503,8 @@ Grafo * Grafo::arvore_geradora_minima_prim(vector<char> ids_nos) {
     return agm;
 }
 
+
+
 Grafo * Grafo::arvore_geradora_minima_kruskal(vector<char> ids_nos) {
    Grafo* agm = new Grafo(); // cria um novo grafo para a árvore geradora mínima (agm)
     agm->set_ordem(ids_nos.size());
@@ -661,7 +672,9 @@ Grafo* Grafo::arvore_caminhamento_profundidade(char id_no) {
     pilha.push({inicio_original, inicio_acp});
 
     while (!pilha.empty()) {
-        auto [atual_original, atual_acp] = pilha.top();
+        pair<No*, No*> par = pilha.top();
+        No* atual_original = par.first;
+        No* atual_acp = par.second;
         pilha.pop();
 
         for (Aresta* aresta : atual_original->arestas) {

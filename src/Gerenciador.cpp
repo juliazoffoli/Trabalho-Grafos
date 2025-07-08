@@ -35,13 +35,25 @@ void Gerenciador::comandos(Grafo* grafo) {
                 primeiro = false;
             }
             cout << endl;
-            
-            cout<<"\nMetodo de impressao em tela nao implementado"<<endl<<endl;
 
-            if(pergunta_imprimir_arquivo("fecho_trans_dir.txt")) {
-                cout<<"\nMetodo de impressao em arquivo nao implementado"<<endl<<endl;
+            if(pergunta_imprimir_arquivo("fecho_transitivo_direto.txt")) {
+                ofstream arquivo("fecho_transitivo_direto.txt");
+                if (!arquivo) {
+                    cout << "Erro ao abrir arquivo." << endl;
+                } else {
+                    bool primeiro = true;  // Inicializa como true para o primeiro elemento
+                    for (char id : fecho_transitivo_direto) {
+                        if (!primeiro) {
+                            arquivo << ", ";
+                        }
+                        arquivo << id;
+                        primeiro = false;
+                    }
+                    arquivo << endl;
+                    arquivo.close();
+                    cout << "Fecho salvo em fecho_transitivo_direto.txt" << endl;
+                }
             }
-
 
             break;
         }
@@ -63,10 +75,23 @@ void Gerenciador::comandos(Grafo* grafo) {
             }
             cout << endl;
 
-            cout<<"Metodo de impressao em tela nao implementado"<<endl<<endl;
-
-            if(pergunta_imprimir_arquivo("fecho_trans_indir.txt")) {
-                cout<<"Metodo de impressao em arquivo nao implementado"<<endl;
+            if(pergunta_imprimir_arquivo("fecho_transitivo_indireto.txt")) {
+                ofstream arquivo("fecho_transitivo_indireto.txt");
+                if (!arquivo) {
+                    cout << "Erro ao abrir arquivo." << endl;
+                } else {
+                    bool primeiro = true;  // Inicializa como true para o primeiro elemento
+                    for (char id : fecho_transitivo_indireto) {
+                        if (!primeiro) {
+                            arquivo << ", ";
+                        }
+                        arquivo << id;
+                        primeiro = false;
+                    }
+                    arquivo << endl;
+                    arquivo.close();
+                    cout << "Fecho salvo em fecho_transitivo_indireto.txt" << endl;
+                }
             }
             break;
         }
