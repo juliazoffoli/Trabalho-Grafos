@@ -171,6 +171,15 @@ void Gerenciador::comandos(Grafo* grafo) {
         }
 
         case 'e': {
+            // Verifica se o grafo é não direcionado e ponderado nas arestas
+            if (grafo->in_direcionado) {
+                cout << "Erro: O grafo deve ser nao direcionado para AGM.\n";
+                break;
+            }
+            if (!grafo->in_ponderado_aresta) {
+                cout << "Erro: O grafo deve ser ponderado nas arestas para AGM.\n";
+                break;
+            }
             int tam;
             cout << "Digite o tamanho do subconjunto: ";
             cin >> tam;
@@ -202,6 +211,15 @@ void Gerenciador::comandos(Grafo* grafo) {
         }
 
         case 'f': {
+            // Verifica se o grafo é não direcionado e ponderado nas arestas
+            if (grafo->in_direcionado) {
+                cout << "Erro: O grafo deve ser nao direcionado para AGM.\n";
+                break;
+            }
+            if (!grafo->in_ponderado_aresta) {
+                cout << "Erro: O grafo deve ser ponderado nas arestas para AGM.\n";
+                break;
+            }
             int tam;
             cout << "Digite o tamanho do subconjunto: ";
             cin >> tam;
