@@ -1,6 +1,6 @@
 #include "Gerenciador.h"
 #include <fstream>
-
+#include "Guloso.h"
 
 void Gerenciador::comandos(Grafo* grafo) {
     cout<<"Digite uma das opcoes abaixo e pressione enter:"<<endl<<endl;
@@ -11,9 +11,15 @@ void Gerenciador::comandos(Grafo* grafo) {
     cout<<"(e) Arvore Geradora Minima (Algoritmo de Prim);"<<endl;
     cout<<"(f) Arvore Geradora Minima (Algoritmo de Kruskal);"<<endl;
     cout<<"(g) Arvore de caminhamento em profundidade;"<<endl;
-    cout<<"(h) Raio, diametro, centro e periferia do grafo;"<<endl;
+    cout<<"(h) Raio, diametro, centro e periferia do grafo;"<< endl;
     cout<<"(i) Vertices de Articulacao" << endl;
-    cout<<"(j) Lista de Adjacencia" << endl;
+    cout<<"(j) Lista de Adjacencia" << endl << endl;
+
+    cout<<"Algoritmos Gulosos para o problema Edge Dominating Set (Conjunto Dominante de Arestas):" << endl;
+    cout<<"(k) Algoritmo Guloso" << endl;
+    cout<<"(l) Algoritmo Guloso Randomizado Adaptativo" << endl;
+    cout<<"(m) Algoritmo Guloso Randomizado Adaptativo Reativo;" << endl << endl;
+    
     cout<<"(0) Sair;"<<endl<<endl;
 
     char resp;
@@ -247,10 +253,8 @@ void Gerenciador::comandos(Grafo* grafo) {
             } else {
                 cout << "Valor invalido\n";
             }
-    break;
-
-
-
+        
+        break;
         }
 
         case 'g': {
@@ -344,6 +348,39 @@ void Gerenciador::comandos(Grafo* grafo) {
 
         case 'j': {
             cout << "Lista de Adjacencia:" << endl;
+            grafo->imprime_ListaAdj();
+            cout << endl;
+
+            break;
+        }
+
+        case 'k': {
+            cout << "Algoritmo Guloso:" << endl;
+
+            Guloso guloso;
+            vector<pair<char, char>> solucao = guloso.algoritmo_guloso(grafo);
+            
+            
+            for (const auto& aresta : solucao) {
+                cout << "(" << aresta.first << ", " << aresta.second << ") ";
+            }
+        
+
+            cout << endl;
+
+            break;
+        }
+
+        case 'l': {
+            cout << "Algoritmo Randomizado:" << endl;
+            grafo->imprime_ListaAdj();
+            cout << endl;
+
+            break;
+        }
+
+        case 'm': {
+            cout << "Algoritmo Randomizado Reativo:" << endl;
             grafo->imprime_ListaAdj();
             cout << endl;
 
