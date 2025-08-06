@@ -9,6 +9,7 @@
 
 Grafo::Grafo() {
     this->ordem = 0;
+    this->num_arestas = 0;
     this->in_direcionado = false;
     this->in_ponderado_aresta = false;
     this->in_ponderado_vertice = false;
@@ -22,12 +23,14 @@ Grafo::~Grafo() {
 
 
 void Grafo::imprime_ListaAdj() {
+    cout << "Debugging: Imprimindo Lista de Adj: " << endl;
     for (No* no : lista_adj) {
         cout << no->id << ": ";
         
         // Imprime todas as arestas exceto a última com " -> "
         for (size_t i = 0; i < no->arestas.size(); ++i) {
             cout << no->arestas[i]->no_destino->get_id();
+
             if (i != no->arestas.size() - 1) { // Se não for o último elemento
                 cout << " -> ";
             }

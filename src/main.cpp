@@ -1,20 +1,3 @@
-/*
-#include <iostream>
-#include "Gerenciador.h"
-#include "Grafo.h"
-
-using namespace std;
-int main(int argc, char *argv[])
-{
-
-    Grafo* grafo = new Grafo();
-
-    Gerenciador::comandos(grafo);
-
-    return 0;
-}
-*/
-
 #include <iostream>
 #include <fstream>
 #include "Gerenciador.h"

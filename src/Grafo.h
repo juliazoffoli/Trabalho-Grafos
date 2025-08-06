@@ -18,6 +18,8 @@ public:
 
     void set_ordem(int ordem) { this->ordem = ordem; }
     int get_ordem() { return this->ordem; }
+    void set_num_arestas(int num_arestas) { this->num_arestas = num_arestas; }
+    int get_num_arestas() { return this->num_arestas; }
     void set_direcionado(bool direcionado) { this->in_direcionado = direcionado; }
     bool get_direcionado() { return this->in_direcionado; }
     void set_ponderado_aresta(bool ponderado) { this->in_ponderado_aresta = ponderado; }
@@ -44,6 +46,7 @@ public:
 
 
     int ordem;
+    int num_arestas;
     bool in_direcionado;
     bool in_ponderado_aresta;
     bool in_ponderado_vertice;
