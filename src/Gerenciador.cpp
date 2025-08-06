@@ -496,8 +496,7 @@ bool Gerenciador::lerArquivoConstruirGrafo(ifstream& arquivo, Grafo* grafo) {
     // Ler as arestas
     if(ponderado_aresta) {
         //lendo arestas ate que o arquivo tenha sido lido completamente:
-        while (true) {
-            arquivo >> id_1 >> id_2 >> peso;
+        while (arquivo >> id_1 >> id_2 >> peso) {
 
             // Encontrar os nós correspondentes
             No* no_1 = nullptr;
@@ -506,7 +505,7 @@ bool Gerenciador::lerArquivoConstruirGrafo(ifstream& arquivo, Grafo* grafo) {
                 if(no->id == id_1) no_1 = no;
                 if(no->id == id_2) no_2 = no;
             }
-
+            
             if(no_1 && no_2) { //Conferindo se os nós existem
                 Aresta* aresta = new Aresta(no_1, no_2, peso);
                 cout << "Foi criada a aresta entre " << no_1->id << " e " << no_2->id << " com peso " << peso << endl;
@@ -519,16 +518,10 @@ bool Gerenciador::lerArquivoConstruirGrafo(ifstream& arquivo, Grafo* grafo) {
                 cerr << "Erro: Aresta entre nós inexistentes: " << id_1 << " e " << id_2 << endl;
                 return false;
             }
-            if (arquivo.eof()){
-                cout << "Arquivo lido completamente." << endl;
-                break;
-            } 
         }
         grafo->set_num_arestas(num_arestas);
     } else {
-        while (true) {
-            arquivo >> id_1 >> id_2;
-            
+        while (arquivo >> id_1 >> id_2) {    
             // Encontrar os nós correspondentes
             No* no_1 = nullptr;
             No* no_2 = nullptr;
@@ -550,10 +543,6 @@ bool Gerenciador::lerArquivoConstruirGrafo(ifstream& arquivo, Grafo* grafo) {
                 cerr << "Erro: Aresta entre nós inexistentes: " << id_1 << " e " << id_2 << endl;
                 return false;
             }
-            if (arquivo.eof()){
-                cout << "Arquivo lido completamente." << endl;
-                break;
-            } 
         }
         grafo->set_num_arestas(num_arestas);
     }
