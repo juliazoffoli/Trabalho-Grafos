@@ -508,7 +508,6 @@ bool Gerenciador::lerArquivoConstruirGrafo(ifstream& arquivo, Grafo* grafo) {
             
             if(no_1 && no_2) { //Conferindo se os nós existem
                 Aresta* aresta = new Aresta(no_1, no_2, peso);
-                cout << "Foi criada a aresta entre " << no_1->id << " e " << no_2->id << " com peso " << peso << endl;
                 num_arestas++;
                 no_1->arestas.push_back(aresta);
                 if(!direcionado) {
@@ -532,7 +531,6 @@ bool Gerenciador::lerArquivoConstruirGrafo(ifstream& arquivo, Grafo* grafo) {
 
             if(no_1 && no_2) { //Conferindo se os nós existem
                 Aresta* aresta = new Aresta(no_1, no_2);
-                cout << "Foi criada a aresta entre " << no_1->id << " e " << no_2->id << " com peso " << peso << endl;
                 num_arestas++;
                 no_1->arestas.push_back(aresta);
                 if (!direcionado) {
@@ -559,5 +557,6 @@ void Gerenciador::imprimirGrafo(Grafo* grafo) {
     cout << "Direcionado: " << (grafo->get_direcionado() ? "Sim" : "Nao") << endl;
     cout << "Ponderado Aresta: " << (grafo->get_ponderado_aresta() ? "Sim" : "Nao") << endl;
     cout << "Ponderado Vertice: " << (grafo->get_ponderado_vertice() ? "Sim" : "Nao") << endl;
+
     return;
 } 

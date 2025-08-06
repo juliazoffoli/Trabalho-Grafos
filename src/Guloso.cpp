@@ -16,12 +16,6 @@ vector<pair<char, char>> Guloso::algoritmo_guloso(Grafo* grafo) {
 
     vector<pair<char, char>> arestas_nao_cobertas = obter_arestas_nao_cobertas(grafo);
 
-    // Debug: imprime as arestas
-    for (pair<char, char> aresta : arestas_nao_cobertas) {
-        cout << "(" << aresta.first << "," << aresta.second << ") ";
-    }
-    cout << endl;
-
     while (!arestas_nao_cobertas.empty()) {
 
         // Calcula o numero de arestas incidentes a u e v que ainda nao foram cobertas

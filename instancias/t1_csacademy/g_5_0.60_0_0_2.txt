@@ -1,0 +1,8 @@
+5 7
+d b
+e c
+e d
+a c
+e b
+c d
+b a
