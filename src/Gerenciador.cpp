@@ -511,7 +511,8 @@ bool Gerenciador::lerArquivoConstruirGrafo(ifstream& arquivo, Grafo* grafo) {
                 num_arestas++;
                 no_1->arestas.push_back(aresta);
                 if(!direcionado) {
-                    no_2->arestas.push_back(aresta); // Se não direcionado, adiciona a aresta também ao nó b
+                    Aresta* aresta2 = new Aresta(no_2, no_1, peso);
+                    no_2->arestas.push_back(aresta2);
                 } 
             } else {
                 cerr << "Erro: Aresta entre nós inexistentes: " << id_1 << " e " << id_2 << endl;
