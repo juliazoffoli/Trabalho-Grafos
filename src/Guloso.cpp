@@ -126,7 +126,7 @@ vector<pair<char, char>> Guloso::algoritmo_guloso_randomizado_adaptativo(Grafo* 
     return solucao;
 }
 
-vector<pair<char, char>> Guloso::algoritmo_guloso_randomizado_adaptativo_reativo(Grafo* grafo, double alfa) {
+vector<pair<char, char>> Guloso::algoritmo_guloso_randomizado_adaptativo_reativo(Grafo* grafo, vector<double> alfas, int num_inter, int bloco) {
     this->arquivo = ofstream ("[DEBUG]guloso_randomizado_adaptativo.txt");
     this->arquivo << grafo->instancia << endl << endl;
 
