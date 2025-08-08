@@ -3,7 +3,7 @@
 
 vector<No*> No::get_vizinhos() {
     vector<No*> vizinhos;
-    for (Aresta* aresta : arestas) {
+    for (Aresta* aresta : arestas_incidentes) {
         No* vizinho = nullptr;
         vizinho = aresta->no_destino; 
         vizinhos.push_back(vizinho);
@@ -14,5 +14,5 @@ vector<No*> No::get_vizinhos() {
 
 void No::adicionar_aresta(No* destino, int peso) {
     Aresta* a = new Aresta(this, destino, peso);
-    this->arestas.push_back(a);
+    this->arestas_incidentes.push_back(a);
 }

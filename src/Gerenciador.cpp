@@ -177,13 +177,13 @@ void Gerenciador::comandos(Grafo* grafo) {
         }
 
         case 'e': {
-            // Verifica se o grafo é não direcionado e ponderado nas arestas
+            // Verifica se o grafo é não direcionado e ponderado nas arestas_incidentes
             if (grafo->in_direcionado) {
                 cout << "Erro: O grafo deve ser nao direcionado para AGM.\n";
                 break;
             }
             if (!grafo->in_ponderado_aresta) {
-                cout << "Erro: O grafo deve ser ponderado nas arestas para AGM.\n";
+                cout << "Erro: O grafo deve ser ponderado nas arestas_incidentes para AGM.\n";
                 break;
             }
             int tam;
@@ -196,8 +196,8 @@ void Gerenciador::comandos(Grafo* grafo) {
 
                 if (pergunta_imprimir_arquivo("agm_prim.txt")) {
                     ofstream arquivo("agm_prim.txt");
-                    for (No* no : agm_prim->lista_adj) {
-                        for (Aresta* a : no->arestas) {
+                    for (No* no : agm_prim->lista_nos) {
+                        for (Aresta* a : no->arestas_incidentes) {
                             char u = a->no_origem->id;
                             char v = a->no_destino->id;
                             if (u < v) { // evitar duplicidade
@@ -217,13 +217,13 @@ void Gerenciador::comandos(Grafo* grafo) {
         }
 
         case 'f': {
-            // Verifica se o grafo é não direcionado e ponderado nas arestas
+            // Verifica se o grafo é não direcionado e ponderado nas arestas_incidentes
             if (grafo->in_direcionado) {
                 cout << "Erro: O grafo deve ser nao direcionado para AGM.\n";
                 break;
             }
             if (!grafo->in_ponderado_aresta) {
-                cout << "Erro: O grafo deve ser ponderado nas arestas para AGM.\n";
+                cout << "Erro: O grafo deve ser ponderado nas arestas_incidentes para AGM.\n";
                 break;
             }
             int tam;
@@ -236,8 +236,8 @@ void Gerenciador::comandos(Grafo* grafo) {
 
                 if (pergunta_imprimir_arquivo("agm_kruskal.txt")) {
                     ofstream arquivo("agm_kruskal.txt");
-                    for (No* no : agm_kruskal->lista_adj) {
-                        for (Aresta* a : no->arestas) {
+                    for (No* no : agm_kruskal->lista_nos) {
+                        for (Aresta* a : no->arestas_incidentes) {
                             char u = a->no_origem->id;
                             char v = a->no_destino->id;
                             if (u < v) { // evitar duplicidade
@@ -270,11 +270,11 @@ void Gerenciador::comandos(Grafo* grafo) {
                 } else {
                     out << "Arvore Caminhamento Profundidade: " << endl;
                     
-                    for (No* no : arvore_caminhamento_profundidade->lista_adj) {
+                    for (No* no : arvore_caminhamento_profundidade->lista_nos) {
                         out << no->id << ": ";
-                        for (size_t i = 0; i < no->arestas.size(); ++i) {
-                            out << no->arestas[i]->no_destino->get_id();
-                            if (i != no->arestas.size() - 1) {
+                        for (size_t i = 0; i < no->arestas_incidentes.size(); ++i) {
+                            out << no->arestas_incidentes[i]->no_destino->get_id();
+                            if (i != no->arestas_incidentes.size() - 1) {
                                 out << " -> ";
                             }
                         }
@@ -364,9 +364,9 @@ void Gerenciador::comandos(Grafo* grafo) {
             for (const auto& aresta : solucao) {
                 cout << "(" << aresta.first << ", " << aresta.second << ") ";
             }
-        
 
             cout << endl;
+
 
             break;
         }
@@ -412,7 +412,7 @@ vector<char> Gerenciador::get_conjunto_ids(Grafo *grafo, int tam) {
     while((int)ids.size() < tam) {
         char id_no =get_id_entrada();
         bool existe = false;
-        for(No* no: grafo->lista_adj){
+        for(No* no: grafo->lista_nos){
             if(no->id == id_no){
                 existe = true;
                 break;
@@ -481,7 +481,7 @@ bool Gerenciador::lerArquivoConstruirGrafo(ifstream& arquivo, Grafo* grafo) {
             arquivo >> id >> peso;
             
             No* no = new No(id, peso);
-            grafo->lista_adj.push_back(no);
+            grafo->lista_nos.push_back(no);
         }
     } else {
         for(int i = 0; i < ordem; i++) {
@@ -489,19 +489,19 @@ bool Gerenciador::lerArquivoConstruirGrafo(ifstream& arquivo, Grafo* grafo) {
             arquivo >> id;
             
             No* no = new No(id);
-            grafo->lista_adj.push_back(no);
+            grafo->lista_nos.push_back(no);
         }
     }
 
-    // Ler as arestas
+    // Ler as arestas_incidentes
     if(ponderado_aresta) {
-        //lendo arestas ate que o arquivo tenha sido lido completamente:
+        //lendo arestas_incidentes ate que o arquivo tenha sido lido completamente:
         while (arquivo >> id_1 >> id_2 >> peso) {
 
             // Encontrar os nós correspondentes
             No* no_1 = nullptr;
             No* no_2 = nullptr;
-            for(No* no : grafo->lista_adj) {
+            for(No* no : grafo->lista_nos) {
                 if(no->id == id_1) no_1 = no;
                 if(no->id == id_2) no_2 = no;
             }
@@ -509,10 +509,10 @@ bool Gerenciador::lerArquivoConstruirGrafo(ifstream& arquivo, Grafo* grafo) {
             if(no_1 && no_2) { //Conferindo se os nós existem
                 Aresta* aresta = new Aresta(no_1, no_2, peso);
                 num_arestas++;
-                no_1->arestas.push_back(aresta);
+                no_1->arestas_incidentes.push_back(aresta);
                 if(!direcionado) {
                     Aresta* aresta2 = new Aresta(no_2, no_1, peso);
-                    no_2->arestas.push_back(aresta2);
+                    no_2->arestas_incidentes.push_back(aresta2);
                 } 
             } else {
                 cerr << "Erro: Aresta entre nós inexistentes: " << id_1 << " e " << id_2 << endl;
@@ -525,7 +525,7 @@ bool Gerenciador::lerArquivoConstruirGrafo(ifstream& arquivo, Grafo* grafo) {
             // Encontrar os nós correspondentes
             No* no_1 = nullptr;
             No* no_2 = nullptr;
-            for(No* no : grafo->lista_adj) {
+            for(No* no : grafo->lista_nos) {
                 if(no->id == id_1) no_1 = no;
                 if(no->id == id_2) no_2 = no;
             }
@@ -533,10 +533,10 @@ bool Gerenciador::lerArquivoConstruirGrafo(ifstream& arquivo, Grafo* grafo) {
             if(no_1 && no_2) { //Conferindo se os nós existem
                 Aresta* aresta = new Aresta(no_1, no_2);
                 num_arestas++;
-                no_1->arestas.push_back(aresta);
+                no_1->arestas_incidentes.push_back(aresta);
                 if (!direcionado) {
                     Aresta* aresta2 = new Aresta(no_2, no_1);
-                    no_2->arestas.push_back(aresta2);
+                    no_2->arestas_incidentes.push_back(aresta2);
                 }
             } else {
                 cerr << "Erro: Aresta entre nós inexistentes: " << id_1 << " e " << id_2 << endl;

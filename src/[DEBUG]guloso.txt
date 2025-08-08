@@ -1,0 +1,208 @@
+../instancias/instancias_t1/g_10_0.30_0_0_0.txt
+
+[DEBUG] Arestas não cobertas (antes de iniciar a execução): 
+(a, e) (a, b) (g, b) (g, d) (h, b) (j, f) (j, d) (c, e) (c, b) (d, f) (d, b) (i, f) (i, e) (f, b) 
+
+[DEBUG] Execução 1:
+[DEBUG] Arestas não cobertas: 
+(a, e) (a, b) (g, b) (g, d) (h, b) (j, f) (j, d) (c, e) (c, b) (d, f) (d, b) (i, f) (i, e) (f, b) 
+
+[DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
+[DEBUG] Aresta: (a, e)
+[DEBUG] Nó: a, Grau: 1
+[DEBUG] Nó: e, Grau: 1
+[DEBUG] Aresta: (a, b)
+[DEBUG] Nó: a, Grau: 2
+[DEBUG] Nó: b, Grau: 1
+[DEBUG] Aresta: (g, b)
+[DEBUG] Nó: g, Grau: 1
+[DEBUG] Nó: b, Grau: 2
+[DEBUG] Aresta: (g, d)
+[DEBUG] Nó: g, Grau: 2
+[DEBUG] Nó: d, Grau: 1
+[DEBUG] Aresta: (h, b)
+[DEBUG] Nó: h, Grau: 1
+[DEBUG] Nó: b, Grau: 3
+[DEBUG] Aresta: (j, f)
+[DEBUG] Nó: j, Grau: 1
+[DEBUG] Nó: f, Grau: 1
+[DEBUG] Aresta: (j, d)
+[DEBUG] Nó: j, Grau: 2
+[DEBUG] Nó: d, Grau: 2
+[DEBUG] Aresta: (c, e)
+[DEBUG] Nó: c, Grau: 1
+[DEBUG] Nó: e, Grau: 2
+[DEBUG] Aresta: (c, b)
+[DEBUG] Nó: c, Grau: 2
+[DEBUG] Nó: b, Grau: 4
+[DEBUG] Aresta: (d, f)
+[DEBUG] Nó: d, Grau: 3
+[DEBUG] Nó: f, Grau: 2
+[DEBUG] Aresta: (d, b)
+[DEBUG] Nó: d, Grau: 4
+[DEBUG] Nó: b, Grau: 5
+[DEBUG] Aresta: (i, f)
+[DEBUG] Nó: i, Grau: 1
+[DEBUG] Nó: f, Grau: 3
+[DEBUG] Aresta: (i, e)
+[DEBUG] Nó: i, Grau: 2
+[DEBUG] Nó: e, Grau: 3
+[DEBUG] Aresta: (f, b)
+[DEBUG] Nó: f, Grau: 4
+[DEBUG] Nó: b, Grau: 6
+
+[DEBUG] Grau dos vertices das arestas não cobertas: 
+[DEBUG] Nó: a, Grau: 2
+[DEBUG] Nó: b, Grau: 6
+[DEBUG] Nó: c, Grau: 2
+[DEBUG] Nó: d, Grau: 4
+[DEBUG] Nó: e, Grau: 3
+[DEBUG] Nó: f, Grau: 4
+[DEBUG] Nó: g, Grau: 2
+[DEBUG] Nó: h, Grau: 1
+[DEBUG] Nó: i, Grau: 2
+[DEBUG] Nó: j, Grau: 2
+
+[DEBUG] Selecionando a aresta com maior grau...
+[DEBUG] Aresta: (a, e), Grau: 5
+[DEBUG] Aresta: (a, b), Grau: 8
+[DEBUG] Aresta: (g, b), Grau: 8
+[DEBUG] Aresta: (g, d), Grau: 6
+[DEBUG] Aresta: (h, b), Grau: 7
+[DEBUG] Aresta: (j, f), Grau: 6
+[DEBUG] Aresta: (j, d), Grau: 6
+[DEBUG] Aresta: (c, e), Grau: 5
+[DEBUG] Aresta: (c, b), Grau: 8
+[DEBUG] Aresta: (d, f), Grau: 8
+[DEBUG] Aresta: (d, b), Grau: 10
+[DEBUG] Aresta: (i, f), Grau: 6
+[DEBUG] Aresta: (i, e), Grau: 5
+[DEBUG] Aresta: (f, b), Grau: 10
+[DEBUG] Aresta selecionada: (d, b) com grau 10
+[DEBUG] Solução:  (d, b) 
+
+[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (d, b)
+
+[DEBUG] Verificando aresta: (f, b)
+[DEBUG] Removendo aresta: (f, b)
+
+[DEBUG] Verificando aresta: (i, e)
+
+[DEBUG] Verificando aresta: (i, f)
+
+[DEBUG] Verificando aresta: (d, b)
+[DEBUG] Removendo aresta: (d, b)
+
+[DEBUG] Verificando aresta: (d, f)
+[DEBUG] Removendo aresta: (d, f)
+
+[DEBUG] Verificando aresta: (c, b)
+[DEBUG] Removendo aresta: (c, b)
+
+[DEBUG] Verificando aresta: (c, e)
+
+[DEBUG] Verificando aresta: (j, d)
+[DEBUG] Removendo aresta: (j, d)
+
+[DEBUG] Verificando aresta: (j, f)
+
+[DEBUG] Verificando aresta: (h, b)
+[DEBUG] Removendo aresta: (h, b)
+
+[DEBUG] Verificando aresta: (g, d)
+[DEBUG] Removendo aresta: (g, d)
+
+[DEBUG] Verificando aresta: (g, b)
+[DEBUG] Removendo aresta: (g, b)
+
+[DEBUG] Verificando aresta: (a, b)
+[DEBUG] Removendo aresta: (a, b)
+
+[DEBUG] Verificando aresta: (a, e)
+
+[DEBUG] Arestas não cobertas após remoção: 
+(a, e) (j, f) (c, e) (i, f) (i, e) 
+
+[DEBUG] Execução 2:
+[DEBUG] Arestas não cobertas: 
+(a, e) (j, f) (c, e) (i, f) (i, e) 
+
+[DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
+[DEBUG] Aresta: (a, e)
+[DEBUG] Nó: a, Grau: 1
+[DEBUG] Nó: e, Grau: 1
+[DEBUG] Aresta: (j, f)
+[DEBUG] Nó: j, Grau: 1
+[DEBUG] Nó: f, Grau: 1
+[DEBUG] Aresta: (c, e)
+[DEBUG] Nó: c, Grau: 1
+[DEBUG] Nó: e, Grau: 2
+[DEBUG] Aresta: (i, f)
+[DEBUG] Nó: i, Grau: 1
+[DEBUG] Nó: f, Grau: 2
+[DEBUG] Aresta: (i, e)
+[DEBUG] Nó: i, Grau: 2
+[DEBUG] Nó: e, Grau: 3
+
+[DEBUG] Grau dos vertices das arestas não cobertas: 
+[DEBUG] Nó: a, Grau: 1
+[DEBUG] Nó: c, Grau: 1
+[DEBUG] Nó: e, Grau: 3
+[DEBUG] Nó: f, Grau: 2
+[DEBUG] Nó: i, Grau: 2
+[DEBUG] Nó: j, Grau: 1
+
+[DEBUG] Selecionando a aresta com maior grau...
+[DEBUG] Aresta: (a, e), Grau: 4
+[DEBUG] Aresta: (j, f), Grau: 3
+[DEBUG] Aresta: (c, e), Grau: 4
+[DEBUG] Aresta: (i, f), Grau: 4
+[DEBUG] Aresta: (i, e), Grau: 5
+[DEBUG] Aresta selecionada: (i, e) com grau 5
+[DEBUG] Solução:  (d, b)  (i, e) 
+
+[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (i, e)
+
+[DEBUG] Verificando aresta: (i, e)
+[DEBUG] Removendo aresta: (i, e)
+
+[DEBUG] Verificando aresta: (i, f)
+[DEBUG] Removendo aresta: (i, f)
+
+[DEBUG] Verificando aresta: (c, e)
+[DEBUG] Removendo aresta: (c, e)
+
+[DEBUG] Verificando aresta: (j, f)
+
+[DEBUG] Verificando aresta: (a, e)
+[DEBUG] Removendo aresta: (a, e)
+
+[DEBUG] Arestas não cobertas após remoção: 
+(j, f) 
+
+[DEBUG] Execução 3:
+[DEBUG] Arestas não cobertas: 
+(j, f) 
+
+[DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
+[DEBUG] Aresta: (j, f)
+[DEBUG] Nó: j, Grau: 1
+[DEBUG] Nó: f, Grau: 1
+
+[DEBUG] Grau dos vertices das arestas não cobertas: 
+[DEBUG] Nó: f, Grau: 1
+[DEBUG] Nó: j, Grau: 1
+
+[DEBUG] Selecionando a aresta com maior grau...
+[DEBUG] Aresta: (j, f), Grau: 2
+[DEBUG] Aresta selecionada: (j, f) com grau 2
+[DEBUG] Solução:  (d, b)  (i, e)  (j, f) 
+
+[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (j, f)
+
+[DEBUG] Verificando aresta: (j, f)
+[DEBUG] Removendo aresta: (j, f)
+
+[DEBUG] Arestas não cobertas após remoção: 
+
+[DEBUG] Solução final: (d, b) (i, e) (j, f) 

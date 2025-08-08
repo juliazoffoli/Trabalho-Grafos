@@ -13,8 +13,7 @@ Grafo::Grafo() {
     this->in_direcionado = false;
     this->in_ponderado_aresta = false;
     this->in_ponderado_vertice = false;
-
-    this->lista_adj = vector<No*>();
+    this->lista_nos = vector<No*>();
 }
 
 Grafo::~Grafo() {
@@ -24,14 +23,14 @@ Grafo::~Grafo() {
 
 void Grafo::imprime_ListaAdj() {
     cout << "Debugging: Imprimindo Lista de Adj: " << endl;
-    for (No* no : lista_adj) {
+    for (No* no : lista_nos) {
         cout << no->id << ": ";
         
-        // Imprime todas as arestas exceto a última com " -> "
-        for (size_t i = 0; i < no->arestas.size(); ++i) {
-            cout << no->arestas[i]->no_destino->get_id();
+        // Imprime todas as arestas_incidentes exceto a última com " -> "
+        for (size_t i = 0; i < no->arestas_incidentes.size(); ++i) {
+            cout << no->arestas_incidentes[i]->no_destino->get_id();
 
-            if (i != no->arestas.size() - 1) { // Se não for o último elemento
+            if (i != no->arestas_incidentes.size() - 1) { // Se não for o último elemento
                 cout << " -> ";
             }
         }
@@ -41,7 +40,7 @@ void Grafo::imprime_ListaAdj() {
 }
 
 No* Grafo::buscarNo(char id_no) {
-    for (No* no : this->lista_adj) {
+    for (No* no : this->lista_nos) {
         if (no->id == id_no) {
             return no;
         }
@@ -56,7 +55,7 @@ vector<char> Grafo::fecho_transitivo_direto(char id_no) {
     vector<char> ids;
     vector<No*> nos_visitados;
 
-    for (No* no : this->lista_adj) {
+    for (No* no : this->lista_nos) {
         if (no->id == id_no) {
             for (No* vizinho : no->get_vizinhos()) {
                 ids.push_back(vizinho->id);
@@ -66,7 +65,7 @@ vector<char> Grafo::fecho_transitivo_direto(char id_no) {
     }
 
     for (char id : ids) {
-        for (No* no : this->lista_adj) {
+        for (No* no : this->lista_nos) {
             if (no->id == id) {
                 for (No* vizinho : no->get_vizinhos()) {
                     // Adicionar vizinho apenas se ele não estiver em nos_visitados:
@@ -105,10 +104,10 @@ vector<char> Grafo::fecho_transitivo_direto(char id_no) {
         fila.pop();
 
         // Encontra o nó atual na lista de adjacência
-        for (No* no : lista_adj) {
+        for (No* no : lista_nos) {
             if (no->id == atual) {
-                // Processa todas as arestas
-                for (Aresta* aresta : no->arestas) {
+                // Processa todas as arestas_incidentes
+                for (Aresta* aresta : no->arestas_incidentes) {
                     char vizinho = aresta->no_destino->id;
                     
                     // Se o grafo é não direcionado, considera a aresta nos dois sentidos
@@ -142,8 +141,8 @@ vector<char> Grafo::fecho_transitivo_indireto(char id_no) {
         queue<char> fila;
         
         // Predecessores diretos
-        for (No* no : lista_adj) {
-            for (Aresta* aresta : no->arestas) {
+        for (No* no : lista_nos) {
+            for (Aresta* aresta : no->arestas_incidentes) {
                 if (aresta->no_destino->get_id() == id_no) {
                     char id_origem = aresta->no_origem->get_id();
                     if (visitados.insert(id_origem).second) {
@@ -159,8 +158,8 @@ vector<char> Grafo::fecho_transitivo_indireto(char id_no) {
             char atual = fila.front();
             fila.pop();
             
-            for (No* no : lista_adj) {
-                for (Aresta* aresta : no->arestas) {
+            for (No* no : lista_nos) {
+                for (Aresta* aresta : no->arestas_incidentes) {
                     if (aresta->no_destino->get_id() == atual) {
                         char id_origem = aresta->no_origem->get_id();
                         if (visitados.insert(id_origem).second) {
@@ -187,7 +186,7 @@ vector<char> Grafo::caminho_minimo_dijkstra(char id_no_a, char id_no_b) {
     vector<char> todos_ids;
 
     // Inicializa distâncias e S̅
-    for (No* no : lista_adj) {
+    for (No* no : lista_nos) {
         char id = no->get_id();
         todos_ids.push_back(id);
         if (id != id_no_a) {
@@ -268,9 +267,9 @@ vector<char> Grafo::caminho_minimo_floyd(char id_no, char id_no_b) {
     unordered_map<char, int> id_to_idx;
     unordered_map<int, char> idx_to_id;
 
-    int n = lista_adj.size();
+    int n = lista_nos.size();
     for (int i = 0; i < n; ++i) {
-        char id = lista_adj[i]->get_id();
+        char id = lista_nos[i]->get_id();
         id_to_idx[id] = i;
         idx_to_id[i] = id;
         vertices.push_back(id);
@@ -282,7 +281,7 @@ vector<char> Grafo::caminho_minimo_floyd(char id_no, char id_no_b) {
 
     for (int i = 0; i < n; ++i) {
         dist[i][i] = 0;
-        No* no = lista_adj[i];
+        No* no = lista_nos[i];
 
         for (Aresta* aresta : no->get_arestas()) {
             int j = id_to_idx[aresta->no_destino->get_id()];
@@ -339,7 +338,7 @@ Grafo * Grafo::arvore_geradora_minima_prim(vector<char> ids_nos) {
     for (char id : ids_nos) {
         No* novo = new No(id);
         novos_nos.push_back(novo);
-        agm->lista_adj.push_back(novo);
+        agm->lista_nos.push_back(novo);
     }
 
     vector<char> prox(n, '\0'); // vetor para armazenar o próximo nó a ser adicionado à árvore geradora mínima
@@ -348,8 +347,8 @@ Grafo * Grafo::arvore_geradora_minima_prim(vector<char> ids_nos) {
     int menor = 999999;
     char u = '\0';
     char v = '\0';
-    for (No* no : lista_adj) {
-        for (Aresta* a : no->arestas) {
+    for (No* no : lista_nos) {
+        for (Aresta* a : no->arestas_incidentes) {
             char id1 = a->no_origem->id;
             char id2 = a->no_destino->id;
 
@@ -379,8 +378,8 @@ Grafo * Grafo::arvore_geradora_minima_prim(vector<char> ids_nos) {
     }
 
     Aresta* a_ini = new Aresta(nu, nv, menor); // cria a aresta inicial com o menor peso encontrado
-    nu->arestas.push_back(a_ini);
-    nv->arestas.push_back(a_ini);
+    nu->arestas_incidentes.push_back(a_ini);
+    nv->arestas_incidentes.push_back(a_ini);
     arestas_agm.push_back(a_ini); 
 
     // inicializa o vetor prox inicialmente com \0 e depois com os nós adjacentes a u e v
@@ -393,9 +392,9 @@ Grafo * Grafo::arvore_geradora_minima_prim(vector<char> ids_nos) {
         int peso_u = 999999; // inicializa com um valor alto
         int peso_v = 999999;
 
-        // busca o peso das arestas adjacentes a u e v
+        // busca o peso das arestas_incidentes adjacentes a u e v
         No* ni = buscarNo(ids_nos[i]);
-         for (Aresta* a : ni->arestas) {
+         for (Aresta* a : ni->arestas_incidentes) {
             if ((a->no_destino->id == u || a->no_origem->id == u) && a->peso < peso_u)
                 peso_u = a->peso;
             if ((a->no_destino->id == v || a->no_origem->id == v) && a->peso < peso_v)
@@ -418,7 +417,7 @@ Grafo * Grafo::arvore_geradora_minima_prim(vector<char> ids_nos) {
 
             // procura a aresta de menor peso entre vi e pi
             No* ni = buscarNo(vi);
-            for (Aresta* a : ni->arestas) {
+            for (Aresta* a : ni->arestas_incidentes) {
                 char u = a->no_origem->id;
                 char v = a->no_destino->id;
                 if ((u == vi && v == pi) || (u == pi && v == vi)) {
@@ -430,7 +429,7 @@ Grafo * Grafo::arvore_geradora_minima_prim(vector<char> ids_nos) {
             }
         }
 
-        // se j for -1, significa que não há mais arestas a serem adicionadas
+        // se j for -1, significa que não há mais arestas_incidentes a serem adicionadas
         if (j == -1) break;
 
         char no_j = ids_nos[j]; 
@@ -445,8 +444,8 @@ Grafo * Grafo::arvore_geradora_minima_prim(vector<char> ids_nos) {
 
         // adiciona a aresta (nj, np) com o peso menor encontrado
         Aresta* a = new Aresta(nj, np, menor);
-        nj->arestas.push_back(a);
-        np->arestas.push_back(a);
+        nj->arestas_incidentes.push_back(a);
+        np->arestas_incidentes.push_back(a);
         arestas_agm.push_back(a);
 
         prox[j] = '\0';
@@ -457,13 +456,13 @@ Grafo * Grafo::arvore_geradora_minima_prim(vector<char> ids_nos) {
                 char vi = ids_nos[i];
                 No* ni = buscarNo(vi);
 
-                for (Aresta* a : ni->arestas) { // verifica se a aresta é adjacente a no_j
+                for (Aresta* a : ni->arestas_incidentes) { // verifica se a aresta é adjacente a no_j
                     if ((a->no_origem->id == vi && a->no_destino->id == no_j) ||
                         (a->no_destino->id == vi && a->no_origem->id == no_j)) {
 
                         // encontra o peso atual da aresta entre vi e prox[i]
                         int peso_atual = 999999;
-                        for (Aresta* a2 : ni->arestas) {
+                        for (Aresta* a2 : ni->arestas_incidentes) {
                             if ((a2->no_origem->id == vi && a2->no_destino->id == prox[i]) ||
                                 (a2->no_destino->id == vi && a2->no_origem->id == prox[i])) {
                                 peso_atual = a2->peso;
@@ -480,17 +479,17 @@ Grafo * Grafo::arvore_geradora_minima_prim(vector<char> ids_nos) {
             }
         }
 
-        contador++; // incrementa o contador de arestas adicionadas
+        contador++; // incrementa o contador de arestas_incidentes adicionadas
     }
 
 
 
     cout << "\nLista de Adjacência da AGM(PRIM):\n";
-    for (No* no : agm->lista_adj) {
+    for (No* no : agm->lista_nos) {
         cout << no->id << ": ";
         vector<string> vizinhos;
 
-        for (Aresta* a : no->arestas) {
+        for (Aresta* a : no->arestas_incidentes) {
             char vizinho = (a->no_origem->id == no->id) ? a->no_destino->id : a->no_origem->id;
             vizinhos.push_back(string(1, vizinho));
         }
@@ -516,20 +515,20 @@ Grafo * Grafo::arvore_geradora_minima_kruskal(vector<char> ids_nos) {
 
  // cria novos nós para a árvore geradora mínima (agm) com os ids fornecidos e adiciona esses nós à lista de adjacência do grafo agm
     vector<No*> novos_nos;
-    vector<Aresta*> arestas_agm; // vetor para armazenar a ordem de inserção das arestas
+    vector<Aresta*> arestas_agm; // vetor para armazenar a ordem de inserção das arestas_incidentes
 
     for (char id : ids_nos) {
         No* novo_no = new No(id);
         novos_nos.push_back(novo_no);
-        agm->lista_adj.push_back(novo_no);
+        agm->lista_nos.push_back(novo_no);
     }
 
 // coletar os nós novos no grafo agm
-    vector<Aresta*> arestas;
-    for(int i = 0; i < lista_adj.size(); i++) {
-        No* no = lista_adj[i];
+    vector<Aresta*> arestas_incidentes;
+    for(int i = 0; i < lista_nos.size(); i++) {
+        No* no = lista_nos[i];
         bool contem_i = false;
-        for (char id : ids_nos) { // verifica se o nó atual contém algum dos ids fornecidos, se sim, adiciona as arestas desse nó à lista de arestas que serão consideradas para a árvore geradora mínima
+        for (char id : ids_nos) { // verifica se o nó atual contém algum dos ids fornecidos, se sim, adiciona as arestas_incidentes desse nó à lista de arestas_incidentes que serão consideradas para a árvore geradora mínima
             if (no->id == id) {
                 contem_i = true;
                 break;
@@ -539,9 +538,9 @@ Grafo * Grafo::arvore_geradora_minima_kruskal(vector<char> ids_nos) {
         if(!contem_i)  // se o nó não contém nenhum dos ids fornecidos, pula para o próximo nó
             continue;
         
- // adiciona as arestas do nó atual à lista de arestas que serão consideradas para a árvore geradora mínima
-        for(int j = 0; j < no->arestas.size(); j++){
-            Aresta* aresta = no->arestas[j];
+ // adiciona as arestas_incidentes do nó atual à lista de arestas_incidentes que serão consideradas para a árvore geradora mínima
+        for(int j = 0; j < no->arestas_incidentes.size(); j++){
+            Aresta* aresta = no->arestas_incidentes[j];
             char u = aresta->no_origem->id;
             char v = aresta->no_destino->id;
 
@@ -556,10 +555,10 @@ Grafo * Grafo::arvore_geradora_minima_kruskal(vector<char> ids_nos) {
                     contem_v = true;
                 }
             }
-// verifica se a aresta contém ambos os nós u e v, se sim, adiciona a aresta à lista de arestas que serão consideradas para a árvore geradora mínima
+// verifica se a aresta contém ambos os nós u e v, se sim, adiciona a aresta à lista de arestas_incidentes que serão consideradas para a árvore geradora mínima
             if (contem_u && contem_v) { 
                 bool ja_adicionada = false;
-                for(Aresta* a : arestas){ // verifica se a aresta já foi adicionada
+                for(Aresta* a : arestas_incidentes){ // verifica se a aresta já foi adicionada
                     char a_u = a->no_origem->id;
                     char a_v = a->no_destino->id;
                     if ((a_u == u && a_v == v) || (a_u == v && a_v == u)) {
@@ -568,17 +567,17 @@ Grafo * Grafo::arvore_geradora_minima_kruskal(vector<char> ids_nos) {
 
                 }
                 if (!ja_adicionada) // se a aresta ainda não foi adicionada, adiciona a aresta à lista
-                    arestas.push_back(aresta);
+                    arestas_incidentes.push_back(aresta);
             }   
         }
     }
-// ordena as arestas por peso utilizando o bubble sort
-    for (int i = 0; i < arestas.size() - 1; i++) {
-        for (int j = 0; j < arestas.size() - i - 1; j++) {
-            if (arestas[j]->peso > arestas[j + 1]->peso) {
-                Aresta* temp = arestas[j];
-                arestas[j] = arestas[j + 1];
-                arestas[j + 1] = temp;
+// ordena as arestas_incidentes por peso utilizando o bubble sort
+    for (int i = 0; i < arestas_incidentes.size() - 1; i++) {
+        for (int j = 0; j < arestas_incidentes.size() - i - 1; j++) {
+            if (arestas_incidentes[j]->peso > arestas_incidentes[j + 1]->peso) {
+                Aresta* temp = arestas_incidentes[j];
+                arestas_incidentes[j] = arestas_incidentes[j + 1];
+                arestas_incidentes[j + 1] = temp;
             }
         }
     }
@@ -590,10 +589,10 @@ Grafo * Grafo::arvore_geradora_minima_kruskal(vector<char> ids_nos) {
     }
 
     int cont = 0;   
-// percorre as arestas ordenadas e adiciona as arestas à árvore geradora mínima (agm) se os nós de origem e destino não estiverem no mesmo grupo
+// percorre as arestas_incidentes ordenadas e adiciona as arestas_incidentes à árvore geradora mínima (agm) se os nós de origem e destino não estiverem no mesmo grupo
 // se estiverem no mesmo grupo, a aresta não é adicionada, porque configura como um ciclo
-    for (int i = 0; i < arestas.size() && cont < ids_nos.size()-1; i++){
-        Aresta* a = arestas[i];
+    for (int i = 0; i < arestas_incidentes.size() && cont < ids_nos.size()-1; i++){
+        Aresta* a = arestas_incidentes[i];
         char u = a->no_origem->id;
         char v = a->no_destino->id;
 
@@ -627,8 +626,8 @@ Grafo * Grafo::arvore_geradora_minima_kruskal(vector<char> ids_nos) {
             }
 // se os nós correspondentes forem encontrados, cria uma nova aresta e adiciona aos nós u e v
             Aresta* nova_aresta = new Aresta(no_u, no_v, a->peso);
-            no_u->arestas.push_back(nova_aresta);
-            no_v->arestas.push_back(nova_aresta); 
+            no_u->arestas_incidentes.push_back(nova_aresta);
+            no_v->arestas_incidentes.push_back(nova_aresta); 
             arestas_agm.push_back(nova_aresta);
 
             cont ++;
@@ -637,11 +636,11 @@ Grafo * Grafo::arvore_geradora_minima_kruskal(vector<char> ids_nos) {
 
 
     cout << "\nLista de Adjacência da AGM(Kruskal):\n";
-    for (No* no : agm->lista_adj) {
+    for (No* no : agm->lista_nos) {
         cout << no->id << ": ";
         vector<string> vizinhos;
 
-        for (Aresta* a : no->arestas) {
+        for (Aresta* a : no->arestas_incidentes) {
             char vizinho = (a->no_origem->id == no->id) ? a->no_destino->id : a->no_origem->id;
             vizinhos.push_back(string(1, vizinho));
         }
@@ -663,13 +662,13 @@ Grafo* Grafo::arvore_caminhamento_profundidade(char id_no) {
     No* inicio_original = buscarNo(id_no);
     if (!inicio_original) return acp;
 
-    for (No* no : lista_adj)
+    for (No* no : lista_nos)
         no->visitado = false;
 
     stack<pair<No*, No*>> pilha;
 
     No* inicio_acp = new No(inicio_original->id);
-    acp->lista_adj.push_back(inicio_acp);
+    acp->lista_nos.push_back(inicio_acp);
     inicio_original->visitado = true;
 
     pilha.push({inicio_original, inicio_acp});
@@ -680,14 +679,14 @@ Grafo* Grafo::arvore_caminhamento_profundidade(char id_no) {
         No* atual_acp = par.second;
         pilha.pop();
 
-        for (Aresta* aresta : atual_original->arestas) {
+        for (Aresta* aresta : atual_original->arestas_incidentes) {
             No* vizinho_original = aresta->no_destino;
 
             if (!vizinho_original->visitado) {
                 vizinho_original->visitado = true;
 
                 No* vizinho_acp = new No(vizinho_original->id);
-                acp->lista_adj.push_back(vizinho_acp);
+                acp->lista_nos.push_back(vizinho_acp);
 
                 atual_acp->adicionar_aresta(vizinho_acp, aresta->peso);
                 if (!in_direcionado)
@@ -702,17 +701,17 @@ Grafo* Grafo::arvore_caminhamento_profundidade(char id_no) {
 }
 
 vector<int> Grafo::calcular_excentricidades() {
-    int n = lista_adj.size();
+    int n = lista_nos.size();
     vector<int> excentricidade(n, 0);
 
     for (int i = 0; i < n; ++i) {
-        char origem_id = lista_adj[i]->get_id();
+        char origem_id = lista_nos[i]->get_id();
         int max_dist = 0;
 
         for (int j = 0; j < n; ++j) {
             if (i == j) continue;
 
-            char destino_id = lista_adj[j]->get_id();
+            char destino_id = lista_nos[j]->get_id();
             vector<char> caminho = caminho_minimo_floyd(origem_id, destino_id);
 
             if (caminho.empty())
@@ -746,7 +745,7 @@ vector<char> Grafo::centro() {
     vector<char> centro;
     for (size_t i = 0; i < exc.size(); ++i)
         if (exc[i] == r)
-            centro.push_back(lista_adj[i]->get_id());
+            centro.push_back(lista_nos[i]->get_id());
 
     return centro;
 }
@@ -758,7 +757,7 @@ vector<char> Grafo::periferia() {
     vector<char> periferia;
     for (size_t i = 0; i < exc.size(); ++i)
         if (exc[i] == d)
-            periferia.push_back(lista_adj[i]->get_id());
+            periferia.push_back(lista_nos[i]->get_id());
 
     return periferia;
 }

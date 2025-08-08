@@ -9,7 +9,6 @@ int main(int argc, char *argv[]) {
     Grafo* grafo = new Grafo();
     
     string nomeArquivo;
-
     if(argc > 1) {                      // arg[0] é o nome do programa. se tiver um segundo arg, é o nome do arquivo
         nomeArquivo = argv[1];
     } 
@@ -18,7 +17,10 @@ int main(int argc, char *argv[]) {
         cout << "Digite o nome do arquivo de entrada: ";
         cin >> nomeArquivo;
     }
-
+    
+    grafo->instancia = nomeArquivo;
+    cout << "Nome arquivo:" << nomeArquivo << endl;
+    
     // Tenta abrir o arquivo
     ifstream arquivo(nomeArquivo);
     if(!arquivo.is_open()) {

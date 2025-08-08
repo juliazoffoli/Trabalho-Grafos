@@ -47,10 +47,11 @@ public:
 
     int ordem;
     int num_arestas;
+    string instancia;
     bool in_direcionado;
     bool in_ponderado_aresta;
     bool in_ponderado_vertice;
-    vector<No*> lista_adj;
+    vector<No*> lista_nos;
 
 private:
     vector<int> calcular_excentricidades();
