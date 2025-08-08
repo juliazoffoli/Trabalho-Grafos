@@ -1,13 +1,16 @@
 #include <iostream>
 #include <fstream>
+#include <cstdlib>
+#include <ctime>
 #include "Gerenciador.h"
 #include "Grafo.h"
 
 using namespace std;
 
 int main(int argc, char *argv[]) {
-    Grafo* grafo = new Grafo();
     
+    Grafo* grafo = new Grafo();
+    srand(time(0));
     string nomeArquivo;
     if(argc > 1) {                      // arg[0] é o nome do programa. se tiver um segundo arg, é o nome do arquivo
         nomeArquivo = argv[1];

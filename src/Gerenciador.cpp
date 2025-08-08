@@ -372,9 +372,15 @@ void Gerenciador::comandos(Grafo* grafo) {
         }
 
         case 'l': {
-            cout << "Algoritmo Randomizado:" << endl;
-            grafo->imprime_ListaAdj();
-            cout << endl;
+            cout << "Algoritmo Randomizado Adaptativo:" << endl;
+            
+            Guloso guloso_rand_adap;
+            vector<pair<char, char>> solucao = guloso_rand_adap.algoritmo_guloso_randomizado_adaptativo(grafo, 0.5);
+            
+            
+            for (const auto& aresta : solucao) {
+                cout << "(" << aresta.first << ", " << aresta.second << ") ";
+            }
 
             break;
         }

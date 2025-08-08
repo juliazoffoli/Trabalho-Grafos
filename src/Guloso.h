@@ -18,8 +18,8 @@ public:
     ofstream arquivo;
     
     vector<pair<char, char>> algoritmo_guloso(Grafo* grafo);
-    vector<pair<char, char>> algoritmo_guloso_randomizado_adaptativo(Grafo* grafo);
-    vector<pair<char, char>> algoritmo_guloso_randomizado_adaptativo_reativo(Grafo* grafo);
+    vector<pair<char, char>> algoritmo_guloso_randomizado_adaptativo(Grafo* grafo, double alfa);
+    vector<pair<char, char>> algoritmo_guloso_randomizado_adaptativo_reativo(Grafo* grafo, string instancia = "NULL");
 
 private:
     vector<pair<char, char>> arestas_nao_cobertas;

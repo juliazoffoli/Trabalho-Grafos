@@ -1,4 +1,4 @@
-../instancias/instancias_t1/g_10_0.30_0_0_0.txt
+C:\Users\gusta\OneDrive\Documentos\fcl\grafos\t2\2\Trabalho-Grafos-main\instancias\instancias_t1\g_10_0.30_0_0_0.txt
 
 [DEBUG] Arestas não cobertas (antes de iniciar a execução): 
 (a, e) (a, b) (g, b) (g, d) (h, b) (j, f) (j, d) (c, e) (c, b) (d, f) (d, b) (i, f) (i, e) (f, b) 
