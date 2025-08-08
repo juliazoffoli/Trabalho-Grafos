@@ -19,6 +19,7 @@ vector<pair<char, char>> Guloso::algoritmo_guloso(Grafo* grafo) {
 
     vector<pair<char, char>> solucao;
     obter_arestas_nao_cobertas(grafo);
+    int quant_arestas = this->arestas_nao_cobertas.size();
 
     int exec = 0;
     while (!arestas_nao_cobertas.empty()) {
@@ -38,18 +39,18 @@ vector<pair<char, char>> Guloso::algoritmo_guloso(Grafo* grafo) {
         vector<pair<pair<char, char>, int>> arestas_com_grau = obter_arestas_ordenadas(grau_vertices);
         
         // Obtem a aresta com maior grau
-        pair<char, char> aresta_maior_grau = arestas_com_grau.begin()->first;
+        pair<char, char> aresta_escolhida = arestas_com_grau.begin()->first;
         int max_grau = arestas_com_grau.begin()->second;
-        this->arquivo << "[DEBUG] Aresta selecionada: (" << aresta_maior_grau.first << ", " << aresta_maior_grau.second << ") com grau " << max_grau << endl;
+        this->arquivo << "[DEBUG] Aresta selecionada: (" << aresta_escolhida.first << ", " << aresta_escolhida.second << ") com grau " << max_grau << endl;
 
-        solucao.push_back(aresta_maior_grau);
+        solucao.push_back(aresta_escolhida);
         this->arquivo << "[DEBUG] Solução: ";
         for (pair<char, char> aresta: solucao)
             this->arquivo << " (" << aresta.first << ", " << aresta.second << ") ";
         this->arquivo << endl;
 
         // Remove as arestas_incidentes incidentes aos vértices da aresta selecionada
-        remove_arestas_incidentes(aresta_maior_grau);
+        remove_arestas_incidentes(aresta_escolhida);
     }
  
     this->arquivo << "[DEBUG] Solução final: ";
@@ -57,7 +58,8 @@ vector<pair<char, char>> Guloso::algoritmo_guloso(Grafo* grafo) {
         this->arquivo << "(" << aresta.first << ", " << aresta.second << ") ";
     this->arquivo << endl;
 
-    cout << "Tamanho do Conjunto Dominante: " << solucao.size() << endl;
+    this->arquivo << "[DEBUG] Tamanho do Conjunto de Arestas do Grafo: " << quant_arestas << endl;
+    this->arquivo << "[DEBUG] Tamanho do Conjunto Dominante: " << solucao.size() << endl;
     return solucao;
 }
 
@@ -67,6 +69,7 @@ vector<pair<char, char>> Guloso::algoritmo_guloso_randomizado_adaptativo(Grafo* 
 
     vector<pair<char, char>> solucao;
     obter_arestas_nao_cobertas(grafo);
+    int quant_arestas = this->arestas_nao_cobertas.size();
 
     int exec = 0;
     while (!arestas_nao_cobertas.empty()) {
@@ -87,22 +90,30 @@ vector<pair<char, char>> Guloso::algoritmo_guloso_randomizado_adaptativo(Grafo* 
         
         // Obtem a aresta com maior grau
         // Parte randomizada
-        int lim_superior = arestas_com_grau.size() * alfa + 1; // limite superior do intervalo a ser escolhido aleatoriamente
-        int i = rand() % lim_superior; // índice do vetor ordenado de arestas, escolhido aleatoriamente entre a primeira fração do vetor, determinada por alfa.
-        this->arquivo << "[DEBUG] Valor do i entre 0 e " << lim_superior << ". Valor escolhido: " << i << "." << endl;
+        int lim_superior = (alfa * arestas_com_grau.size() - 1) + 1; // limite superior do intervalo a ser escolhido aleatoriamente
+        int K = rand() % lim_superior; // índice do vetor ordenado de arestas, escolhido aleatoriamente entre a primeira fração do vetor, determinada por alfa.
+        this->arquivo << "[DEBUG] Valor do i entre 0 e " << lim_superior << ". Valor escolhido: " << K << "." << endl;
 
-        pair<char, char> aresta_maior_grau = arestas_com_grau[i].first;
-        int max_grau = arestas_com_grau.begin()->second;
-        this->arquivo << "[DEBUG] Aresta selecionada: (" << aresta_maior_grau.first << ", " << aresta_maior_grau.second << ") com grau " << max_grau << endl;
+        pair<char, char> aresta_escolhida = arestas_com_grau[K].first;
+        int grau_aresta_escolhida = arestas_com_grau[K].second;
+        this->arquivo << "[DEBUG] Aresta selecionada: (" << aresta_escolhida.first << ", " << aresta_escolhida.second << ") com grau " << arestas_com_grau[K].second << endl;
+        
+        // Testar viabilidade
+        // pair<char, char> aresta_escolhida = arestas_com_grau.begin()->first;
+        // int max_grau = arestas_com_grau.begin()->second;
+        // if(!(grau_aresta_escolhida == max_grau)) {
+        //    this->arquivo << "[DEBUG] Aresta (" << aresta_escolhida.first << "), " << aresta_escolhida.second << ") não viável";
+        //    continue;
+        // }
 
-        solucao.push_back(aresta_maior_grau);
+        solucao.push_back(aresta_escolhida);
         this->arquivo << "[DEBUG] Solução: ";
         for (pair<char, char> aresta: solucao)
             this->arquivo << " (" << aresta.first << ", " << aresta.second << ") ";
         this->arquivo << endl;
 
         // Remove as arestas_incidentes incidentes aos vértices da aresta selecionada
-        remove_arestas_incidentes(aresta_maior_grau);
+        remove_arestas_incidentes(aresta_escolhida);
     }
  
     this->arquivo << "[DEBUG] Solução final: ";
@@ -110,7 +121,63 @@ vector<pair<char, char>> Guloso::algoritmo_guloso_randomizado_adaptativo(Grafo* 
         this->arquivo << "(" << aresta.first << ", " << aresta.second << ") ";
     this->arquivo << endl;
 
-    cout << "Tamanho do Conjunto Dominante: " << solucao.size() << endl;
+    this->arquivo << "[DEBUG] Tamanho do Conjunto de Arestas do Grafo: " << quant_arestas << endl;
+    this->arquivo << "[DEBUG] Tamanho do Conjunto Dominante: " << solucao.size() << endl;
+    return solucao;
+}
+
+vector<pair<char, char>> Guloso::algoritmo_guloso_randomizado_adaptativo_reativo(Grafo* grafo, double alfa) {
+    this->arquivo = ofstream ("[DEBUG]guloso_randomizado_adaptativo.txt");
+    this->arquivo << grafo->instancia << endl << endl;
+
+    vector<pair<char, char>> solucao;
+    obter_arestas_nao_cobertas(grafo);
+    int quant_arestas = this->arestas_nao_cobertas.size();
+
+    int exec = 0;
+    while (!arestas_nao_cobertas.empty()) {
+
+        // DEBUG
+        exec++;
+        this->arquivo << "\n[DEBUG] Execução " << exec << ":\n";
+        this->arquivo << "[DEBUG] Arestas não cobertas: " << endl;
+        for (pair<char, char> aresta : arestas_nao_cobertas)
+            this->arquivo << "(" << aresta.first << ", " << aresta.second << ") ";
+        this->arquivo << endl;
+
+        // Calcula o grau dos vértices das arestas não cobertas
+        map<char, int> grau_vertices = obter_grau_vertices();
+
+        // Calcula o grau das arestas (soma dos graus dos vértices da aresta) e ordena
+        vector<pair<pair<char, char>, int>> arestas_com_grau = obter_arestas_ordenadas(grau_vertices);
+        
+        // Obtem a aresta com maior grau
+        // Parte randomizada
+        int lim_superior = (alfa * arestas_com_grau.size() - 1) + 1; // limite superior do intervalo a ser escolhido aleatoriamente
+        int K = rand() % lim_superior; // índice do vetor ordenado de arestas, escolhido aleatoriamente entre a primeira fração do vetor, determinada por alfa.
+        this->arquivo << "[DEBUG] Valor do i entre 0 e " << lim_superior << ". Valor escolhido: " << K << "." << endl;
+
+        pair<char, char> aresta_escolhida = arestas_com_grau[K].first;
+        int grau_aresta_escolhida = arestas_com_grau[K].second;
+        this->arquivo << "[DEBUG] Aresta selecionada: (" << aresta_escolhida.first << ", " << aresta_escolhida.second << ") com grau " << arestas_com_grau[K].second << endl;
+
+        solucao.push_back(aresta_escolhida);
+        this->arquivo << "[DEBUG] Solução: ";
+        for (pair<char, char> aresta: solucao)
+            this->arquivo << " (" << aresta.first << ", " << aresta.second << ") ";
+        this->arquivo << endl;
+
+        // Remove as arestas_incidentes incidentes aos vértices da aresta selecionada
+        remove_arestas_incidentes(aresta_escolhida);
+    }
+ 
+    this->arquivo << "[DEBUG] Solução final: ";
+    for (pair<char, char> aresta : solucao)
+        this->arquivo << "(" << aresta.first << ", " << aresta.second << ") ";
+    this->arquivo << endl;
+
+    this->arquivo << "[DEBUG] Tamanho do Conjunto de Arestas do Grafo: " << quant_arestas << endl;
+    this->arquivo << "[DEBUG] Tamanho do Conjunto Dominante: " << solucao.size() << endl;
     return solucao;
 }
 
