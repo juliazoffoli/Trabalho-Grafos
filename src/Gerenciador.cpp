@@ -382,14 +382,25 @@ void Gerenciador::comandos(Grafo* grafo) {
                 cout << "(" << aresta.first << ", " << aresta.second << ") ";
             }
 
+            cout << endl;
             break;
         }
 
         case 'm': {
-            cout << "Algoritmo Randomizado Reativo:" << endl;
-            grafo->imprime_ListaAdj();
+            cout << "Algoritmo Randomizado Adaptativo Reativo:" << endl;
+            
+            Guloso guloso_rand_adap_reat;
+            vector<double> alfas = {0.05, 0.10, 0.15, 0.30, 0.50};
+            int iteracoes = 10;
+            int bloco = 5;
+            vector<pair<char, char>> solucao = guloso_rand_adap_reat.algoritmo_guloso_randomizado_adaptativo_reativo(grafo, alfas, iteracoes, bloco);
+            
+            
+            for (const auto& aresta : solucao) {
+                cout << "(" << aresta.first << ", " << aresta.second << ") ";
+            }
+            
             cout << endl;
-
             break;
         }
 
