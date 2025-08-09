@@ -5,6 +5,8 @@
 #include <cstdlib>
 #include <ctime>
 #include <limits.h>
+#include <cmath>
+
 
 using namespace std;
 
@@ -65,6 +67,8 @@ vector<pair<char, char>> Guloso::algoritmo_guloso(Grafo* grafo) {
 }
 
 vector<pair<char, char>> Guloso::algoritmo_guloso_randomizado_adaptativo(Grafo* grafo, double alfa) {
+
+    int iteracao = 0;
     this->arquivo = ofstream ("[DEBUG]guloso_randomizado_adaptativo.txt");
     this->arquivo << grafo->instancia << endl << endl;
 
@@ -91,10 +95,14 @@ vector<pair<char, char>> Guloso::algoritmo_guloso_randomizado_adaptativo(Grafo* 
         
         // Obtem a aresta com maior grau
         // Parte randomizada
-        int lim_superior = (alfa * arestas_com_grau.size() - 1) + 1; // limite superior do intervalo a ser escolhido aleatoriamente
-        int K = rand() % lim_superior; // índice do vetor ordenado de arestas, escolhido aleatoriamente entre a primeira fração do vetor, determinada por alfa.
+        int lim_superior = (alfa * arestas_com_grau.size()); // limite superior do intervalo a ser escolhido aleatoriamente
+        int K = rand() % lim_superior; // índice do vetor ordenado de arestas, escolhido aleatoriamente entre o intervalo do vetor, determinada por alfa.
         this->arquivo << "[DEBUG] Valor do i entre 0 e " << lim_superior << ". Valor escolhido: " << K << "." << endl;
 
+        // int lim_superior = (alfa * arestas_com_grau.size() - 1) + 1; // limite superior do intervalo a ser escolhido aleatoriamente
+        //int K = rand() % lim_superior; // índice do vetor ordenado de arestas, escolhido aleatoriamente entre a primeira fração do vetor, determinada por alfa.
+
+   
         pair<char, char> aresta_escolhida = arestas_com_grau[K].first;
         int grau_aresta_escolhida = arestas_com_grau[K].second;
         this->arquivo << "[DEBUG] Aresta selecionada: (" << aresta_escolhida.first << ", " << aresta_escolhida.second << ") com grau " << arestas_com_grau[K].second << endl;
@@ -117,6 +125,7 @@ vector<pair<char, char>> Guloso::algoritmo_guloso_randomizado_adaptativo(Grafo* 
         remove_arestas_incidentes(aresta_escolhida);
     }
  
+
     this->arquivo << "[DEBUG] Solução final: ";
     for (pair<char, char> aresta : solucao)
         this->arquivo << "(" << aresta.first << ", " << aresta.second << ") ";
@@ -125,27 +134,118 @@ vector<pair<char, char>> Guloso::algoritmo_guloso_randomizado_adaptativo(Grafo* 
     this->arquivo << "[DEBUG] Tamanho do Conjunto de Arestas do Grafo: " << quant_arestas << endl;
     this->arquivo << "[DEBUG] Tamanho do Conjunto Dominante: " << solucao.size() << endl;
     return solucao;
+
 }
 
 vector<pair<char, char>> Guloso::algoritmo_guloso_randomizado_adaptativo_reativo(Grafo* grafo, vector<double> alfas, int num_iter, int bloco) {
-/*     this->arquivo = ofstream("[DEBUG]guloso_randomizado_adaptativo_reativo.txt");
-    this->arquivo << grafo->instancia << endl << endl; */
+//    this->arquivo = ofstream("[DEBUG]guloso_randomizado_adaptativo_reativo.txt");
+//    this->arquivo << grafo->instancia << endl << endl; */
+//
+//    vector<pair<char, char>> solucao;
+//    obter_arestas_nao_cobertas(grafo);
+//
+//    vector<pair<char, char>> melhor_sol;
+//    int m = alfas.size();
+//    vector<double> P(m, 1.0 / m);   // Probabilidades iniciais iguais
+//    vector<double> M(m, 0.0);       // Soma de qualidade por alfa
+//    vector<int> cont(m, 0);         // Contagem de usos por alfa, para dividir M e encontrar média
+//
+//    
+//    int melhor_tam = INT_MAX; // tamanho da melhor solução
+//
+//    for (int iter = 1; iter <= num_iter; iter++) { // Executa num_iter vezes, cada vez construindo uma solução completa
+//
+//        double r = ((double) rand() / RAND_MAX); // numero aleatorio entre 0 e 1
+//        double soma = 0.0;
+//        int idx = 0;
+//        for (; idx < m; idx++) {
+//            soma += P[idx];
+//            if (r <= soma) break;
+//        }
+//        double alfa_escolhido = alfas[idx];
+//        cont[idx]++;
+//
+//        // --- Executa o guloso randomizado adaptativo com este alfa ---
+//        
+//
+//        while (!arestas_nao_cobertas.empty()) {
+//            map<char, int> grau_vertices = obter_grau_vertices();
+//            vector<pair<pair<char, char>, int>> arestas_com_grau =
+//                obter_arestas_ordenadas(grau_vertices);
+//
+//            int lim_superior = (alfa_escolhido * arestas_com_grau.size());
+//            if (lim_superior < 1) lim_superior = 1;
+//            int K = rand() % lim_superior;
+//
+//            pair<char, char> aresta_escolhida = arestas_com_grau[K].first;
+//            solucao.push_back(aresta_escolhida);
+//
+//            remove_arestas_incidentes(aresta_escolhida);
+//        }
+//
+//        // --- Atualiza melhor solução ---
+//        int tam_sol = solucao.size();
+//        if (tam_sol < melhor_tam) {
+//            melhor_tam = tam_sol;
+//            melhor_sol = solucao;
+//        }
+//
+//        // --- Atualiza média para este alfa ---
+//        M[idx] += tam_sol;
+//
+//        // --- Recalcula probabilidades a cada bloco ---
+//        if (iter % bloco == 0) {
+//            for (int i = 0; i < m; i++) {
+//                if (cont[i] > 0) M[i] /= cont[i]; // média real
+//                else M[i] = 1e9; // caso nunca tenha sido usado
+//            }
+//
+//            // Calcula q[i] = F(S*) / M[i]
+//            vector<double> q(m, 0.0);
+//            double soma_q = 0.0;
+//            for (int i = 0; i < m; i++) {
+//                q[i] = (double)melhor_tam / M[i];
+//                soma_q += q[i];
+//            }
+//
+//            // Atualiza P[i] = q[i] / soma_q
+//            for (int i = 0; i < m; i++) {
+//                if (soma_q > 0) P[i] = q[i] / soma_q;
+//                else P[i] = 1.0 / m;
+//            }
+//
+//            // Zera contadores e médias acumuladas
+//            fill(M.begin(), M.end(), 0.0);
+//            fill(cont.begin(), cont.end(), 0);
+//        }
+//    }
+//
+//   /*  // --- Debug final ---
+//    this->arquivo << "\n[DEBUG] Melhor solução encontrada (" << melhor_tam << " arestas): ";
+//    for (auto &a : melhor_sol)
+//        this->arquivo << "(" << a.first << ", " << a.second << ") ";
+//    this->arquivo << endl; */
+//
+//    return melhor_sol;
+//}
 
-    vector<pair<char, char>> solucao;
-    obter_arestas_nao_cobertas(grafo);
+this->arquivo = ofstream("[DEBUG]guloso_randomizado_adaptativo_reativo.txt");
+    this->arquivo << grafo->instancia << endl << endl;
 
     vector<pair<char, char>> melhor_sol;
     int m = alfas.size();
     vector<double> P(m, 1.0 / m);   // Probabilidades iniciais iguais
     vector<double> M(m, 0.0);       // Soma de qualidade por alfa
-    vector<int> cont(m, 0);         // Contagem de usos por alfa, para dividir M e encontrar média
+    vector<int> cont(m, 0);         // Contagem de usos por alfa, para média
 
-    
     int melhor_tam = INT_MAX; // tamanho da melhor solução
 
-    for (int iter = 1; iter <= num_iter; iter++) { // Executa num_iter vezes, cada vez construindo uma solução completa
+    for (int iter = 1; iter <= num_iter; iter++) {
 
-        double r = ((double) rand() / RAND_MAX); // numero aleatorio entre 0 e 1
+        this->arquivo << "\n[DEBUG] Iteração " << iter << ":\n";
+
+        // Escolha do alfa com base em P
+        double r = ((double) rand() / RAND_MAX);
         double soma = 0.0;
         int idx = 0;
         for (; idx < m; idx++) {
@@ -155,42 +255,69 @@ vector<pair<char, char>> Guloso::algoritmo_guloso_randomizado_adaptativo_reativo
         double alfa_escolhido = alfas[idx];
         cont[idx]++;
 
-        // --- Executa o guloso randomizado adaptativo com este alfa ---
-        
+        this->arquivo << "[DEBUG] Alfa escolhido: " << alfa_escolhido << " (índice " << idx << ")\n";
 
+        // Reiniciar arestas nao cobertas para esta iteração
+        obter_arestas_nao_cobertas(grafo);
+
+        vector<pair<char, char>> solucao;
+
+        int exec = 0;
         while (!arestas_nao_cobertas.empty()) {
+            exec++;
+            this->arquivo << "[DEBUG] Execução " << exec << " - Arestas não cobertas: ";
+            for (auto &aresta : arestas_nao_cobertas)
+                this->arquivo << "(" << aresta.first << ", " << aresta.second << ") ";
+            this->arquivo << endl;
+
             map<char, int> grau_vertices = obter_grau_vertices();
-            vector<pair<pair<char, char>, int>> arestas_com_grau =
-                obter_arestas_ordenadas(grau_vertices);
+            vector<pair<pair<char, char>, int>> arestas_com_grau = obter_arestas_ordenadas(grau_vertices);
 
             int lim_superior = (alfa_escolhido * arestas_com_grau.size());
             if (lim_superior < 1) lim_superior = 1;
             int K = rand() % lim_superior;
 
+            this->arquivo << "[DEBUG] lim_superior = " << lim_superior << ", índice sorteado K = " << K << endl;
+
             pair<char, char> aresta_escolhida = arestas_com_grau[K].first;
+            int grau_aresta_escolhida = arestas_com_grau[K].second;
+
+            this->arquivo << "[DEBUG] Aresta selecionada: (" << aresta_escolhida.first << ", " << aresta_escolhida.second 
+                          << ") com grau " << grau_aresta_escolhida << endl;
+
             solucao.push_back(aresta_escolhida);
+
+            this->arquivo << "[DEBUG] Solução parcial: ";
+            for (auto &a : solucao)
+                this->arquivo << "(" << a.first << ", " << a.second << ") ";
+            this->arquivo << endl;
 
             remove_arestas_incidentes(aresta_escolhida);
         }
 
-        // --- Atualiza melhor solução ---
         int tam_sol = solucao.size();
+        this->arquivo << "[DEBUG] Tamanho da solução atual: " << tam_sol << endl;
+
+        // Atualiza melhor solução
         if (tam_sol < melhor_tam) {
             melhor_tam = tam_sol;
             melhor_sol = solucao;
+            this->arquivo << "[DEBUG] Nova melhor solução encontrada com tamanho " << melhor_tam << endl;
         }
 
-        // --- Atualiza média para este alfa ---
+        // Atualiza média para alfa escolhido
         M[idx] += tam_sol;
 
-        // --- Recalcula probabilidades a cada bloco ---
+        // Atualiza probabilidades a cada bloco
         if (iter % bloco == 0) {
+            this->arquivo << "[DEBUG] Atualizando probabilidades após " << iter << " iterações\n";
+
             for (int i = 0; i < m; i++) {
-                if (cont[i] > 0) M[i] /= cont[i]; // média real
-                else M[i] = 1e9; // caso nunca tenha sido usado
+                if (cont[i] > 0) M[i] /= cont[i];
+                else M[i] = 1e9;
+                this->arquivo << "[DEBUG] Alfa " << alfas[i] << ": média M = " << M[i] << ", contagem = " << cont[i] << endl;
             }
 
-            // Calcula q[i] = F(S*) / M[i]
             vector<double> q(m, 0.0);
             double soma_q = 0.0;
             for (int i = 0; i < m; i++) {
@@ -198,26 +325,30 @@ vector<pair<char, char>> Guloso::algoritmo_guloso_randomizado_adaptativo_reativo
                 soma_q += q[i];
             }
 
-            // Atualiza P[i] = q[i] / soma_q
+            this->arquivo << "[DEBUG] Soma dos q[i]: " << soma_q << endl;
+
             for (int i = 0; i < m; i++) {
                 if (soma_q > 0) P[i] = q[i] / soma_q;
                 else P[i] = 1.0 / m;
+                this->arquivo << "[DEBUG] Probabilidade P[" << i << "] = " << P[i] << endl;
             }
 
-            // Zera contadores e médias acumuladas
+            // Reseta contadores
             fill(M.begin(), M.end(), 0.0);
             fill(cont.begin(), cont.end(), 0);
         }
     }
 
-   /*  // --- Debug final ---
+    // Debug final da melhor solução
     this->arquivo << "\n[DEBUG] Melhor solução encontrada (" << melhor_tam << " arestas): ";
     for (auto &a : melhor_sol)
         this->arquivo << "(" << a.first << ", " << a.second << ") ";
-    this->arquivo << endl; */
+    this->arquivo << endl;
 
     return melhor_sol;
 }
+
+
 
 
 void Guloso::obter_arestas_nao_cobertas(Grafo* grafo) {
