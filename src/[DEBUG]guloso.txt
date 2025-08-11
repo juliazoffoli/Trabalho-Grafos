@@ -1,5779 +1,1272 @@
-..\instancias\instancias_t2\g_60_0.07_0_1_1.txt
+..\instancias\instancias_t2\g_25_0.16_0_1_0.txt
 
 [DEBUG] Arestas não cobertas (antes de iniciar a execução): 
-(N, E) (N, z) (N, p) (N, 7) (C, 1) (C, b) (C, G) (C, o) (c, B) (c, D) (c, n) (c, t) (r, 0) (J, F) (B, m) (L, s) (L, K) (H, u) (H, A) (H, E) (f, R) (f, K) (f, W) (f, Y) (f, 6) (e, V) (e, 7) (6, F) (6, U) (6, o) (6, R) (U, P) (U, S) (U, n) (W, j) (W, t) (W, y) (W, 5) (0, R) (0, K) (0, 3) (s, I) (b, K) (b, m) (b, O) (b, T) (v, Z) (v, k) (w, I) (w, x) (y, Q) (y, 1) (4, Z) (4, P) (V, E) (V, 5) (V, R) (V, n) (t, G) (t, m) (m, I) (m, k) (m, 1) (m, p) (5, M) (5, p) (5, K) (k, Y) (k, g) (k, Z) (Y, i) (Y, n) (p, i) (p, n) (3, Z) (M, g) (X, i) (X, K) (X, l) (X, F) (n, D) (Q, S) (1, F) (1, i) (1, d) (G, j) (o, g) (u, S) (u, O) (x, O) (7, O) (h, Z) (h, z) (F, a) (F, q) (q, j) (q, P) (R, a) (R, P) (I, S) (P, D) (P, S) (d, i) (Z, E) (Z, K) (a, i) (T, O) (2, g) (K, E) (O, A) (O, z) (A, z) (l, D) (D, j) (i, S) (g, S) (j, S) (S, z) 
+(w, v) (w, t) (q, u) (q, h) (q, l) (l, a) (l, h) (j, f) (j, d) (j, x) (j, a) (y, o) (y, b) (d, s) (d, f) (t, o) (t, s) (t, i) (b, h) (b, s) (b, u) (a, s) (a, h) (f, p) (f, e) (k, x) (k, m) (k, h) (p, m) (p, g) (p, s) (p, r) (s, u) (o, i) (c, r) (m, n) (m, h) (u, i) (g, x) (n, h) (n, i) (i, x) (i, h) (i, v) (r, h) (h, v) (x, v) (e, v) 
 
 [DEBUG] Execução 1:
 [DEBUG] Arestas não cobertas: 
-(N, E) (N, z) (N, p) (N, 7) (C, 1) (C, b) (C, G) (C, o) (c, B) (c, D) (c, n) (c, t) (r, 0) (J, F) (B, m) (L, s) (L, K) (H, u) (H, A) (H, E) (f, R) (f, K) (f, W) (f, Y) (f, 6) (e, V) (e, 7) (6, F) (6, U) (6, o) (6, R) (U, P) (U, S) (U, n) (W, j) (W, t) (W, y) (W, 5) (0, R) (0, K) (0, 3) (s, I) (b, K) (b, m) (b, O) (b, T) (v, Z) (v, k) (w, I) (w, x) (y, Q) (y, 1) (4, Z) (4, P) (V, E) (V, 5) (V, R) (V, n) (t, G) (t, m) (m, I) (m, k) (m, 1) (m, p) (5, M) (5, p) (5, K) (k, Y) (k, g) (k, Z) (Y, i) (Y, n) (p, i) (p, n) (3, Z) (M, g) (X, i) (X, K) (X, l) (X, F) (n, D) (Q, S) (1, F) (1, i) (1, d) (G, j) (o, g) (u, S) (u, O) (x, O) (7, O) (h, Z) (h, z) (F, a) (F, q) (q, j) (q, P) (R, a) (R, P) (I, S) (P, D) (P, S) (d, i) (Z, E) (Z, K) (a, i) (T, O) (2, g) (K, E) (O, A) (O, z) (A, z) (l, D) (D, j) (i, S) (g, S) (j, S) (S, z) 
+(w, v) (w, t) (q, u) (q, h) (q, l) (l, a) (l, h) (j, f) (j, d) (j, x) (j, a) (y, o) (y, b) (d, s) (d, f) (t, o) (t, s) (t, i) (b, h) (b, s) (b, u) (a, s) (a, h) (f, p) (f, e) (k, x) (k, m) (k, h) (p, m) (p, g) (p, s) (p, r) (s, u) (o, i) (c, r) (m, n) (m, h) (u, i) (g, x) (n, h) (n, i) (i, x) (i, h) (i, v) (r, h) (h, v) (x, v) (e, v) 
 
 [DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
-[DEBUG] Aresta: (N, E)
-[DEBUG] Nó: N, Grau: 1
-[DEBUG] Nó: E, Grau: 1
-[DEBUG] Aresta: (N, z)
-[DEBUG] Nó: N, Grau: 2
-[DEBUG] Nó: z, Grau: 1
-[DEBUG] Aresta: (N, p)
-[DEBUG] Nó: N, Grau: 3
-[DEBUG] Nó: p, Grau: 1
-[DEBUG] Aresta: (N, 7)
-[DEBUG] Nó: N, Grau: 4
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Aresta: (C, 1)
-[DEBUG] Nó: C, Grau: 1
-[DEBUG] Nó: 1, Grau: 1
-[DEBUG] Aresta: (C, b)
-[DEBUG] Nó: C, Grau: 2
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Aresta: (C, G)
-[DEBUG] Nó: C, Grau: 3
-[DEBUG] Nó: G, Grau: 1
-[DEBUG] Aresta: (C, o)
-[DEBUG] Nó: C, Grau: 4
-[DEBUG] Nó: o, Grau: 1
-[DEBUG] Aresta: (c, B)
-[DEBUG] Nó: c, Grau: 1
-[DEBUG] Nó: B, Grau: 1
-[DEBUG] Aresta: (c, D)
-[DEBUG] Nó: c, Grau: 2
-[DEBUG] Nó: D, Grau: 1
-[DEBUG] Aresta: (c, n)
-[DEBUG] Nó: c, Grau: 3
-[DEBUG] Nó: n, Grau: 1
-[DEBUG] Aresta: (c, t)
-[DEBUG] Nó: c, Grau: 4
-[DEBUG] Nó: t, Grau: 1
-[DEBUG] Aresta: (r, 0)
-[DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: 0, Grau: 1
-[DEBUG] Aresta: (J, F)
-[DEBUG] Nó: J, Grau: 1
-[DEBUG] Nó: F, Grau: 1
-[DEBUG] Aresta: (B, m)
-[DEBUG] Nó: B, Grau: 2
-[DEBUG] Nó: m, Grau: 1
-[DEBUG] Aresta: (L, s)
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: s, Grau: 1
-[DEBUG] Aresta: (L, K)
-[DEBUG] Nó: L, Grau: 2
-[DEBUG] Nó: K, Grau: 1
-[DEBUG] Aresta: (H, u)
-[DEBUG] Nó: H, Grau: 1
-[DEBUG] Nó: u, Grau: 1
-[DEBUG] Aresta: (H, A)
-[DEBUG] Nó: H, Grau: 2
-[DEBUG] Nó: A, Grau: 1
-[DEBUG] Aresta: (H, E)
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: E, Grau: 2
-[DEBUG] Aresta: (f, R)
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: R, Grau: 1
-[DEBUG] Aresta: (f, K)
-[DEBUG] Nó: f, Grau: 2
-[DEBUG] Nó: K, Grau: 2
-[DEBUG] Aresta: (f, W)
-[DEBUG] Nó: f, Grau: 3
-[DEBUG] Nó: W, Grau: 1
-[DEBUG] Aresta: (f, Y)
-[DEBUG] Nó: f, Grau: 4
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Aresta: (f, 6)
-[DEBUG] Nó: f, Grau: 5
-[DEBUG] Nó: 6, Grau: 1
-[DEBUG] Aresta: (e, V)
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: V, Grau: 1
-[DEBUG] Aresta: (e, 7)
-[DEBUG] Nó: e, Grau: 2
-[DEBUG] Nó: 7, Grau: 2
-[DEBUG] Aresta: (6, F)
-[DEBUG] Nó: 6, Grau: 2
-[DEBUG] Nó: F, Grau: 2
-[DEBUG] Aresta: (6, U)
-[DEBUG] Nó: 6, Grau: 3
-[DEBUG] Nó: U, Grau: 1
-[DEBUG] Aresta: (6, o)
-[DEBUG] Nó: 6, Grau: 4
-[DEBUG] Nó: o, Grau: 2
-[DEBUG] Aresta: (6, R)
-[DEBUG] Nó: 6, Grau: 5
-[DEBUG] Nó: R, Grau: 2
-[DEBUG] Aresta: (U, P)
-[DEBUG] Nó: U, Grau: 2
-[DEBUG] Nó: P, Grau: 1
-[DEBUG] Aresta: (U, S)
-[DEBUG] Nó: U, Grau: 3
-[DEBUG] Nó: S, Grau: 1
-[DEBUG] Aresta: (U, n)
-[DEBUG] Nó: U, Grau: 4
-[DEBUG] Nó: n, Grau: 2
-[DEBUG] Aresta: (W, j)
-[DEBUG] Nó: W, Grau: 2
-[DEBUG] Nó: j, Grau: 1
-[DEBUG] Aresta: (W, t)
-[DEBUG] Nó: W, Grau: 3
-[DEBUG] Nó: t, Grau: 2
-[DEBUG] Aresta: (W, y)
-[DEBUG] Nó: W, Grau: 4
-[DEBUG] Nó: y, Grau: 1
-[DEBUG] Aresta: (W, 5)
-[DEBUG] Nó: W, Grau: 5
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Aresta: (0, R)
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: R, Grau: 3
-[DEBUG] Aresta: (0, K)
-[DEBUG] Nó: 0, Grau: 3
-[DEBUG] Nó: K, Grau: 3
-[DEBUG] Aresta: (0, 3)
-[DEBUG] Nó: 0, Grau: 4
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Aresta: (s, I)
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: I, Grau: 1
-[DEBUG] Aresta: (b, K)
-[DEBUG] Nó: b, Grau: 2
-[DEBUG] Nó: K, Grau: 4
-[DEBUG] Aresta: (b, m)
-[DEBUG] Nó: b, Grau: 3
-[DEBUG] Nó: m, Grau: 2
-[DEBUG] Aresta: (b, O)
-[DEBUG] Nó: b, Grau: 4
-[DEBUG] Nó: O, Grau: 1
-[DEBUG] Aresta: (b, T)
-[DEBUG] Nó: b, Grau: 5
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Aresta: (v, Z)
-[DEBUG] Nó: v, Grau: 1
-[DEBUG] Nó: Z, Grau: 1
-[DEBUG] Aresta: (v, k)
-[DEBUG] Nó: v, Grau: 2
-[DEBUG] Nó: k, Grau: 1
-[DEBUG] Aresta: (w, I)
+[DEBUG] Aresta: (w, v)
 [DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Aresta: (w, x)
+[DEBUG] Nó: v, Grau: 1
+[DEBUG] Aresta: (w, t)
 [DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Aresta: (y, Q)
-[DEBUG] Nó: y, Grau: 2
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Aresta: (y, 1)
-[DEBUG] Nó: y, Grau: 3
-[DEBUG] Nó: 1, Grau: 2
-[DEBUG] Aresta: (4, Z)
-[DEBUG] Nó: 4, Grau: 1
-[DEBUG] Nó: Z, Grau: 2
-[DEBUG] Aresta: (4, P)
-[DEBUG] Nó: 4, Grau: 2
-[DEBUG] Nó: P, Grau: 2
-[DEBUG] Aresta: (V, E)
-[DEBUG] Nó: V, Grau: 2
-[DEBUG] Nó: E, Grau: 3
-[DEBUG] Aresta: (V, 5)
-[DEBUG] Nó: V, Grau: 3
-[DEBUG] Nó: 5, Grau: 2
-[DEBUG] Aresta: (V, R)
-[DEBUG] Nó: V, Grau: 4
-[DEBUG] Nó: R, Grau: 4
-[DEBUG] Aresta: (V, n)
-[DEBUG] Nó: V, Grau: 5
-[DEBUG] Nó: n, Grau: 3
-[DEBUG] Aresta: (t, G)
-[DEBUG] Nó: t, Grau: 3
-[DEBUG] Nó: G, Grau: 2
-[DEBUG] Aresta: (t, m)
-[DEBUG] Nó: t, Grau: 4
-[DEBUG] Nó: m, Grau: 3
-[DEBUG] Aresta: (m, I)
-[DEBUG] Nó: m, Grau: 4
-[DEBUG] Nó: I, Grau: 3
-[DEBUG] Aresta: (m, k)
-[DEBUG] Nó: m, Grau: 5
-[DEBUG] Nó: k, Grau: 2
-[DEBUG] Aresta: (m, 1)
-[DEBUG] Nó: m, Grau: 6
-[DEBUG] Nó: 1, Grau: 3
-[DEBUG] Aresta: (m, p)
-[DEBUG] Nó: m, Grau: 7
-[DEBUG] Nó: p, Grau: 2
-[DEBUG] Aresta: (5, M)
-[DEBUG] Nó: 5, Grau: 3
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Aresta: (5, p)
-[DEBUG] Nó: 5, Grau: 4
-[DEBUG] Nó: p, Grau: 3
-[DEBUG] Aresta: (5, K)
-[DEBUG] Nó: 5, Grau: 5
-[DEBUG] Nó: K, Grau: 5
-[DEBUG] Aresta: (k, Y)
-[DEBUG] Nó: k, Grau: 3
-[DEBUG] Nó: Y, Grau: 2
-[DEBUG] Aresta: (k, g)
-[DEBUG] Nó: k, Grau: 4
-[DEBUG] Nó: g, Grau: 1
-[DEBUG] Aresta: (k, Z)
-[DEBUG] Nó: k, Grau: 5
-[DEBUG] Nó: Z, Grau: 3
-[DEBUG] Aresta: (Y, i)
-[DEBUG] Nó: Y, Grau: 3
-[DEBUG] Nó: i, Grau: 1
-[DEBUG] Aresta: (Y, n)
-[DEBUG] Nó: Y, Grau: 4
-[DEBUG] Nó: n, Grau: 4
-[DEBUG] Aresta: (p, i)
-[DEBUG] Nó: p, Grau: 4
-[DEBUG] Nó: i, Grau: 2
-[DEBUG] Aresta: (p, n)
-[DEBUG] Nó: p, Grau: 5
-[DEBUG] Nó: n, Grau: 5
-[DEBUG] Aresta: (3, Z)
-[DEBUG] Nó: 3, Grau: 2
-[DEBUG] Nó: Z, Grau: 4
-[DEBUG] Aresta: (M, g)
-[DEBUG] Nó: M, Grau: 2
-[DEBUG] Nó: g, Grau: 2
-[DEBUG] Aresta: (X, i)
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: i, Grau: 3
-[DEBUG] Aresta: (X, K)
-[DEBUG] Nó: X, Grau: 2
-[DEBUG] Nó: K, Grau: 6
-[DEBUG] Aresta: (X, l)
-[DEBUG] Nó: X, Grau: 3
-[DEBUG] Nó: l, Grau: 1
-[DEBUG] Aresta: (X, F)
-[DEBUG] Nó: X, Grau: 4
-[DEBUG] Nó: F, Grau: 3
-[DEBUG] Aresta: (n, D)
-[DEBUG] Nó: n, Grau: 6
-[DEBUG] Nó: D, Grau: 2
-[DEBUG] Aresta: (Q, S)
-[DEBUG] Nó: Q, Grau: 2
-[DEBUG] Nó: S, Grau: 2
-[DEBUG] Aresta: (1, F)
-[DEBUG] Nó: 1, Grau: 4
-[DEBUG] Nó: F, Grau: 4
-[DEBUG] Aresta: (1, i)
-[DEBUG] Nó: 1, Grau: 5
-[DEBUG] Nó: i, Grau: 4
-[DEBUG] Aresta: (1, d)
-[DEBUG] Nó: 1, Grau: 6
-[DEBUG] Nó: d, Grau: 1
-[DEBUG] Aresta: (G, j)
-[DEBUG] Nó: G, Grau: 3
-[DEBUG] Nó: j, Grau: 2
-[DEBUG] Aresta: (o, g)
-[DEBUG] Nó: o, Grau: 3
-[DEBUG] Nó: g, Grau: 3
-[DEBUG] Aresta: (u, S)
-[DEBUG] Nó: u, Grau: 2
-[DEBUG] Nó: S, Grau: 3
-[DEBUG] Aresta: (u, O)
-[DEBUG] Nó: u, Grau: 3
-[DEBUG] Nó: O, Grau: 2
-[DEBUG] Aresta: (x, O)
-[DEBUG] Nó: x, Grau: 2
-[DEBUG] Nó: O, Grau: 3
-[DEBUG] Aresta: (7, O)
-[DEBUG] Nó: 7, Grau: 3
-[DEBUG] Nó: O, Grau: 4
-[DEBUG] Aresta: (h, Z)
-[DEBUG] Nó: h, Grau: 1
-[DEBUG] Nó: Z, Grau: 5
-[DEBUG] Aresta: (h, z)
-[DEBUG] Nó: h, Grau: 2
-[DEBUG] Nó: z, Grau: 2
-[DEBUG] Aresta: (F, a)
-[DEBUG] Nó: F, Grau: 5
-[DEBUG] Nó: a, Grau: 1
-[DEBUG] Aresta: (F, q)
-[DEBUG] Nó: F, Grau: 6
+[DEBUG] Nó: t, Grau: 1
+[DEBUG] Aresta: (q, u)
 [DEBUG] Nó: q, Grau: 1
-[DEBUG] Aresta: (q, j)
+[DEBUG] Nó: u, Grau: 1
+[DEBUG] Aresta: (q, h)
 [DEBUG] Nó: q, Grau: 2
-[DEBUG] Nó: j, Grau: 3
-[DEBUG] Aresta: (q, P)
+[DEBUG] Nó: h, Grau: 1
+[DEBUG] Aresta: (q, l)
 [DEBUG] Nó: q, Grau: 3
-[DEBUG] Nó: P, Grau: 3
-[DEBUG] Aresta: (R, a)
-[DEBUG] Nó: R, Grau: 5
-[DEBUG] Nó: a, Grau: 2
-[DEBUG] Aresta: (R, P)
-[DEBUG] Nó: R, Grau: 6
-[DEBUG] Nó: P, Grau: 4
-[DEBUG] Aresta: (I, S)
-[DEBUG] Nó: I, Grau: 4
-[DEBUG] Nó: S, Grau: 4
-[DEBUG] Aresta: (P, D)
-[DEBUG] Nó: P, Grau: 5
-[DEBUG] Nó: D, Grau: 3
-[DEBUG] Aresta: (P, S)
-[DEBUG] Nó: P, Grau: 6
-[DEBUG] Nó: S, Grau: 5
-[DEBUG] Aresta: (d, i)
-[DEBUG] Nó: d, Grau: 2
-[DEBUG] Nó: i, Grau: 5
-[DEBUG] Aresta: (Z, E)
-[DEBUG] Nó: Z, Grau: 6
-[DEBUG] Nó: E, Grau: 4
-[DEBUG] Aresta: (Z, K)
-[DEBUG] Nó: Z, Grau: 7
-[DEBUG] Nó: K, Grau: 7
-[DEBUG] Aresta: (a, i)
-[DEBUG] Nó: a, Grau: 3
-[DEBUG] Nó: i, Grau: 6
-[DEBUG] Aresta: (T, O)
-[DEBUG] Nó: T, Grau: 2
-[DEBUG] Nó: O, Grau: 5
-[DEBUG] Aresta: (2, g)
-[DEBUG] Nó: 2, Grau: 1
-[DEBUG] Nó: g, Grau: 4
-[DEBUG] Aresta: (K, E)
-[DEBUG] Nó: K, Grau: 8
-[DEBUG] Nó: E, Grau: 5
-[DEBUG] Aresta: (O, A)
-[DEBUG] Nó: O, Grau: 6
-[DEBUG] Nó: A, Grau: 2
-[DEBUG] Aresta: (O, z)
-[DEBUG] Nó: O, Grau: 7
-[DEBUG] Nó: z, Grau: 3
-[DEBUG] Aresta: (A, z)
-[DEBUG] Nó: A, Grau: 3
-[DEBUG] Nó: z, Grau: 4
-[DEBUG] Aresta: (l, D)
+[DEBUG] Nó: l, Grau: 1
+[DEBUG] Aresta: (l, a)
 [DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: D, Grau: 4
-[DEBUG] Aresta: (D, j)
-[DEBUG] Nó: D, Grau: 5
+[DEBUG] Nó: a, Grau: 1
+[DEBUG] Aresta: (l, h)
+[DEBUG] Nó: l, Grau: 3
+[DEBUG] Nó: h, Grau: 2
+[DEBUG] Aresta: (j, f)
+[DEBUG] Nó: j, Grau: 1
+[DEBUG] Nó: f, Grau: 1
+[DEBUG] Aresta: (j, d)
+[DEBUG] Nó: j, Grau: 2
+[DEBUG] Nó: d, Grau: 1
+[DEBUG] Aresta: (j, x)
+[DEBUG] Nó: j, Grau: 3
+[DEBUG] Nó: x, Grau: 1
+[DEBUG] Aresta: (j, a)
 [DEBUG] Nó: j, Grau: 4
-[DEBUG] Aresta: (i, S)
+[DEBUG] Nó: a, Grau: 2
+[DEBUG] Aresta: (y, o)
+[DEBUG] Nó: y, Grau: 1
+[DEBUG] Nó: o, Grau: 1
+[DEBUG] Aresta: (y, b)
+[DEBUG] Nó: y, Grau: 2
+[DEBUG] Nó: b, Grau: 1
+[DEBUG] Aresta: (d, s)
+[DEBUG] Nó: d, Grau: 2
+[DEBUG] Nó: s, Grau: 1
+[DEBUG] Aresta: (d, f)
+[DEBUG] Nó: d, Grau: 3
+[DEBUG] Nó: f, Grau: 2
+[DEBUG] Aresta: (t, o)
+[DEBUG] Nó: t, Grau: 2
+[DEBUG] Nó: o, Grau: 2
+[DEBUG] Aresta: (t, s)
+[DEBUG] Nó: t, Grau: 3
+[DEBUG] Nó: s, Grau: 2
+[DEBUG] Aresta: (t, i)
+[DEBUG] Nó: t, Grau: 4
+[DEBUG] Nó: i, Grau: 1
+[DEBUG] Aresta: (b, h)
+[DEBUG] Nó: b, Grau: 2
+[DEBUG] Nó: h, Grau: 3
+[DEBUG] Aresta: (b, s)
+[DEBUG] Nó: b, Grau: 3
+[DEBUG] Nó: s, Grau: 3
+[DEBUG] Aresta: (b, u)
+[DEBUG] Nó: b, Grau: 4
+[DEBUG] Nó: u, Grau: 2
+[DEBUG] Aresta: (a, s)
+[DEBUG] Nó: a, Grau: 3
+[DEBUG] Nó: s, Grau: 4
+[DEBUG] Aresta: (a, h)
+[DEBUG] Nó: a, Grau: 4
+[DEBUG] Nó: h, Grau: 4
+[DEBUG] Aresta: (f, p)
+[DEBUG] Nó: f, Grau: 3
+[DEBUG] Nó: p, Grau: 1
+[DEBUG] Aresta: (f, e)
+[DEBUG] Nó: f, Grau: 4
+[DEBUG] Nó: e, Grau: 1
+[DEBUG] Aresta: (k, x)
+[DEBUG] Nó: k, Grau: 1
+[DEBUG] Nó: x, Grau: 2
+[DEBUG] Aresta: (k, m)
+[DEBUG] Nó: k, Grau: 2
+[DEBUG] Nó: m, Grau: 1
+[DEBUG] Aresta: (k, h)
+[DEBUG] Nó: k, Grau: 3
+[DEBUG] Nó: h, Grau: 5
+[DEBUG] Aresta: (p, m)
+[DEBUG] Nó: p, Grau: 2
+[DEBUG] Nó: m, Grau: 2
+[DEBUG] Aresta: (p, g)
+[DEBUG] Nó: p, Grau: 3
+[DEBUG] Nó: g, Grau: 1
+[DEBUG] Aresta: (p, s)
+[DEBUG] Nó: p, Grau: 4
+[DEBUG] Nó: s, Grau: 5
+[DEBUG] Aresta: (p, r)
+[DEBUG] Nó: p, Grau: 5
+[DEBUG] Nó: r, Grau: 1
+[DEBUG] Aresta: (s, u)
+[DEBUG] Nó: s, Grau: 6
+[DEBUG] Nó: u, Grau: 3
+[DEBUG] Aresta: (o, i)
+[DEBUG] Nó: o, Grau: 3
+[DEBUG] Nó: i, Grau: 2
+[DEBUG] Aresta: (c, r)
+[DEBUG] Nó: c, Grau: 1
+[DEBUG] Nó: r, Grau: 2
+[DEBUG] Aresta: (m, n)
+[DEBUG] Nó: m, Grau: 3
+[DEBUG] Nó: n, Grau: 1
+[DEBUG] Aresta: (m, h)
+[DEBUG] Nó: m, Grau: 4
+[DEBUG] Nó: h, Grau: 6
+[DEBUG] Aresta: (u, i)
+[DEBUG] Nó: u, Grau: 4
+[DEBUG] Nó: i, Grau: 3
+[DEBUG] Aresta: (g, x)
+[DEBUG] Nó: g, Grau: 2
+[DEBUG] Nó: x, Grau: 3
+[DEBUG] Aresta: (n, h)
+[DEBUG] Nó: n, Grau: 2
+[DEBUG] Nó: h, Grau: 7
+[DEBUG] Aresta: (n, i)
+[DEBUG] Nó: n, Grau: 3
+[DEBUG] Nó: i, Grau: 4
+[DEBUG] Aresta: (i, x)
+[DEBUG] Nó: i, Grau: 5
+[DEBUG] Nó: x, Grau: 4
+[DEBUG] Aresta: (i, h)
+[DEBUG] Nó: i, Grau: 6
+[DEBUG] Nó: h, Grau: 8
+[DEBUG] Aresta: (i, v)
 [DEBUG] Nó: i, Grau: 7
-[DEBUG] Nó: S, Grau: 6
-[DEBUG] Aresta: (g, S)
-[DEBUG] Nó: g, Grau: 5
-[DEBUG] Nó: S, Grau: 7
-[DEBUG] Aresta: (j, S)
-[DEBUG] Nó: j, Grau: 5
-[DEBUG] Nó: S, Grau: 8
-[DEBUG] Aresta: (S, z)
-[DEBUG] Nó: S, Grau: 9
-[DEBUG] Nó: z, Grau: 5
+[DEBUG] Nó: v, Grau: 2
+[DEBUG] Aresta: (r, h)
+[DEBUG] Nó: r, Grau: 3
+[DEBUG] Nó: h, Grau: 9
+[DEBUG] Aresta: (h, v)
+[DEBUG] Nó: h, Grau: 10
+[DEBUG] Nó: v, Grau: 3
+[DEBUG] Aresta: (x, v)
+[DEBUG] Nó: x, Grau: 5
+[DEBUG] Nó: v, Grau: 4
+[DEBUG] Aresta: (e, v)
+[DEBUG] Nó: e, Grau: 2
+[DEBUG] Nó: v, Grau: 5
 
 [DEBUG] Grau dos vertices das arestas não cobertas: 
-[DEBUG] Nó: 0, Grau: 4
-[DEBUG] Nó: 1, Grau: 6
-[DEBUG] Nó: 2, Grau: 1
-[DEBUG] Nó: 3, Grau: 2
-[DEBUG] Nó: 4, Grau: 2
-[DEBUG] Nó: 5, Grau: 5
-[DEBUG] Nó: 6, Grau: 5
-[DEBUG] Nó: 7, Grau: 3
-[DEBUG] Nó: A, Grau: 3
-[DEBUG] Nó: B, Grau: 2
-[DEBUG] Nó: C, Grau: 4
-[DEBUG] Nó: D, Grau: 5
-[DEBUG] Nó: E, Grau: 5
-[DEBUG] Nó: F, Grau: 6
-[DEBUG] Nó: G, Grau: 3
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: I, Grau: 4
-[DEBUG] Nó: J, Grau: 1
-[DEBUG] Nó: K, Grau: 8
-[DEBUG] Nó: L, Grau: 2
-[DEBUG] Nó: M, Grau: 2
-[DEBUG] Nó: N, Grau: 4
-[DEBUG] Nó: O, Grau: 7
-[DEBUG] Nó: P, Grau: 6
-[DEBUG] Nó: Q, Grau: 2
-[DEBUG] Nó: R, Grau: 6
-[DEBUG] Nó: S, Grau: 9
-[DEBUG] Nó: T, Grau: 2
-[DEBUG] Nó: U, Grau: 4
-[DEBUG] Nó: V, Grau: 5
-[DEBUG] Nó: W, Grau: 5
-[DEBUG] Nó: X, Grau: 4
-[DEBUG] Nó: Y, Grau: 4
-[DEBUG] Nó: Z, Grau: 7
-[DEBUG] Nó: a, Grau: 3
-[DEBUG] Nó: b, Grau: 5
-[DEBUG] Nó: c, Grau: 4
-[DEBUG] Nó: d, Grau: 2
+[DEBUG] Nó: a, Grau: 4
+[DEBUG] Nó: b, Grau: 4
+[DEBUG] Nó: c, Grau: 1
+[DEBUG] Nó: d, Grau: 3
 [DEBUG] Nó: e, Grau: 2
-[DEBUG] Nó: f, Grau: 5
-[DEBUG] Nó: g, Grau: 5
-[DEBUG] Nó: h, Grau: 2
+[DEBUG] Nó: f, Grau: 4
+[DEBUG] Nó: g, Grau: 2
+[DEBUG] Nó: h, Grau: 10
 [DEBUG] Nó: i, Grau: 7
-[DEBUG] Nó: j, Grau: 5
-[DEBUG] Nó: k, Grau: 5
-[DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: m, Grau: 7
-[DEBUG] Nó: n, Grau: 6
+[DEBUG] Nó: j, Grau: 4
+[DEBUG] Nó: k, Grau: 3
+[DEBUG] Nó: l, Grau: 3
+[DEBUG] Nó: m, Grau: 4
+[DEBUG] Nó: n, Grau: 3
 [DEBUG] Nó: o, Grau: 3
 [DEBUG] Nó: p, Grau: 5
 [DEBUG] Nó: q, Grau: 3
-[DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: s, Grau: 2
+[DEBUG] Nó: r, Grau: 3
+[DEBUG] Nó: s, Grau: 6
 [DEBUG] Nó: t, Grau: 4
-[DEBUG] Nó: u, Grau: 3
-[DEBUG] Nó: v, Grau: 2
+[DEBUG] Nó: u, Grau: 4
+[DEBUG] Nó: v, Grau: 5
 [DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 2
-[DEBUG] Nó: y, Grau: 3
-[DEBUG] Nó: z, Grau: 5
+[DEBUG] Nó: x, Grau: 5
+[DEBUG] Nó: y, Grau: 2
 
 [DEBUG] Selecionando a aresta com maior grau...
-[DEBUG] Aresta: (N, E), Grau: 9
-[DEBUG] Aresta: (N, z), Grau: 9
-[DEBUG] Aresta: (N, p), Grau: 9
-[DEBUG] Aresta: (N, 7), Grau: 7
-[DEBUG] Aresta: (C, 1), Grau: 10
-[DEBUG] Aresta: (C, b), Grau: 9
-[DEBUG] Aresta: (C, G), Grau: 7
-[DEBUG] Aresta: (C, o), Grau: 7
-[DEBUG] Aresta: (c, B), Grau: 6
-[DEBUG] Aresta: (c, D), Grau: 9
-[DEBUG] Aresta: (c, n), Grau: 10
-[DEBUG] Aresta: (c, t), Grau: 8
-[DEBUG] Aresta: (r, 0), Grau: 5
-[DEBUG] Aresta: (J, F), Grau: 7
-[DEBUG] Aresta: (B, m), Grau: 9
-[DEBUG] Aresta: (L, s), Grau: 4
-[DEBUG] Aresta: (L, K), Grau: 10
-[DEBUG] Aresta: (H, u), Grau: 6
-[DEBUG] Aresta: (H, A), Grau: 6
-[DEBUG] Aresta: (H, E), Grau: 8
-[DEBUG] Aresta: (f, R), Grau: 11
-[DEBUG] Aresta: (f, K), Grau: 13
-[DEBUG] Aresta: (f, W), Grau: 10
-[DEBUG] Aresta: (f, Y), Grau: 9
-[DEBUG] Aresta: (f, 6), Grau: 10
-[DEBUG] Aresta: (e, V), Grau: 7
-[DEBUG] Aresta: (e, 7), Grau: 5
-[DEBUG] Aresta: (6, F), Grau: 11
-[DEBUG] Aresta: (6, U), Grau: 9
-[DEBUG] Aresta: (6, o), Grau: 8
-[DEBUG] Aresta: (6, R), Grau: 11
-[DEBUG] Aresta: (U, P), Grau: 10
-[DEBUG] Aresta: (U, S), Grau: 13
-[DEBUG] Aresta: (U, n), Grau: 10
-[DEBUG] Aresta: (W, j), Grau: 10
-[DEBUG] Aresta: (W, t), Grau: 9
-[DEBUG] Aresta: (W, y), Grau: 8
-[DEBUG] Aresta: (W, 5), Grau: 10
-[DEBUG] Aresta: (0, R), Grau: 10
-[DEBUG] Aresta: (0, K), Grau: 12
-[DEBUG] Aresta: (0, 3), Grau: 6
-[DEBUG] Aresta: (s, I), Grau: 6
-[DEBUG] Aresta: (b, K), Grau: 13
-[DEBUG] Aresta: (b, m), Grau: 12
-[DEBUG] Aresta: (b, O), Grau: 12
-[DEBUG] Aresta: (b, T), Grau: 7
-[DEBUG] Aresta: (v, Z), Grau: 9
-[DEBUG] Aresta: (v, k), Grau: 7
-[DEBUG] Aresta: (w, I), Grau: 6
-[DEBUG] Aresta: (w, x), Grau: 4
-[DEBUG] Aresta: (y, Q), Grau: 5
-[DEBUG] Aresta: (y, 1), Grau: 9
-[DEBUG] Aresta: (4, Z), Grau: 9
-[DEBUG] Aresta: (4, P), Grau: 8
-[DEBUG] Aresta: (V, E), Grau: 10
-[DEBUG] Aresta: (V, 5), Grau: 10
-[DEBUG] Aresta: (V, R), Grau: 11
-[DEBUG] Aresta: (V, n), Grau: 11
-[DEBUG] Aresta: (t, G), Grau: 7
-[DEBUG] Aresta: (t, m), Grau: 11
-[DEBUG] Aresta: (m, I), Grau: 11
-[DEBUG] Aresta: (m, k), Grau: 12
-[DEBUG] Aresta: (m, 1), Grau: 13
-[DEBUG] Aresta: (m, p), Grau: 12
-[DEBUG] Aresta: (5, M), Grau: 7
-[DEBUG] Aresta: (5, p), Grau: 10
-[DEBUG] Aresta: (5, K), Grau: 13
-[DEBUG] Aresta: (k, Y), Grau: 9
-[DEBUG] Aresta: (k, g), Grau: 10
-[DEBUG] Aresta: (k, Z), Grau: 12
-[DEBUG] Aresta: (Y, i), Grau: 11
-[DEBUG] Aresta: (Y, n), Grau: 10
-[DEBUG] Aresta: (p, i), Grau: 12
-[DEBUG] Aresta: (p, n), Grau: 11
-[DEBUG] Aresta: (3, Z), Grau: 9
-[DEBUG] Aresta: (M, g), Grau: 7
-[DEBUG] Aresta: (X, i), Grau: 11
-[DEBUG] Aresta: (X, K), Grau: 12
-[DEBUG] Aresta: (X, l), Grau: 6
-[DEBUG] Aresta: (X, F), Grau: 10
-[DEBUG] Aresta: (n, D), Grau: 11
-[DEBUG] Aresta: (Q, S), Grau: 11
-[DEBUG] Aresta: (1, F), Grau: 12
-[DEBUG] Aresta: (1, i), Grau: 13
-[DEBUG] Aresta: (1, d), Grau: 8
-[DEBUG] Aresta: (G, j), Grau: 8
-[DEBUG] Aresta: (o, g), Grau: 8
-[DEBUG] Aresta: (u, S), Grau: 12
-[DEBUG] Aresta: (u, O), Grau: 10
-[DEBUG] Aresta: (x, O), Grau: 9
-[DEBUG] Aresta: (7, O), Grau: 10
-[DEBUG] Aresta: (h, Z), Grau: 9
-[DEBUG] Aresta: (h, z), Grau: 7
-[DEBUG] Aresta: (F, a), Grau: 9
-[DEBUG] Aresta: (F, q), Grau: 9
-[DEBUG] Aresta: (q, j), Grau: 8
-[DEBUG] Aresta: (q, P), Grau: 9
-[DEBUG] Aresta: (R, a), Grau: 9
-[DEBUG] Aresta: (R, P), Grau: 12
-[DEBUG] Aresta: (I, S), Grau: 13
-[DEBUG] Aresta: (P, D), Grau: 11
-[DEBUG] Aresta: (P, S), Grau: 15
-[DEBUG] Aresta: (d, i), Grau: 9
-[DEBUG] Aresta: (Z, E), Grau: 12
-[DEBUG] Aresta: (Z, K), Grau: 15
-[DEBUG] Aresta: (a, i), Grau: 10
-[DEBUG] Aresta: (T, O), Grau: 9
-[DEBUG] Aresta: (2, g), Grau: 6
-[DEBUG] Aresta: (K, E), Grau: 13
-[DEBUG] Aresta: (O, A), Grau: 10
-[DEBUG] Aresta: (O, z), Grau: 12
-[DEBUG] Aresta: (A, z), Grau: 8
-[DEBUG] Aresta: (l, D), Grau: 7
-[DEBUG] Aresta: (D, j), Grau: 10
-[DEBUG] Aresta: (i, S), Grau: 16
-[DEBUG] Aresta: (g, S), Grau: 14
-[DEBUG] Aresta: (j, S), Grau: 14
-[DEBUG] Aresta: (S, z), Grau: 14
-[DEBUG] Aresta selecionada: (i, S) com grau 16
-[DEBUG] Solução:  (i, S) 
+[DEBUG] Aresta: (w, v), Grau: 7
+[DEBUG] Aresta: (w, t), Grau: 6
+[DEBUG] Aresta: (q, u), Grau: 7
+[DEBUG] Aresta: (q, h), Grau: 13
+[DEBUG] Aresta: (q, l), Grau: 6
+[DEBUG] Aresta: (l, a), Grau: 7
+[DEBUG] Aresta: (l, h), Grau: 13
+[DEBUG] Aresta: (j, f), Grau: 8
+[DEBUG] Aresta: (j, d), Grau: 7
+[DEBUG] Aresta: (j, x), Grau: 9
+[DEBUG] Aresta: (j, a), Grau: 8
+[DEBUG] Aresta: (y, o), Grau: 5
+[DEBUG] Aresta: (y, b), Grau: 6
+[DEBUG] Aresta: (d, s), Grau: 9
+[DEBUG] Aresta: (d, f), Grau: 7
+[DEBUG] Aresta: (t, o), Grau: 7
+[DEBUG] Aresta: (t, s), Grau: 10
+[DEBUG] Aresta: (t, i), Grau: 11
+[DEBUG] Aresta: (b, h), Grau: 14
+[DEBUG] Aresta: (b, s), Grau: 10
+[DEBUG] Aresta: (b, u), Grau: 8
+[DEBUG] Aresta: (a, s), Grau: 10
+[DEBUG] Aresta: (a, h), Grau: 14
+[DEBUG] Aresta: (f, p), Grau: 9
+[DEBUG] Aresta: (f, e), Grau: 6
+[DEBUG] Aresta: (k, x), Grau: 8
+[DEBUG] Aresta: (k, m), Grau: 7
+[DEBUG] Aresta: (k, h), Grau: 13
+[DEBUG] Aresta: (p, m), Grau: 9
+[DEBUG] Aresta: (p, g), Grau: 7
+[DEBUG] Aresta: (p, s), Grau: 11
+[DEBUG] Aresta: (p, r), Grau: 8
+[DEBUG] Aresta: (s, u), Grau: 10
+[DEBUG] Aresta: (o, i), Grau: 10
+[DEBUG] Aresta: (c, r), Grau: 4
+[DEBUG] Aresta: (m, n), Grau: 7
+[DEBUG] Aresta: (m, h), Grau: 14
+[DEBUG] Aresta: (u, i), Grau: 11
+[DEBUG] Aresta: (g, x), Grau: 7
+[DEBUG] Aresta: (n, h), Grau: 13
+[DEBUG] Aresta: (n, i), Grau: 10
+[DEBUG] Aresta: (i, x), Grau: 12
+[DEBUG] Aresta: (i, h), Grau: 17
+[DEBUG] Aresta: (i, v), Grau: 12
+[DEBUG] Aresta: (r, h), Grau: 13
+[DEBUG] Aresta: (h, v), Grau: 15
+[DEBUG] Aresta: (x, v), Grau: 10
+[DEBUG] Aresta: (e, v), Grau: 7
+[DEBUG] Aresta selecionada: (i, h) com grau 17
+[DEBUG] Solução:  (i, h) 
 
-[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (i, S)
+[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (i, h)
 
-[DEBUG] Verificando aresta: (S, z)
-[DEBUG] Removendo aresta: (S, z)
+[DEBUG] Verificando aresta: (e, v)
 
-[DEBUG] Verificando aresta: (j, S)
-[DEBUG] Removendo aresta: (j, S)
+[DEBUG] Verificando aresta: (x, v)
 
-[DEBUG] Verificando aresta: (g, S)
-[DEBUG] Removendo aresta: (g, S)
+[DEBUG] Verificando aresta: (h, v)
+[DEBUG] Removendo aresta: (h, v)
 
-[DEBUG] Verificando aresta: (i, S)
-[DEBUG] Removendo aresta: (i, S)
+[DEBUG] Verificando aresta: (r, h)
+[DEBUG] Removendo aresta: (r, h)
 
-[DEBUG] Verificando aresta: (D, j)
+[DEBUG] Verificando aresta: (i, v)
+[DEBUG] Removendo aresta: (i, v)
 
-[DEBUG] Verificando aresta: (l, D)
+[DEBUG] Verificando aresta: (i, h)
+[DEBUG] Removendo aresta: (i, h)
 
-[DEBUG] Verificando aresta: (A, z)
+[DEBUG] Verificando aresta: (i, x)
+[DEBUG] Removendo aresta: (i, x)
 
-[DEBUG] Verificando aresta: (O, z)
+[DEBUG] Verificando aresta: (n, i)
+[DEBUG] Removendo aresta: (n, i)
 
-[DEBUG] Verificando aresta: (O, A)
+[DEBUG] Verificando aresta: (n, h)
+[DEBUG] Removendo aresta: (n, h)
 
-[DEBUG] Verificando aresta: (K, E)
+[DEBUG] Verificando aresta: (g, x)
 
-[DEBUG] Verificando aresta: (2, g)
+[DEBUG] Verificando aresta: (u, i)
+[DEBUG] Removendo aresta: (u, i)
 
-[DEBUG] Verificando aresta: (T, O)
+[DEBUG] Verificando aresta: (m, h)
+[DEBUG] Removendo aresta: (m, h)
 
-[DEBUG] Verificando aresta: (a, i)
-[DEBUG] Removendo aresta: (a, i)
+[DEBUG] Verificando aresta: (m, n)
 
-[DEBUG] Verificando aresta: (Z, K)
+[DEBUG] Verificando aresta: (c, r)
 
-[DEBUG] Verificando aresta: (Z, E)
+[DEBUG] Verificando aresta: (o, i)
+[DEBUG] Removendo aresta: (o, i)
 
-[DEBUG] Verificando aresta: (d, i)
-[DEBUG] Removendo aresta: (d, i)
+[DEBUG] Verificando aresta: (s, u)
 
-[DEBUG] Verificando aresta: (P, S)
-[DEBUG] Removendo aresta: (P, S)
+[DEBUG] Verificando aresta: (p, r)
 
-[DEBUG] Verificando aresta: (P, D)
+[DEBUG] Verificando aresta: (p, s)
 
-[DEBUG] Verificando aresta: (I, S)
-[DEBUG] Removendo aresta: (I, S)
+[DEBUG] Verificando aresta: (p, g)
 
-[DEBUG] Verificando aresta: (R, P)
+[DEBUG] Verificando aresta: (p, m)
 
-[DEBUG] Verificando aresta: (R, a)
+[DEBUG] Verificando aresta: (k, h)
+[DEBUG] Removendo aresta: (k, h)
 
-[DEBUG] Verificando aresta: (q, P)
+[DEBUG] Verificando aresta: (k, m)
 
-[DEBUG] Verificando aresta: (q, j)
+[DEBUG] Verificando aresta: (k, x)
 
-[DEBUG] Verificando aresta: (F, q)
+[DEBUG] Verificando aresta: (f, e)
 
-[DEBUG] Verificando aresta: (F, a)
+[DEBUG] Verificando aresta: (f, p)
 
-[DEBUG] Verificando aresta: (h, z)
+[DEBUG] Verificando aresta: (a, h)
+[DEBUG] Removendo aresta: (a, h)
 
-[DEBUG] Verificando aresta: (h, Z)
+[DEBUG] Verificando aresta: (a, s)
 
-[DEBUG] Verificando aresta: (7, O)
+[DEBUG] Verificando aresta: (b, u)
 
-[DEBUG] Verificando aresta: (x, O)
+[DEBUG] Verificando aresta: (b, s)
 
-[DEBUG] Verificando aresta: (u, O)
+[DEBUG] Verificando aresta: (b, h)
+[DEBUG] Removendo aresta: (b, h)
 
-[DEBUG] Verificando aresta: (u, S)
-[DEBUG] Removendo aresta: (u, S)
+[DEBUG] Verificando aresta: (t, i)
+[DEBUG] Removendo aresta: (t, i)
 
-[DEBUG] Verificando aresta: (o, g)
+[DEBUG] Verificando aresta: (t, s)
 
-[DEBUG] Verificando aresta: (G, j)
+[DEBUG] Verificando aresta: (t, o)
 
-[DEBUG] Verificando aresta: (1, d)
+[DEBUG] Verificando aresta: (d, f)
 
-[DEBUG] Verificando aresta: (1, i)
-[DEBUG] Removendo aresta: (1, i)
+[DEBUG] Verificando aresta: (d, s)
 
-[DEBUG] Verificando aresta: (1, F)
+[DEBUG] Verificando aresta: (y, b)
 
-[DEBUG] Verificando aresta: (Q, S)
-[DEBUG] Removendo aresta: (Q, S)
+[DEBUG] Verificando aresta: (y, o)
 
-[DEBUG] Verificando aresta: (n, D)
+[DEBUG] Verificando aresta: (j, a)
 
-[DEBUG] Verificando aresta: (X, F)
+[DEBUG] Verificando aresta: (j, x)
 
-[DEBUG] Verificando aresta: (X, l)
+[DEBUG] Verificando aresta: (j, d)
 
-[DEBUG] Verificando aresta: (X, K)
+[DEBUG] Verificando aresta: (j, f)
 
-[DEBUG] Verificando aresta: (X, i)
-[DEBUG] Removendo aresta: (X, i)
+[DEBUG] Verificando aresta: (l, h)
+[DEBUG] Removendo aresta: (l, h)
 
-[DEBUG] Verificando aresta: (M, g)
+[DEBUG] Verificando aresta: (l, a)
 
-[DEBUG] Verificando aresta: (3, Z)
+[DEBUG] Verificando aresta: (q, l)
 
-[DEBUG] Verificando aresta: (p, n)
+[DEBUG] Verificando aresta: (q, h)
+[DEBUG] Removendo aresta: (q, h)
 
-[DEBUG] Verificando aresta: (p, i)
-[DEBUG] Removendo aresta: (p, i)
+[DEBUG] Verificando aresta: (q, u)
 
-[DEBUG] Verificando aresta: (Y, n)
+[DEBUG] Verificando aresta: (w, t)
 
-[DEBUG] Verificando aresta: (Y, i)
-[DEBUG] Removendo aresta: (Y, i)
-
-[DEBUG] Verificando aresta: (k, Z)
-
-[DEBUG] Verificando aresta: (k, g)
-
-[DEBUG] Verificando aresta: (k, Y)
-
-[DEBUG] Verificando aresta: (5, K)
-
-[DEBUG] Verificando aresta: (5, p)
-
-[DEBUG] Verificando aresta: (5, M)
-
-[DEBUG] Verificando aresta: (m, p)
-
-[DEBUG] Verificando aresta: (m, 1)
-
-[DEBUG] Verificando aresta: (m, k)
-
-[DEBUG] Verificando aresta: (m, I)
-
-[DEBUG] Verificando aresta: (t, m)
-
-[DEBUG] Verificando aresta: (t, G)
-
-[DEBUG] Verificando aresta: (V, n)
-
-[DEBUG] Verificando aresta: (V, R)
-
-[DEBUG] Verificando aresta: (V, 5)
-
-[DEBUG] Verificando aresta: (V, E)
-
-[DEBUG] Verificando aresta: (4, P)
-
-[DEBUG] Verificando aresta: (4, Z)
-
-[DEBUG] Verificando aresta: (y, 1)
-
-[DEBUG] Verificando aresta: (y, Q)
-
-[DEBUG] Verificando aresta: (w, x)
-
-[DEBUG] Verificando aresta: (w, I)
-
-[DEBUG] Verificando aresta: (v, k)
-
-[DEBUG] Verificando aresta: (v, Z)
-
-[DEBUG] Verificando aresta: (b, T)
-
-[DEBUG] Verificando aresta: (b, O)
-
-[DEBUG] Verificando aresta: (b, m)
-
-[DEBUG] Verificando aresta: (b, K)
-
-[DEBUG] Verificando aresta: (s, I)
-
-[DEBUG] Verificando aresta: (0, 3)
-
-[DEBUG] Verificando aresta: (0, K)
-
-[DEBUG] Verificando aresta: (0, R)
-
-[DEBUG] Verificando aresta: (W, 5)
-
-[DEBUG] Verificando aresta: (W, y)
-
-[DEBUG] Verificando aresta: (W, t)
-
-[DEBUG] Verificando aresta: (W, j)
-
-[DEBUG] Verificando aresta: (U, n)
-
-[DEBUG] Verificando aresta: (U, S)
-[DEBUG] Removendo aresta: (U, S)
-
-[DEBUG] Verificando aresta: (U, P)
-
-[DEBUG] Verificando aresta: (6, R)
-
-[DEBUG] Verificando aresta: (6, o)
-
-[DEBUG] Verificando aresta: (6, U)
-
-[DEBUG] Verificando aresta: (6, F)
-
-[DEBUG] Verificando aresta: (e, 7)
-
-[DEBUG] Verificando aresta: (e, V)
-
-[DEBUG] Verificando aresta: (f, 6)
-
-[DEBUG] Verificando aresta: (f, Y)
-
-[DEBUG] Verificando aresta: (f, W)
-
-[DEBUG] Verificando aresta: (f, K)
-
-[DEBUG] Verificando aresta: (f, R)
-
-[DEBUG] Verificando aresta: (H, E)
-
-[DEBUG] Verificando aresta: (H, A)
-
-[DEBUG] Verificando aresta: (H, u)
-
-[DEBUG] Verificando aresta: (L, K)
-
-[DEBUG] Verificando aresta: (L, s)
-
-[DEBUG] Verificando aresta: (B, m)
-
-[DEBUG] Verificando aresta: (J, F)
-
-[DEBUG] Verificando aresta: (r, 0)
-
-[DEBUG] Verificando aresta: (c, t)
-
-[DEBUG] Verificando aresta: (c, n)
-
-[DEBUG] Verificando aresta: (c, D)
-
-[DEBUG] Verificando aresta: (c, B)
-
-[DEBUG] Verificando aresta: (C, o)
-
-[DEBUG] Verificando aresta: (C, G)
-
-[DEBUG] Verificando aresta: (C, b)
-
-[DEBUG] Verificando aresta: (C, 1)
-
-[DEBUG] Verificando aresta: (N, 7)
-
-[DEBUG] Verificando aresta: (N, p)
-
-[DEBUG] Verificando aresta: (N, z)
-
-[DEBUG] Verificando aresta: (N, E)
+[DEBUG] Verificando aresta: (w, v)
 
 [DEBUG] Arestas não cobertas após remoção: 
-(N, E) (N, z) (N, p) (N, 7) (C, 1) (C, b) (C, G) (C, o) (c, B) (c, D) (c, n) (c, t) (r, 0) (J, F) (B, m) (L, s) (L, K) (H, u) (H, A) (H, E) (f, R) (f, K) (f, W) (f, Y) (f, 6) (e, V) (e, 7) (6, F) (6, U) (6, o) (6, R) (U, P) (U, n) (W, j) (W, t) (W, y) (W, 5) (0, R) (0, K) (0, 3) (s, I) (b, K) (b, m) (b, O) (b, T) (v, Z) (v, k) (w, I) (w, x) (y, Q) (y, 1) (4, Z) (4, P) (V, E) (V, 5) (V, R) (V, n) (t, G) (t, m) (m, I) (m, k) (m, 1) (m, p) (5, M) (5, p) (5, K) (k, Y) (k, g) (k, Z) (Y, n) (p, n) (3, Z) (M, g) (X, K) (X, l) (X, F) (n, D) (1, F) (1, d) (G, j) (o, g) (u, O) (x, O) (7, O) (h, Z) (h, z) (F, a) (F, q) (q, j) (q, P) (R, a) (R, P) (P, D) (Z, E) (Z, K) (T, O) (2, g) (K, E) (O, A) (O, z) (A, z) (l, D) (D, j) 
+(w, v) (w, t) (q, u) (q, l) (l, a) (j, f) (j, d) (j, x) (j, a) (y, o) (y, b) (d, s) (d, f) (t, o) (t, s) (b, s) (b, u) (a, s) (f, p) (f, e) (k, x) (k, m) (p, m) (p, g) (p, s) (p, r) (s, u) (c, r) (m, n) (g, x) (x, v) (e, v) 
 
 [DEBUG] Execução 2:
 [DEBUG] Arestas não cobertas: 
-(N, E) (N, z) (N, p) (N, 7) (C, 1) (C, b) (C, G) (C, o) (c, B) (c, D) (c, n) (c, t) (r, 0) (J, F) (B, m) (L, s) (L, K) (H, u) (H, A) (H, E) (f, R) (f, K) (f, W) (f, Y) (f, 6) (e, V) (e, 7) (6, F) (6, U) (6, o) (6, R) (U, P) (U, n) (W, j) (W, t) (W, y) (W, 5) (0, R) (0, K) (0, 3) (s, I) (b, K) (b, m) (b, O) (b, T) (v, Z) (v, k) (w, I) (w, x) (y, Q) (y, 1) (4, Z) (4, P) (V, E) (V, 5) (V, R) (V, n) (t, G) (t, m) (m, I) (m, k) (m, 1) (m, p) (5, M) (5, p) (5, K) (k, Y) (k, g) (k, Z) (Y, n) (p, n) (3, Z) (M, g) (X, K) (X, l) (X, F) (n, D) (1, F) (1, d) (G, j) (o, g) (u, O) (x, O) (7, O) (h, Z) (h, z) (F, a) (F, q) (q, j) (q, P) (R, a) (R, P) (P, D) (Z, E) (Z, K) (T, O) (2, g) (K, E) (O, A) (O, z) (A, z) (l, D) (D, j) 
+(w, v) (w, t) (q, u) (q, l) (l, a) (j, f) (j, d) (j, x) (j, a) (y, o) (y, b) (d, s) (d, f) (t, o) (t, s) (b, s) (b, u) (a, s) (f, p) (f, e) (k, x) (k, m) (p, m) (p, g) (p, s) (p, r) (s, u) (c, r) (m, n) (g, x) (x, v) (e, v) 
 
 [DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
-[DEBUG] Aresta: (N, E)
-[DEBUG] Nó: N, Grau: 1
-[DEBUG] Nó: E, Grau: 1
-[DEBUG] Aresta: (N, z)
-[DEBUG] Nó: N, Grau: 2
-[DEBUG] Nó: z, Grau: 1
-[DEBUG] Aresta: (N, p)
-[DEBUG] Nó: N, Grau: 3
-[DEBUG] Nó: p, Grau: 1
-[DEBUG] Aresta: (N, 7)
-[DEBUG] Nó: N, Grau: 4
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Aresta: (C, 1)
-[DEBUG] Nó: C, Grau: 1
-[DEBUG] Nó: 1, Grau: 1
-[DEBUG] Aresta: (C, b)
-[DEBUG] Nó: C, Grau: 2
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Aresta: (C, G)
-[DEBUG] Nó: C, Grau: 3
-[DEBUG] Nó: G, Grau: 1
-[DEBUG] Aresta: (C, o)
-[DEBUG] Nó: C, Grau: 4
-[DEBUG] Nó: o, Grau: 1
-[DEBUG] Aresta: (c, B)
-[DEBUG] Nó: c, Grau: 1
-[DEBUG] Nó: B, Grau: 1
-[DEBUG] Aresta: (c, D)
-[DEBUG] Nó: c, Grau: 2
-[DEBUG] Nó: D, Grau: 1
-[DEBUG] Aresta: (c, n)
-[DEBUG] Nó: c, Grau: 3
-[DEBUG] Nó: n, Grau: 1
-[DEBUG] Aresta: (c, t)
-[DEBUG] Nó: c, Grau: 4
-[DEBUG] Nó: t, Grau: 1
-[DEBUG] Aresta: (r, 0)
-[DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: 0, Grau: 1
-[DEBUG] Aresta: (J, F)
-[DEBUG] Nó: J, Grau: 1
-[DEBUG] Nó: F, Grau: 1
-[DEBUG] Aresta: (B, m)
-[DEBUG] Nó: B, Grau: 2
-[DEBUG] Nó: m, Grau: 1
-[DEBUG] Aresta: (L, s)
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: s, Grau: 1
-[DEBUG] Aresta: (L, K)
-[DEBUG] Nó: L, Grau: 2
-[DEBUG] Nó: K, Grau: 1
-[DEBUG] Aresta: (H, u)
-[DEBUG] Nó: H, Grau: 1
-[DEBUG] Nó: u, Grau: 1
-[DEBUG] Aresta: (H, A)
-[DEBUG] Nó: H, Grau: 2
-[DEBUG] Nó: A, Grau: 1
-[DEBUG] Aresta: (H, E)
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: E, Grau: 2
-[DEBUG] Aresta: (f, R)
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: R, Grau: 1
-[DEBUG] Aresta: (f, K)
-[DEBUG] Nó: f, Grau: 2
-[DEBUG] Nó: K, Grau: 2
-[DEBUG] Aresta: (f, W)
-[DEBUG] Nó: f, Grau: 3
-[DEBUG] Nó: W, Grau: 1
-[DEBUG] Aresta: (f, Y)
-[DEBUG] Nó: f, Grau: 4
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Aresta: (f, 6)
-[DEBUG] Nó: f, Grau: 5
-[DEBUG] Nó: 6, Grau: 1
-[DEBUG] Aresta: (e, V)
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: V, Grau: 1
-[DEBUG] Aresta: (e, 7)
-[DEBUG] Nó: e, Grau: 2
-[DEBUG] Nó: 7, Grau: 2
-[DEBUG] Aresta: (6, F)
-[DEBUG] Nó: 6, Grau: 2
-[DEBUG] Nó: F, Grau: 2
-[DEBUG] Aresta: (6, U)
-[DEBUG] Nó: 6, Grau: 3
-[DEBUG] Nó: U, Grau: 1
-[DEBUG] Aresta: (6, o)
-[DEBUG] Nó: 6, Grau: 4
-[DEBUG] Nó: o, Grau: 2
-[DEBUG] Aresta: (6, R)
-[DEBUG] Nó: 6, Grau: 5
-[DEBUG] Nó: R, Grau: 2
-[DEBUG] Aresta: (U, P)
-[DEBUG] Nó: U, Grau: 2
-[DEBUG] Nó: P, Grau: 1
-[DEBUG] Aresta: (U, n)
-[DEBUG] Nó: U, Grau: 3
-[DEBUG] Nó: n, Grau: 2
-[DEBUG] Aresta: (W, j)
-[DEBUG] Nó: W, Grau: 2
-[DEBUG] Nó: j, Grau: 1
-[DEBUG] Aresta: (W, t)
-[DEBUG] Nó: W, Grau: 3
-[DEBUG] Nó: t, Grau: 2
-[DEBUG] Aresta: (W, y)
-[DEBUG] Nó: W, Grau: 4
-[DEBUG] Nó: y, Grau: 1
-[DEBUG] Aresta: (W, 5)
-[DEBUG] Nó: W, Grau: 5
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Aresta: (0, R)
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: R, Grau: 3
-[DEBUG] Aresta: (0, K)
-[DEBUG] Nó: 0, Grau: 3
-[DEBUG] Nó: K, Grau: 3
-[DEBUG] Aresta: (0, 3)
-[DEBUG] Nó: 0, Grau: 4
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Aresta: (s, I)
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: I, Grau: 1
-[DEBUG] Aresta: (b, K)
-[DEBUG] Nó: b, Grau: 2
-[DEBUG] Nó: K, Grau: 4
-[DEBUG] Aresta: (b, m)
-[DEBUG] Nó: b, Grau: 3
-[DEBUG] Nó: m, Grau: 2
-[DEBUG] Aresta: (b, O)
-[DEBUG] Nó: b, Grau: 4
-[DEBUG] Nó: O, Grau: 1
-[DEBUG] Aresta: (b, T)
-[DEBUG] Nó: b, Grau: 5
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Aresta: (v, Z)
-[DEBUG] Nó: v, Grau: 1
-[DEBUG] Nó: Z, Grau: 1
-[DEBUG] Aresta: (v, k)
-[DEBUG] Nó: v, Grau: 2
-[DEBUG] Nó: k, Grau: 1
-[DEBUG] Aresta: (w, I)
+[DEBUG] Aresta: (w, v)
 [DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Aresta: (w, x)
+[DEBUG] Nó: v, Grau: 1
+[DEBUG] Aresta: (w, t)
 [DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Aresta: (y, Q)
-[DEBUG] Nó: y, Grau: 2
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Aresta: (y, 1)
-[DEBUG] Nó: y, Grau: 3
-[DEBUG] Nó: 1, Grau: 2
-[DEBUG] Aresta: (4, Z)
-[DEBUG] Nó: 4, Grau: 1
-[DEBUG] Nó: Z, Grau: 2
-[DEBUG] Aresta: (4, P)
-[DEBUG] Nó: 4, Grau: 2
-[DEBUG] Nó: P, Grau: 2
-[DEBUG] Aresta: (V, E)
-[DEBUG] Nó: V, Grau: 2
-[DEBUG] Nó: E, Grau: 3
-[DEBUG] Aresta: (V, 5)
-[DEBUG] Nó: V, Grau: 3
-[DEBUG] Nó: 5, Grau: 2
-[DEBUG] Aresta: (V, R)
-[DEBUG] Nó: V, Grau: 4
-[DEBUG] Nó: R, Grau: 4
-[DEBUG] Aresta: (V, n)
-[DEBUG] Nó: V, Grau: 5
-[DEBUG] Nó: n, Grau: 3
-[DEBUG] Aresta: (t, G)
-[DEBUG] Nó: t, Grau: 3
-[DEBUG] Nó: G, Grau: 2
-[DEBUG] Aresta: (t, m)
-[DEBUG] Nó: t, Grau: 4
-[DEBUG] Nó: m, Grau: 3
-[DEBUG] Aresta: (m, I)
-[DEBUG] Nó: m, Grau: 4
-[DEBUG] Nó: I, Grau: 3
-[DEBUG] Aresta: (m, k)
-[DEBUG] Nó: m, Grau: 5
-[DEBUG] Nó: k, Grau: 2
-[DEBUG] Aresta: (m, 1)
-[DEBUG] Nó: m, Grau: 6
-[DEBUG] Nó: 1, Grau: 3
-[DEBUG] Aresta: (m, p)
-[DEBUG] Nó: m, Grau: 7
-[DEBUG] Nó: p, Grau: 2
-[DEBUG] Aresta: (5, M)
-[DEBUG] Nó: 5, Grau: 3
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Aresta: (5, p)
-[DEBUG] Nó: 5, Grau: 4
-[DEBUG] Nó: p, Grau: 3
-[DEBUG] Aresta: (5, K)
-[DEBUG] Nó: 5, Grau: 5
-[DEBUG] Nó: K, Grau: 5
-[DEBUG] Aresta: (k, Y)
-[DEBUG] Nó: k, Grau: 3
-[DEBUG] Nó: Y, Grau: 2
-[DEBUG] Aresta: (k, g)
-[DEBUG] Nó: k, Grau: 4
-[DEBUG] Nó: g, Grau: 1
-[DEBUG] Aresta: (k, Z)
-[DEBUG] Nó: k, Grau: 5
-[DEBUG] Nó: Z, Grau: 3
-[DEBUG] Aresta: (Y, n)
-[DEBUG] Nó: Y, Grau: 3
-[DEBUG] Nó: n, Grau: 4
-[DEBUG] Aresta: (p, n)
-[DEBUG] Nó: p, Grau: 4
-[DEBUG] Nó: n, Grau: 5
-[DEBUG] Aresta: (3, Z)
-[DEBUG] Nó: 3, Grau: 2
-[DEBUG] Nó: Z, Grau: 4
-[DEBUG] Aresta: (M, g)
-[DEBUG] Nó: M, Grau: 2
-[DEBUG] Nó: g, Grau: 2
-[DEBUG] Aresta: (X, K)
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: K, Grau: 6
-[DEBUG] Aresta: (X, l)
-[DEBUG] Nó: X, Grau: 2
-[DEBUG] Nó: l, Grau: 1
-[DEBUG] Aresta: (X, F)
-[DEBUG] Nó: X, Grau: 3
-[DEBUG] Nó: F, Grau: 3
-[DEBUG] Aresta: (n, D)
-[DEBUG] Nó: n, Grau: 6
-[DEBUG] Nó: D, Grau: 2
-[DEBUG] Aresta: (1, F)
-[DEBUG] Nó: 1, Grau: 4
-[DEBUG] Nó: F, Grau: 4
-[DEBUG] Aresta: (1, d)
-[DEBUG] Nó: 1, Grau: 5
-[DEBUG] Nó: d, Grau: 1
-[DEBUG] Aresta: (G, j)
-[DEBUG] Nó: G, Grau: 3
-[DEBUG] Nó: j, Grau: 2
-[DEBUG] Aresta: (o, g)
-[DEBUG] Nó: o, Grau: 3
-[DEBUG] Nó: g, Grau: 3
-[DEBUG] Aresta: (u, O)
-[DEBUG] Nó: u, Grau: 2
-[DEBUG] Nó: O, Grau: 2
-[DEBUG] Aresta: (x, O)
-[DEBUG] Nó: x, Grau: 2
-[DEBUG] Nó: O, Grau: 3
-[DEBUG] Aresta: (7, O)
-[DEBUG] Nó: 7, Grau: 3
-[DEBUG] Nó: O, Grau: 4
-[DEBUG] Aresta: (h, Z)
-[DEBUG] Nó: h, Grau: 1
-[DEBUG] Nó: Z, Grau: 5
-[DEBUG] Aresta: (h, z)
-[DEBUG] Nó: h, Grau: 2
-[DEBUG] Nó: z, Grau: 2
-[DEBUG] Aresta: (F, a)
-[DEBUG] Nó: F, Grau: 5
-[DEBUG] Nó: a, Grau: 1
-[DEBUG] Aresta: (F, q)
-[DEBUG] Nó: F, Grau: 6
+[DEBUG] Nó: t, Grau: 1
+[DEBUG] Aresta: (q, u)
 [DEBUG] Nó: q, Grau: 1
-[DEBUG] Aresta: (q, j)
+[DEBUG] Nó: u, Grau: 1
+[DEBUG] Aresta: (q, l)
 [DEBUG] Nó: q, Grau: 2
-[DEBUG] Nó: j, Grau: 3
-[DEBUG] Aresta: (q, P)
-[DEBUG] Nó: q, Grau: 3
-[DEBUG] Nó: P, Grau: 3
-[DEBUG] Aresta: (R, a)
-[DEBUG] Nó: R, Grau: 5
-[DEBUG] Nó: a, Grau: 2
-[DEBUG] Aresta: (R, P)
-[DEBUG] Nó: R, Grau: 6
-[DEBUG] Nó: P, Grau: 4
-[DEBUG] Aresta: (P, D)
-[DEBUG] Nó: P, Grau: 5
-[DEBUG] Nó: D, Grau: 3
-[DEBUG] Aresta: (Z, E)
-[DEBUG] Nó: Z, Grau: 6
-[DEBUG] Nó: E, Grau: 4
-[DEBUG] Aresta: (Z, K)
-[DEBUG] Nó: Z, Grau: 7
-[DEBUG] Nó: K, Grau: 7
-[DEBUG] Aresta: (T, O)
-[DEBUG] Nó: T, Grau: 2
-[DEBUG] Nó: O, Grau: 5
-[DEBUG] Aresta: (2, g)
-[DEBUG] Nó: 2, Grau: 1
-[DEBUG] Nó: g, Grau: 4
-[DEBUG] Aresta: (K, E)
-[DEBUG] Nó: K, Grau: 8
-[DEBUG] Nó: E, Grau: 5
-[DEBUG] Aresta: (O, A)
-[DEBUG] Nó: O, Grau: 6
-[DEBUG] Nó: A, Grau: 2
-[DEBUG] Aresta: (O, z)
-[DEBUG] Nó: O, Grau: 7
-[DEBUG] Nó: z, Grau: 3
-[DEBUG] Aresta: (A, z)
-[DEBUG] Nó: A, Grau: 3
-[DEBUG] Nó: z, Grau: 4
-[DEBUG] Aresta: (l, D)
+[DEBUG] Nó: l, Grau: 1
+[DEBUG] Aresta: (l, a)
 [DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: D, Grau: 4
-[DEBUG] Aresta: (D, j)
-[DEBUG] Nó: D, Grau: 5
+[DEBUG] Nó: a, Grau: 1
+[DEBUG] Aresta: (j, f)
+[DEBUG] Nó: j, Grau: 1
+[DEBUG] Nó: f, Grau: 1
+[DEBUG] Aresta: (j, d)
+[DEBUG] Nó: j, Grau: 2
+[DEBUG] Nó: d, Grau: 1
+[DEBUG] Aresta: (j, x)
+[DEBUG] Nó: j, Grau: 3
+[DEBUG] Nó: x, Grau: 1
+[DEBUG] Aresta: (j, a)
 [DEBUG] Nó: j, Grau: 4
+[DEBUG] Nó: a, Grau: 2
+[DEBUG] Aresta: (y, o)
+[DEBUG] Nó: y, Grau: 1
+[DEBUG] Nó: o, Grau: 1
+[DEBUG] Aresta: (y, b)
+[DEBUG] Nó: y, Grau: 2
+[DEBUG] Nó: b, Grau: 1
+[DEBUG] Aresta: (d, s)
+[DEBUG] Nó: d, Grau: 2
+[DEBUG] Nó: s, Grau: 1
+[DEBUG] Aresta: (d, f)
+[DEBUG] Nó: d, Grau: 3
+[DEBUG] Nó: f, Grau: 2
+[DEBUG] Aresta: (t, o)
+[DEBUG] Nó: t, Grau: 2
+[DEBUG] Nó: o, Grau: 2
+[DEBUG] Aresta: (t, s)
+[DEBUG] Nó: t, Grau: 3
+[DEBUG] Nó: s, Grau: 2
+[DEBUG] Aresta: (b, s)
+[DEBUG] Nó: b, Grau: 2
+[DEBUG] Nó: s, Grau: 3
+[DEBUG] Aresta: (b, u)
+[DEBUG] Nó: b, Grau: 3
+[DEBUG] Nó: u, Grau: 2
+[DEBUG] Aresta: (a, s)
+[DEBUG] Nó: a, Grau: 3
+[DEBUG] Nó: s, Grau: 4
+[DEBUG] Aresta: (f, p)
+[DEBUG] Nó: f, Grau: 3
+[DEBUG] Nó: p, Grau: 1
+[DEBUG] Aresta: (f, e)
+[DEBUG] Nó: f, Grau: 4
+[DEBUG] Nó: e, Grau: 1
+[DEBUG] Aresta: (k, x)
+[DEBUG] Nó: k, Grau: 1
+[DEBUG] Nó: x, Grau: 2
+[DEBUG] Aresta: (k, m)
+[DEBUG] Nó: k, Grau: 2
+[DEBUG] Nó: m, Grau: 1
+[DEBUG] Aresta: (p, m)
+[DEBUG] Nó: p, Grau: 2
+[DEBUG] Nó: m, Grau: 2
+[DEBUG] Aresta: (p, g)
+[DEBUG] Nó: p, Grau: 3
+[DEBUG] Nó: g, Grau: 1
+[DEBUG] Aresta: (p, s)
+[DEBUG] Nó: p, Grau: 4
+[DEBUG] Nó: s, Grau: 5
+[DEBUG] Aresta: (p, r)
+[DEBUG] Nó: p, Grau: 5
+[DEBUG] Nó: r, Grau: 1
+[DEBUG] Aresta: (s, u)
+[DEBUG] Nó: s, Grau: 6
+[DEBUG] Nó: u, Grau: 3
+[DEBUG] Aresta: (c, r)
+[DEBUG] Nó: c, Grau: 1
+[DEBUG] Nó: r, Grau: 2
+[DEBUG] Aresta: (m, n)
+[DEBUG] Nó: m, Grau: 3
+[DEBUG] Nó: n, Grau: 1
+[DEBUG] Aresta: (g, x)
+[DEBUG] Nó: g, Grau: 2
+[DEBUG] Nó: x, Grau: 3
+[DEBUG] Aresta: (x, v)
+[DEBUG] Nó: x, Grau: 4
+[DEBUG] Nó: v, Grau: 2
+[DEBUG] Aresta: (e, v)
+[DEBUG] Nó: e, Grau: 2
+[DEBUG] Nó: v, Grau: 3
 
 [DEBUG] Grau dos vertices das arestas não cobertas: 
-[DEBUG] Nó: 0, Grau: 4
-[DEBUG] Nó: 1, Grau: 5
-[DEBUG] Nó: 2, Grau: 1
-[DEBUG] Nó: 3, Grau: 2
-[DEBUG] Nó: 4, Grau: 2
-[DEBUG] Nó: 5, Grau: 5
-[DEBUG] Nó: 6, Grau: 5
-[DEBUG] Nó: 7, Grau: 3
-[DEBUG] Nó: A, Grau: 3
-[DEBUG] Nó: B, Grau: 2
-[DEBUG] Nó: C, Grau: 4
-[DEBUG] Nó: D, Grau: 5
-[DEBUG] Nó: E, Grau: 5
-[DEBUG] Nó: F, Grau: 6
-[DEBUG] Nó: G, Grau: 3
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: I, Grau: 3
-[DEBUG] Nó: J, Grau: 1
-[DEBUG] Nó: K, Grau: 8
-[DEBUG] Nó: L, Grau: 2
-[DEBUG] Nó: M, Grau: 2
-[DEBUG] Nó: N, Grau: 4
-[DEBUG] Nó: O, Grau: 7
-[DEBUG] Nó: P, Grau: 5
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Nó: R, Grau: 6
-[DEBUG] Nó: T, Grau: 2
-[DEBUG] Nó: U, Grau: 3
-[DEBUG] Nó: V, Grau: 5
-[DEBUG] Nó: W, Grau: 5
-[DEBUG] Nó: X, Grau: 3
-[DEBUG] Nó: Y, Grau: 3
-[DEBUG] Nó: Z, Grau: 7
-[DEBUG] Nó: a, Grau: 2
-[DEBUG] Nó: b, Grau: 5
-[DEBUG] Nó: c, Grau: 4
-[DEBUG] Nó: d, Grau: 1
+[DEBUG] Nó: a, Grau: 3
+[DEBUG] Nó: b, Grau: 3
+[DEBUG] Nó: c, Grau: 1
+[DEBUG] Nó: d, Grau: 3
 [DEBUG] Nó: e, Grau: 2
-[DEBUG] Nó: f, Grau: 5
-[DEBUG] Nó: g, Grau: 4
-[DEBUG] Nó: h, Grau: 2
+[DEBUG] Nó: f, Grau: 4
+[DEBUG] Nó: g, Grau: 2
 [DEBUG] Nó: j, Grau: 4
-[DEBUG] Nó: k, Grau: 5
+[DEBUG] Nó: k, Grau: 2
 [DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: m, Grau: 7
-[DEBUG] Nó: n, Grau: 6
-[DEBUG] Nó: o, Grau: 3
-[DEBUG] Nó: p, Grau: 4
-[DEBUG] Nó: q, Grau: 3
-[DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: t, Grau: 4
-[DEBUG] Nó: u, Grau: 2
-[DEBUG] Nó: v, Grau: 2
+[DEBUG] Nó: m, Grau: 3
+[DEBUG] Nó: n, Grau: 1
+[DEBUG] Nó: o, Grau: 2
+[DEBUG] Nó: p, Grau: 5
+[DEBUG] Nó: q, Grau: 2
+[DEBUG] Nó: r, Grau: 2
+[DEBUG] Nó: s, Grau: 6
+[DEBUG] Nó: t, Grau: 3
+[DEBUG] Nó: u, Grau: 3
+[DEBUG] Nó: v, Grau: 3
 [DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 2
-[DEBUG] Nó: y, Grau: 3
-[DEBUG] Nó: z, Grau: 4
+[DEBUG] Nó: x, Grau: 4
+[DEBUG] Nó: y, Grau: 2
 
 [DEBUG] Selecionando a aresta com maior grau...
-[DEBUG] Aresta: (N, E), Grau: 9
-[DEBUG] Aresta: (N, z), Grau: 8
-[DEBUG] Aresta: (N, p), Grau: 8
-[DEBUG] Aresta: (N, 7), Grau: 7
-[DEBUG] Aresta: (C, 1), Grau: 9
-[DEBUG] Aresta: (C, b), Grau: 9
-[DEBUG] Aresta: (C, G), Grau: 7
-[DEBUG] Aresta: (C, o), Grau: 7
-[DEBUG] Aresta: (c, B), Grau: 6
-[DEBUG] Aresta: (c, D), Grau: 9
-[DEBUG] Aresta: (c, n), Grau: 10
-[DEBUG] Aresta: (c, t), Grau: 8
-[DEBUG] Aresta: (r, 0), Grau: 5
-[DEBUG] Aresta: (J, F), Grau: 7
-[DEBUG] Aresta: (B, m), Grau: 9
-[DEBUG] Aresta: (L, s), Grau: 4
-[DEBUG] Aresta: (L, K), Grau: 10
-[DEBUG] Aresta: (H, u), Grau: 5
-[DEBUG] Aresta: (H, A), Grau: 6
-[DEBUG] Aresta: (H, E), Grau: 8
-[DEBUG] Aresta: (f, R), Grau: 11
-[DEBUG] Aresta: (f, K), Grau: 13
-[DEBUG] Aresta: (f, W), Grau: 10
-[DEBUG] Aresta: (f, Y), Grau: 8
-[DEBUG] Aresta: (f, 6), Grau: 10
-[DEBUG] Aresta: (e, V), Grau: 7
-[DEBUG] Aresta: (e, 7), Grau: 5
-[DEBUG] Aresta: (6, F), Grau: 11
-[DEBUG] Aresta: (6, U), Grau: 8
-[DEBUG] Aresta: (6, o), Grau: 8
-[DEBUG] Aresta: (6, R), Grau: 11
-[DEBUG] Aresta: (U, P), Grau: 8
-[DEBUG] Aresta: (U, n), Grau: 9
-[DEBUG] Aresta: (W, j), Grau: 9
-[DEBUG] Aresta: (W, t), Grau: 9
-[DEBUG] Aresta: (W, y), Grau: 8
-[DEBUG] Aresta: (W, 5), Grau: 10
-[DEBUG] Aresta: (0, R), Grau: 10
-[DEBUG] Aresta: (0, K), Grau: 12
-[DEBUG] Aresta: (0, 3), Grau: 6
-[DEBUG] Aresta: (s, I), Grau: 5
-[DEBUG] Aresta: (b, K), Grau: 13
-[DEBUG] Aresta: (b, m), Grau: 12
-[DEBUG] Aresta: (b, O), Grau: 12
-[DEBUG] Aresta: (b, T), Grau: 7
-[DEBUG] Aresta: (v, Z), Grau: 9
-[DEBUG] Aresta: (v, k), Grau: 7
-[DEBUG] Aresta: (w, I), Grau: 5
-[DEBUG] Aresta: (w, x), Grau: 4
-[DEBUG] Aresta: (y, Q), Grau: 4
-[DEBUG] Aresta: (y, 1), Grau: 8
-[DEBUG] Aresta: (4, Z), Grau: 9
-[DEBUG] Aresta: (4, P), Grau: 7
-[DEBUG] Aresta: (V, E), Grau: 10
-[DEBUG] Aresta: (V, 5), Grau: 10
-[DEBUG] Aresta: (V, R), Grau: 11
-[DEBUG] Aresta: (V, n), Grau: 11
-[DEBUG] Aresta: (t, G), Grau: 7
-[DEBUG] Aresta: (t, m), Grau: 11
-[DEBUG] Aresta: (m, I), Grau: 10
-[DEBUG] Aresta: (m, k), Grau: 12
-[DEBUG] Aresta: (m, 1), Grau: 12
-[DEBUG] Aresta: (m, p), Grau: 11
-[DEBUG] Aresta: (5, M), Grau: 7
-[DEBUG] Aresta: (5, p), Grau: 9
-[DEBUG] Aresta: (5, K), Grau: 13
-[DEBUG] Aresta: (k, Y), Grau: 8
-[DEBUG] Aresta: (k, g), Grau: 9
-[DEBUG] Aresta: (k, Z), Grau: 12
-[DEBUG] Aresta: (Y, n), Grau: 9
-[DEBUG] Aresta: (p, n), Grau: 10
-[DEBUG] Aresta: (3, Z), Grau: 9
-[DEBUG] Aresta: (M, g), Grau: 6
-[DEBUG] Aresta: (X, K), Grau: 11
-[DEBUG] Aresta: (X, l), Grau: 5
-[DEBUG] Aresta: (X, F), Grau: 9
-[DEBUG] Aresta: (n, D), Grau: 11
-[DEBUG] Aresta: (1, F), Grau: 11
-[DEBUG] Aresta: (1, d), Grau: 6
-[DEBUG] Aresta: (G, j), Grau: 7
-[DEBUG] Aresta: (o, g), Grau: 7
-[DEBUG] Aresta: (u, O), Grau: 9
-[DEBUG] Aresta: (x, O), Grau: 9
-[DEBUG] Aresta: (7, O), Grau: 10
-[DEBUG] Aresta: (h, Z), Grau: 9
-[DEBUG] Aresta: (h, z), Grau: 6
-[DEBUG] Aresta: (F, a), Grau: 8
-[DEBUG] Aresta: (F, q), Grau: 9
-[DEBUG] Aresta: (q, j), Grau: 7
-[DEBUG] Aresta: (q, P), Grau: 8
-[DEBUG] Aresta: (R, a), Grau: 8
-[DEBUG] Aresta: (R, P), Grau: 11
-[DEBUG] Aresta: (P, D), Grau: 10
-[DEBUG] Aresta: (Z, E), Grau: 12
-[DEBUG] Aresta: (Z, K), Grau: 15
-[DEBUG] Aresta: (T, O), Grau: 9
-[DEBUG] Aresta: (2, g), Grau: 5
-[DEBUG] Aresta: (K, E), Grau: 13
-[DEBUG] Aresta: (O, A), Grau: 10
-[DEBUG] Aresta: (O, z), Grau: 11
-[DEBUG] Aresta: (A, z), Grau: 7
-[DEBUG] Aresta: (l, D), Grau: 7
-[DEBUG] Aresta: (D, j), Grau: 9
-[DEBUG] Aresta selecionada: (Z, K) com grau 15
-[DEBUG] Solução:  (i, S)  (Z, K) 
+[DEBUG] Aresta: (w, v), Grau: 5
+[DEBUG] Aresta: (w, t), Grau: 5
+[DEBUG] Aresta: (q, u), Grau: 5
+[DEBUG] Aresta: (q, l), Grau: 4
+[DEBUG] Aresta: (l, a), Grau: 5
+[DEBUG] Aresta: (j, f), Grau: 8
+[DEBUG] Aresta: (j, d), Grau: 7
+[DEBUG] Aresta: (j, x), Grau: 8
+[DEBUG] Aresta: (j, a), Grau: 7
+[DEBUG] Aresta: (y, o), Grau: 4
+[DEBUG] Aresta: (y, b), Grau: 5
+[DEBUG] Aresta: (d, s), Grau: 9
+[DEBUG] Aresta: (d, f), Grau: 7
+[DEBUG] Aresta: (t, o), Grau: 5
+[DEBUG] Aresta: (t, s), Grau: 9
+[DEBUG] Aresta: (b, s), Grau: 9
+[DEBUG] Aresta: (b, u), Grau: 6
+[DEBUG] Aresta: (a, s), Grau: 9
+[DEBUG] Aresta: (f, p), Grau: 9
+[DEBUG] Aresta: (f, e), Grau: 6
+[DEBUG] Aresta: (k, x), Grau: 6
+[DEBUG] Aresta: (k, m), Grau: 5
+[DEBUG] Aresta: (p, m), Grau: 8
+[DEBUG] Aresta: (p, g), Grau: 7
+[DEBUG] Aresta: (p, s), Grau: 11
+[DEBUG] Aresta: (p, r), Grau: 7
+[DEBUG] Aresta: (s, u), Grau: 9
+[DEBUG] Aresta: (c, r), Grau: 3
+[DEBUG] Aresta: (m, n), Grau: 4
+[DEBUG] Aresta: (g, x), Grau: 6
+[DEBUG] Aresta: (x, v), Grau: 7
+[DEBUG] Aresta: (e, v), Grau: 5
+[DEBUG] Aresta selecionada: (p, s) com grau 11
+[DEBUG] Solução:  (i, h)  (p, s) 
 
-[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (Z, K)
+[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (p, s)
 
-[DEBUG] Verificando aresta: (D, j)
+[DEBUG] Verificando aresta: (e, v)
 
-[DEBUG] Verificando aresta: (l, D)
+[DEBUG] Verificando aresta: (x, v)
 
-[DEBUG] Verificando aresta: (A, z)
+[DEBUG] Verificando aresta: (g, x)
 
-[DEBUG] Verificando aresta: (O, z)
+[DEBUG] Verificando aresta: (m, n)
 
-[DEBUG] Verificando aresta: (O, A)
+[DEBUG] Verificando aresta: (c, r)
 
-[DEBUG] Verificando aresta: (K, E)
-[DEBUG] Removendo aresta: (K, E)
+[DEBUG] Verificando aresta: (s, u)
+[DEBUG] Removendo aresta: (s, u)
 
-[DEBUG] Verificando aresta: (2, g)
+[DEBUG] Verificando aresta: (p, r)
+[DEBUG] Removendo aresta: (p, r)
 
-[DEBUG] Verificando aresta: (T, O)
+[DEBUG] Verificando aresta: (p, s)
+[DEBUG] Removendo aresta: (p, s)
 
-[DEBUG] Verificando aresta: (Z, K)
-[DEBUG] Removendo aresta: (Z, K)
+[DEBUG] Verificando aresta: (p, g)
+[DEBUG] Removendo aresta: (p, g)
 
-[DEBUG] Verificando aresta: (Z, E)
-[DEBUG] Removendo aresta: (Z, E)
+[DEBUG] Verificando aresta: (p, m)
+[DEBUG] Removendo aresta: (p, m)
 
-[DEBUG] Verificando aresta: (P, D)
+[DEBUG] Verificando aresta: (k, m)
 
-[DEBUG] Verificando aresta: (R, P)
+[DEBUG] Verificando aresta: (k, x)
 
-[DEBUG] Verificando aresta: (R, a)
+[DEBUG] Verificando aresta: (f, e)
 
-[DEBUG] Verificando aresta: (q, P)
+[DEBUG] Verificando aresta: (f, p)
+[DEBUG] Removendo aresta: (f, p)
 
-[DEBUG] Verificando aresta: (q, j)
+[DEBUG] Verificando aresta: (a, s)
+[DEBUG] Removendo aresta: (a, s)
 
-[DEBUG] Verificando aresta: (F, q)
+[DEBUG] Verificando aresta: (b, u)
 
-[DEBUG] Verificando aresta: (F, a)
+[DEBUG] Verificando aresta: (b, s)
+[DEBUG] Removendo aresta: (b, s)
 
-[DEBUG] Verificando aresta: (h, z)
+[DEBUG] Verificando aresta: (t, s)
+[DEBUG] Removendo aresta: (t, s)
 
-[DEBUG] Verificando aresta: (h, Z)
-[DEBUG] Removendo aresta: (h, Z)
+[DEBUG] Verificando aresta: (t, o)
 
-[DEBUG] Verificando aresta: (7, O)
+[DEBUG] Verificando aresta: (d, f)
 
-[DEBUG] Verificando aresta: (x, O)
+[DEBUG] Verificando aresta: (d, s)
+[DEBUG] Removendo aresta: (d, s)
 
-[DEBUG] Verificando aresta: (u, O)
+[DEBUG] Verificando aresta: (y, b)
 
-[DEBUG] Verificando aresta: (o, g)
+[DEBUG] Verificando aresta: (y, o)
 
-[DEBUG] Verificando aresta: (G, j)
+[DEBUG] Verificando aresta: (j, a)
 
-[DEBUG] Verificando aresta: (1, d)
+[DEBUG] Verificando aresta: (j, x)
 
-[DEBUG] Verificando aresta: (1, F)
+[DEBUG] Verificando aresta: (j, d)
 
-[DEBUG] Verificando aresta: (n, D)
+[DEBUG] Verificando aresta: (j, f)
 
-[DEBUG] Verificando aresta: (X, F)
+[DEBUG] Verificando aresta: (l, a)
 
-[DEBUG] Verificando aresta: (X, l)
+[DEBUG] Verificando aresta: (q, l)
 
-[DEBUG] Verificando aresta: (X, K)
-[DEBUG] Removendo aresta: (X, K)
+[DEBUG] Verificando aresta: (q, u)
 
-[DEBUG] Verificando aresta: (M, g)
+[DEBUG] Verificando aresta: (w, t)
 
-[DEBUG] Verificando aresta: (3, Z)
-[DEBUG] Removendo aresta: (3, Z)
-
-[DEBUG] Verificando aresta: (p, n)
-
-[DEBUG] Verificando aresta: (Y, n)
-
-[DEBUG] Verificando aresta: (k, Z)
-[DEBUG] Removendo aresta: (k, Z)
-
-[DEBUG] Verificando aresta: (k, g)
-
-[DEBUG] Verificando aresta: (k, Y)
-
-[DEBUG] Verificando aresta: (5, K)
-[DEBUG] Removendo aresta: (5, K)
-
-[DEBUG] Verificando aresta: (5, p)
-
-[DEBUG] Verificando aresta: (5, M)
-
-[DEBUG] Verificando aresta: (m, p)
-
-[DEBUG] Verificando aresta: (m, 1)
-
-[DEBUG] Verificando aresta: (m, k)
-
-[DEBUG] Verificando aresta: (m, I)
-
-[DEBUG] Verificando aresta: (t, m)
-
-[DEBUG] Verificando aresta: (t, G)
-
-[DEBUG] Verificando aresta: (V, n)
-
-[DEBUG] Verificando aresta: (V, R)
-
-[DEBUG] Verificando aresta: (V, 5)
-
-[DEBUG] Verificando aresta: (V, E)
-
-[DEBUG] Verificando aresta: (4, P)
-
-[DEBUG] Verificando aresta: (4, Z)
-[DEBUG] Removendo aresta: (4, Z)
-
-[DEBUG] Verificando aresta: (y, 1)
-
-[DEBUG] Verificando aresta: (y, Q)
-
-[DEBUG] Verificando aresta: (w, x)
-
-[DEBUG] Verificando aresta: (w, I)
-
-[DEBUG] Verificando aresta: (v, k)
-
-[DEBUG] Verificando aresta: (v, Z)
-[DEBUG] Removendo aresta: (v, Z)
-
-[DEBUG] Verificando aresta: (b, T)
-
-[DEBUG] Verificando aresta: (b, O)
-
-[DEBUG] Verificando aresta: (b, m)
-
-[DEBUG] Verificando aresta: (b, K)
-[DEBUG] Removendo aresta: (b, K)
-
-[DEBUG] Verificando aresta: (s, I)
-
-[DEBUG] Verificando aresta: (0, 3)
-
-[DEBUG] Verificando aresta: (0, K)
-[DEBUG] Removendo aresta: (0, K)
-
-[DEBUG] Verificando aresta: (0, R)
-
-[DEBUG] Verificando aresta: (W, 5)
-
-[DEBUG] Verificando aresta: (W, y)
-
-[DEBUG] Verificando aresta: (W, t)
-
-[DEBUG] Verificando aresta: (W, j)
-
-[DEBUG] Verificando aresta: (U, n)
-
-[DEBUG] Verificando aresta: (U, P)
-
-[DEBUG] Verificando aresta: (6, R)
-
-[DEBUG] Verificando aresta: (6, o)
-
-[DEBUG] Verificando aresta: (6, U)
-
-[DEBUG] Verificando aresta: (6, F)
-
-[DEBUG] Verificando aresta: (e, 7)
-
-[DEBUG] Verificando aresta: (e, V)
-
-[DEBUG] Verificando aresta: (f, 6)
-
-[DEBUG] Verificando aresta: (f, Y)
-
-[DEBUG] Verificando aresta: (f, W)
-
-[DEBUG] Verificando aresta: (f, K)
-[DEBUG] Removendo aresta: (f, K)
-
-[DEBUG] Verificando aresta: (f, R)
-
-[DEBUG] Verificando aresta: (H, E)
-
-[DEBUG] Verificando aresta: (H, A)
-
-[DEBUG] Verificando aresta: (H, u)
-
-[DEBUG] Verificando aresta: (L, K)
-[DEBUG] Removendo aresta: (L, K)
-
-[DEBUG] Verificando aresta: (L, s)
-
-[DEBUG] Verificando aresta: (B, m)
-
-[DEBUG] Verificando aresta: (J, F)
-
-[DEBUG] Verificando aresta: (r, 0)
-
-[DEBUG] Verificando aresta: (c, t)
-
-[DEBUG] Verificando aresta: (c, n)
-
-[DEBUG] Verificando aresta: (c, D)
-
-[DEBUG] Verificando aresta: (c, B)
-
-[DEBUG] Verificando aresta: (C, o)
-
-[DEBUG] Verificando aresta: (C, G)
-
-[DEBUG] Verificando aresta: (C, b)
-
-[DEBUG] Verificando aresta: (C, 1)
-
-[DEBUG] Verificando aresta: (N, 7)
-
-[DEBUG] Verificando aresta: (N, p)
-
-[DEBUG] Verificando aresta: (N, z)
-
-[DEBUG] Verificando aresta: (N, E)
+[DEBUG] Verificando aresta: (w, v)
 
 [DEBUG] Arestas não cobertas após remoção: 
-(N, E) (N, z) (N, p) (N, 7) (C, 1) (C, b) (C, G) (C, o) (c, B) (c, D) (c, n) (c, t) (r, 0) (J, F) (B, m) (L, s) (H, u) (H, A) (H, E) (f, R) (f, W) (f, Y) (f, 6) (e, V) (e, 7) (6, F) (6, U) (6, o) (6, R) (U, P) (U, n) (W, j) (W, t) (W, y) (W, 5) (0, R) (0, 3) (s, I) (b, m) (b, O) (b, T) (v, k) (w, I) (w, x) (y, Q) (y, 1) (4, P) (V, E) (V, 5) (V, R) (V, n) (t, G) (t, m) (m, I) (m, k) (m, 1) (m, p) (5, M) (5, p) (k, Y) (k, g) (Y, n) (p, n) (M, g) (X, l) (X, F) (n, D) (1, F) (1, d) (G, j) (o, g) (u, O) (x, O) (7, O) (h, z) (F, a) (F, q) (q, j) (q, P) (R, a) (R, P) (P, D) (T, O) (2, g) (O, A) (O, z) (A, z) (l, D) (D, j) 
+(w, v) (w, t) (q, u) (q, l) (l, a) (j, f) (j, d) (j, x) (j, a) (y, o) (y, b) (d, f) (t, o) (b, u) (f, e) (k, x) (k, m) (c, r) (m, n) (g, x) (x, v) (e, v) 
 
 [DEBUG] Execução 3:
 [DEBUG] Arestas não cobertas: 
-(N, E) (N, z) (N, p) (N, 7) (C, 1) (C, b) (C, G) (C, o) (c, B) (c, D) (c, n) (c, t) (r, 0) (J, F) (B, m) (L, s) (H, u) (H, A) (H, E) (f, R) (f, W) (f, Y) (f, 6) (e, V) (e, 7) (6, F) (6, U) (6, o) (6, R) (U, P) (U, n) (W, j) (W, t) (W, y) (W, 5) (0, R) (0, 3) (s, I) (b, m) (b, O) (b, T) (v, k) (w, I) (w, x) (y, Q) (y, 1) (4, P) (V, E) (V, 5) (V, R) (V, n) (t, G) (t, m) (m, I) (m, k) (m, 1) (m, p) (5, M) (5, p) (k, Y) (k, g) (Y, n) (p, n) (M, g) (X, l) (X, F) (n, D) (1, F) (1, d) (G, j) (o, g) (u, O) (x, O) (7, O) (h, z) (F, a) (F, q) (q, j) (q, P) (R, a) (R, P) (P, D) (T, O) (2, g) (O, A) (O, z) (A, z) (l, D) (D, j) 
+(w, v) (w, t) (q, u) (q, l) (l, a) (j, f) (j, d) (j, x) (j, a) (y, o) (y, b) (d, f) (t, o) (b, u) (f, e) (k, x) (k, m) (c, r) (m, n) (g, x) (x, v) (e, v) 
 
 [DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
-[DEBUG] Aresta: (N, E)
-[DEBUG] Nó: N, Grau: 1
-[DEBUG] Nó: E, Grau: 1
-[DEBUG] Aresta: (N, z)
-[DEBUG] Nó: N, Grau: 2
-[DEBUG] Nó: z, Grau: 1
-[DEBUG] Aresta: (N, p)
-[DEBUG] Nó: N, Grau: 3
-[DEBUG] Nó: p, Grau: 1
-[DEBUG] Aresta: (N, 7)
-[DEBUG] Nó: N, Grau: 4
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Aresta: (C, 1)
-[DEBUG] Nó: C, Grau: 1
-[DEBUG] Nó: 1, Grau: 1
-[DEBUG] Aresta: (C, b)
-[DEBUG] Nó: C, Grau: 2
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Aresta: (C, G)
-[DEBUG] Nó: C, Grau: 3
-[DEBUG] Nó: G, Grau: 1
-[DEBUG] Aresta: (C, o)
-[DEBUG] Nó: C, Grau: 4
-[DEBUG] Nó: o, Grau: 1
-[DEBUG] Aresta: (c, B)
-[DEBUG] Nó: c, Grau: 1
-[DEBUG] Nó: B, Grau: 1
-[DEBUG] Aresta: (c, D)
-[DEBUG] Nó: c, Grau: 2
-[DEBUG] Nó: D, Grau: 1
-[DEBUG] Aresta: (c, n)
-[DEBUG] Nó: c, Grau: 3
-[DEBUG] Nó: n, Grau: 1
-[DEBUG] Aresta: (c, t)
-[DEBUG] Nó: c, Grau: 4
-[DEBUG] Nó: t, Grau: 1
-[DEBUG] Aresta: (r, 0)
-[DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: 0, Grau: 1
-[DEBUG] Aresta: (J, F)
-[DEBUG] Nó: J, Grau: 1
-[DEBUG] Nó: F, Grau: 1
-[DEBUG] Aresta: (B, m)
-[DEBUG] Nó: B, Grau: 2
-[DEBUG] Nó: m, Grau: 1
-[DEBUG] Aresta: (L, s)
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: s, Grau: 1
-[DEBUG] Aresta: (H, u)
-[DEBUG] Nó: H, Grau: 1
-[DEBUG] Nó: u, Grau: 1
-[DEBUG] Aresta: (H, A)
-[DEBUG] Nó: H, Grau: 2
-[DEBUG] Nó: A, Grau: 1
-[DEBUG] Aresta: (H, E)
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: E, Grau: 2
-[DEBUG] Aresta: (f, R)
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: R, Grau: 1
-[DEBUG] Aresta: (f, W)
-[DEBUG] Nó: f, Grau: 2
-[DEBUG] Nó: W, Grau: 1
-[DEBUG] Aresta: (f, Y)
-[DEBUG] Nó: f, Grau: 3
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Aresta: (f, 6)
-[DEBUG] Nó: f, Grau: 4
-[DEBUG] Nó: 6, Grau: 1
-[DEBUG] Aresta: (e, V)
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: V, Grau: 1
-[DEBUG] Aresta: (e, 7)
-[DEBUG] Nó: e, Grau: 2
-[DEBUG] Nó: 7, Grau: 2
-[DEBUG] Aresta: (6, F)
-[DEBUG] Nó: 6, Grau: 2
-[DEBUG] Nó: F, Grau: 2
-[DEBUG] Aresta: (6, U)
-[DEBUG] Nó: 6, Grau: 3
-[DEBUG] Nó: U, Grau: 1
-[DEBUG] Aresta: (6, o)
-[DEBUG] Nó: 6, Grau: 4
-[DEBUG] Nó: o, Grau: 2
-[DEBUG] Aresta: (6, R)
-[DEBUG] Nó: 6, Grau: 5
-[DEBUG] Nó: R, Grau: 2
-[DEBUG] Aresta: (U, P)
-[DEBUG] Nó: U, Grau: 2
-[DEBUG] Nó: P, Grau: 1
-[DEBUG] Aresta: (U, n)
-[DEBUG] Nó: U, Grau: 3
-[DEBUG] Nó: n, Grau: 2
-[DEBUG] Aresta: (W, j)
-[DEBUG] Nó: W, Grau: 2
-[DEBUG] Nó: j, Grau: 1
-[DEBUG] Aresta: (W, t)
-[DEBUG] Nó: W, Grau: 3
-[DEBUG] Nó: t, Grau: 2
-[DEBUG] Aresta: (W, y)
-[DEBUG] Nó: W, Grau: 4
-[DEBUG] Nó: y, Grau: 1
-[DEBUG] Aresta: (W, 5)
-[DEBUG] Nó: W, Grau: 5
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Aresta: (0, R)
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: R, Grau: 3
-[DEBUG] Aresta: (0, 3)
-[DEBUG] Nó: 0, Grau: 3
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Aresta: (s, I)
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: I, Grau: 1
-[DEBUG] Aresta: (b, m)
-[DEBUG] Nó: b, Grau: 2
-[DEBUG] Nó: m, Grau: 2
-[DEBUG] Aresta: (b, O)
-[DEBUG] Nó: b, Grau: 3
-[DEBUG] Nó: O, Grau: 1
-[DEBUG] Aresta: (b, T)
-[DEBUG] Nó: b, Grau: 4
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Aresta: (v, k)
-[DEBUG] Nó: v, Grau: 1
-[DEBUG] Nó: k, Grau: 1
-[DEBUG] Aresta: (w, I)
+[DEBUG] Aresta: (w, v)
 [DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Aresta: (w, x)
+[DEBUG] Nó: v, Grau: 1
+[DEBUG] Aresta: (w, t)
 [DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Aresta: (y, Q)
-[DEBUG] Nó: y, Grau: 2
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Aresta: (y, 1)
-[DEBUG] Nó: y, Grau: 3
-[DEBUG] Nó: 1, Grau: 2
-[DEBUG] Aresta: (4, P)
-[DEBUG] Nó: 4, Grau: 1
-[DEBUG] Nó: P, Grau: 2
-[DEBUG] Aresta: (V, E)
-[DEBUG] Nó: V, Grau: 2
-[DEBUG] Nó: E, Grau: 3
-[DEBUG] Aresta: (V, 5)
-[DEBUG] Nó: V, Grau: 3
-[DEBUG] Nó: 5, Grau: 2
-[DEBUG] Aresta: (V, R)
-[DEBUG] Nó: V, Grau: 4
-[DEBUG] Nó: R, Grau: 4
-[DEBUG] Aresta: (V, n)
-[DEBUG] Nó: V, Grau: 5
-[DEBUG] Nó: n, Grau: 3
-[DEBUG] Aresta: (t, G)
-[DEBUG] Nó: t, Grau: 3
-[DEBUG] Nó: G, Grau: 2
-[DEBUG] Aresta: (t, m)
-[DEBUG] Nó: t, Grau: 4
-[DEBUG] Nó: m, Grau: 3
-[DEBUG] Aresta: (m, I)
-[DEBUG] Nó: m, Grau: 4
-[DEBUG] Nó: I, Grau: 3
-[DEBUG] Aresta: (m, k)
-[DEBUG] Nó: m, Grau: 5
-[DEBUG] Nó: k, Grau: 2
-[DEBUG] Aresta: (m, 1)
-[DEBUG] Nó: m, Grau: 6
-[DEBUG] Nó: 1, Grau: 3
-[DEBUG] Aresta: (m, p)
-[DEBUG] Nó: m, Grau: 7
-[DEBUG] Nó: p, Grau: 2
-[DEBUG] Aresta: (5, M)
-[DEBUG] Nó: 5, Grau: 3
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Aresta: (5, p)
-[DEBUG] Nó: 5, Grau: 4
-[DEBUG] Nó: p, Grau: 3
-[DEBUG] Aresta: (k, Y)
-[DEBUG] Nó: k, Grau: 3
-[DEBUG] Nó: Y, Grau: 2
-[DEBUG] Aresta: (k, g)
-[DEBUG] Nó: k, Grau: 4
-[DEBUG] Nó: g, Grau: 1
-[DEBUG] Aresta: (Y, n)
-[DEBUG] Nó: Y, Grau: 3
-[DEBUG] Nó: n, Grau: 4
-[DEBUG] Aresta: (p, n)
-[DEBUG] Nó: p, Grau: 4
-[DEBUG] Nó: n, Grau: 5
-[DEBUG] Aresta: (M, g)
-[DEBUG] Nó: M, Grau: 2
-[DEBUG] Nó: g, Grau: 2
-[DEBUG] Aresta: (X, l)
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-[DEBUG] Aresta: (X, F)
-[DEBUG] Nó: X, Grau: 2
-[DEBUG] Nó: F, Grau: 3
-[DEBUG] Aresta: (n, D)
-[DEBUG] Nó: n, Grau: 6
-[DEBUG] Nó: D, Grau: 2
-[DEBUG] Aresta: (1, F)
-[DEBUG] Nó: 1, Grau: 4
-[DEBUG] Nó: F, Grau: 4
-[DEBUG] Aresta: (1, d)
-[DEBUG] Nó: 1, Grau: 5
-[DEBUG] Nó: d, Grau: 1
-[DEBUG] Aresta: (G, j)
-[DEBUG] Nó: G, Grau: 3
-[DEBUG] Nó: j, Grau: 2
-[DEBUG] Aresta: (o, g)
-[DEBUG] Nó: o, Grau: 3
-[DEBUG] Nó: g, Grau: 3
-[DEBUG] Aresta: (u, O)
-[DEBUG] Nó: u, Grau: 2
-[DEBUG] Nó: O, Grau: 2
-[DEBUG] Aresta: (x, O)
-[DEBUG] Nó: x, Grau: 2
-[DEBUG] Nó: O, Grau: 3
-[DEBUG] Aresta: (7, O)
-[DEBUG] Nó: 7, Grau: 3
-[DEBUG] Nó: O, Grau: 4
-[DEBUG] Aresta: (h, z)
-[DEBUG] Nó: h, Grau: 1
-[DEBUG] Nó: z, Grau: 2
-[DEBUG] Aresta: (F, a)
-[DEBUG] Nó: F, Grau: 5
-[DEBUG] Nó: a, Grau: 1
-[DEBUG] Aresta: (F, q)
-[DEBUG] Nó: F, Grau: 6
+[DEBUG] Nó: t, Grau: 1
+[DEBUG] Aresta: (q, u)
 [DEBUG] Nó: q, Grau: 1
-[DEBUG] Aresta: (q, j)
+[DEBUG] Nó: u, Grau: 1
+[DEBUG] Aresta: (q, l)
 [DEBUG] Nó: q, Grau: 2
-[DEBUG] Nó: j, Grau: 3
-[DEBUG] Aresta: (q, P)
-[DEBUG] Nó: q, Grau: 3
-[DEBUG] Nó: P, Grau: 3
-[DEBUG] Aresta: (R, a)
-[DEBUG] Nó: R, Grau: 5
-[DEBUG] Nó: a, Grau: 2
-[DEBUG] Aresta: (R, P)
-[DEBUG] Nó: R, Grau: 6
-[DEBUG] Nó: P, Grau: 4
-[DEBUG] Aresta: (P, D)
-[DEBUG] Nó: P, Grau: 5
-[DEBUG] Nó: D, Grau: 3
-[DEBUG] Aresta: (T, O)
-[DEBUG] Nó: T, Grau: 2
-[DEBUG] Nó: O, Grau: 5
-[DEBUG] Aresta: (2, g)
-[DEBUG] Nó: 2, Grau: 1
-[DEBUG] Nó: g, Grau: 4
-[DEBUG] Aresta: (O, A)
-[DEBUG] Nó: O, Grau: 6
-[DEBUG] Nó: A, Grau: 2
-[DEBUG] Aresta: (O, z)
-[DEBUG] Nó: O, Grau: 7
-[DEBUG] Nó: z, Grau: 3
-[DEBUG] Aresta: (A, z)
-[DEBUG] Nó: A, Grau: 3
-[DEBUG] Nó: z, Grau: 4
-[DEBUG] Aresta: (l, D)
+[DEBUG] Nó: l, Grau: 1
+[DEBUG] Aresta: (l, a)
 [DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: D, Grau: 4
-[DEBUG] Aresta: (D, j)
-[DEBUG] Nó: D, Grau: 5
+[DEBUG] Nó: a, Grau: 1
+[DEBUG] Aresta: (j, f)
+[DEBUG] Nó: j, Grau: 1
+[DEBUG] Nó: f, Grau: 1
+[DEBUG] Aresta: (j, d)
+[DEBUG] Nó: j, Grau: 2
+[DEBUG] Nó: d, Grau: 1
+[DEBUG] Aresta: (j, x)
+[DEBUG] Nó: j, Grau: 3
+[DEBUG] Nó: x, Grau: 1
+[DEBUG] Aresta: (j, a)
 [DEBUG] Nó: j, Grau: 4
+[DEBUG] Nó: a, Grau: 2
+[DEBUG] Aresta: (y, o)
+[DEBUG] Nó: y, Grau: 1
+[DEBUG] Nó: o, Grau: 1
+[DEBUG] Aresta: (y, b)
+[DEBUG] Nó: y, Grau: 2
+[DEBUG] Nó: b, Grau: 1
+[DEBUG] Aresta: (d, f)
+[DEBUG] Nó: d, Grau: 2
+[DEBUG] Nó: f, Grau: 2
+[DEBUG] Aresta: (t, o)
+[DEBUG] Nó: t, Grau: 2
+[DEBUG] Nó: o, Grau: 2
+[DEBUG] Aresta: (b, u)
+[DEBUG] Nó: b, Grau: 2
+[DEBUG] Nó: u, Grau: 2
+[DEBUG] Aresta: (f, e)
+[DEBUG] Nó: f, Grau: 3
+[DEBUG] Nó: e, Grau: 1
+[DEBUG] Aresta: (k, x)
+[DEBUG] Nó: k, Grau: 1
+[DEBUG] Nó: x, Grau: 2
+[DEBUG] Aresta: (k, m)
+[DEBUG] Nó: k, Grau: 2
+[DEBUG] Nó: m, Grau: 1
+[DEBUG] Aresta: (c, r)
+[DEBUG] Nó: c, Grau: 1
+[DEBUG] Nó: r, Grau: 1
+[DEBUG] Aresta: (m, n)
+[DEBUG] Nó: m, Grau: 2
+[DEBUG] Nó: n, Grau: 1
+[DEBUG] Aresta: (g, x)
+[DEBUG] Nó: g, Grau: 1
+[DEBUG] Nó: x, Grau: 3
+[DEBUG] Aresta: (x, v)
+[DEBUG] Nó: x, Grau: 4
+[DEBUG] Nó: v, Grau: 2
+[DEBUG] Aresta: (e, v)
+[DEBUG] Nó: e, Grau: 2
+[DEBUG] Nó: v, Grau: 3
 
 [DEBUG] Grau dos vertices das arestas não cobertas: 
-[DEBUG] Nó: 0, Grau: 3
-[DEBUG] Nó: 1, Grau: 5
-[DEBUG] Nó: 2, Grau: 1
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Nó: 4, Grau: 1
-[DEBUG] Nó: 5, Grau: 4
-[DEBUG] Nó: 6, Grau: 5
-[DEBUG] Nó: 7, Grau: 3
-[DEBUG] Nó: A, Grau: 3
-[DEBUG] Nó: B, Grau: 2
-[DEBUG] Nó: C, Grau: 4
-[DEBUG] Nó: D, Grau: 5
-[DEBUG] Nó: E, Grau: 3
-[DEBUG] Nó: F, Grau: 6
-[DEBUG] Nó: G, Grau: 3
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: I, Grau: 3
-[DEBUG] Nó: J, Grau: 1
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: M, Grau: 2
-[DEBUG] Nó: N, Grau: 4
-[DEBUG] Nó: O, Grau: 7
-[DEBUG] Nó: P, Grau: 5
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Nó: R, Grau: 6
-[DEBUG] Nó: T, Grau: 2
-[DEBUG] Nó: U, Grau: 3
-[DEBUG] Nó: V, Grau: 5
-[DEBUG] Nó: W, Grau: 5
-[DEBUG] Nó: X, Grau: 2
-[DEBUG] Nó: Y, Grau: 3
 [DEBUG] Nó: a, Grau: 2
-[DEBUG] Nó: b, Grau: 4
-[DEBUG] Nó: c, Grau: 4
-[DEBUG] Nó: d, Grau: 1
+[DEBUG] Nó: b, Grau: 2
+[DEBUG] Nó: c, Grau: 1
+[DEBUG] Nó: d, Grau: 2
 [DEBUG] Nó: e, Grau: 2
-[DEBUG] Nó: f, Grau: 4
-[DEBUG] Nó: g, Grau: 4
-[DEBUG] Nó: h, Grau: 1
+[DEBUG] Nó: f, Grau: 3
+[DEBUG] Nó: g, Grau: 1
 [DEBUG] Nó: j, Grau: 4
-[DEBUG] Nó: k, Grau: 4
+[DEBUG] Nó: k, Grau: 2
 [DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: m, Grau: 7
-[DEBUG] Nó: n, Grau: 6
-[DEBUG] Nó: o, Grau: 3
-[DEBUG] Nó: p, Grau: 4
-[DEBUG] Nó: q, Grau: 3
+[DEBUG] Nó: m, Grau: 2
+[DEBUG] Nó: n, Grau: 1
+[DEBUG] Nó: o, Grau: 2
+[DEBUG] Nó: q, Grau: 2
 [DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: t, Grau: 4
+[DEBUG] Nó: t, Grau: 2
 [DEBUG] Nó: u, Grau: 2
-[DEBUG] Nó: v, Grau: 1
+[DEBUG] Nó: v, Grau: 3
 [DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 2
-[DEBUG] Nó: y, Grau: 3
-[DEBUG] Nó: z, Grau: 4
+[DEBUG] Nó: x, Grau: 4
+[DEBUG] Nó: y, Grau: 2
 
 [DEBUG] Selecionando a aresta com maior grau...
-[DEBUG] Aresta: (N, E), Grau: 7
-[DEBUG] Aresta: (N, z), Grau: 8
-[DEBUG] Aresta: (N, p), Grau: 8
-[DEBUG] Aresta: (N, 7), Grau: 7
-[DEBUG] Aresta: (C, 1), Grau: 9
-[DEBUG] Aresta: (C, b), Grau: 8
-[DEBUG] Aresta: (C, G), Grau: 7
-[DEBUG] Aresta: (C, o), Grau: 7
-[DEBUG] Aresta: (c, B), Grau: 6
-[DEBUG] Aresta: (c, D), Grau: 9
-[DEBUG] Aresta: (c, n), Grau: 10
-[DEBUG] Aresta: (c, t), Grau: 8
-[DEBUG] Aresta: (r, 0), Grau: 4
-[DEBUG] Aresta: (J, F), Grau: 7
-[DEBUG] Aresta: (B, m), Grau: 9
-[DEBUG] Aresta: (L, s), Grau: 3
-[DEBUG] Aresta: (H, u), Grau: 5
-[DEBUG] Aresta: (H, A), Grau: 6
-[DEBUG] Aresta: (H, E), Grau: 6
-[DEBUG] Aresta: (f, R), Grau: 10
-[DEBUG] Aresta: (f, W), Grau: 9
-[DEBUG] Aresta: (f, Y), Grau: 7
-[DEBUG] Aresta: (f, 6), Grau: 9
-[DEBUG] Aresta: (e, V), Grau: 7
-[DEBUG] Aresta: (e, 7), Grau: 5
-[DEBUG] Aresta: (6, F), Grau: 11
-[DEBUG] Aresta: (6, U), Grau: 8
-[DEBUG] Aresta: (6, o), Grau: 8
-[DEBUG] Aresta: (6, R), Grau: 11
-[DEBUG] Aresta: (U, P), Grau: 8
-[DEBUG] Aresta: (U, n), Grau: 9
-[DEBUG] Aresta: (W, j), Grau: 9
-[DEBUG] Aresta: (W, t), Grau: 9
-[DEBUG] Aresta: (W, y), Grau: 8
-[DEBUG] Aresta: (W, 5), Grau: 9
-[DEBUG] Aresta: (0, R), Grau: 9
-[DEBUG] Aresta: (0, 3), Grau: 4
-[DEBUG] Aresta: (s, I), Grau: 5
-[DEBUG] Aresta: (b, m), Grau: 11
-[DEBUG] Aresta: (b, O), Grau: 11
-[DEBUG] Aresta: (b, T), Grau: 6
-[DEBUG] Aresta: (v, k), Grau: 5
-[DEBUG] Aresta: (w, I), Grau: 5
-[DEBUG] Aresta: (w, x), Grau: 4
-[DEBUG] Aresta: (y, Q), Grau: 4
-[DEBUG] Aresta: (y, 1), Grau: 8
-[DEBUG] Aresta: (4, P), Grau: 6
-[DEBUG] Aresta: (V, E), Grau: 8
-[DEBUG] Aresta: (V, 5), Grau: 9
-[DEBUG] Aresta: (V, R), Grau: 11
-[DEBUG] Aresta: (V, n), Grau: 11
-[DEBUG] Aresta: (t, G), Grau: 7
-[DEBUG] Aresta: (t, m), Grau: 11
-[DEBUG] Aresta: (m, I), Grau: 10
-[DEBUG] Aresta: (m, k), Grau: 11
-[DEBUG] Aresta: (m, 1), Grau: 12
-[DEBUG] Aresta: (m, p), Grau: 11
-[DEBUG] Aresta: (5, M), Grau: 6
-[DEBUG] Aresta: (5, p), Grau: 8
-[DEBUG] Aresta: (k, Y), Grau: 7
-[DEBUG] Aresta: (k, g), Grau: 8
-[DEBUG] Aresta: (Y, n), Grau: 9
-[DEBUG] Aresta: (p, n), Grau: 10
-[DEBUG] Aresta: (M, g), Grau: 6
-[DEBUG] Aresta: (X, l), Grau: 4
-[DEBUG] Aresta: (X, F), Grau: 8
-[DEBUG] Aresta: (n, D), Grau: 11
-[DEBUG] Aresta: (1, F), Grau: 11
-[DEBUG] Aresta: (1, d), Grau: 6
-[DEBUG] Aresta: (G, j), Grau: 7
-[DEBUG] Aresta: (o, g), Grau: 7
-[DEBUG] Aresta: (u, O), Grau: 9
-[DEBUG] Aresta: (x, O), Grau: 9
-[DEBUG] Aresta: (7, O), Grau: 10
-[DEBUG] Aresta: (h, z), Grau: 5
-[DEBUG] Aresta: (F, a), Grau: 8
-[DEBUG] Aresta: (F, q), Grau: 9
-[DEBUG] Aresta: (q, j), Grau: 7
-[DEBUG] Aresta: (q, P), Grau: 8
-[DEBUG] Aresta: (R, a), Grau: 8
-[DEBUG] Aresta: (R, P), Grau: 11
-[DEBUG] Aresta: (P, D), Grau: 10
-[DEBUG] Aresta: (T, O), Grau: 9
-[DEBUG] Aresta: (2, g), Grau: 5
-[DEBUG] Aresta: (O, A), Grau: 10
-[DEBUG] Aresta: (O, z), Grau: 11
-[DEBUG] Aresta: (A, z), Grau: 7
-[DEBUG] Aresta: (l, D), Grau: 7
-[DEBUG] Aresta: (D, j), Grau: 9
-[DEBUG] Aresta selecionada: (m, 1) com grau 12
-[DEBUG] Solução:  (i, S)  (Z, K)  (m, 1) 
-
-[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (m, 1)
-
-[DEBUG] Verificando aresta: (D, j)
-
-[DEBUG] Verificando aresta: (l, D)
-
-[DEBUG] Verificando aresta: (A, z)
+[DEBUG] Aresta: (w, v), Grau: 5
+[DEBUG] Aresta: (w, t), Grau: 4
+[DEBUG] Aresta: (q, u), Grau: 4
+[DEBUG] Aresta: (q, l), Grau: 4
+[DEBUG] Aresta: (l, a), Grau: 4
+[DEBUG] Aresta: (j, f), Grau: 7
+[DEBUG] Aresta: (j, d), Grau: 6
+[DEBUG] Aresta: (j, x), Grau: 8
+[DEBUG] Aresta: (j, a), Grau: 6
+[DEBUG] Aresta: (y, o), Grau: 4
+[DEBUG] Aresta: (y, b), Grau: 4
+[DEBUG] Aresta: (d, f), Grau: 5
+[DEBUG] Aresta: (t, o), Grau: 4
+[DEBUG] Aresta: (b, u), Grau: 4
+[DEBUG] Aresta: (f, e), Grau: 5
+[DEBUG] Aresta: (k, x), Grau: 6
+[DEBUG] Aresta: (k, m), Grau: 4
+[DEBUG] Aresta: (c, r), Grau: 2
+[DEBUG] Aresta: (m, n), Grau: 3
+[DEBUG] Aresta: (g, x), Grau: 5
+[DEBUG] Aresta: (x, v), Grau: 7
+[DEBUG] Aresta: (e, v), Grau: 5
+[DEBUG] Aresta selecionada: (j, x) com grau 8
+[DEBUG] Solução:  (i, h)  (p, s)  (j, x) 
 
-[DEBUG] Verificando aresta: (O, z)
+[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (j, x)
 
-[DEBUG] Verificando aresta: (O, A)
+[DEBUG] Verificando aresta: (e, v)
 
-[DEBUG] Verificando aresta: (2, g)
+[DEBUG] Verificando aresta: (x, v)
+[DEBUG] Removendo aresta: (x, v)
 
-[DEBUG] Verificando aresta: (T, O)
+[DEBUG] Verificando aresta: (g, x)
+[DEBUG] Removendo aresta: (g, x)
 
-[DEBUG] Verificando aresta: (P, D)
+[DEBUG] Verificando aresta: (m, n)
 
-[DEBUG] Verificando aresta: (R, P)
+[DEBUG] Verificando aresta: (c, r)
 
-[DEBUG] Verificando aresta: (R, a)
+[DEBUG] Verificando aresta: (k, m)
 
-[DEBUG] Verificando aresta: (q, P)
+[DEBUG] Verificando aresta: (k, x)
+[DEBUG] Removendo aresta: (k, x)
 
-[DEBUG] Verificando aresta: (q, j)
+[DEBUG] Verificando aresta: (f, e)
 
-[DEBUG] Verificando aresta: (F, q)
+[DEBUG] Verificando aresta: (b, u)
 
-[DEBUG] Verificando aresta: (F, a)
+[DEBUG] Verificando aresta: (t, o)
 
-[DEBUG] Verificando aresta: (h, z)
+[DEBUG] Verificando aresta: (d, f)
 
-[DEBUG] Verificando aresta: (7, O)
+[DEBUG] Verificando aresta: (y, b)
 
-[DEBUG] Verificando aresta: (x, O)
+[DEBUG] Verificando aresta: (y, o)
 
-[DEBUG] Verificando aresta: (u, O)
+[DEBUG] Verificando aresta: (j, a)
+[DEBUG] Removendo aresta: (j, a)
 
-[DEBUG] Verificando aresta: (o, g)
+[DEBUG] Verificando aresta: (j, x)
+[DEBUG] Removendo aresta: (j, x)
 
-[DEBUG] Verificando aresta: (G, j)
+[DEBUG] Verificando aresta: (j, d)
+[DEBUG] Removendo aresta: (j, d)
 
-[DEBUG] Verificando aresta: (1, d)
-[DEBUG] Removendo aresta: (1, d)
+[DEBUG] Verificando aresta: (j, f)
+[DEBUG] Removendo aresta: (j, f)
 
-[DEBUG] Verificando aresta: (1, F)
-[DEBUG] Removendo aresta: (1, F)
+[DEBUG] Verificando aresta: (l, a)
 
-[DEBUG] Verificando aresta: (n, D)
+[DEBUG] Verificando aresta: (q, l)
 
-[DEBUG] Verificando aresta: (X, F)
+[DEBUG] Verificando aresta: (q, u)
 
-[DEBUG] Verificando aresta: (X, l)
+[DEBUG] Verificando aresta: (w, t)
 
-[DEBUG] Verificando aresta: (M, g)
-
-[DEBUG] Verificando aresta: (p, n)
-
-[DEBUG] Verificando aresta: (Y, n)
-
-[DEBUG] Verificando aresta: (k, g)
-
-[DEBUG] Verificando aresta: (k, Y)
-
-[DEBUG] Verificando aresta: (5, p)
-
-[DEBUG] Verificando aresta: (5, M)
-
-[DEBUG] Verificando aresta: (m, p)
-[DEBUG] Removendo aresta: (m, p)
-
-[DEBUG] Verificando aresta: (m, 1)
-[DEBUG] Removendo aresta: (m, 1)
-
-[DEBUG] Verificando aresta: (m, k)
-[DEBUG] Removendo aresta: (m, k)
-
-[DEBUG] Verificando aresta: (m, I)
-[DEBUG] Removendo aresta: (m, I)
-
-[DEBUG] Verificando aresta: (t, m)
-[DEBUG] Removendo aresta: (t, m)
-
-[DEBUG] Verificando aresta: (t, G)
-
-[DEBUG] Verificando aresta: (V, n)
-
-[DEBUG] Verificando aresta: (V, R)
-
-[DEBUG] Verificando aresta: (V, 5)
-
-[DEBUG] Verificando aresta: (V, E)
-
-[DEBUG] Verificando aresta: (4, P)
-
-[DEBUG] Verificando aresta: (y, 1)
-[DEBUG] Removendo aresta: (y, 1)
-
-[DEBUG] Verificando aresta: (y, Q)
-
-[DEBUG] Verificando aresta: (w, x)
-
-[DEBUG] Verificando aresta: (w, I)
-
-[DEBUG] Verificando aresta: (v, k)
-
-[DEBUG] Verificando aresta: (b, T)
-
-[DEBUG] Verificando aresta: (b, O)
-
-[DEBUG] Verificando aresta: (b, m)
-[DEBUG] Removendo aresta: (b, m)
-
-[DEBUG] Verificando aresta: (s, I)
-
-[DEBUG] Verificando aresta: (0, 3)
-
-[DEBUG] Verificando aresta: (0, R)
-
-[DEBUG] Verificando aresta: (W, 5)
-
-[DEBUG] Verificando aresta: (W, y)
-
-[DEBUG] Verificando aresta: (W, t)
-
-[DEBUG] Verificando aresta: (W, j)
-
-[DEBUG] Verificando aresta: (U, n)
-
-[DEBUG] Verificando aresta: (U, P)
-
-[DEBUG] Verificando aresta: (6, R)
-
-[DEBUG] Verificando aresta: (6, o)
-
-[DEBUG] Verificando aresta: (6, U)
-
-[DEBUG] Verificando aresta: (6, F)
-
-[DEBUG] Verificando aresta: (e, 7)
-
-[DEBUG] Verificando aresta: (e, V)
-
-[DEBUG] Verificando aresta: (f, 6)
-
-[DEBUG] Verificando aresta: (f, Y)
-
-[DEBUG] Verificando aresta: (f, W)
-
-[DEBUG] Verificando aresta: (f, R)
-
-[DEBUG] Verificando aresta: (H, E)
-
-[DEBUG] Verificando aresta: (H, A)
-
-[DEBUG] Verificando aresta: (H, u)
-
-[DEBUG] Verificando aresta: (L, s)
-
-[DEBUG] Verificando aresta: (B, m)
-[DEBUG] Removendo aresta: (B, m)
-
-[DEBUG] Verificando aresta: (J, F)
-
-[DEBUG] Verificando aresta: (r, 0)
-
-[DEBUG] Verificando aresta: (c, t)
-
-[DEBUG] Verificando aresta: (c, n)
-
-[DEBUG] Verificando aresta: (c, D)
-
-[DEBUG] Verificando aresta: (c, B)
-
-[DEBUG] Verificando aresta: (C, o)
-
-[DEBUG] Verificando aresta: (C, G)
-
-[DEBUG] Verificando aresta: (C, b)
-
-[DEBUG] Verificando aresta: (C, 1)
-[DEBUG] Removendo aresta: (C, 1)
-
-[DEBUG] Verificando aresta: (N, 7)
-
-[DEBUG] Verificando aresta: (N, p)
-
-[DEBUG] Verificando aresta: (N, z)
-
-[DEBUG] Verificando aresta: (N, E)
+[DEBUG] Verificando aresta: (w, v)
 
 [DEBUG] Arestas não cobertas após remoção: 
-(N, E) (N, z) (N, p) (N, 7) (C, b) (C, G) (C, o) (c, B) (c, D) (c, n) (c, t) (r, 0) (J, F) (L, s) (H, u) (H, A) (H, E) (f, R) (f, W) (f, Y) (f, 6) (e, V) (e, 7) (6, F) (6, U) (6, o) (6, R) (U, P) (U, n) (W, j) (W, t) (W, y) (W, 5) (0, R) (0, 3) (s, I) (b, O) (b, T) (v, k) (w, I) (w, x) (y, Q) (4, P) (V, E) (V, 5) (V, R) (V, n) (t, G) (5, M) (5, p) (k, Y) (k, g) (Y, n) (p, n) (M, g) (X, l) (X, F) (n, D) (G, j) (o, g) (u, O) (x, O) (7, O) (h, z) (F, a) (F, q) (q, j) (q, P) (R, a) (R, P) (P, D) (T, O) (2, g) (O, A) (O, z) (A, z) (l, D) (D, j) 
+(w, v) (w, t) (q, u) (q, l) (l, a) (y, o) (y, b) (d, f) (t, o) (b, u) (f, e) (k, m) (c, r) (m, n) (e, v) 
 
 [DEBUG] Execução 4:
 [DEBUG] Arestas não cobertas: 
-(N, E) (N, z) (N, p) (N, 7) (C, b) (C, G) (C, o) (c, B) (c, D) (c, n) (c, t) (r, 0) (J, F) (L, s) (H, u) (H, A) (H, E) (f, R) (f, W) (f, Y) (f, 6) (e, V) (e, 7) (6, F) (6, U) (6, o) (6, R) (U, P) (U, n) (W, j) (W, t) (W, y) (W, 5) (0, R) (0, 3) (s, I) (b, O) (b, T) (v, k) (w, I) (w, x) (y, Q) (4, P) (V, E) (V, 5) (V, R) (V, n) (t, G) (5, M) (5, p) (k, Y) (k, g) (Y, n) (p, n) (M, g) (X, l) (X, F) (n, D) (G, j) (o, g) (u, O) (x, O) (7, O) (h, z) (F, a) (F, q) (q, j) (q, P) (R, a) (R, P) (P, D) (T, O) (2, g) (O, A) (O, z) (A, z) (l, D) (D, j) 
+(w, v) (w, t) (q, u) (q, l) (l, a) (y, o) (y, b) (d, f) (t, o) (b, u) (f, e) (k, m) (c, r) (m, n) (e, v) 
 
 [DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
-[DEBUG] Aresta: (N, E)
-[DEBUG] Nó: N, Grau: 1
-[DEBUG] Nó: E, Grau: 1
-[DEBUG] Aresta: (N, z)
-[DEBUG] Nó: N, Grau: 2
-[DEBUG] Nó: z, Grau: 1
-[DEBUG] Aresta: (N, p)
-[DEBUG] Nó: N, Grau: 3
-[DEBUG] Nó: p, Grau: 1
-[DEBUG] Aresta: (N, 7)
-[DEBUG] Nó: N, Grau: 4
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Aresta: (C, b)
-[DEBUG] Nó: C, Grau: 1
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Aresta: (C, G)
-[DEBUG] Nó: C, Grau: 2
-[DEBUG] Nó: G, Grau: 1
-[DEBUG] Aresta: (C, o)
-[DEBUG] Nó: C, Grau: 3
-[DEBUG] Nó: o, Grau: 1
-[DEBUG] Aresta: (c, B)
-[DEBUG] Nó: c, Grau: 1
-[DEBUG] Nó: B, Grau: 1
-[DEBUG] Aresta: (c, D)
-[DEBUG] Nó: c, Grau: 2
-[DEBUG] Nó: D, Grau: 1
-[DEBUG] Aresta: (c, n)
-[DEBUG] Nó: c, Grau: 3
-[DEBUG] Nó: n, Grau: 1
-[DEBUG] Aresta: (c, t)
-[DEBUG] Nó: c, Grau: 4
-[DEBUG] Nó: t, Grau: 1
-[DEBUG] Aresta: (r, 0)
-[DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: 0, Grau: 1
-[DEBUG] Aresta: (J, F)
-[DEBUG] Nó: J, Grau: 1
-[DEBUG] Nó: F, Grau: 1
-[DEBUG] Aresta: (L, s)
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: s, Grau: 1
-[DEBUG] Aresta: (H, u)
-[DEBUG] Nó: H, Grau: 1
-[DEBUG] Nó: u, Grau: 1
-[DEBUG] Aresta: (H, A)
-[DEBUG] Nó: H, Grau: 2
-[DEBUG] Nó: A, Grau: 1
-[DEBUG] Aresta: (H, E)
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: E, Grau: 2
-[DEBUG] Aresta: (f, R)
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: R, Grau: 1
-[DEBUG] Aresta: (f, W)
-[DEBUG] Nó: f, Grau: 2
-[DEBUG] Nó: W, Grau: 1
-[DEBUG] Aresta: (f, Y)
-[DEBUG] Nó: f, Grau: 3
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Aresta: (f, 6)
-[DEBUG] Nó: f, Grau: 4
-[DEBUG] Nó: 6, Grau: 1
-[DEBUG] Aresta: (e, V)
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: V, Grau: 1
-[DEBUG] Aresta: (e, 7)
-[DEBUG] Nó: e, Grau: 2
-[DEBUG] Nó: 7, Grau: 2
-[DEBUG] Aresta: (6, F)
-[DEBUG] Nó: 6, Grau: 2
-[DEBUG] Nó: F, Grau: 2
-[DEBUG] Aresta: (6, U)
-[DEBUG] Nó: 6, Grau: 3
-[DEBUG] Nó: U, Grau: 1
-[DEBUG] Aresta: (6, o)
-[DEBUG] Nó: 6, Grau: 4
-[DEBUG] Nó: o, Grau: 2
-[DEBUG] Aresta: (6, R)
-[DEBUG] Nó: 6, Grau: 5
-[DEBUG] Nó: R, Grau: 2
-[DEBUG] Aresta: (U, P)
-[DEBUG] Nó: U, Grau: 2
-[DEBUG] Nó: P, Grau: 1
-[DEBUG] Aresta: (U, n)
-[DEBUG] Nó: U, Grau: 3
-[DEBUG] Nó: n, Grau: 2
-[DEBUG] Aresta: (W, j)
-[DEBUG] Nó: W, Grau: 2
-[DEBUG] Nó: j, Grau: 1
-[DEBUG] Aresta: (W, t)
-[DEBUG] Nó: W, Grau: 3
-[DEBUG] Nó: t, Grau: 2
-[DEBUG] Aresta: (W, y)
-[DEBUG] Nó: W, Grau: 4
-[DEBUG] Nó: y, Grau: 1
-[DEBUG] Aresta: (W, 5)
-[DEBUG] Nó: W, Grau: 5
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Aresta: (0, R)
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: R, Grau: 3
-[DEBUG] Aresta: (0, 3)
-[DEBUG] Nó: 0, Grau: 3
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Aresta: (s, I)
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: I, Grau: 1
-[DEBUG] Aresta: (b, O)
-[DEBUG] Nó: b, Grau: 2
-[DEBUG] Nó: O, Grau: 1
-[DEBUG] Aresta: (b, T)
-[DEBUG] Nó: b, Grau: 3
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Aresta: (v, k)
-[DEBUG] Nó: v, Grau: 1
-[DEBUG] Nó: k, Grau: 1
-[DEBUG] Aresta: (w, I)
+[DEBUG] Aresta: (w, v)
 [DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Aresta: (w, x)
+[DEBUG] Nó: v, Grau: 1
+[DEBUG] Aresta: (w, t)
 [DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Aresta: (y, Q)
-[DEBUG] Nó: y, Grau: 2
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Aresta: (4, P)
-[DEBUG] Nó: 4, Grau: 1
-[DEBUG] Nó: P, Grau: 2
-[DEBUG] Aresta: (V, E)
-[DEBUG] Nó: V, Grau: 2
-[DEBUG] Nó: E, Grau: 3
-[DEBUG] Aresta: (V, 5)
-[DEBUG] Nó: V, Grau: 3
-[DEBUG] Nó: 5, Grau: 2
-[DEBUG] Aresta: (V, R)
-[DEBUG] Nó: V, Grau: 4
-[DEBUG] Nó: R, Grau: 4
-[DEBUG] Aresta: (V, n)
-[DEBUG] Nó: V, Grau: 5
-[DEBUG] Nó: n, Grau: 3
-[DEBUG] Aresta: (t, G)
-[DEBUG] Nó: t, Grau: 3
-[DEBUG] Nó: G, Grau: 2
-[DEBUG] Aresta: (5, M)
-[DEBUG] Nó: 5, Grau: 3
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Aresta: (5, p)
-[DEBUG] Nó: 5, Grau: 4
-[DEBUG] Nó: p, Grau: 2
-[DEBUG] Aresta: (k, Y)
-[DEBUG] Nó: k, Grau: 2
-[DEBUG] Nó: Y, Grau: 2
-[DEBUG] Aresta: (k, g)
-[DEBUG] Nó: k, Grau: 3
-[DEBUG] Nó: g, Grau: 1
-[DEBUG] Aresta: (Y, n)
-[DEBUG] Nó: Y, Grau: 3
-[DEBUG] Nó: n, Grau: 4
-[DEBUG] Aresta: (p, n)
-[DEBUG] Nó: p, Grau: 3
-[DEBUG] Nó: n, Grau: 5
-[DEBUG] Aresta: (M, g)
-[DEBUG] Nó: M, Grau: 2
-[DEBUG] Nó: g, Grau: 2
-[DEBUG] Aresta: (X, l)
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-[DEBUG] Aresta: (X, F)
-[DEBUG] Nó: X, Grau: 2
-[DEBUG] Nó: F, Grau: 3
-[DEBUG] Aresta: (n, D)
-[DEBUG] Nó: n, Grau: 6
-[DEBUG] Nó: D, Grau: 2
-[DEBUG] Aresta: (G, j)
-[DEBUG] Nó: G, Grau: 3
-[DEBUG] Nó: j, Grau: 2
-[DEBUG] Aresta: (o, g)
-[DEBUG] Nó: o, Grau: 3
-[DEBUG] Nó: g, Grau: 3
-[DEBUG] Aresta: (u, O)
-[DEBUG] Nó: u, Grau: 2
-[DEBUG] Nó: O, Grau: 2
-[DEBUG] Aresta: (x, O)
-[DEBUG] Nó: x, Grau: 2
-[DEBUG] Nó: O, Grau: 3
-[DEBUG] Aresta: (7, O)
-[DEBUG] Nó: 7, Grau: 3
-[DEBUG] Nó: O, Grau: 4
-[DEBUG] Aresta: (h, z)
-[DEBUG] Nó: h, Grau: 1
-[DEBUG] Nó: z, Grau: 2
-[DEBUG] Aresta: (F, a)
-[DEBUG] Nó: F, Grau: 4
-[DEBUG] Nó: a, Grau: 1
-[DEBUG] Aresta: (F, q)
-[DEBUG] Nó: F, Grau: 5
+[DEBUG] Nó: t, Grau: 1
+[DEBUG] Aresta: (q, u)
 [DEBUG] Nó: q, Grau: 1
-[DEBUG] Aresta: (q, j)
+[DEBUG] Nó: u, Grau: 1
+[DEBUG] Aresta: (q, l)
 [DEBUG] Nó: q, Grau: 2
-[DEBUG] Nó: j, Grau: 3
-[DEBUG] Aresta: (q, P)
-[DEBUG] Nó: q, Grau: 3
-[DEBUG] Nó: P, Grau: 3
-[DEBUG] Aresta: (R, a)
-[DEBUG] Nó: R, Grau: 5
-[DEBUG] Nó: a, Grau: 2
-[DEBUG] Aresta: (R, P)
-[DEBUG] Nó: R, Grau: 6
-[DEBUG] Nó: P, Grau: 4
-[DEBUG] Aresta: (P, D)
-[DEBUG] Nó: P, Grau: 5
-[DEBUG] Nó: D, Grau: 3
-[DEBUG] Aresta: (T, O)
-[DEBUG] Nó: T, Grau: 2
-[DEBUG] Nó: O, Grau: 5
-[DEBUG] Aresta: (2, g)
-[DEBUG] Nó: 2, Grau: 1
-[DEBUG] Nó: g, Grau: 4
-[DEBUG] Aresta: (O, A)
-[DEBUG] Nó: O, Grau: 6
-[DEBUG] Nó: A, Grau: 2
-[DEBUG] Aresta: (O, z)
-[DEBUG] Nó: O, Grau: 7
-[DEBUG] Nó: z, Grau: 3
-[DEBUG] Aresta: (A, z)
-[DEBUG] Nó: A, Grau: 3
-[DEBUG] Nó: z, Grau: 4
-[DEBUG] Aresta: (l, D)
+[DEBUG] Nó: l, Grau: 1
+[DEBUG] Aresta: (l, a)
 [DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: D, Grau: 4
-[DEBUG] Aresta: (D, j)
-[DEBUG] Nó: D, Grau: 5
-[DEBUG] Nó: j, Grau: 4
+[DEBUG] Nó: a, Grau: 1
+[DEBUG] Aresta: (y, o)
+[DEBUG] Nó: y, Grau: 1
+[DEBUG] Nó: o, Grau: 1
+[DEBUG] Aresta: (y, b)
+[DEBUG] Nó: y, Grau: 2
+[DEBUG] Nó: b, Grau: 1
+[DEBUG] Aresta: (d, f)
+[DEBUG] Nó: d, Grau: 1
+[DEBUG] Nó: f, Grau: 1
+[DEBUG] Aresta: (t, o)
+[DEBUG] Nó: t, Grau: 2
+[DEBUG] Nó: o, Grau: 2
+[DEBUG] Aresta: (b, u)
+[DEBUG] Nó: b, Grau: 2
+[DEBUG] Nó: u, Grau: 2
+[DEBUG] Aresta: (f, e)
+[DEBUG] Nó: f, Grau: 2
+[DEBUG] Nó: e, Grau: 1
+[DEBUG] Aresta: (k, m)
+[DEBUG] Nó: k, Grau: 1
+[DEBUG] Nó: m, Grau: 1
+[DEBUG] Aresta: (c, r)
+[DEBUG] Nó: c, Grau: 1
+[DEBUG] Nó: r, Grau: 1
+[DEBUG] Aresta: (m, n)
+[DEBUG] Nó: m, Grau: 2
+[DEBUG] Nó: n, Grau: 1
+[DEBUG] Aresta: (e, v)
+[DEBUG] Nó: e, Grau: 2
+[DEBUG] Nó: v, Grau: 2
 
 [DEBUG] Grau dos vertices das arestas não cobertas: 
-[DEBUG] Nó: 0, Grau: 3
-[DEBUG] Nó: 2, Grau: 1
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Nó: 4, Grau: 1
-[DEBUG] Nó: 5, Grau: 4
-[DEBUG] Nó: 6, Grau: 5
-[DEBUG] Nó: 7, Grau: 3
-[DEBUG] Nó: A, Grau: 3
-[DEBUG] Nó: B, Grau: 1
-[DEBUG] Nó: C, Grau: 3
-[DEBUG] Nó: D, Grau: 5
-[DEBUG] Nó: E, Grau: 3
-[DEBUG] Nó: F, Grau: 5
-[DEBUG] Nó: G, Grau: 3
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Nó: J, Grau: 1
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: M, Grau: 2
-[DEBUG] Nó: N, Grau: 4
-[DEBUG] Nó: O, Grau: 7
-[DEBUG] Nó: P, Grau: 5
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Nó: R, Grau: 6
-[DEBUG] Nó: T, Grau: 2
-[DEBUG] Nó: U, Grau: 3
-[DEBUG] Nó: V, Grau: 5
-[DEBUG] Nó: W, Grau: 5
-[DEBUG] Nó: X, Grau: 2
-[DEBUG] Nó: Y, Grau: 3
-[DEBUG] Nó: a, Grau: 2
-[DEBUG] Nó: b, Grau: 3
-[DEBUG] Nó: c, Grau: 4
+[DEBUG] Nó: a, Grau: 1
+[DEBUG] Nó: b, Grau: 2
+[DEBUG] Nó: c, Grau: 1
+[DEBUG] Nó: d, Grau: 1
 [DEBUG] Nó: e, Grau: 2
-[DEBUG] Nó: f, Grau: 4
-[DEBUG] Nó: g, Grau: 4
-[DEBUG] Nó: h, Grau: 1
-[DEBUG] Nó: j, Grau: 4
-[DEBUG] Nó: k, Grau: 3
+[DEBUG] Nó: f, Grau: 2
+[DEBUG] Nó: k, Grau: 1
 [DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: n, Grau: 6
-[DEBUG] Nó: o, Grau: 3
-[DEBUG] Nó: p, Grau: 3
-[DEBUG] Nó: q, Grau: 3
+[DEBUG] Nó: m, Grau: 2
+[DEBUG] Nó: n, Grau: 1
+[DEBUG] Nó: o, Grau: 2
+[DEBUG] Nó: q, Grau: 2
 [DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: t, Grau: 3
+[DEBUG] Nó: t, Grau: 2
 [DEBUG] Nó: u, Grau: 2
-[DEBUG] Nó: v, Grau: 1
+[DEBUG] Nó: v, Grau: 2
 [DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 2
 [DEBUG] Nó: y, Grau: 2
-[DEBUG] Nó: z, Grau: 4
 
 [DEBUG] Selecionando a aresta com maior grau...
-[DEBUG] Aresta: (N, E), Grau: 7
-[DEBUG] Aresta: (N, z), Grau: 8
-[DEBUG] Aresta: (N, p), Grau: 7
-[DEBUG] Aresta: (N, 7), Grau: 7
-[DEBUG] Aresta: (C, b), Grau: 6
-[DEBUG] Aresta: (C, G), Grau: 6
-[DEBUG] Aresta: (C, o), Grau: 6
-[DEBUG] Aresta: (c, B), Grau: 5
-[DEBUG] Aresta: (c, D), Grau: 9
-[DEBUG] Aresta: (c, n), Grau: 10
-[DEBUG] Aresta: (c, t), Grau: 7
-[DEBUG] Aresta: (r, 0), Grau: 4
-[DEBUG] Aresta: (J, F), Grau: 6
-[DEBUG] Aresta: (L, s), Grau: 3
-[DEBUG] Aresta: (H, u), Grau: 5
-[DEBUG] Aresta: (H, A), Grau: 6
-[DEBUG] Aresta: (H, E), Grau: 6
-[DEBUG] Aresta: (f, R), Grau: 10
-[DEBUG] Aresta: (f, W), Grau: 9
-[DEBUG] Aresta: (f, Y), Grau: 7
-[DEBUG] Aresta: (f, 6), Grau: 9
-[DEBUG] Aresta: (e, V), Grau: 7
-[DEBUG] Aresta: (e, 7), Grau: 5
-[DEBUG] Aresta: (6, F), Grau: 10
-[DEBUG] Aresta: (6, U), Grau: 8
-[DEBUG] Aresta: (6, o), Grau: 8
-[DEBUG] Aresta: (6, R), Grau: 11
-[DEBUG] Aresta: (U, P), Grau: 8
-[DEBUG] Aresta: (U, n), Grau: 9
-[DEBUG] Aresta: (W, j), Grau: 9
-[DEBUG] Aresta: (W, t), Grau: 8
-[DEBUG] Aresta: (W, y), Grau: 7
-[DEBUG] Aresta: (W, 5), Grau: 9
-[DEBUG] Aresta: (0, R), Grau: 9
-[DEBUG] Aresta: (0, 3), Grau: 4
-[DEBUG] Aresta: (s, I), Grau: 4
-[DEBUG] Aresta: (b, O), Grau: 10
-[DEBUG] Aresta: (b, T), Grau: 5
-[DEBUG] Aresta: (v, k), Grau: 4
-[DEBUG] Aresta: (w, I), Grau: 4
-[DEBUG] Aresta: (w, x), Grau: 4
-[DEBUG] Aresta: (y, Q), Grau: 3
-[DEBUG] Aresta: (4, P), Grau: 6
-[DEBUG] Aresta: (V, E), Grau: 8
-[DEBUG] Aresta: (V, 5), Grau: 9
-[DEBUG] Aresta: (V, R), Grau: 11
-[DEBUG] Aresta: (V, n), Grau: 11
-[DEBUG] Aresta: (t, G), Grau: 6
-[DEBUG] Aresta: (5, M), Grau: 6
-[DEBUG] Aresta: (5, p), Grau: 7
-[DEBUG] Aresta: (k, Y), Grau: 6
-[DEBUG] Aresta: (k, g), Grau: 7
-[DEBUG] Aresta: (Y, n), Grau: 9
-[DEBUG] Aresta: (p, n), Grau: 9
-[DEBUG] Aresta: (M, g), Grau: 6
-[DEBUG] Aresta: (X, l), Grau: 4
-[DEBUG] Aresta: (X, F), Grau: 7
-[DEBUG] Aresta: (n, D), Grau: 11
-[DEBUG] Aresta: (G, j), Grau: 7
-[DEBUG] Aresta: (o, g), Grau: 7
-[DEBUG] Aresta: (u, O), Grau: 9
-[DEBUG] Aresta: (x, O), Grau: 9
-[DEBUG] Aresta: (7, O), Grau: 10
-[DEBUG] Aresta: (h, z), Grau: 5
-[DEBUG] Aresta: (F, a), Grau: 7
-[DEBUG] Aresta: (F, q), Grau: 8
-[DEBUG] Aresta: (q, j), Grau: 7
-[DEBUG] Aresta: (q, P), Grau: 8
-[DEBUG] Aresta: (R, a), Grau: 8
-[DEBUG] Aresta: (R, P), Grau: 11
-[DEBUG] Aresta: (P, D), Grau: 10
-[DEBUG] Aresta: (T, O), Grau: 9
-[DEBUG] Aresta: (2, g), Grau: 5
-[DEBUG] Aresta: (O, A), Grau: 10
-[DEBUG] Aresta: (O, z), Grau: 11
-[DEBUG] Aresta: (A, z), Grau: 7
-[DEBUG] Aresta: (l, D), Grau: 7
-[DEBUG] Aresta: (D, j), Grau: 9
-[DEBUG] Aresta selecionada: (O, z) com grau 11
-[DEBUG] Solução:  (i, S)  (Z, K)  (m, 1)  (O, z) 
+[DEBUG] Aresta: (w, v), Grau: 4
+[DEBUG] Aresta: (w, t), Grau: 4
+[DEBUG] Aresta: (q, u), Grau: 4
+[DEBUG] Aresta: (q, l), Grau: 4
+[DEBUG] Aresta: (l, a), Grau: 3
+[DEBUG] Aresta: (y, o), Grau: 4
+[DEBUG] Aresta: (y, b), Grau: 4
+[DEBUG] Aresta: (d, f), Grau: 3
+[DEBUG] Aresta: (t, o), Grau: 4
+[DEBUG] Aresta: (b, u), Grau: 4
+[DEBUG] Aresta: (f, e), Grau: 4
+[DEBUG] Aresta: (k, m), Grau: 3
+[DEBUG] Aresta: (c, r), Grau: 2
+[DEBUG] Aresta: (m, n), Grau: 3
+[DEBUG] Aresta: (e, v), Grau: 4
+[DEBUG] Aresta selecionada: (w, v) com grau 4
+[DEBUG] Solução:  (i, h)  (p, s)  (j, x)  (w, v) 
 
-[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (O, z)
+[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (w, v)
 
-[DEBUG] Verificando aresta: (D, j)
+[DEBUG] Verificando aresta: (e, v)
+[DEBUG] Removendo aresta: (e, v)
 
-[DEBUG] Verificando aresta: (l, D)
+[DEBUG] Verificando aresta: (m, n)
 
-[DEBUG] Verificando aresta: (A, z)
-[DEBUG] Removendo aresta: (A, z)
+[DEBUG] Verificando aresta: (c, r)
 
-[DEBUG] Verificando aresta: (O, z)
-[DEBUG] Removendo aresta: (O, z)
+[DEBUG] Verificando aresta: (k, m)
 
-[DEBUG] Verificando aresta: (O, A)
-[DEBUG] Removendo aresta: (O, A)
+[DEBUG] Verificando aresta: (f, e)
 
-[DEBUG] Verificando aresta: (2, g)
+[DEBUG] Verificando aresta: (b, u)
 
-[DEBUG] Verificando aresta: (T, O)
-[DEBUG] Removendo aresta: (T, O)
+[DEBUG] Verificando aresta: (t, o)
 
-[DEBUG] Verificando aresta: (P, D)
+[DEBUG] Verificando aresta: (d, f)
 
-[DEBUG] Verificando aresta: (R, P)
+[DEBUG] Verificando aresta: (y, b)
 
-[DEBUG] Verificando aresta: (R, a)
+[DEBUG] Verificando aresta: (y, o)
 
-[DEBUG] Verificando aresta: (q, P)
+[DEBUG] Verificando aresta: (l, a)
 
-[DEBUG] Verificando aresta: (q, j)
+[DEBUG] Verificando aresta: (q, l)
 
-[DEBUG] Verificando aresta: (F, q)
+[DEBUG] Verificando aresta: (q, u)
 
-[DEBUG] Verificando aresta: (F, a)
+[DEBUG] Verificando aresta: (w, t)
+[DEBUG] Removendo aresta: (w, t)
 
-[DEBUG] Verificando aresta: (h, z)
-[DEBUG] Removendo aresta: (h, z)
-
-[DEBUG] Verificando aresta: (7, O)
-[DEBUG] Removendo aresta: (7, O)
-
-[DEBUG] Verificando aresta: (x, O)
-[DEBUG] Removendo aresta: (x, O)
-
-[DEBUG] Verificando aresta: (u, O)
-[DEBUG] Removendo aresta: (u, O)
-
-[DEBUG] Verificando aresta: (o, g)
-
-[DEBUG] Verificando aresta: (G, j)
-
-[DEBUG] Verificando aresta: (n, D)
-
-[DEBUG] Verificando aresta: (X, F)
-
-[DEBUG] Verificando aresta: (X, l)
-
-[DEBUG] Verificando aresta: (M, g)
-
-[DEBUG] Verificando aresta: (p, n)
-
-[DEBUG] Verificando aresta: (Y, n)
-
-[DEBUG] Verificando aresta: (k, g)
-
-[DEBUG] Verificando aresta: (k, Y)
-
-[DEBUG] Verificando aresta: (5, p)
-
-[DEBUG] Verificando aresta: (5, M)
-
-[DEBUG] Verificando aresta: (t, G)
-
-[DEBUG] Verificando aresta: (V, n)
-
-[DEBUG] Verificando aresta: (V, R)
-
-[DEBUG] Verificando aresta: (V, 5)
-
-[DEBUG] Verificando aresta: (V, E)
-
-[DEBUG] Verificando aresta: (4, P)
-
-[DEBUG] Verificando aresta: (y, Q)
-
-[DEBUG] Verificando aresta: (w, x)
-
-[DEBUG] Verificando aresta: (w, I)
-
-[DEBUG] Verificando aresta: (v, k)
-
-[DEBUG] Verificando aresta: (b, T)
-
-[DEBUG] Verificando aresta: (b, O)
-[DEBUG] Removendo aresta: (b, O)
-
-[DEBUG] Verificando aresta: (s, I)
-
-[DEBUG] Verificando aresta: (0, 3)
-
-[DEBUG] Verificando aresta: (0, R)
-
-[DEBUG] Verificando aresta: (W, 5)
-
-[DEBUG] Verificando aresta: (W, y)
-
-[DEBUG] Verificando aresta: (W, t)
-
-[DEBUG] Verificando aresta: (W, j)
-
-[DEBUG] Verificando aresta: (U, n)
-
-[DEBUG] Verificando aresta: (U, P)
-
-[DEBUG] Verificando aresta: (6, R)
-
-[DEBUG] Verificando aresta: (6, o)
-
-[DEBUG] Verificando aresta: (6, U)
-
-[DEBUG] Verificando aresta: (6, F)
-
-[DEBUG] Verificando aresta: (e, 7)
-
-[DEBUG] Verificando aresta: (e, V)
-
-[DEBUG] Verificando aresta: (f, 6)
-
-[DEBUG] Verificando aresta: (f, Y)
-
-[DEBUG] Verificando aresta: (f, W)
-
-[DEBUG] Verificando aresta: (f, R)
-
-[DEBUG] Verificando aresta: (H, E)
-
-[DEBUG] Verificando aresta: (H, A)
-
-[DEBUG] Verificando aresta: (H, u)
-
-[DEBUG] Verificando aresta: (L, s)
-
-[DEBUG] Verificando aresta: (J, F)
-
-[DEBUG] Verificando aresta: (r, 0)
-
-[DEBUG] Verificando aresta: (c, t)
-
-[DEBUG] Verificando aresta: (c, n)
-
-[DEBUG] Verificando aresta: (c, D)
-
-[DEBUG] Verificando aresta: (c, B)
-
-[DEBUG] Verificando aresta: (C, o)
-
-[DEBUG] Verificando aresta: (C, G)
-
-[DEBUG] Verificando aresta: (C, b)
-
-[DEBUG] Verificando aresta: (N, 7)
-
-[DEBUG] Verificando aresta: (N, p)
-
-[DEBUG] Verificando aresta: (N, z)
-[DEBUG] Removendo aresta: (N, z)
-
-[DEBUG] Verificando aresta: (N, E)
+[DEBUG] Verificando aresta: (w, v)
+[DEBUG] Removendo aresta: (w, v)
 
 [DEBUG] Arestas não cobertas após remoção: 
-(N, E) (N, p) (N, 7) (C, b) (C, G) (C, o) (c, B) (c, D) (c, n) (c, t) (r, 0) (J, F) (L, s) (H, u) (H, A) (H, E) (f, R) (f, W) (f, Y) (f, 6) (e, V) (e, 7) (6, F) (6, U) (6, o) (6, R) (U, P) (U, n) (W, j) (W, t) (W, y) (W, 5) (0, R) (0, 3) (s, I) (b, T) (v, k) (w, I) (w, x) (y, Q) (4, P) (V, E) (V, 5) (V, R) (V, n) (t, G) (5, M) (5, p) (k, Y) (k, g) (Y, n) (p, n) (M, g) (X, l) (X, F) (n, D) (G, j) (o, g) (F, a) (F, q) (q, j) (q, P) (R, a) (R, P) (P, D) (2, g) (l, D) (D, j) 
+(q, u) (q, l) (l, a) (y, o) (y, b) (d, f) (t, o) (b, u) (f, e) (k, m) (c, r) (m, n) 
 
 [DEBUG] Execução 5:
 [DEBUG] Arestas não cobertas: 
-(N, E) (N, p) (N, 7) (C, b) (C, G) (C, o) (c, B) (c, D) (c, n) (c, t) (r, 0) (J, F) (L, s) (H, u) (H, A) (H, E) (f, R) (f, W) (f, Y) (f, 6) (e, V) (e, 7) (6, F) (6, U) (6, o) (6, R) (U, P) (U, n) (W, j) (W, t) (W, y) (W, 5) (0, R) (0, 3) (s, I) (b, T) (v, k) (w, I) (w, x) (y, Q) (4, P) (V, E) (V, 5) (V, R) (V, n) (t, G) (5, M) (5, p) (k, Y) (k, g) (Y, n) (p, n) (M, g) (X, l) (X, F) (n, D) (G, j) (o, g) (F, a) (F, q) (q, j) (q, P) (R, a) (R, P) (P, D) (2, g) (l, D) (D, j) 
+(q, u) (q, l) (l, a) (y, o) (y, b) (d, f) (t, o) (b, u) (f, e) (k, m) (c, r) (m, n) 
 
 [DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
-[DEBUG] Aresta: (N, E)
-[DEBUG] Nó: N, Grau: 1
-[DEBUG] Nó: E, Grau: 1
-[DEBUG] Aresta: (N, p)
-[DEBUG] Nó: N, Grau: 2
-[DEBUG] Nó: p, Grau: 1
-[DEBUG] Aresta: (N, 7)
-[DEBUG] Nó: N, Grau: 3
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Aresta: (C, b)
-[DEBUG] Nó: C, Grau: 1
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Aresta: (C, G)
-[DEBUG] Nó: C, Grau: 2
-[DEBUG] Nó: G, Grau: 1
-[DEBUG] Aresta: (C, o)
-[DEBUG] Nó: C, Grau: 3
-[DEBUG] Nó: o, Grau: 1
-[DEBUG] Aresta: (c, B)
-[DEBUG] Nó: c, Grau: 1
-[DEBUG] Nó: B, Grau: 1
-[DEBUG] Aresta: (c, D)
-[DEBUG] Nó: c, Grau: 2
-[DEBUG] Nó: D, Grau: 1
-[DEBUG] Aresta: (c, n)
-[DEBUG] Nó: c, Grau: 3
-[DEBUG] Nó: n, Grau: 1
-[DEBUG] Aresta: (c, t)
-[DEBUG] Nó: c, Grau: 4
-[DEBUG] Nó: t, Grau: 1
-[DEBUG] Aresta: (r, 0)
-[DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: 0, Grau: 1
-[DEBUG] Aresta: (J, F)
-[DEBUG] Nó: J, Grau: 1
-[DEBUG] Nó: F, Grau: 1
-[DEBUG] Aresta: (L, s)
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: s, Grau: 1
-[DEBUG] Aresta: (H, u)
-[DEBUG] Nó: H, Grau: 1
-[DEBUG] Nó: u, Grau: 1
-[DEBUG] Aresta: (H, A)
-[DEBUG] Nó: H, Grau: 2
-[DEBUG] Nó: A, Grau: 1
-[DEBUG] Aresta: (H, E)
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: E, Grau: 2
-[DEBUG] Aresta: (f, R)
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: R, Grau: 1
-[DEBUG] Aresta: (f, W)
-[DEBUG] Nó: f, Grau: 2
-[DEBUG] Nó: W, Grau: 1
-[DEBUG] Aresta: (f, Y)
-[DEBUG] Nó: f, Grau: 3
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Aresta: (f, 6)
-[DEBUG] Nó: f, Grau: 4
-[DEBUG] Nó: 6, Grau: 1
-[DEBUG] Aresta: (e, V)
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: V, Grau: 1
-[DEBUG] Aresta: (e, 7)
-[DEBUG] Nó: e, Grau: 2
-[DEBUG] Nó: 7, Grau: 2
-[DEBUG] Aresta: (6, F)
-[DEBUG] Nó: 6, Grau: 2
-[DEBUG] Nó: F, Grau: 2
-[DEBUG] Aresta: (6, U)
-[DEBUG] Nó: 6, Grau: 3
-[DEBUG] Nó: U, Grau: 1
-[DEBUG] Aresta: (6, o)
-[DEBUG] Nó: 6, Grau: 4
-[DEBUG] Nó: o, Grau: 2
-[DEBUG] Aresta: (6, R)
-[DEBUG] Nó: 6, Grau: 5
-[DEBUG] Nó: R, Grau: 2
-[DEBUG] Aresta: (U, P)
-[DEBUG] Nó: U, Grau: 2
-[DEBUG] Nó: P, Grau: 1
-[DEBUG] Aresta: (U, n)
-[DEBUG] Nó: U, Grau: 3
-[DEBUG] Nó: n, Grau: 2
-[DEBUG] Aresta: (W, j)
-[DEBUG] Nó: W, Grau: 2
-[DEBUG] Nó: j, Grau: 1
-[DEBUG] Aresta: (W, t)
-[DEBUG] Nó: W, Grau: 3
-[DEBUG] Nó: t, Grau: 2
-[DEBUG] Aresta: (W, y)
-[DEBUG] Nó: W, Grau: 4
-[DEBUG] Nó: y, Grau: 1
-[DEBUG] Aresta: (W, 5)
-[DEBUG] Nó: W, Grau: 5
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Aresta: (0, R)
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: R, Grau: 3
-[DEBUG] Aresta: (0, 3)
-[DEBUG] Nó: 0, Grau: 3
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Aresta: (s, I)
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: I, Grau: 1
-[DEBUG] Aresta: (b, T)
-[DEBUG] Nó: b, Grau: 2
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Aresta: (v, k)
-[DEBUG] Nó: v, Grau: 1
-[DEBUG] Nó: k, Grau: 1
-[DEBUG] Aresta: (w, I)
-[DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Aresta: (w, x)
-[DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Aresta: (y, Q)
-[DEBUG] Nó: y, Grau: 2
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Aresta: (4, P)
-[DEBUG] Nó: 4, Grau: 1
-[DEBUG] Nó: P, Grau: 2
-[DEBUG] Aresta: (V, E)
-[DEBUG] Nó: V, Grau: 2
-[DEBUG] Nó: E, Grau: 3
-[DEBUG] Aresta: (V, 5)
-[DEBUG] Nó: V, Grau: 3
-[DEBUG] Nó: 5, Grau: 2
-[DEBUG] Aresta: (V, R)
-[DEBUG] Nó: V, Grau: 4
-[DEBUG] Nó: R, Grau: 4
-[DEBUG] Aresta: (V, n)
-[DEBUG] Nó: V, Grau: 5
-[DEBUG] Nó: n, Grau: 3
-[DEBUG] Aresta: (t, G)
-[DEBUG] Nó: t, Grau: 3
-[DEBUG] Nó: G, Grau: 2
-[DEBUG] Aresta: (5, M)
-[DEBUG] Nó: 5, Grau: 3
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Aresta: (5, p)
-[DEBUG] Nó: 5, Grau: 4
-[DEBUG] Nó: p, Grau: 2
-[DEBUG] Aresta: (k, Y)
-[DEBUG] Nó: k, Grau: 2
-[DEBUG] Nó: Y, Grau: 2
-[DEBUG] Aresta: (k, g)
-[DEBUG] Nó: k, Grau: 3
-[DEBUG] Nó: g, Grau: 1
-[DEBUG] Aresta: (Y, n)
-[DEBUG] Nó: Y, Grau: 3
-[DEBUG] Nó: n, Grau: 4
-[DEBUG] Aresta: (p, n)
-[DEBUG] Nó: p, Grau: 3
-[DEBUG] Nó: n, Grau: 5
-[DEBUG] Aresta: (M, g)
-[DEBUG] Nó: M, Grau: 2
-[DEBUG] Nó: g, Grau: 2
-[DEBUG] Aresta: (X, l)
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-[DEBUG] Aresta: (X, F)
-[DEBUG] Nó: X, Grau: 2
-[DEBUG] Nó: F, Grau: 3
-[DEBUG] Aresta: (n, D)
-[DEBUG] Nó: n, Grau: 6
-[DEBUG] Nó: D, Grau: 2
-[DEBUG] Aresta: (G, j)
-[DEBUG] Nó: G, Grau: 3
-[DEBUG] Nó: j, Grau: 2
-[DEBUG] Aresta: (o, g)
-[DEBUG] Nó: o, Grau: 3
-[DEBUG] Nó: g, Grau: 3
-[DEBUG] Aresta: (F, a)
-[DEBUG] Nó: F, Grau: 4
-[DEBUG] Nó: a, Grau: 1
-[DEBUG] Aresta: (F, q)
-[DEBUG] Nó: F, Grau: 5
+[DEBUG] Aresta: (q, u)
 [DEBUG] Nó: q, Grau: 1
-[DEBUG] Aresta: (q, j)
+[DEBUG] Nó: u, Grau: 1
+[DEBUG] Aresta: (q, l)
 [DEBUG] Nó: q, Grau: 2
-[DEBUG] Nó: j, Grau: 3
-[DEBUG] Aresta: (q, P)
-[DEBUG] Nó: q, Grau: 3
-[DEBUG] Nó: P, Grau: 3
-[DEBUG] Aresta: (R, a)
-[DEBUG] Nó: R, Grau: 5
-[DEBUG] Nó: a, Grau: 2
-[DEBUG] Aresta: (R, P)
-[DEBUG] Nó: R, Grau: 6
-[DEBUG] Nó: P, Grau: 4
-[DEBUG] Aresta: (P, D)
-[DEBUG] Nó: P, Grau: 5
-[DEBUG] Nó: D, Grau: 3
-[DEBUG] Aresta: (2, g)
-[DEBUG] Nó: 2, Grau: 1
-[DEBUG] Nó: g, Grau: 4
-[DEBUG] Aresta: (l, D)
+[DEBUG] Nó: l, Grau: 1
+[DEBUG] Aresta: (l, a)
 [DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: D, Grau: 4
-[DEBUG] Aresta: (D, j)
-[DEBUG] Nó: D, Grau: 5
-[DEBUG] Nó: j, Grau: 4
+[DEBUG] Nó: a, Grau: 1
+[DEBUG] Aresta: (y, o)
+[DEBUG] Nó: y, Grau: 1
+[DEBUG] Nó: o, Grau: 1
+[DEBUG] Aresta: (y, b)
+[DEBUG] Nó: y, Grau: 2
+[DEBUG] Nó: b, Grau: 1
+[DEBUG] Aresta: (d, f)
+[DEBUG] Nó: d, Grau: 1
+[DEBUG] Nó: f, Grau: 1
+[DEBUG] Aresta: (t, o)
+[DEBUG] Nó: t, Grau: 1
+[DEBUG] Nó: o, Grau: 2
+[DEBUG] Aresta: (b, u)
+[DEBUG] Nó: b, Grau: 2
+[DEBUG] Nó: u, Grau: 2
+[DEBUG] Aresta: (f, e)
+[DEBUG] Nó: f, Grau: 2
+[DEBUG] Nó: e, Grau: 1
+[DEBUG] Aresta: (k, m)
+[DEBUG] Nó: k, Grau: 1
+[DEBUG] Nó: m, Grau: 1
+[DEBUG] Aresta: (c, r)
+[DEBUG] Nó: c, Grau: 1
+[DEBUG] Nó: r, Grau: 1
+[DEBUG] Aresta: (m, n)
+[DEBUG] Nó: m, Grau: 2
+[DEBUG] Nó: n, Grau: 1
 
 [DEBUG] Grau dos vertices das arestas não cobertas: 
-[DEBUG] Nó: 0, Grau: 3
-[DEBUG] Nó: 2, Grau: 1
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Nó: 4, Grau: 1
-[DEBUG] Nó: 5, Grau: 4
-[DEBUG] Nó: 6, Grau: 5
-[DEBUG] Nó: 7, Grau: 2
-[DEBUG] Nó: A, Grau: 1
-[DEBUG] Nó: B, Grau: 1
-[DEBUG] Nó: C, Grau: 3
-[DEBUG] Nó: D, Grau: 5
-[DEBUG] Nó: E, Grau: 3
-[DEBUG] Nó: F, Grau: 5
-[DEBUG] Nó: G, Grau: 3
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Nó: J, Grau: 1
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: M, Grau: 2
-[DEBUG] Nó: N, Grau: 3
-[DEBUG] Nó: P, Grau: 5
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Nó: R, Grau: 6
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Nó: U, Grau: 3
-[DEBUG] Nó: V, Grau: 5
-[DEBUG] Nó: W, Grau: 5
-[DEBUG] Nó: X, Grau: 2
-[DEBUG] Nó: Y, Grau: 3
-[DEBUG] Nó: a, Grau: 2
+[DEBUG] Nó: a, Grau: 1
 [DEBUG] Nó: b, Grau: 2
-[DEBUG] Nó: c, Grau: 4
-[DEBUG] Nó: e, Grau: 2
-[DEBUG] Nó: f, Grau: 4
-[DEBUG] Nó: g, Grau: 4
-[DEBUG] Nó: j, Grau: 4
-[DEBUG] Nó: k, Grau: 3
+[DEBUG] Nó: c, Grau: 1
+[DEBUG] Nó: d, Grau: 1
+[DEBUG] Nó: e, Grau: 1
+[DEBUG] Nó: f, Grau: 2
+[DEBUG] Nó: k, Grau: 1
 [DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: n, Grau: 6
-[DEBUG] Nó: o, Grau: 3
-[DEBUG] Nó: p, Grau: 3
-[DEBUG] Nó: q, Grau: 3
+[DEBUG] Nó: m, Grau: 2
+[DEBUG] Nó: n, Grau: 1
+[DEBUG] Nó: o, Grau: 2
+[DEBUG] Nó: q, Grau: 2
 [DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: t, Grau: 3
-[DEBUG] Nó: u, Grau: 1
-[DEBUG] Nó: v, Grau: 1
-[DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
+[DEBUG] Nó: t, Grau: 1
+[DEBUG] Nó: u, Grau: 2
 [DEBUG] Nó: y, Grau: 2
 
 [DEBUG] Selecionando a aresta com maior grau...
-[DEBUG] Aresta: (N, E), Grau: 6
-[DEBUG] Aresta: (N, p), Grau: 6
-[DEBUG] Aresta: (N, 7), Grau: 5
-[DEBUG] Aresta: (C, b), Grau: 5
-[DEBUG] Aresta: (C, G), Grau: 6
-[DEBUG] Aresta: (C, o), Grau: 6
-[DEBUG] Aresta: (c, B), Grau: 5
-[DEBUG] Aresta: (c, D), Grau: 9
-[DEBUG] Aresta: (c, n), Grau: 10
-[DEBUG] Aresta: (c, t), Grau: 7
-[DEBUG] Aresta: (r, 0), Grau: 4
-[DEBUG] Aresta: (J, F), Grau: 6
-[DEBUG] Aresta: (L, s), Grau: 3
-[DEBUG] Aresta: (H, u), Grau: 4
-[DEBUG] Aresta: (H, A), Grau: 4
-[DEBUG] Aresta: (H, E), Grau: 6
-[DEBUG] Aresta: (f, R), Grau: 10
-[DEBUG] Aresta: (f, W), Grau: 9
-[DEBUG] Aresta: (f, Y), Grau: 7
-[DEBUG] Aresta: (f, 6), Grau: 9
-[DEBUG] Aresta: (e, V), Grau: 7
-[DEBUG] Aresta: (e, 7), Grau: 4
-[DEBUG] Aresta: (6, F), Grau: 10
-[DEBUG] Aresta: (6, U), Grau: 8
-[DEBUG] Aresta: (6, o), Grau: 8
-[DEBUG] Aresta: (6, R), Grau: 11
-[DEBUG] Aresta: (U, P), Grau: 8
-[DEBUG] Aresta: (U, n), Grau: 9
-[DEBUG] Aresta: (W, j), Grau: 9
-[DEBUG] Aresta: (W, t), Grau: 8
-[DEBUG] Aresta: (W, y), Grau: 7
-[DEBUG] Aresta: (W, 5), Grau: 9
-[DEBUG] Aresta: (0, R), Grau: 9
-[DEBUG] Aresta: (0, 3), Grau: 4
-[DEBUG] Aresta: (s, I), Grau: 4
-[DEBUG] Aresta: (b, T), Grau: 3
-[DEBUG] Aresta: (v, k), Grau: 4
-[DEBUG] Aresta: (w, I), Grau: 4
-[DEBUG] Aresta: (w, x), Grau: 3
-[DEBUG] Aresta: (y, Q), Grau: 3
-[DEBUG] Aresta: (4, P), Grau: 6
-[DEBUG] Aresta: (V, E), Grau: 8
-[DEBUG] Aresta: (V, 5), Grau: 9
-[DEBUG] Aresta: (V, R), Grau: 11
-[DEBUG] Aresta: (V, n), Grau: 11
-[DEBUG] Aresta: (t, G), Grau: 6
-[DEBUG] Aresta: (5, M), Grau: 6
-[DEBUG] Aresta: (5, p), Grau: 7
-[DEBUG] Aresta: (k, Y), Grau: 6
-[DEBUG] Aresta: (k, g), Grau: 7
-[DEBUG] Aresta: (Y, n), Grau: 9
-[DEBUG] Aresta: (p, n), Grau: 9
-[DEBUG] Aresta: (M, g), Grau: 6
-[DEBUG] Aresta: (X, l), Grau: 4
-[DEBUG] Aresta: (X, F), Grau: 7
-[DEBUG] Aresta: (n, D), Grau: 11
-[DEBUG] Aresta: (G, j), Grau: 7
-[DEBUG] Aresta: (o, g), Grau: 7
-[DEBUG] Aresta: (F, a), Grau: 7
-[DEBUG] Aresta: (F, q), Grau: 8
-[DEBUG] Aresta: (q, j), Grau: 7
-[DEBUG] Aresta: (q, P), Grau: 8
-[DEBUG] Aresta: (R, a), Grau: 8
-[DEBUG] Aresta: (R, P), Grau: 11
-[DEBUG] Aresta: (P, D), Grau: 10
-[DEBUG] Aresta: (2, g), Grau: 5
-[DEBUG] Aresta: (l, D), Grau: 7
-[DEBUG] Aresta: (D, j), Grau: 9
-[DEBUG] Aresta selecionada: (V, n) com grau 11
-[DEBUG] Solução:  (i, S)  (Z, K)  (m, 1)  (O, z)  (V, n) 
+[DEBUG] Aresta: (q, u), Grau: 4
+[DEBUG] Aresta: (q, l), Grau: 4
+[DEBUG] Aresta: (l, a), Grau: 3
+[DEBUG] Aresta: (y, o), Grau: 4
+[DEBUG] Aresta: (y, b), Grau: 4
+[DEBUG] Aresta: (d, f), Grau: 3
+[DEBUG] Aresta: (t, o), Grau: 3
+[DEBUG] Aresta: (b, u), Grau: 4
+[DEBUG] Aresta: (f, e), Grau: 3
+[DEBUG] Aresta: (k, m), Grau: 3
+[DEBUG] Aresta: (c, r), Grau: 2
+[DEBUG] Aresta: (m, n), Grau: 3
+[DEBUG] Aresta selecionada: (q, u) com grau 4
+[DEBUG] Solução:  (i, h)  (p, s)  (j, x)  (w, v)  (q, u) 
 
-[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (V, n)
+[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (q, u)
 
-[DEBUG] Verificando aresta: (D, j)
+[DEBUG] Verificando aresta: (m, n)
 
-[DEBUG] Verificando aresta: (l, D)
+[DEBUG] Verificando aresta: (c, r)
 
-[DEBUG] Verificando aresta: (2, g)
+[DEBUG] Verificando aresta: (k, m)
 
-[DEBUG] Verificando aresta: (P, D)
+[DEBUG] Verificando aresta: (f, e)
 
-[DEBUG] Verificando aresta: (R, P)
+[DEBUG] Verificando aresta: (b, u)
+[DEBUG] Removendo aresta: (b, u)
 
-[DEBUG] Verificando aresta: (R, a)
+[DEBUG] Verificando aresta: (t, o)
 
-[DEBUG] Verificando aresta: (q, P)
+[DEBUG] Verificando aresta: (d, f)
 
-[DEBUG] Verificando aresta: (q, j)
+[DEBUG] Verificando aresta: (y, b)
 
-[DEBUG] Verificando aresta: (F, q)
+[DEBUG] Verificando aresta: (y, o)
 
-[DEBUG] Verificando aresta: (F, a)
+[DEBUG] Verificando aresta: (l, a)
 
-[DEBUG] Verificando aresta: (o, g)
+[DEBUG] Verificando aresta: (q, l)
+[DEBUG] Removendo aresta: (q, l)
 
-[DEBUG] Verificando aresta: (G, j)
-
-[DEBUG] Verificando aresta: (n, D)
-[DEBUG] Removendo aresta: (n, D)
-
-[DEBUG] Verificando aresta: (X, F)
-
-[DEBUG] Verificando aresta: (X, l)
-
-[DEBUG] Verificando aresta: (M, g)
-
-[DEBUG] Verificando aresta: (p, n)
-[DEBUG] Removendo aresta: (p, n)
-
-[DEBUG] Verificando aresta: (Y, n)
-[DEBUG] Removendo aresta: (Y, n)
-
-[DEBUG] Verificando aresta: (k, g)
-
-[DEBUG] Verificando aresta: (k, Y)
-
-[DEBUG] Verificando aresta: (5, p)
-
-[DEBUG] Verificando aresta: (5, M)
-
-[DEBUG] Verificando aresta: (t, G)
-
-[DEBUG] Verificando aresta: (V, n)
-[DEBUG] Removendo aresta: (V, n)
-
-[DEBUG] Verificando aresta: (V, R)
-[DEBUG] Removendo aresta: (V, R)
-
-[DEBUG] Verificando aresta: (V, 5)
-[DEBUG] Removendo aresta: (V, 5)
-
-[DEBUG] Verificando aresta: (V, E)
-[DEBUG] Removendo aresta: (V, E)
-
-[DEBUG] Verificando aresta: (4, P)
-
-[DEBUG] Verificando aresta: (y, Q)
-
-[DEBUG] Verificando aresta: (w, x)
-
-[DEBUG] Verificando aresta: (w, I)
-
-[DEBUG] Verificando aresta: (v, k)
-
-[DEBUG] Verificando aresta: (b, T)
-
-[DEBUG] Verificando aresta: (s, I)
-
-[DEBUG] Verificando aresta: (0, 3)
-
-[DEBUG] Verificando aresta: (0, R)
-
-[DEBUG] Verificando aresta: (W, 5)
-
-[DEBUG] Verificando aresta: (W, y)
-
-[DEBUG] Verificando aresta: (W, t)
-
-[DEBUG] Verificando aresta: (W, j)
-
-[DEBUG] Verificando aresta: (U, n)
-[DEBUG] Removendo aresta: (U, n)
-
-[DEBUG] Verificando aresta: (U, P)
-
-[DEBUG] Verificando aresta: (6, R)
-
-[DEBUG] Verificando aresta: (6, o)
-
-[DEBUG] Verificando aresta: (6, U)
-
-[DEBUG] Verificando aresta: (6, F)
-
-[DEBUG] Verificando aresta: (e, 7)
-
-[DEBUG] Verificando aresta: (e, V)
-[DEBUG] Removendo aresta: (e, V)
-
-[DEBUG] Verificando aresta: (f, 6)
-
-[DEBUG] Verificando aresta: (f, Y)
-
-[DEBUG] Verificando aresta: (f, W)
-
-[DEBUG] Verificando aresta: (f, R)
-
-[DEBUG] Verificando aresta: (H, E)
-
-[DEBUG] Verificando aresta: (H, A)
-
-[DEBUG] Verificando aresta: (H, u)
-
-[DEBUG] Verificando aresta: (L, s)
-
-[DEBUG] Verificando aresta: (J, F)
-
-[DEBUG] Verificando aresta: (r, 0)
-
-[DEBUG] Verificando aresta: (c, t)
-
-[DEBUG] Verificando aresta: (c, n)
-[DEBUG] Removendo aresta: (c, n)
-
-[DEBUG] Verificando aresta: (c, D)
-
-[DEBUG] Verificando aresta: (c, B)
-
-[DEBUG] Verificando aresta: (C, o)
-
-[DEBUG] Verificando aresta: (C, G)
-
-[DEBUG] Verificando aresta: (C, b)
-
-[DEBUG] Verificando aresta: (N, 7)
-
-[DEBUG] Verificando aresta: (N, p)
-
-[DEBUG] Verificando aresta: (N, E)
+[DEBUG] Verificando aresta: (q, u)
+[DEBUG] Removendo aresta: (q, u)
 
 [DEBUG] Arestas não cobertas após remoção: 
-(N, E) (N, p) (N, 7) (C, b) (C, G) (C, o) (c, B) (c, D) (c, t) (r, 0) (J, F) (L, s) (H, u) (H, A) (H, E) (f, R) (f, W) (f, Y) (f, 6) (e, 7) (6, F) (6, U) (6, o) (6, R) (U, P) (W, j) (W, t) (W, y) (W, 5) (0, R) (0, 3) (s, I) (b, T) (v, k) (w, I) (w, x) (y, Q) (4, P) (t, G) (5, M) (5, p) (k, Y) (k, g) (M, g) (X, l) (X, F) (G, j) (o, g) (F, a) (F, q) (q, j) (q, P) (R, a) (R, P) (P, D) (2, g) (l, D) (D, j) 
+(l, a) (y, o) (y, b) (d, f) (t, o) (f, e) (k, m) (c, r) (m, n) 
 
 [DEBUG] Execução 6:
 [DEBUG] Arestas não cobertas: 
-(N, E) (N, p) (N, 7) (C, b) (C, G) (C, o) (c, B) (c, D) (c, t) (r, 0) (J, F) (L, s) (H, u) (H, A) (H, E) (f, R) (f, W) (f, Y) (f, 6) (e, 7) (6, F) (6, U) (6, o) (6, R) (U, P) (W, j) (W, t) (W, y) (W, 5) (0, R) (0, 3) (s, I) (b, T) (v, k) (w, I) (w, x) (y, Q) (4, P) (t, G) (5, M) (5, p) (k, Y) (k, g) (M, g) (X, l) (X, F) (G, j) (o, g) (F, a) (F, q) (q, j) (q, P) (R, a) (R, P) (P, D) (2, g) (l, D) (D, j) 
+(l, a) (y, o) (y, b) (d, f) (t, o) (f, e) (k, m) (c, r) (m, n) 
 
 [DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
-[DEBUG] Aresta: (N, E)
-[DEBUG] Nó: N, Grau: 1
-[DEBUG] Nó: E, Grau: 1
-[DEBUG] Aresta: (N, p)
-[DEBUG] Nó: N, Grau: 2
-[DEBUG] Nó: p, Grau: 1
-[DEBUG] Aresta: (N, 7)
-[DEBUG] Nó: N, Grau: 3
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Aresta: (C, b)
-[DEBUG] Nó: C, Grau: 1
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Aresta: (C, G)
-[DEBUG] Nó: C, Grau: 2
-[DEBUG] Nó: G, Grau: 1
-[DEBUG] Aresta: (C, o)
-[DEBUG] Nó: C, Grau: 3
-[DEBUG] Nó: o, Grau: 1
-[DEBUG] Aresta: (c, B)
-[DEBUG] Nó: c, Grau: 1
-[DEBUG] Nó: B, Grau: 1
-[DEBUG] Aresta: (c, D)
-[DEBUG] Nó: c, Grau: 2
-[DEBUG] Nó: D, Grau: 1
-[DEBUG] Aresta: (c, t)
-[DEBUG] Nó: c, Grau: 3
-[DEBUG] Nó: t, Grau: 1
-[DEBUG] Aresta: (r, 0)
-[DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: 0, Grau: 1
-[DEBUG] Aresta: (J, F)
-[DEBUG] Nó: J, Grau: 1
-[DEBUG] Nó: F, Grau: 1
-[DEBUG] Aresta: (L, s)
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: s, Grau: 1
-[DEBUG] Aresta: (H, u)
-[DEBUG] Nó: H, Grau: 1
-[DEBUG] Nó: u, Grau: 1
-[DEBUG] Aresta: (H, A)
-[DEBUG] Nó: H, Grau: 2
-[DEBUG] Nó: A, Grau: 1
-[DEBUG] Aresta: (H, E)
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: E, Grau: 2
-[DEBUG] Aresta: (f, R)
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: R, Grau: 1
-[DEBUG] Aresta: (f, W)
-[DEBUG] Nó: f, Grau: 2
-[DEBUG] Nó: W, Grau: 1
-[DEBUG] Aresta: (f, Y)
-[DEBUG] Nó: f, Grau: 3
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Aresta: (f, 6)
-[DEBUG] Nó: f, Grau: 4
-[DEBUG] Nó: 6, Grau: 1
-[DEBUG] Aresta: (e, 7)
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: 7, Grau: 2
-[DEBUG] Aresta: (6, F)
-[DEBUG] Nó: 6, Grau: 2
-[DEBUG] Nó: F, Grau: 2
-[DEBUG] Aresta: (6, U)
-[DEBUG] Nó: 6, Grau: 3
-[DEBUG] Nó: U, Grau: 1
-[DEBUG] Aresta: (6, o)
-[DEBUG] Nó: 6, Grau: 4
-[DEBUG] Nó: o, Grau: 2
-[DEBUG] Aresta: (6, R)
-[DEBUG] Nó: 6, Grau: 5
-[DEBUG] Nó: R, Grau: 2
-[DEBUG] Aresta: (U, P)
-[DEBUG] Nó: U, Grau: 2
-[DEBUG] Nó: P, Grau: 1
-[DEBUG] Aresta: (W, j)
-[DEBUG] Nó: W, Grau: 2
-[DEBUG] Nó: j, Grau: 1
-[DEBUG] Aresta: (W, t)
-[DEBUG] Nó: W, Grau: 3
-[DEBUG] Nó: t, Grau: 2
-[DEBUG] Aresta: (W, y)
-[DEBUG] Nó: W, Grau: 4
-[DEBUG] Nó: y, Grau: 1
-[DEBUG] Aresta: (W, 5)
-[DEBUG] Nó: W, Grau: 5
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Aresta: (0, R)
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: R, Grau: 3
-[DEBUG] Aresta: (0, 3)
-[DEBUG] Nó: 0, Grau: 3
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Aresta: (s, I)
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: I, Grau: 1
-[DEBUG] Aresta: (b, T)
-[DEBUG] Nó: b, Grau: 2
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Aresta: (v, k)
-[DEBUG] Nó: v, Grau: 1
-[DEBUG] Nó: k, Grau: 1
-[DEBUG] Aresta: (w, I)
-[DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Aresta: (w, x)
-[DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Aresta: (y, Q)
-[DEBUG] Nó: y, Grau: 2
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Aresta: (4, P)
-[DEBUG] Nó: 4, Grau: 1
-[DEBUG] Nó: P, Grau: 2
-[DEBUG] Aresta: (t, G)
-[DEBUG] Nó: t, Grau: 3
-[DEBUG] Nó: G, Grau: 2
-[DEBUG] Aresta: (5, M)
-[DEBUG] Nó: 5, Grau: 2
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Aresta: (5, p)
-[DEBUG] Nó: 5, Grau: 3
-[DEBUG] Nó: p, Grau: 2
-[DEBUG] Aresta: (k, Y)
-[DEBUG] Nó: k, Grau: 2
-[DEBUG] Nó: Y, Grau: 2
-[DEBUG] Aresta: (k, g)
-[DEBUG] Nó: k, Grau: 3
-[DEBUG] Nó: g, Grau: 1
-[DEBUG] Aresta: (M, g)
-[DEBUG] Nó: M, Grau: 2
-[DEBUG] Nó: g, Grau: 2
-[DEBUG] Aresta: (X, l)
-[DEBUG] Nó: X, Grau: 1
+[DEBUG] Aresta: (l, a)
 [DEBUG] Nó: l, Grau: 1
-[DEBUG] Aresta: (X, F)
-[DEBUG] Nó: X, Grau: 2
-[DEBUG] Nó: F, Grau: 3
-[DEBUG] Aresta: (G, j)
-[DEBUG] Nó: G, Grau: 3
-[DEBUG] Nó: j, Grau: 2
-[DEBUG] Aresta: (o, g)
-[DEBUG] Nó: o, Grau: 3
-[DEBUG] Nó: g, Grau: 3
-[DEBUG] Aresta: (F, a)
-[DEBUG] Nó: F, Grau: 4
 [DEBUG] Nó: a, Grau: 1
-[DEBUG] Aresta: (F, q)
-[DEBUG] Nó: F, Grau: 5
-[DEBUG] Nó: q, Grau: 1
-[DEBUG] Aresta: (q, j)
-[DEBUG] Nó: q, Grau: 2
-[DEBUG] Nó: j, Grau: 3
-[DEBUG] Aresta: (q, P)
-[DEBUG] Nó: q, Grau: 3
-[DEBUG] Nó: P, Grau: 3
-[DEBUG] Aresta: (R, a)
-[DEBUG] Nó: R, Grau: 4
-[DEBUG] Nó: a, Grau: 2
-[DEBUG] Aresta: (R, P)
-[DEBUG] Nó: R, Grau: 5
-[DEBUG] Nó: P, Grau: 4
-[DEBUG] Aresta: (P, D)
-[DEBUG] Nó: P, Grau: 5
-[DEBUG] Nó: D, Grau: 2
-[DEBUG] Aresta: (2, g)
-[DEBUG] Nó: 2, Grau: 1
-[DEBUG] Nó: g, Grau: 4
-[DEBUG] Aresta: (l, D)
-[DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: D, Grau: 3
-[DEBUG] Aresta: (D, j)
-[DEBUG] Nó: D, Grau: 4
-[DEBUG] Nó: j, Grau: 4
+[DEBUG] Aresta: (y, o)
+[DEBUG] Nó: y, Grau: 1
+[DEBUG] Nó: o, Grau: 1
+[DEBUG] Aresta: (y, b)
+[DEBUG] Nó: y, Grau: 2
+[DEBUG] Nó: b, Grau: 1
+[DEBUG] Aresta: (d, f)
+[DEBUG] Nó: d, Grau: 1
+[DEBUG] Nó: f, Grau: 1
+[DEBUG] Aresta: (t, o)
+[DEBUG] Nó: t, Grau: 1
+[DEBUG] Nó: o, Grau: 2
+[DEBUG] Aresta: (f, e)
+[DEBUG] Nó: f, Grau: 2
+[DEBUG] Nó: e, Grau: 1
+[DEBUG] Aresta: (k, m)
+[DEBUG] Nó: k, Grau: 1
+[DEBUG] Nó: m, Grau: 1
+[DEBUG] Aresta: (c, r)
+[DEBUG] Nó: c, Grau: 1
+[DEBUG] Nó: r, Grau: 1
+[DEBUG] Aresta: (m, n)
+[DEBUG] Nó: m, Grau: 2
+[DEBUG] Nó: n, Grau: 1
 
 [DEBUG] Grau dos vertices das arestas não cobertas: 
-[DEBUG] Nó: 0, Grau: 3
-[DEBUG] Nó: 2, Grau: 1
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Nó: 4, Grau: 1
-[DEBUG] Nó: 5, Grau: 3
-[DEBUG] Nó: 6, Grau: 5
-[DEBUG] Nó: 7, Grau: 2
-[DEBUG] Nó: A, Grau: 1
-[DEBUG] Nó: B, Grau: 1
-[DEBUG] Nó: C, Grau: 3
-[DEBUG] Nó: D, Grau: 4
-[DEBUG] Nó: E, Grau: 2
-[DEBUG] Nó: F, Grau: 5
-[DEBUG] Nó: G, Grau: 3
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Nó: J, Grau: 1
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: M, Grau: 2
-[DEBUG] Nó: N, Grau: 3
-[DEBUG] Nó: P, Grau: 5
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Nó: R, Grau: 5
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Nó: U, Grau: 2
-[DEBUG] Nó: W, Grau: 5
-[DEBUG] Nó: X, Grau: 2
-[DEBUG] Nó: Y, Grau: 2
-[DEBUG] Nó: a, Grau: 2
-[DEBUG] Nó: b, Grau: 2
-[DEBUG] Nó: c, Grau: 3
+[DEBUG] Nó: a, Grau: 1
+[DEBUG] Nó: b, Grau: 1
+[DEBUG] Nó: c, Grau: 1
+[DEBUG] Nó: d, Grau: 1
 [DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: f, Grau: 4
-[DEBUG] Nó: g, Grau: 4
-[DEBUG] Nó: j, Grau: 4
-[DEBUG] Nó: k, Grau: 3
-[DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: o, Grau: 3
-[DEBUG] Nó: p, Grau: 2
-[DEBUG] Nó: q, Grau: 3
+[DEBUG] Nó: f, Grau: 2
+[DEBUG] Nó: k, Grau: 1
+[DEBUG] Nó: l, Grau: 1
+[DEBUG] Nó: m, Grau: 2
+[DEBUG] Nó: n, Grau: 1
+[DEBUG] Nó: o, Grau: 2
 [DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: t, Grau: 3
-[DEBUG] Nó: u, Grau: 1
-[DEBUG] Nó: v, Grau: 1
-[DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
+[DEBUG] Nó: t, Grau: 1
 [DEBUG] Nó: y, Grau: 2
 
 [DEBUG] Selecionando a aresta com maior grau...
-[DEBUG] Aresta: (N, E), Grau: 5
-[DEBUG] Aresta: (N, p), Grau: 5
-[DEBUG] Aresta: (N, 7), Grau: 5
-[DEBUG] Aresta: (C, b), Grau: 5
-[DEBUG] Aresta: (C, G), Grau: 6
-[DEBUG] Aresta: (C, o), Grau: 6
-[DEBUG] Aresta: (c, B), Grau: 4
-[DEBUG] Aresta: (c, D), Grau: 7
-[DEBUG] Aresta: (c, t), Grau: 6
-[DEBUG] Aresta: (r, 0), Grau: 4
-[DEBUG] Aresta: (J, F), Grau: 6
-[DEBUG] Aresta: (L, s), Grau: 3
-[DEBUG] Aresta: (H, u), Grau: 4
-[DEBUG] Aresta: (H, A), Grau: 4
-[DEBUG] Aresta: (H, E), Grau: 5
-[DEBUG] Aresta: (f, R), Grau: 9
-[DEBUG] Aresta: (f, W), Grau: 9
-[DEBUG] Aresta: (f, Y), Grau: 6
-[DEBUG] Aresta: (f, 6), Grau: 9
-[DEBUG] Aresta: (e, 7), Grau: 3
-[DEBUG] Aresta: (6, F), Grau: 10
-[DEBUG] Aresta: (6, U), Grau: 7
-[DEBUG] Aresta: (6, o), Grau: 8
-[DEBUG] Aresta: (6, R), Grau: 10
-[DEBUG] Aresta: (U, P), Grau: 7
-[DEBUG] Aresta: (W, j), Grau: 9
-[DEBUG] Aresta: (W, t), Grau: 8
-[DEBUG] Aresta: (W, y), Grau: 7
-[DEBUG] Aresta: (W, 5), Grau: 8
-[DEBUG] Aresta: (0, R), Grau: 8
-[DEBUG] Aresta: (0, 3), Grau: 4
-[DEBUG] Aresta: (s, I), Grau: 4
-[DEBUG] Aresta: (b, T), Grau: 3
-[DEBUG] Aresta: (v, k), Grau: 4
-[DEBUG] Aresta: (w, I), Grau: 4
-[DEBUG] Aresta: (w, x), Grau: 3
-[DEBUG] Aresta: (y, Q), Grau: 3
-[DEBUG] Aresta: (4, P), Grau: 6
-[DEBUG] Aresta: (t, G), Grau: 6
-[DEBUG] Aresta: (5, M), Grau: 5
-[DEBUG] Aresta: (5, p), Grau: 5
-[DEBUG] Aresta: (k, Y), Grau: 5
-[DEBUG] Aresta: (k, g), Grau: 7
-[DEBUG] Aresta: (M, g), Grau: 6
-[DEBUG] Aresta: (X, l), Grau: 4
-[DEBUG] Aresta: (X, F), Grau: 7
-[DEBUG] Aresta: (G, j), Grau: 7
-[DEBUG] Aresta: (o, g), Grau: 7
-[DEBUG] Aresta: (F, a), Grau: 7
-[DEBUG] Aresta: (F, q), Grau: 8
-[DEBUG] Aresta: (q, j), Grau: 7
-[DEBUG] Aresta: (q, P), Grau: 8
-[DEBUG] Aresta: (R, a), Grau: 7
-[DEBUG] Aresta: (R, P), Grau: 10
-[DEBUG] Aresta: (P, D), Grau: 9
-[DEBUG] Aresta: (2, g), Grau: 5
-[DEBUG] Aresta: (l, D), Grau: 6
-[DEBUG] Aresta: (D, j), Grau: 8
-[DEBUG] Aresta selecionada: (R, P) com grau 10
-[DEBUG] Solução:  (i, S)  (Z, K)  (m, 1)  (O, z)  (V, n)  (R, P) 
+[DEBUG] Aresta: (l, a), Grau: 2
+[DEBUG] Aresta: (y, o), Grau: 4
+[DEBUG] Aresta: (y, b), Grau: 3
+[DEBUG] Aresta: (d, f), Grau: 3
+[DEBUG] Aresta: (t, o), Grau: 3
+[DEBUG] Aresta: (f, e), Grau: 3
+[DEBUG] Aresta: (k, m), Grau: 3
+[DEBUG] Aresta: (c, r), Grau: 2
+[DEBUG] Aresta: (m, n), Grau: 3
+[DEBUG] Aresta selecionada: (y, o) com grau 4
+[DEBUG] Solução:  (i, h)  (p, s)  (j, x)  (w, v)  (q, u)  (y, o) 
 
-[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (R, P)
+[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (y, o)
 
-[DEBUG] Verificando aresta: (D, j)
+[DEBUG] Verificando aresta: (m, n)
 
-[DEBUG] Verificando aresta: (l, D)
+[DEBUG] Verificando aresta: (c, r)
 
-[DEBUG] Verificando aresta: (2, g)
+[DEBUG] Verificando aresta: (k, m)
 
-[DEBUG] Verificando aresta: (P, D)
-[DEBUG] Removendo aresta: (P, D)
+[DEBUG] Verificando aresta: (f, e)
 
-[DEBUG] Verificando aresta: (R, P)
-[DEBUG] Removendo aresta: (R, P)
+[DEBUG] Verificando aresta: (t, o)
+[DEBUG] Removendo aresta: (t, o)
 
-[DEBUG] Verificando aresta: (R, a)
-[DEBUG] Removendo aresta: (R, a)
+[DEBUG] Verificando aresta: (d, f)
 
-[DEBUG] Verificando aresta: (q, P)
-[DEBUG] Removendo aresta: (q, P)
+[DEBUG] Verificando aresta: (y, b)
+[DEBUG] Removendo aresta: (y, b)
 
-[DEBUG] Verificando aresta: (q, j)
+[DEBUG] Verificando aresta: (y, o)
+[DEBUG] Removendo aresta: (y, o)
 
-[DEBUG] Verificando aresta: (F, q)
-
-[DEBUG] Verificando aresta: (F, a)
-
-[DEBUG] Verificando aresta: (o, g)
-
-[DEBUG] Verificando aresta: (G, j)
-
-[DEBUG] Verificando aresta: (X, F)
-
-[DEBUG] Verificando aresta: (X, l)
-
-[DEBUG] Verificando aresta: (M, g)
-
-[DEBUG] Verificando aresta: (k, g)
-
-[DEBUG] Verificando aresta: (k, Y)
-
-[DEBUG] Verificando aresta: (5, p)
-
-[DEBUG] Verificando aresta: (5, M)
-
-[DEBUG] Verificando aresta: (t, G)
-
-[DEBUG] Verificando aresta: (4, P)
-[DEBUG] Removendo aresta: (4, P)
-
-[DEBUG] Verificando aresta: (y, Q)
-
-[DEBUG] Verificando aresta: (w, x)
-
-[DEBUG] Verificando aresta: (w, I)
-
-[DEBUG] Verificando aresta: (v, k)
-
-[DEBUG] Verificando aresta: (b, T)
-
-[DEBUG] Verificando aresta: (s, I)
-
-[DEBUG] Verificando aresta: (0, 3)
-
-[DEBUG] Verificando aresta: (0, R)
-[DEBUG] Removendo aresta: (0, R)
-
-[DEBUG] Verificando aresta: (W, 5)
-
-[DEBUG] Verificando aresta: (W, y)
-
-[DEBUG] Verificando aresta: (W, t)
-
-[DEBUG] Verificando aresta: (W, j)
-
-[DEBUG] Verificando aresta: (U, P)
-[DEBUG] Removendo aresta: (U, P)
-
-[DEBUG] Verificando aresta: (6, R)
-[DEBUG] Removendo aresta: (6, R)
-
-[DEBUG] Verificando aresta: (6, o)
-
-[DEBUG] Verificando aresta: (6, U)
-
-[DEBUG] Verificando aresta: (6, F)
-
-[DEBUG] Verificando aresta: (e, 7)
-
-[DEBUG] Verificando aresta: (f, 6)
-
-[DEBUG] Verificando aresta: (f, Y)
-
-[DEBUG] Verificando aresta: (f, W)
-
-[DEBUG] Verificando aresta: (f, R)
-[DEBUG] Removendo aresta: (f, R)
-
-[DEBUG] Verificando aresta: (H, E)
-
-[DEBUG] Verificando aresta: (H, A)
-
-[DEBUG] Verificando aresta: (H, u)
-
-[DEBUG] Verificando aresta: (L, s)
-
-[DEBUG] Verificando aresta: (J, F)
-
-[DEBUG] Verificando aresta: (r, 0)
-
-[DEBUG] Verificando aresta: (c, t)
-
-[DEBUG] Verificando aresta: (c, D)
-
-[DEBUG] Verificando aresta: (c, B)
-
-[DEBUG] Verificando aresta: (C, o)
-
-[DEBUG] Verificando aresta: (C, G)
-
-[DEBUG] Verificando aresta: (C, b)
-
-[DEBUG] Verificando aresta: (N, 7)
-
-[DEBUG] Verificando aresta: (N, p)
-
-[DEBUG] Verificando aresta: (N, E)
+[DEBUG] Verificando aresta: (l, a)
 
 [DEBUG] Arestas não cobertas após remoção: 
-(N, E) (N, p) (N, 7) (C, b) (C, G) (C, o) (c, B) (c, D) (c, t) (r, 0) (J, F) (L, s) (H, u) (H, A) (H, E) (f, W) (f, Y) (f, 6) (e, 7) (6, F) (6, U) (6, o) (W, j) (W, t) (W, y) (W, 5) (0, 3) (s, I) (b, T) (v, k) (w, I) (w, x) (y, Q) (t, G) (5, M) (5, p) (k, Y) (k, g) (M, g) (X, l) (X, F) (G, j) (o, g) (F, a) (F, q) (q, j) (2, g) (l, D) (D, j) 
+(l, a) (d, f) (f, e) (k, m) (c, r) (m, n) 
 
 [DEBUG] Execução 7:
 [DEBUG] Arestas não cobertas: 
-(N, E) (N, p) (N, 7) (C, b) (C, G) (C, o) (c, B) (c, D) (c, t) (r, 0) (J, F) (L, s) (H, u) (H, A) (H, E) (f, W) (f, Y) (f, 6) (e, 7) (6, F) (6, U) (6, o) (W, j) (W, t) (W, y) (W, 5) (0, 3) (s, I) (b, T) (v, k) (w, I) (w, x) (y, Q) (t, G) (5, M) (5, p) (k, Y) (k, g) (M, g) (X, l) (X, F) (G, j) (o, g) (F, a) (F, q) (q, j) (2, g) (l, D) (D, j) 
+(l, a) (d, f) (f, e) (k, m) (c, r) (m, n) 
 
 [DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
-[DEBUG] Aresta: (N, E)
-[DEBUG] Nó: N, Grau: 1
-[DEBUG] Nó: E, Grau: 1
-[DEBUG] Aresta: (N, p)
-[DEBUG] Nó: N, Grau: 2
-[DEBUG] Nó: p, Grau: 1
-[DEBUG] Aresta: (N, 7)
-[DEBUG] Nó: N, Grau: 3
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Aresta: (C, b)
-[DEBUG] Nó: C, Grau: 1
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Aresta: (C, G)
-[DEBUG] Nó: C, Grau: 2
-[DEBUG] Nó: G, Grau: 1
-[DEBUG] Aresta: (C, o)
-[DEBUG] Nó: C, Grau: 3
-[DEBUG] Nó: o, Grau: 1
-[DEBUG] Aresta: (c, B)
-[DEBUG] Nó: c, Grau: 1
-[DEBUG] Nó: B, Grau: 1
-[DEBUG] Aresta: (c, D)
-[DEBUG] Nó: c, Grau: 2
-[DEBUG] Nó: D, Grau: 1
-[DEBUG] Aresta: (c, t)
-[DEBUG] Nó: c, Grau: 3
-[DEBUG] Nó: t, Grau: 1
-[DEBUG] Aresta: (r, 0)
-[DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: 0, Grau: 1
-[DEBUG] Aresta: (J, F)
-[DEBUG] Nó: J, Grau: 1
-[DEBUG] Nó: F, Grau: 1
-[DEBUG] Aresta: (L, s)
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: s, Grau: 1
-[DEBUG] Aresta: (H, u)
-[DEBUG] Nó: H, Grau: 1
-[DEBUG] Nó: u, Grau: 1
-[DEBUG] Aresta: (H, A)
-[DEBUG] Nó: H, Grau: 2
-[DEBUG] Nó: A, Grau: 1
-[DEBUG] Aresta: (H, E)
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: E, Grau: 2
-[DEBUG] Aresta: (f, W)
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: W, Grau: 1
-[DEBUG] Aresta: (f, Y)
-[DEBUG] Nó: f, Grau: 2
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Aresta: (f, 6)
-[DEBUG] Nó: f, Grau: 3
-[DEBUG] Nó: 6, Grau: 1
-[DEBUG] Aresta: (e, 7)
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: 7, Grau: 2
-[DEBUG] Aresta: (6, F)
-[DEBUG] Nó: 6, Grau: 2
-[DEBUG] Nó: F, Grau: 2
-[DEBUG] Aresta: (6, U)
-[DEBUG] Nó: 6, Grau: 3
-[DEBUG] Nó: U, Grau: 1
-[DEBUG] Aresta: (6, o)
-[DEBUG] Nó: 6, Grau: 4
-[DEBUG] Nó: o, Grau: 2
-[DEBUG] Aresta: (W, j)
-[DEBUG] Nó: W, Grau: 2
-[DEBUG] Nó: j, Grau: 1
-[DEBUG] Aresta: (W, t)
-[DEBUG] Nó: W, Grau: 3
-[DEBUG] Nó: t, Grau: 2
-[DEBUG] Aresta: (W, y)
-[DEBUG] Nó: W, Grau: 4
-[DEBUG] Nó: y, Grau: 1
-[DEBUG] Aresta: (W, 5)
-[DEBUG] Nó: W, Grau: 5
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Aresta: (0, 3)
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Aresta: (s, I)
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: I, Grau: 1
-[DEBUG] Aresta: (b, T)
-[DEBUG] Nó: b, Grau: 2
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Aresta: (v, k)
-[DEBUG] Nó: v, Grau: 1
-[DEBUG] Nó: k, Grau: 1
-[DEBUG] Aresta: (w, I)
-[DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Aresta: (w, x)
-[DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Aresta: (y, Q)
-[DEBUG] Nó: y, Grau: 2
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Aresta: (t, G)
-[DEBUG] Nó: t, Grau: 3
-[DEBUG] Nó: G, Grau: 2
-[DEBUG] Aresta: (5, M)
-[DEBUG] Nó: 5, Grau: 2
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Aresta: (5, p)
-[DEBUG] Nó: 5, Grau: 3
-[DEBUG] Nó: p, Grau: 2
-[DEBUG] Aresta: (k, Y)
-[DEBUG] Nó: k, Grau: 2
-[DEBUG] Nó: Y, Grau: 2
-[DEBUG] Aresta: (k, g)
-[DEBUG] Nó: k, Grau: 3
-[DEBUG] Nó: g, Grau: 1
-[DEBUG] Aresta: (M, g)
-[DEBUG] Nó: M, Grau: 2
-[DEBUG] Nó: g, Grau: 2
-[DEBUG] Aresta: (X, l)
-[DEBUG] Nó: X, Grau: 1
+[DEBUG] Aresta: (l, a)
 [DEBUG] Nó: l, Grau: 1
-[DEBUG] Aresta: (X, F)
-[DEBUG] Nó: X, Grau: 2
-[DEBUG] Nó: F, Grau: 3
-[DEBUG] Aresta: (G, j)
-[DEBUG] Nó: G, Grau: 3
-[DEBUG] Nó: j, Grau: 2
-[DEBUG] Aresta: (o, g)
-[DEBUG] Nó: o, Grau: 3
-[DEBUG] Nó: g, Grau: 3
-[DEBUG] Aresta: (F, a)
-[DEBUG] Nó: F, Grau: 4
 [DEBUG] Nó: a, Grau: 1
-[DEBUG] Aresta: (F, q)
-[DEBUG] Nó: F, Grau: 5
-[DEBUG] Nó: q, Grau: 1
-[DEBUG] Aresta: (q, j)
-[DEBUG] Nó: q, Grau: 2
-[DEBUG] Nó: j, Grau: 3
-[DEBUG] Aresta: (2, g)
-[DEBUG] Nó: 2, Grau: 1
-[DEBUG] Nó: g, Grau: 4
-[DEBUG] Aresta: (l, D)
-[DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: D, Grau: 2
-[DEBUG] Aresta: (D, j)
-[DEBUG] Nó: D, Grau: 3
-[DEBUG] Nó: j, Grau: 4
+[DEBUG] Aresta: (d, f)
+[DEBUG] Nó: d, Grau: 1
+[DEBUG] Nó: f, Grau: 1
+[DEBUG] Aresta: (f, e)
+[DEBUG] Nó: f, Grau: 2
+[DEBUG] Nó: e, Grau: 1
+[DEBUG] Aresta: (k, m)
+[DEBUG] Nó: k, Grau: 1
+[DEBUG] Nó: m, Grau: 1
+[DEBUG] Aresta: (c, r)
+[DEBUG] Nó: c, Grau: 1
+[DEBUG] Nó: r, Grau: 1
+[DEBUG] Aresta: (m, n)
+[DEBUG] Nó: m, Grau: 2
+[DEBUG] Nó: n, Grau: 1
 
 [DEBUG] Grau dos vertices das arestas não cobertas: 
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: 2, Grau: 1
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Nó: 5, Grau: 3
-[DEBUG] Nó: 6, Grau: 4
-[DEBUG] Nó: 7, Grau: 2
-[DEBUG] Nó: A, Grau: 1
-[DEBUG] Nó: B, Grau: 1
-[DEBUG] Nó: C, Grau: 3
-[DEBUG] Nó: D, Grau: 3
-[DEBUG] Nó: E, Grau: 2
-[DEBUG] Nó: F, Grau: 5
-[DEBUG] Nó: G, Grau: 3
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Nó: J, Grau: 1
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: M, Grau: 2
-[DEBUG] Nó: N, Grau: 3
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Nó: U, Grau: 1
-[DEBUG] Nó: W, Grau: 5
-[DEBUG] Nó: X, Grau: 2
-[DEBUG] Nó: Y, Grau: 2
 [DEBUG] Nó: a, Grau: 1
-[DEBUG] Nó: b, Grau: 2
-[DEBUG] Nó: c, Grau: 3
+[DEBUG] Nó: c, Grau: 1
+[DEBUG] Nó: d, Grau: 1
 [DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: f, Grau: 3
-[DEBUG] Nó: g, Grau: 4
-[DEBUG] Nó: j, Grau: 4
-[DEBUG] Nó: k, Grau: 3
-[DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: o, Grau: 3
-[DEBUG] Nó: p, Grau: 2
-[DEBUG] Nó: q, Grau: 2
+[DEBUG] Nó: f, Grau: 2
+[DEBUG] Nó: k, Grau: 1
+[DEBUG] Nó: l, Grau: 1
+[DEBUG] Nó: m, Grau: 2
+[DEBUG] Nó: n, Grau: 1
 [DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: t, Grau: 3
-[DEBUG] Nó: u, Grau: 1
-[DEBUG] Nó: v, Grau: 1
-[DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Nó: y, Grau: 2
 
 [DEBUG] Selecionando a aresta com maior grau...
-[DEBUG] Aresta: (N, E), Grau: 5
-[DEBUG] Aresta: (N, p), Grau: 5
-[DEBUG] Aresta: (N, 7), Grau: 5
-[DEBUG] Aresta: (C, b), Grau: 5
-[DEBUG] Aresta: (C, G), Grau: 6
-[DEBUG] Aresta: (C, o), Grau: 6
-[DEBUG] Aresta: (c, B), Grau: 4
-[DEBUG] Aresta: (c, D), Grau: 6
-[DEBUG] Aresta: (c, t), Grau: 6
-[DEBUG] Aresta: (r, 0), Grau: 3
-[DEBUG] Aresta: (J, F), Grau: 6
-[DEBUG] Aresta: (L, s), Grau: 3
-[DEBUG] Aresta: (H, u), Grau: 4
-[DEBUG] Aresta: (H, A), Grau: 4
-[DEBUG] Aresta: (H, E), Grau: 5
-[DEBUG] Aresta: (f, W), Grau: 8
-[DEBUG] Aresta: (f, Y), Grau: 5
-[DEBUG] Aresta: (f, 6), Grau: 7
-[DEBUG] Aresta: (e, 7), Grau: 3
-[DEBUG] Aresta: (6, F), Grau: 9
-[DEBUG] Aresta: (6, U), Grau: 5
-[DEBUG] Aresta: (6, o), Grau: 7
-[DEBUG] Aresta: (W, j), Grau: 9
-[DEBUG] Aresta: (W, t), Grau: 8
-[DEBUG] Aresta: (W, y), Grau: 7
-[DEBUG] Aresta: (W, 5), Grau: 8
-[DEBUG] Aresta: (0, 3), Grau: 3
-[DEBUG] Aresta: (s, I), Grau: 4
-[DEBUG] Aresta: (b, T), Grau: 3
-[DEBUG] Aresta: (v, k), Grau: 4
-[DEBUG] Aresta: (w, I), Grau: 4
-[DEBUG] Aresta: (w, x), Grau: 3
-[DEBUG] Aresta: (y, Q), Grau: 3
-[DEBUG] Aresta: (t, G), Grau: 6
-[DEBUG] Aresta: (5, M), Grau: 5
-[DEBUG] Aresta: (5, p), Grau: 5
-[DEBUG] Aresta: (k, Y), Grau: 5
-[DEBUG] Aresta: (k, g), Grau: 7
-[DEBUG] Aresta: (M, g), Grau: 6
-[DEBUG] Aresta: (X, l), Grau: 4
-[DEBUG] Aresta: (X, F), Grau: 7
-[DEBUG] Aresta: (G, j), Grau: 7
-[DEBUG] Aresta: (o, g), Grau: 7
-[DEBUG] Aresta: (F, a), Grau: 6
-[DEBUG] Aresta: (F, q), Grau: 7
-[DEBUG] Aresta: (q, j), Grau: 6
-[DEBUG] Aresta: (2, g), Grau: 5
-[DEBUG] Aresta: (l, D), Grau: 5
-[DEBUG] Aresta: (D, j), Grau: 7
-[DEBUG] Aresta selecionada: (W, j) com grau 9
-[DEBUG] Solução:  (i, S)  (Z, K)  (m, 1)  (O, z)  (V, n)  (R, P)  (W, j) 
+[DEBUG] Aresta: (l, a), Grau: 2
+[DEBUG] Aresta: (d, f), Grau: 3
+[DEBUG] Aresta: (f, e), Grau: 3
+[DEBUG] Aresta: (k, m), Grau: 3
+[DEBUG] Aresta: (c, r), Grau: 2
+[DEBUG] Aresta: (m, n), Grau: 3
+[DEBUG] Aresta selecionada: (d, f) com grau 3
+[DEBUG] Solução:  (i, h)  (p, s)  (j, x)  (w, v)  (q, u)  (y, o)  (d, f) 
 
-[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (W, j)
+[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (d, f)
 
-[DEBUG] Verificando aresta: (D, j)
-[DEBUG] Removendo aresta: (D, j)
+[DEBUG] Verificando aresta: (m, n)
 
-[DEBUG] Verificando aresta: (l, D)
+[DEBUG] Verificando aresta: (c, r)
 
-[DEBUG] Verificando aresta: (2, g)
+[DEBUG] Verificando aresta: (k, m)
 
-[DEBUG] Verificando aresta: (q, j)
-[DEBUG] Removendo aresta: (q, j)
+[DEBUG] Verificando aresta: (f, e)
+[DEBUG] Removendo aresta: (f, e)
 
-[DEBUG] Verificando aresta: (F, q)
+[DEBUG] Verificando aresta: (d, f)
+[DEBUG] Removendo aresta: (d, f)
 
-[DEBUG] Verificando aresta: (F, a)
-
-[DEBUG] Verificando aresta: (o, g)
-
-[DEBUG] Verificando aresta: (G, j)
-[DEBUG] Removendo aresta: (G, j)
-
-[DEBUG] Verificando aresta: (X, F)
-
-[DEBUG] Verificando aresta: (X, l)
-
-[DEBUG] Verificando aresta: (M, g)
-
-[DEBUG] Verificando aresta: (k, g)
-
-[DEBUG] Verificando aresta: (k, Y)
-
-[DEBUG] Verificando aresta: (5, p)
-
-[DEBUG] Verificando aresta: (5, M)
-
-[DEBUG] Verificando aresta: (t, G)
-
-[DEBUG] Verificando aresta: (y, Q)
-
-[DEBUG] Verificando aresta: (w, x)
-
-[DEBUG] Verificando aresta: (w, I)
-
-[DEBUG] Verificando aresta: (v, k)
-
-[DEBUG] Verificando aresta: (b, T)
-
-[DEBUG] Verificando aresta: (s, I)
-
-[DEBUG] Verificando aresta: (0, 3)
-
-[DEBUG] Verificando aresta: (W, 5)
-[DEBUG] Removendo aresta: (W, 5)
-
-[DEBUG] Verificando aresta: (W, y)
-[DEBUG] Removendo aresta: (W, y)
-
-[DEBUG] Verificando aresta: (W, t)
-[DEBUG] Removendo aresta: (W, t)
-
-[DEBUG] Verificando aresta: (W, j)
-[DEBUG] Removendo aresta: (W, j)
-
-[DEBUG] Verificando aresta: (6, o)
-
-[DEBUG] Verificando aresta: (6, U)
-
-[DEBUG] Verificando aresta: (6, F)
-
-[DEBUG] Verificando aresta: (e, 7)
-
-[DEBUG] Verificando aresta: (f, 6)
-
-[DEBUG] Verificando aresta: (f, Y)
-
-[DEBUG] Verificando aresta: (f, W)
-[DEBUG] Removendo aresta: (f, W)
-
-[DEBUG] Verificando aresta: (H, E)
-
-[DEBUG] Verificando aresta: (H, A)
-
-[DEBUG] Verificando aresta: (H, u)
-
-[DEBUG] Verificando aresta: (L, s)
-
-[DEBUG] Verificando aresta: (J, F)
-
-[DEBUG] Verificando aresta: (r, 0)
-
-[DEBUG] Verificando aresta: (c, t)
-
-[DEBUG] Verificando aresta: (c, D)
-
-[DEBUG] Verificando aresta: (c, B)
-
-[DEBUG] Verificando aresta: (C, o)
-
-[DEBUG] Verificando aresta: (C, G)
-
-[DEBUG] Verificando aresta: (C, b)
-
-[DEBUG] Verificando aresta: (N, 7)
-
-[DEBUG] Verificando aresta: (N, p)
-
-[DEBUG] Verificando aresta: (N, E)
+[DEBUG] Verificando aresta: (l, a)
 
 [DEBUG] Arestas não cobertas após remoção: 
-(N, E) (N, p) (N, 7) (C, b) (C, G) (C, o) (c, B) (c, D) (c, t) (r, 0) (J, F) (L, s) (H, u) (H, A) (H, E) (f, Y) (f, 6) (e, 7) (6, F) (6, U) (6, o) (0, 3) (s, I) (b, T) (v, k) (w, I) (w, x) (y, Q) (t, G) (5, M) (5, p) (k, Y) (k, g) (M, g) (X, l) (X, F) (o, g) (F, a) (F, q) (2, g) (l, D) 
+(l, a) (k, m) (c, r) (m, n) 
 
 [DEBUG] Execução 8:
 [DEBUG] Arestas não cobertas: 
-(N, E) (N, p) (N, 7) (C, b) (C, G) (C, o) (c, B) (c, D) (c, t) (r, 0) (J, F) (L, s) (H, u) (H, A) (H, E) (f, Y) (f, 6) (e, 7) (6, F) (6, U) (6, o) (0, 3) (s, I) (b, T) (v, k) (w, I) (w, x) (y, Q) (t, G) (5, M) (5, p) (k, Y) (k, g) (M, g) (X, l) (X, F) (o, g) (F, a) (F, q) (2, g) (l, D) 
+(l, a) (k, m) (c, r) (m, n) 
 
 [DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
-[DEBUG] Aresta: (N, E)
-[DEBUG] Nó: N, Grau: 1
-[DEBUG] Nó: E, Grau: 1
-[DEBUG] Aresta: (N, p)
-[DEBUG] Nó: N, Grau: 2
-[DEBUG] Nó: p, Grau: 1
-[DEBUG] Aresta: (N, 7)
-[DEBUG] Nó: N, Grau: 3
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Aresta: (C, b)
-[DEBUG] Nó: C, Grau: 1
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Aresta: (C, G)
-[DEBUG] Nó: C, Grau: 2
-[DEBUG] Nó: G, Grau: 1
-[DEBUG] Aresta: (C, o)
-[DEBUG] Nó: C, Grau: 3
-[DEBUG] Nó: o, Grau: 1
-[DEBUG] Aresta: (c, B)
-[DEBUG] Nó: c, Grau: 1
-[DEBUG] Nó: B, Grau: 1
-[DEBUG] Aresta: (c, D)
-[DEBUG] Nó: c, Grau: 2
-[DEBUG] Nó: D, Grau: 1
-[DEBUG] Aresta: (c, t)
-[DEBUG] Nó: c, Grau: 3
-[DEBUG] Nó: t, Grau: 1
-[DEBUG] Aresta: (r, 0)
-[DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: 0, Grau: 1
-[DEBUG] Aresta: (J, F)
-[DEBUG] Nó: J, Grau: 1
-[DEBUG] Nó: F, Grau: 1
-[DEBUG] Aresta: (L, s)
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: s, Grau: 1
-[DEBUG] Aresta: (H, u)
-[DEBUG] Nó: H, Grau: 1
-[DEBUG] Nó: u, Grau: 1
-[DEBUG] Aresta: (H, A)
-[DEBUG] Nó: H, Grau: 2
-[DEBUG] Nó: A, Grau: 1
-[DEBUG] Aresta: (H, E)
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: E, Grau: 2
-[DEBUG] Aresta: (f, Y)
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Aresta: (f, 6)
-[DEBUG] Nó: f, Grau: 2
-[DEBUG] Nó: 6, Grau: 1
-[DEBUG] Aresta: (e, 7)
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: 7, Grau: 2
-[DEBUG] Aresta: (6, F)
-[DEBUG] Nó: 6, Grau: 2
-[DEBUG] Nó: F, Grau: 2
-[DEBUG] Aresta: (6, U)
-[DEBUG] Nó: 6, Grau: 3
-[DEBUG] Nó: U, Grau: 1
-[DEBUG] Aresta: (6, o)
-[DEBUG] Nó: 6, Grau: 4
-[DEBUG] Nó: o, Grau: 2
-[DEBUG] Aresta: (0, 3)
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Aresta: (s, I)
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: I, Grau: 1
-[DEBUG] Aresta: (b, T)
-[DEBUG] Nó: b, Grau: 2
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Aresta: (v, k)
-[DEBUG] Nó: v, Grau: 1
-[DEBUG] Nó: k, Grau: 1
-[DEBUG] Aresta: (w, I)
-[DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Aresta: (w, x)
-[DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Aresta: (y, Q)
-[DEBUG] Nó: y, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Aresta: (t, G)
-[DEBUG] Nó: t, Grau: 2
-[DEBUG] Nó: G, Grau: 2
-[DEBUG] Aresta: (5, M)
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Aresta: (5, p)
-[DEBUG] Nó: 5, Grau: 2
-[DEBUG] Nó: p, Grau: 2
-[DEBUG] Aresta: (k, Y)
-[DEBUG] Nó: k, Grau: 2
-[DEBUG] Nó: Y, Grau: 2
-[DEBUG] Aresta: (k, g)
-[DEBUG] Nó: k, Grau: 3
-[DEBUG] Nó: g, Grau: 1
-[DEBUG] Aresta: (M, g)
-[DEBUG] Nó: M, Grau: 2
-[DEBUG] Nó: g, Grau: 2
-[DEBUG] Aresta: (X, l)
-[DEBUG] Nó: X, Grau: 1
+[DEBUG] Aresta: (l, a)
 [DEBUG] Nó: l, Grau: 1
-[DEBUG] Aresta: (X, F)
-[DEBUG] Nó: X, Grau: 2
-[DEBUG] Nó: F, Grau: 3
-[DEBUG] Aresta: (o, g)
-[DEBUG] Nó: o, Grau: 3
-[DEBUG] Nó: g, Grau: 3
-[DEBUG] Aresta: (F, a)
-[DEBUG] Nó: F, Grau: 4
 [DEBUG] Nó: a, Grau: 1
-[DEBUG] Aresta: (F, q)
-[DEBUG] Nó: F, Grau: 5
-[DEBUG] Nó: q, Grau: 1
-[DEBUG] Aresta: (2, g)
-[DEBUG] Nó: 2, Grau: 1
-[DEBUG] Nó: g, Grau: 4
-[DEBUG] Aresta: (l, D)
-[DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: D, Grau: 2
+[DEBUG] Aresta: (k, m)
+[DEBUG] Nó: k, Grau: 1
+[DEBUG] Nó: m, Grau: 1
+[DEBUG] Aresta: (c, r)
+[DEBUG] Nó: c, Grau: 1
+[DEBUG] Nó: r, Grau: 1
+[DEBUG] Aresta: (m, n)
+[DEBUG] Nó: m, Grau: 2
+[DEBUG] Nó: n, Grau: 1
 
 [DEBUG] Grau dos vertices das arestas não cobertas: 
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: 2, Grau: 1
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Nó: 5, Grau: 2
-[DEBUG] Nó: 6, Grau: 4
-[DEBUG] Nó: 7, Grau: 2
-[DEBUG] Nó: A, Grau: 1
-[DEBUG] Nó: B, Grau: 1
-[DEBUG] Nó: C, Grau: 3
-[DEBUG] Nó: D, Grau: 2
-[DEBUG] Nó: E, Grau: 2
-[DEBUG] Nó: F, Grau: 5
-[DEBUG] Nó: G, Grau: 2
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Nó: J, Grau: 1
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: M, Grau: 2
-[DEBUG] Nó: N, Grau: 3
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Nó: U, Grau: 1
-[DEBUG] Nó: X, Grau: 2
-[DEBUG] Nó: Y, Grau: 2
 [DEBUG] Nó: a, Grau: 1
-[DEBUG] Nó: b, Grau: 2
-[DEBUG] Nó: c, Grau: 3
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: f, Grau: 2
-[DEBUG] Nó: g, Grau: 4
-[DEBUG] Nó: k, Grau: 3
-[DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: o, Grau: 3
-[DEBUG] Nó: p, Grau: 2
-[DEBUG] Nó: q, Grau: 1
+[DEBUG] Nó: c, Grau: 1
+[DEBUG] Nó: k, Grau: 1
+[DEBUG] Nó: l, Grau: 1
+[DEBUG] Nó: m, Grau: 2
+[DEBUG] Nó: n, Grau: 1
 [DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: t, Grau: 2
-[DEBUG] Nó: u, Grau: 1
-[DEBUG] Nó: v, Grau: 1
-[DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Nó: y, Grau: 1
 
 [DEBUG] Selecionando a aresta com maior grau...
-[DEBUG] Aresta: (N, E), Grau: 5
-[DEBUG] Aresta: (N, p), Grau: 5
-[DEBUG] Aresta: (N, 7), Grau: 5
-[DEBUG] Aresta: (C, b), Grau: 5
-[DEBUG] Aresta: (C, G), Grau: 5
-[DEBUG] Aresta: (C, o), Grau: 6
-[DEBUG] Aresta: (c, B), Grau: 4
-[DEBUG] Aresta: (c, D), Grau: 5
-[DEBUG] Aresta: (c, t), Grau: 5
-[DEBUG] Aresta: (r, 0), Grau: 3
-[DEBUG] Aresta: (J, F), Grau: 6
-[DEBUG] Aresta: (L, s), Grau: 3
-[DEBUG] Aresta: (H, u), Grau: 4
-[DEBUG] Aresta: (H, A), Grau: 4
-[DEBUG] Aresta: (H, E), Grau: 5
-[DEBUG] Aresta: (f, Y), Grau: 4
-[DEBUG] Aresta: (f, 6), Grau: 6
-[DEBUG] Aresta: (e, 7), Grau: 3
-[DEBUG] Aresta: (6, F), Grau: 9
-[DEBUG] Aresta: (6, U), Grau: 5
-[DEBUG] Aresta: (6, o), Grau: 7
-[DEBUG] Aresta: (0, 3), Grau: 3
-[DEBUG] Aresta: (s, I), Grau: 4
-[DEBUG] Aresta: (b, T), Grau: 3
-[DEBUG] Aresta: (v, k), Grau: 4
-[DEBUG] Aresta: (w, I), Grau: 4
-[DEBUG] Aresta: (w, x), Grau: 3
-[DEBUG] Aresta: (y, Q), Grau: 2
-[DEBUG] Aresta: (t, G), Grau: 4
-[DEBUG] Aresta: (5, M), Grau: 4
-[DEBUG] Aresta: (5, p), Grau: 4
-[DEBUG] Aresta: (k, Y), Grau: 5
-[DEBUG] Aresta: (k, g), Grau: 7
-[DEBUG] Aresta: (M, g), Grau: 6
-[DEBUG] Aresta: (X, l), Grau: 4
-[DEBUG] Aresta: (X, F), Grau: 7
-[DEBUG] Aresta: (o, g), Grau: 7
-[DEBUG] Aresta: (F, a), Grau: 6
-[DEBUG] Aresta: (F, q), Grau: 6
-[DEBUG] Aresta: (2, g), Grau: 5
-[DEBUG] Aresta: (l, D), Grau: 4
-[DEBUG] Aresta selecionada: (6, F) com grau 9
-[DEBUG] Solução:  (i, S)  (Z, K)  (m, 1)  (O, z)  (V, n)  (R, P)  (W, j)  (6, F) 
+[DEBUG] Aresta: (l, a), Grau: 2
+[DEBUG] Aresta: (k, m), Grau: 3
+[DEBUG] Aresta: (c, r), Grau: 2
+[DEBUG] Aresta: (m, n), Grau: 3
+[DEBUG] Aresta selecionada: (k, m) com grau 3
+[DEBUG] Solução:  (i, h)  (p, s)  (j, x)  (w, v)  (q, u)  (y, o)  (d, f)  (k, m) 
 
-[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (6, F)
+[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (k, m)
 
-[DEBUG] Verificando aresta: (l, D)
+[DEBUG] Verificando aresta: (m, n)
+[DEBUG] Removendo aresta: (m, n)
 
-[DEBUG] Verificando aresta: (2, g)
+[DEBUG] Verificando aresta: (c, r)
 
-[DEBUG] Verificando aresta: (F, q)
-[DEBUG] Removendo aresta: (F, q)
+[DEBUG] Verificando aresta: (k, m)
+[DEBUG] Removendo aresta: (k, m)
 
-[DEBUG] Verificando aresta: (F, a)
-[DEBUG] Removendo aresta: (F, a)
-
-[DEBUG] Verificando aresta: (o, g)
-
-[DEBUG] Verificando aresta: (X, F)
-[DEBUG] Removendo aresta: (X, F)
-
-[DEBUG] Verificando aresta: (X, l)
-
-[DEBUG] Verificando aresta: (M, g)
-
-[DEBUG] Verificando aresta: (k, g)
-
-[DEBUG] Verificando aresta: (k, Y)
-
-[DEBUG] Verificando aresta: (5, p)
-
-[DEBUG] Verificando aresta: (5, M)
-
-[DEBUG] Verificando aresta: (t, G)
-
-[DEBUG] Verificando aresta: (y, Q)
-
-[DEBUG] Verificando aresta: (w, x)
-
-[DEBUG] Verificando aresta: (w, I)
-
-[DEBUG] Verificando aresta: (v, k)
-
-[DEBUG] Verificando aresta: (b, T)
-
-[DEBUG] Verificando aresta: (s, I)
-
-[DEBUG] Verificando aresta: (0, 3)
-
-[DEBUG] Verificando aresta: (6, o)
-[DEBUG] Removendo aresta: (6, o)
-
-[DEBUG] Verificando aresta: (6, U)
-[DEBUG] Removendo aresta: (6, U)
-
-[DEBUG] Verificando aresta: (6, F)
-[DEBUG] Removendo aresta: (6, F)
-
-[DEBUG] Verificando aresta: (e, 7)
-
-[DEBUG] Verificando aresta: (f, 6)
-[DEBUG] Removendo aresta: (f, 6)
-
-[DEBUG] Verificando aresta: (f, Y)
-
-[DEBUG] Verificando aresta: (H, E)
-
-[DEBUG] Verificando aresta: (H, A)
-
-[DEBUG] Verificando aresta: (H, u)
-
-[DEBUG] Verificando aresta: (L, s)
-
-[DEBUG] Verificando aresta: (J, F)
-[DEBUG] Removendo aresta: (J, F)
-
-[DEBUG] Verificando aresta: (r, 0)
-
-[DEBUG] Verificando aresta: (c, t)
-
-[DEBUG] Verificando aresta: (c, D)
-
-[DEBUG] Verificando aresta: (c, B)
-
-[DEBUG] Verificando aresta: (C, o)
-
-[DEBUG] Verificando aresta: (C, G)
-
-[DEBUG] Verificando aresta: (C, b)
-
-[DEBUG] Verificando aresta: (N, 7)
-
-[DEBUG] Verificando aresta: (N, p)
-
-[DEBUG] Verificando aresta: (N, E)
+[DEBUG] Verificando aresta: (l, a)
 
 [DEBUG] Arestas não cobertas após remoção: 
-(N, E) (N, p) (N, 7) (C, b) (C, G) (C, o) (c, B) (c, D) (c, t) (r, 0) (L, s) (H, u) (H, A) (H, E) (f, Y) (e, 7) (0, 3) (s, I) (b, T) (v, k) (w, I) (w, x) (y, Q) (t, G) (5, M) (5, p) (k, Y) (k, g) (M, g) (X, l) (o, g) (2, g) (l, D) 
+(l, a) (c, r) 
 
 [DEBUG] Execução 9:
 [DEBUG] Arestas não cobertas: 
-(N, E) (N, p) (N, 7) (C, b) (C, G) (C, o) (c, B) (c, D) (c, t) (r, 0) (L, s) (H, u) (H, A) (H, E) (f, Y) (e, 7) (0, 3) (s, I) (b, T) (v, k) (w, I) (w, x) (y, Q) (t, G) (5, M) (5, p) (k, Y) (k, g) (M, g) (X, l) (o, g) (2, g) (l, D) 
+(l, a) (c, r) 
 
 [DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
-[DEBUG] Aresta: (N, E)
-[DEBUG] Nó: N, Grau: 1
-[DEBUG] Nó: E, Grau: 1
-[DEBUG] Aresta: (N, p)
-[DEBUG] Nó: N, Grau: 2
-[DEBUG] Nó: p, Grau: 1
-[DEBUG] Aresta: (N, 7)
-[DEBUG] Nó: N, Grau: 3
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Aresta: (C, b)
-[DEBUG] Nó: C, Grau: 1
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Aresta: (C, G)
-[DEBUG] Nó: C, Grau: 2
-[DEBUG] Nó: G, Grau: 1
-[DEBUG] Aresta: (C, o)
-[DEBUG] Nó: C, Grau: 3
-[DEBUG] Nó: o, Grau: 1
-[DEBUG] Aresta: (c, B)
-[DEBUG] Nó: c, Grau: 1
-[DEBUG] Nó: B, Grau: 1
-[DEBUG] Aresta: (c, D)
-[DEBUG] Nó: c, Grau: 2
-[DEBUG] Nó: D, Grau: 1
-[DEBUG] Aresta: (c, t)
-[DEBUG] Nó: c, Grau: 3
-[DEBUG] Nó: t, Grau: 1
-[DEBUG] Aresta: (r, 0)
-[DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: 0, Grau: 1
-[DEBUG] Aresta: (L, s)
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: s, Grau: 1
-[DEBUG] Aresta: (H, u)
-[DEBUG] Nó: H, Grau: 1
-[DEBUG] Nó: u, Grau: 1
-[DEBUG] Aresta: (H, A)
-[DEBUG] Nó: H, Grau: 2
-[DEBUG] Nó: A, Grau: 1
-[DEBUG] Aresta: (H, E)
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: E, Grau: 2
-[DEBUG] Aresta: (f, Y)
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Aresta: (e, 7)
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: 7, Grau: 2
-[DEBUG] Aresta: (0, 3)
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Aresta: (s, I)
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: I, Grau: 1
-[DEBUG] Aresta: (b, T)
-[DEBUG] Nó: b, Grau: 2
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Aresta: (v, k)
-[DEBUG] Nó: v, Grau: 1
-[DEBUG] Nó: k, Grau: 1
-[DEBUG] Aresta: (w, I)
-[DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Aresta: (w, x)
-[DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Aresta: (y, Q)
-[DEBUG] Nó: y, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Aresta: (t, G)
-[DEBUG] Nó: t, Grau: 2
-[DEBUG] Nó: G, Grau: 2
-[DEBUG] Aresta: (5, M)
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Aresta: (5, p)
-[DEBUG] Nó: 5, Grau: 2
-[DEBUG] Nó: p, Grau: 2
-[DEBUG] Aresta: (k, Y)
-[DEBUG] Nó: k, Grau: 2
-[DEBUG] Nó: Y, Grau: 2
-[DEBUG] Aresta: (k, g)
-[DEBUG] Nó: k, Grau: 3
-[DEBUG] Nó: g, Grau: 1
-[DEBUG] Aresta: (M, g)
-[DEBUG] Nó: M, Grau: 2
-[DEBUG] Nó: g, Grau: 2
-[DEBUG] Aresta: (X, l)
-[DEBUG] Nó: X, Grau: 1
+[DEBUG] Aresta: (l, a)
 [DEBUG] Nó: l, Grau: 1
-[DEBUG] Aresta: (o, g)
-[DEBUG] Nó: o, Grau: 2
-[DEBUG] Nó: g, Grau: 3
-[DEBUG] Aresta: (2, g)
-[DEBUG] Nó: 2, Grau: 1
-[DEBUG] Nó: g, Grau: 4
-[DEBUG] Aresta: (l, D)
-[DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: D, Grau: 2
+[DEBUG] Nó: a, Grau: 1
+[DEBUG] Aresta: (c, r)
+[DEBUG] Nó: c, Grau: 1
+[DEBUG] Nó: r, Grau: 1
 
 [DEBUG] Grau dos vertices das arestas não cobertas: 
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: 2, Grau: 1
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Nó: 5, Grau: 2
-[DEBUG] Nó: 7, Grau: 2
-[DEBUG] Nó: A, Grau: 1
-[DEBUG] Nó: B, Grau: 1
-[DEBUG] Nó: C, Grau: 3
-[DEBUG] Nó: D, Grau: 2
-[DEBUG] Nó: E, Grau: 2
-[DEBUG] Nó: G, Grau: 2
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: M, Grau: 2
-[DEBUG] Nó: N, Grau: 3
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: Y, Grau: 2
-[DEBUG] Nó: b, Grau: 2
-[DEBUG] Nó: c, Grau: 3
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: g, Grau: 4
-[DEBUG] Nó: k, Grau: 3
-[DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: o, Grau: 2
-[DEBUG] Nó: p, Grau: 2
+[DEBUG] Nó: a, Grau: 1
+[DEBUG] Nó: c, Grau: 1
+[DEBUG] Nó: l, Grau: 1
 [DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: t, Grau: 2
-[DEBUG] Nó: u, Grau: 1
-[DEBUG] Nó: v, Grau: 1
-[DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Nó: y, Grau: 1
 
 [DEBUG] Selecionando a aresta com maior grau...
-[DEBUG] Aresta: (N, E), Grau: 5
-[DEBUG] Aresta: (N, p), Grau: 5
-[DEBUG] Aresta: (N, 7), Grau: 5
-[DEBUG] Aresta: (C, b), Grau: 5
-[DEBUG] Aresta: (C, G), Grau: 5
-[DEBUG] Aresta: (C, o), Grau: 5
-[DEBUG] Aresta: (c, B), Grau: 4
-[DEBUG] Aresta: (c, D), Grau: 5
-[DEBUG] Aresta: (c, t), Grau: 5
-[DEBUG] Aresta: (r, 0), Grau: 3
-[DEBUG] Aresta: (L, s), Grau: 3
-[DEBUG] Aresta: (H, u), Grau: 4
-[DEBUG] Aresta: (H, A), Grau: 4
-[DEBUG] Aresta: (H, E), Grau: 5
-[DEBUG] Aresta: (f, Y), Grau: 3
-[DEBUG] Aresta: (e, 7), Grau: 3
-[DEBUG] Aresta: (0, 3), Grau: 3
-[DEBUG] Aresta: (s, I), Grau: 4
-[DEBUG] Aresta: (b, T), Grau: 3
-[DEBUG] Aresta: (v, k), Grau: 4
-[DEBUG] Aresta: (w, I), Grau: 4
-[DEBUG] Aresta: (w, x), Grau: 3
-[DEBUG] Aresta: (y, Q), Grau: 2
-[DEBUG] Aresta: (t, G), Grau: 4
-[DEBUG] Aresta: (5, M), Grau: 4
-[DEBUG] Aresta: (5, p), Grau: 4
-[DEBUG] Aresta: (k, Y), Grau: 5
-[DEBUG] Aresta: (k, g), Grau: 7
-[DEBUG] Aresta: (M, g), Grau: 6
-[DEBUG] Aresta: (X, l), Grau: 3
-[DEBUG] Aresta: (o, g), Grau: 6
-[DEBUG] Aresta: (2, g), Grau: 5
-[DEBUG] Aresta: (l, D), Grau: 4
-[DEBUG] Aresta selecionada: (k, g) com grau 7
-[DEBUG] Solução:  (i, S)  (Z, K)  (m, 1)  (O, z)  (V, n)  (R, P)  (W, j)  (6, F)  (k, g) 
+[DEBUG] Aresta: (l, a), Grau: 2
+[DEBUG] Aresta: (c, r), Grau: 2
+[DEBUG] Aresta selecionada: (l, a) com grau 2
+[DEBUG] Solução:  (i, h)  (p, s)  (j, x)  (w, v)  (q, u)  (y, o)  (d, f)  (k, m)  (l, a) 
 
-[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (k, g)
+[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (l, a)
 
-[DEBUG] Verificando aresta: (l, D)
+[DEBUG] Verificando aresta: (c, r)
 
-[DEBUG] Verificando aresta: (2, g)
-[DEBUG] Removendo aresta: (2, g)
-
-[DEBUG] Verificando aresta: (o, g)
-[DEBUG] Removendo aresta: (o, g)
-
-[DEBUG] Verificando aresta: (X, l)
-
-[DEBUG] Verificando aresta: (M, g)
-[DEBUG] Removendo aresta: (M, g)
-
-[DEBUG] Verificando aresta: (k, g)
-[DEBUG] Removendo aresta: (k, g)
-
-[DEBUG] Verificando aresta: (k, Y)
-[DEBUG] Removendo aresta: (k, Y)
-
-[DEBUG] Verificando aresta: (5, p)
-
-[DEBUG] Verificando aresta: (5, M)
-
-[DEBUG] Verificando aresta: (t, G)
-
-[DEBUG] Verificando aresta: (y, Q)
-
-[DEBUG] Verificando aresta: (w, x)
-
-[DEBUG] Verificando aresta: (w, I)
-
-[DEBUG] Verificando aresta: (v, k)
-[DEBUG] Removendo aresta: (v, k)
-
-[DEBUG] Verificando aresta: (b, T)
-
-[DEBUG] Verificando aresta: (s, I)
-
-[DEBUG] Verificando aresta: (0, 3)
-
-[DEBUG] Verificando aresta: (e, 7)
-
-[DEBUG] Verificando aresta: (f, Y)
-
-[DEBUG] Verificando aresta: (H, E)
-
-[DEBUG] Verificando aresta: (H, A)
-
-[DEBUG] Verificando aresta: (H, u)
-
-[DEBUG] Verificando aresta: (L, s)
-
-[DEBUG] Verificando aresta: (r, 0)
-
-[DEBUG] Verificando aresta: (c, t)
-
-[DEBUG] Verificando aresta: (c, D)
-
-[DEBUG] Verificando aresta: (c, B)
-
-[DEBUG] Verificando aresta: (C, o)
-
-[DEBUG] Verificando aresta: (C, G)
-
-[DEBUG] Verificando aresta: (C, b)
-
-[DEBUG] Verificando aresta: (N, 7)
-
-[DEBUG] Verificando aresta: (N, p)
-
-[DEBUG] Verificando aresta: (N, E)
+[DEBUG] Verificando aresta: (l, a)
+[DEBUG] Removendo aresta: (l, a)
 
 [DEBUG] Arestas não cobertas após remoção: 
-(N, E) (N, p) (N, 7) (C, b) (C, G) (C, o) (c, B) (c, D) (c, t) (r, 0) (L, s) (H, u) (H, A) (H, E) (f, Y) (e, 7) (0, 3) (s, I) (b, T) (w, I) (w, x) (y, Q) (t, G) (5, M) (5, p) (X, l) (l, D) 
+(c, r) 
 
 [DEBUG] Execução 10:
 [DEBUG] Arestas não cobertas: 
-(N, E) (N, p) (N, 7) (C, b) (C, G) (C, o) (c, B) (c, D) (c, t) (r, 0) (L, s) (H, u) (H, A) (H, E) (f, Y) (e, 7) (0, 3) (s, I) (b, T) (w, I) (w, x) (y, Q) (t, G) (5, M) (5, p) (X, l) (l, D) 
+(c, r) 
 
 [DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
-[DEBUG] Aresta: (N, E)
-[DEBUG] Nó: N, Grau: 1
-[DEBUG] Nó: E, Grau: 1
-[DEBUG] Aresta: (N, p)
-[DEBUG] Nó: N, Grau: 2
-[DEBUG] Nó: p, Grau: 1
-[DEBUG] Aresta: (N, 7)
-[DEBUG] Nó: N, Grau: 3
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Aresta: (C, b)
-[DEBUG] Nó: C, Grau: 1
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Aresta: (C, G)
-[DEBUG] Nó: C, Grau: 2
-[DEBUG] Nó: G, Grau: 1
-[DEBUG] Aresta: (C, o)
-[DEBUG] Nó: C, Grau: 3
-[DEBUG] Nó: o, Grau: 1
-[DEBUG] Aresta: (c, B)
+[DEBUG] Aresta: (c, r)
 [DEBUG] Nó: c, Grau: 1
-[DEBUG] Nó: B, Grau: 1
-[DEBUG] Aresta: (c, D)
-[DEBUG] Nó: c, Grau: 2
-[DEBUG] Nó: D, Grau: 1
-[DEBUG] Aresta: (c, t)
-[DEBUG] Nó: c, Grau: 3
-[DEBUG] Nó: t, Grau: 1
-[DEBUG] Aresta: (r, 0)
 [DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: 0, Grau: 1
-[DEBUG] Aresta: (L, s)
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: s, Grau: 1
-[DEBUG] Aresta: (H, u)
-[DEBUG] Nó: H, Grau: 1
-[DEBUG] Nó: u, Grau: 1
-[DEBUG] Aresta: (H, A)
-[DEBUG] Nó: H, Grau: 2
-[DEBUG] Nó: A, Grau: 1
-[DEBUG] Aresta: (H, E)
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: E, Grau: 2
-[DEBUG] Aresta: (f, Y)
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Aresta: (e, 7)
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: 7, Grau: 2
-[DEBUG] Aresta: (0, 3)
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Aresta: (s, I)
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: I, Grau: 1
-[DEBUG] Aresta: (b, T)
-[DEBUG] Nó: b, Grau: 2
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Aresta: (w, I)
-[DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Aresta: (w, x)
-[DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Aresta: (y, Q)
-[DEBUG] Nó: y, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Aresta: (t, G)
-[DEBUG] Nó: t, Grau: 2
-[DEBUG] Nó: G, Grau: 2
-[DEBUG] Aresta: (5, M)
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Aresta: (5, p)
-[DEBUG] Nó: 5, Grau: 2
-[DEBUG] Nó: p, Grau: 2
-[DEBUG] Aresta: (X, l)
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-[DEBUG] Aresta: (l, D)
-[DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: D, Grau: 2
 
 [DEBUG] Grau dos vertices das arestas não cobertas: 
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Nó: 5, Grau: 2
-[DEBUG] Nó: 7, Grau: 2
-[DEBUG] Nó: A, Grau: 1
-[DEBUG] Nó: B, Grau: 1
-[DEBUG] Nó: C, Grau: 3
-[DEBUG] Nó: D, Grau: 2
-[DEBUG] Nó: E, Grau: 2
-[DEBUG] Nó: G, Grau: 2
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Nó: N, Grau: 3
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Nó: b, Grau: 2
-[DEBUG] Nó: c, Grau: 3
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: o, Grau: 1
-[DEBUG] Nó: p, Grau: 2
-[DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: t, Grau: 2
-[DEBUG] Nó: u, Grau: 1
-[DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Nó: y, Grau: 1
-
-[DEBUG] Selecionando a aresta com maior grau...
-[DEBUG] Aresta: (N, E), Grau: 5
-[DEBUG] Aresta: (N, p), Grau: 5
-[DEBUG] Aresta: (N, 7), Grau: 5
-[DEBUG] Aresta: (C, b), Grau: 5
-[DEBUG] Aresta: (C, G), Grau: 5
-[DEBUG] Aresta: (C, o), Grau: 4
-[DEBUG] Aresta: (c, B), Grau: 4
-[DEBUG] Aresta: (c, D), Grau: 5
-[DEBUG] Aresta: (c, t), Grau: 5
-[DEBUG] Aresta: (r, 0), Grau: 3
-[DEBUG] Aresta: (L, s), Grau: 3
-[DEBUG] Aresta: (H, u), Grau: 4
-[DEBUG] Aresta: (H, A), Grau: 4
-[DEBUG] Aresta: (H, E), Grau: 5
-[DEBUG] Aresta: (f, Y), Grau: 2
-[DEBUG] Aresta: (e, 7), Grau: 3
-[DEBUG] Aresta: (0, 3), Grau: 3
-[DEBUG] Aresta: (s, I), Grau: 4
-[DEBUG] Aresta: (b, T), Grau: 3
-[DEBUG] Aresta: (w, I), Grau: 4
-[DEBUG] Aresta: (w, x), Grau: 3
-[DEBUG] Aresta: (y, Q), Grau: 2
-[DEBUG] Aresta: (t, G), Grau: 4
-[DEBUG] Aresta: (5, M), Grau: 3
-[DEBUG] Aresta: (5, p), Grau: 4
-[DEBUG] Aresta: (X, l), Grau: 3
-[DEBUG] Aresta: (l, D), Grau: 4
-[DEBUG] Aresta selecionada: (N, p) com grau 5
-[DEBUG] Solução:  (i, S)  (Z, K)  (m, 1)  (O, z)  (V, n)  (R, P)  (W, j)  (6, F)  (k, g)  (N, p) 
-
-[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (N, p)
-
-[DEBUG] Verificando aresta: (l, D)
-
-[DEBUG] Verificando aresta: (X, l)
-
-[DEBUG] Verificando aresta: (5, p)
-[DEBUG] Removendo aresta: (5, p)
-
-[DEBUG] Verificando aresta: (5, M)
-
-[DEBUG] Verificando aresta: (t, G)
-
-[DEBUG] Verificando aresta: (y, Q)
-
-[DEBUG] Verificando aresta: (w, x)
-
-[DEBUG] Verificando aresta: (w, I)
-
-[DEBUG] Verificando aresta: (b, T)
-
-[DEBUG] Verificando aresta: (s, I)
-
-[DEBUG] Verificando aresta: (0, 3)
-
-[DEBUG] Verificando aresta: (e, 7)
-
-[DEBUG] Verificando aresta: (f, Y)
-
-[DEBUG] Verificando aresta: (H, E)
-
-[DEBUG] Verificando aresta: (H, A)
-
-[DEBUG] Verificando aresta: (H, u)
-
-[DEBUG] Verificando aresta: (L, s)
-
-[DEBUG] Verificando aresta: (r, 0)
-
-[DEBUG] Verificando aresta: (c, t)
-
-[DEBUG] Verificando aresta: (c, D)
-
-[DEBUG] Verificando aresta: (c, B)
-
-[DEBUG] Verificando aresta: (C, o)
-
-[DEBUG] Verificando aresta: (C, G)
-
-[DEBUG] Verificando aresta: (C, b)
-
-[DEBUG] Verificando aresta: (N, 7)
-[DEBUG] Removendo aresta: (N, 7)
-
-[DEBUG] Verificando aresta: (N, p)
-[DEBUG] Removendo aresta: (N, p)
-
-[DEBUG] Verificando aresta: (N, E)
-[DEBUG] Removendo aresta: (N, E)
-
-[DEBUG] Arestas não cobertas após remoção: 
-(C, b) (C, G) (C, o) (c, B) (c, D) (c, t) (r, 0) (L, s) (H, u) (H, A) (H, E) (f, Y) (e, 7) (0, 3) (s, I) (b, T) (w, I) (w, x) (y, Q) (t, G) (5, M) (X, l) (l, D) 
-
-[DEBUG] Execução 11:
-[DEBUG] Arestas não cobertas: 
-(C, b) (C, G) (C, o) (c, B) (c, D) (c, t) (r, 0) (L, s) (H, u) (H, A) (H, E) (f, Y) (e, 7) (0, 3) (s, I) (b, T) (w, I) (w, x) (y, Q) (t, G) (5, M) (X, l) (l, D) 
-
-[DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
-[DEBUG] Aresta: (C, b)
-[DEBUG] Nó: C, Grau: 1
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Aresta: (C, G)
-[DEBUG] Nó: C, Grau: 2
-[DEBUG] Nó: G, Grau: 1
-[DEBUG] Aresta: (C, o)
-[DEBUG] Nó: C, Grau: 3
-[DEBUG] Nó: o, Grau: 1
-[DEBUG] Aresta: (c, B)
 [DEBUG] Nó: c, Grau: 1
-[DEBUG] Nó: B, Grau: 1
-[DEBUG] Aresta: (c, D)
-[DEBUG] Nó: c, Grau: 2
-[DEBUG] Nó: D, Grau: 1
-[DEBUG] Aresta: (c, t)
-[DEBUG] Nó: c, Grau: 3
-[DEBUG] Nó: t, Grau: 1
-[DEBUG] Aresta: (r, 0)
 [DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: 0, Grau: 1
-[DEBUG] Aresta: (L, s)
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: s, Grau: 1
-[DEBUG] Aresta: (H, u)
-[DEBUG] Nó: H, Grau: 1
-[DEBUG] Nó: u, Grau: 1
-[DEBUG] Aresta: (H, A)
-[DEBUG] Nó: H, Grau: 2
-[DEBUG] Nó: A, Grau: 1
-[DEBUG] Aresta: (H, E)
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: E, Grau: 1
-[DEBUG] Aresta: (f, Y)
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Aresta: (e, 7)
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Aresta: (0, 3)
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Aresta: (s, I)
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: I, Grau: 1
-[DEBUG] Aresta: (b, T)
-[DEBUG] Nó: b, Grau: 2
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Aresta: (w, I)
-[DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Aresta: (w, x)
-[DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Aresta: (y, Q)
-[DEBUG] Nó: y, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Aresta: (t, G)
-[DEBUG] Nó: t, Grau: 2
-[DEBUG] Nó: G, Grau: 2
-[DEBUG] Aresta: (5, M)
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Aresta: (X, l)
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-[DEBUG] Aresta: (l, D)
-[DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: D, Grau: 2
-
-[DEBUG] Grau dos vertices das arestas não cobertas: 
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Nó: A, Grau: 1
-[DEBUG] Nó: B, Grau: 1
-[DEBUG] Nó: C, Grau: 3
-[DEBUG] Nó: D, Grau: 2
-[DEBUG] Nó: E, Grau: 1
-[DEBUG] Nó: G, Grau: 2
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Nó: b, Grau: 2
-[DEBUG] Nó: c, Grau: 3
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: o, Grau: 1
-[DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: t, Grau: 2
-[DEBUG] Nó: u, Grau: 1
-[DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Nó: y, Grau: 1
 
 [DEBUG] Selecionando a aresta com maior grau...
-[DEBUG] Aresta: (C, b), Grau: 5
-[DEBUG] Aresta: (C, G), Grau: 5
-[DEBUG] Aresta: (C, o), Grau: 4
-[DEBUG] Aresta: (c, B), Grau: 4
-[DEBUG] Aresta: (c, D), Grau: 5
-[DEBUG] Aresta: (c, t), Grau: 5
-[DEBUG] Aresta: (r, 0), Grau: 3
-[DEBUG] Aresta: (L, s), Grau: 3
-[DEBUG] Aresta: (H, u), Grau: 4
-[DEBUG] Aresta: (H, A), Grau: 4
-[DEBUG] Aresta: (H, E), Grau: 4
-[DEBUG] Aresta: (f, Y), Grau: 2
-[DEBUG] Aresta: (e, 7), Grau: 2
-[DEBUG] Aresta: (0, 3), Grau: 3
-[DEBUG] Aresta: (s, I), Grau: 4
-[DEBUG] Aresta: (b, T), Grau: 3
-[DEBUG] Aresta: (w, I), Grau: 4
-[DEBUG] Aresta: (w, x), Grau: 3
-[DEBUG] Aresta: (y, Q), Grau: 2
-[DEBUG] Aresta: (t, G), Grau: 4
-[DEBUG] Aresta: (5, M), Grau: 2
-[DEBUG] Aresta: (X, l), Grau: 3
-[DEBUG] Aresta: (l, D), Grau: 4
-[DEBUG] Aresta selecionada: (C, G) com grau 5
-[DEBUG] Solução:  (i, S)  (Z, K)  (m, 1)  (O, z)  (V, n)  (R, P)  (W, j)  (6, F)  (k, g)  (N, p)  (C, G) 
+[DEBUG] Aresta: (c, r), Grau: 2
+[DEBUG] Aresta selecionada: (c, r) com grau 2
+[DEBUG] Solução:  (i, h)  (p, s)  (j, x)  (w, v)  (q, u)  (y, o)  (d, f)  (k, m)  (l, a)  (c, r) 
 
-[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (C, G)
+[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (c, r)
 
-[DEBUG] Verificando aresta: (l, D)
-
-[DEBUG] Verificando aresta: (X, l)
-
-[DEBUG] Verificando aresta: (5, M)
-
-[DEBUG] Verificando aresta: (t, G)
-[DEBUG] Removendo aresta: (t, G)
-
-[DEBUG] Verificando aresta: (y, Q)
-
-[DEBUG] Verificando aresta: (w, x)
-
-[DEBUG] Verificando aresta: (w, I)
-
-[DEBUG] Verificando aresta: (b, T)
-
-[DEBUG] Verificando aresta: (s, I)
-
-[DEBUG] Verificando aresta: (0, 3)
-
-[DEBUG] Verificando aresta: (e, 7)
-
-[DEBUG] Verificando aresta: (f, Y)
-
-[DEBUG] Verificando aresta: (H, E)
-
-[DEBUG] Verificando aresta: (H, A)
-
-[DEBUG] Verificando aresta: (H, u)
-
-[DEBUG] Verificando aresta: (L, s)
-
-[DEBUG] Verificando aresta: (r, 0)
-
-[DEBUG] Verificando aresta: (c, t)
-
-[DEBUG] Verificando aresta: (c, D)
-
-[DEBUG] Verificando aresta: (c, B)
-
-[DEBUG] Verificando aresta: (C, o)
-[DEBUG] Removendo aresta: (C, o)
-
-[DEBUG] Verificando aresta: (C, G)
-[DEBUG] Removendo aresta: (C, G)
-
-[DEBUG] Verificando aresta: (C, b)
-[DEBUG] Removendo aresta: (C, b)
-
-[DEBUG] Arestas não cobertas após remoção: 
-(c, B) (c, D) (c, t) (r, 0) (L, s) (H, u) (H, A) (H, E) (f, Y) (e, 7) (0, 3) (s, I) (b, T) (w, I) (w, x) (y, Q) (5, M) (X, l) (l, D) 
-
-[DEBUG] Execução 12:
-[DEBUG] Arestas não cobertas: 
-(c, B) (c, D) (c, t) (r, 0) (L, s) (H, u) (H, A) (H, E) (f, Y) (e, 7) (0, 3) (s, I) (b, T) (w, I) (w, x) (y, Q) (5, M) (X, l) (l, D) 
-
-[DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
-[DEBUG] Aresta: (c, B)
-[DEBUG] Nó: c, Grau: 1
-[DEBUG] Nó: B, Grau: 1
-[DEBUG] Aresta: (c, D)
-[DEBUG] Nó: c, Grau: 2
-[DEBUG] Nó: D, Grau: 1
-[DEBUG] Aresta: (c, t)
-[DEBUG] Nó: c, Grau: 3
-[DEBUG] Nó: t, Grau: 1
-[DEBUG] Aresta: (r, 0)
-[DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: 0, Grau: 1
-[DEBUG] Aresta: (L, s)
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: s, Grau: 1
-[DEBUG] Aresta: (H, u)
-[DEBUG] Nó: H, Grau: 1
-[DEBUG] Nó: u, Grau: 1
-[DEBUG] Aresta: (H, A)
-[DEBUG] Nó: H, Grau: 2
-[DEBUG] Nó: A, Grau: 1
-[DEBUG] Aresta: (H, E)
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: E, Grau: 1
-[DEBUG] Aresta: (f, Y)
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Aresta: (e, 7)
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Aresta: (0, 3)
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Aresta: (s, I)
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: I, Grau: 1
-[DEBUG] Aresta: (b, T)
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Aresta: (w, I)
-[DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Aresta: (w, x)
-[DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Aresta: (y, Q)
-[DEBUG] Nó: y, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Aresta: (5, M)
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Aresta: (X, l)
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-[DEBUG] Aresta: (l, D)
-[DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: D, Grau: 2
-
-[DEBUG] Grau dos vertices das arestas não cobertas: 
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Nó: A, Grau: 1
-[DEBUG] Nó: B, Grau: 1
-[DEBUG] Nó: D, Grau: 2
-[DEBUG] Nó: E, Grau: 1
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Nó: c, Grau: 3
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: l, Grau: 2
-[DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: t, Grau: 1
-[DEBUG] Nó: u, Grau: 1
-[DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Nó: y, Grau: 1
-
-[DEBUG] Selecionando a aresta com maior grau...
-[DEBUG] Aresta: (c, B), Grau: 4
-[DEBUG] Aresta: (c, D), Grau: 5
-[DEBUG] Aresta: (c, t), Grau: 4
-[DEBUG] Aresta: (r, 0), Grau: 3
-[DEBUG] Aresta: (L, s), Grau: 3
-[DEBUG] Aresta: (H, u), Grau: 4
-[DEBUG] Aresta: (H, A), Grau: 4
-[DEBUG] Aresta: (H, E), Grau: 4
-[DEBUG] Aresta: (f, Y), Grau: 2
-[DEBUG] Aresta: (e, 7), Grau: 2
-[DEBUG] Aresta: (0, 3), Grau: 3
-[DEBUG] Aresta: (s, I), Grau: 4
-[DEBUG] Aresta: (b, T), Grau: 2
-[DEBUG] Aresta: (w, I), Grau: 4
-[DEBUG] Aresta: (w, x), Grau: 3
-[DEBUG] Aresta: (y, Q), Grau: 2
-[DEBUG] Aresta: (5, M), Grau: 2
-[DEBUG] Aresta: (X, l), Grau: 3
-[DEBUG] Aresta: (l, D), Grau: 4
-[DEBUG] Aresta selecionada: (c, D) com grau 5
-[DEBUG] Solução:  (i, S)  (Z, K)  (m, 1)  (O, z)  (V, n)  (R, P)  (W, j)  (6, F)  (k, g)  (N, p)  (C, G)  (c, D) 
-
-[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (c, D)
-
-[DEBUG] Verificando aresta: (l, D)
-[DEBUG] Removendo aresta: (l, D)
-
-[DEBUG] Verificando aresta: (X, l)
-
-[DEBUG] Verificando aresta: (5, M)
-
-[DEBUG] Verificando aresta: (y, Q)
-
-[DEBUG] Verificando aresta: (w, x)
-
-[DEBUG] Verificando aresta: (w, I)
-
-[DEBUG] Verificando aresta: (b, T)
-
-[DEBUG] Verificando aresta: (s, I)
-
-[DEBUG] Verificando aresta: (0, 3)
-
-[DEBUG] Verificando aresta: (e, 7)
-
-[DEBUG] Verificando aresta: (f, Y)
-
-[DEBUG] Verificando aresta: (H, E)
-
-[DEBUG] Verificando aresta: (H, A)
-
-[DEBUG] Verificando aresta: (H, u)
-
-[DEBUG] Verificando aresta: (L, s)
-
-[DEBUG] Verificando aresta: (r, 0)
-
-[DEBUG] Verificando aresta: (c, t)
-[DEBUG] Removendo aresta: (c, t)
-
-[DEBUG] Verificando aresta: (c, D)
-[DEBUG] Removendo aresta: (c, D)
-
-[DEBUG] Verificando aresta: (c, B)
-[DEBUG] Removendo aresta: (c, B)
-
-[DEBUG] Arestas não cobertas após remoção: 
-(r, 0) (L, s) (H, u) (H, A) (H, E) (f, Y) (e, 7) (0, 3) (s, I) (b, T) (w, I) (w, x) (y, Q) (5, M) (X, l) 
-
-[DEBUG] Execução 13:
-[DEBUG] Arestas não cobertas: 
-(r, 0) (L, s) (H, u) (H, A) (H, E) (f, Y) (e, 7) (0, 3) (s, I) (b, T) (w, I) (w, x) (y, Q) (5, M) (X, l) 
-
-[DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
-[DEBUG] Aresta: (r, 0)
-[DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: 0, Grau: 1
-[DEBUG] Aresta: (L, s)
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: s, Grau: 1
-[DEBUG] Aresta: (H, u)
-[DEBUG] Nó: H, Grau: 1
-[DEBUG] Nó: u, Grau: 1
-[DEBUG] Aresta: (H, A)
-[DEBUG] Nó: H, Grau: 2
-[DEBUG] Nó: A, Grau: 1
-[DEBUG] Aresta: (H, E)
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: E, Grau: 1
-[DEBUG] Aresta: (f, Y)
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Aresta: (e, 7)
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Aresta: (0, 3)
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Aresta: (s, I)
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: I, Grau: 1
-[DEBUG] Aresta: (b, T)
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Aresta: (w, I)
-[DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Aresta: (w, x)
-[DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Aresta: (y, Q)
-[DEBUG] Nó: y, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Aresta: (5, M)
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Aresta: (X, l)
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-
-[DEBUG] Grau dos vertices das arestas não cobertas: 
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Nó: A, Grau: 1
-[DEBUG] Nó: E, Grau: 1
-[DEBUG] Nó: H, Grau: 3
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-[DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: u, Grau: 1
-[DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Nó: y, Grau: 1
-
-[DEBUG] Selecionando a aresta com maior grau...
-[DEBUG] Aresta: (r, 0), Grau: 3
-[DEBUG] Aresta: (L, s), Grau: 3
-[DEBUG] Aresta: (H, u), Grau: 4
-[DEBUG] Aresta: (H, A), Grau: 4
-[DEBUG] Aresta: (H, E), Grau: 4
-[DEBUG] Aresta: (f, Y), Grau: 2
-[DEBUG] Aresta: (e, 7), Grau: 2
-[DEBUG] Aresta: (0, 3), Grau: 3
-[DEBUG] Aresta: (s, I), Grau: 4
-[DEBUG] Aresta: (b, T), Grau: 2
-[DEBUG] Aresta: (w, I), Grau: 4
-[DEBUG] Aresta: (w, x), Grau: 3
-[DEBUG] Aresta: (y, Q), Grau: 2
-[DEBUG] Aresta: (5, M), Grau: 2
-[DEBUG] Aresta: (X, l), Grau: 2
-[DEBUG] Aresta selecionada: (H, u) com grau 4
-[DEBUG] Solução:  (i, S)  (Z, K)  (m, 1)  (O, z)  (V, n)  (R, P)  (W, j)  (6, F)  (k, g)  (N, p)  (C, G)  (c, D)  (H, u) 
-
-[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (H, u)
-
-[DEBUG] Verificando aresta: (X, l)
-
-[DEBUG] Verificando aresta: (5, M)
-
-[DEBUG] Verificando aresta: (y, Q)
-
-[DEBUG] Verificando aresta: (w, x)
-
-[DEBUG] Verificando aresta: (w, I)
-
-[DEBUG] Verificando aresta: (b, T)
-
-[DEBUG] Verificando aresta: (s, I)
-
-[DEBUG] Verificando aresta: (0, 3)
-
-[DEBUG] Verificando aresta: (e, 7)
-
-[DEBUG] Verificando aresta: (f, Y)
-
-[DEBUG] Verificando aresta: (H, E)
-[DEBUG] Removendo aresta: (H, E)
-
-[DEBUG] Verificando aresta: (H, A)
-[DEBUG] Removendo aresta: (H, A)
-
-[DEBUG] Verificando aresta: (H, u)
-[DEBUG] Removendo aresta: (H, u)
-
-[DEBUG] Verificando aresta: (L, s)
-
-[DEBUG] Verificando aresta: (r, 0)
-
-[DEBUG] Arestas não cobertas após remoção: 
-(r, 0) (L, s) (f, Y) (e, 7) (0, 3) (s, I) (b, T) (w, I) (w, x) (y, Q) (5, M) (X, l) 
-
-[DEBUG] Execução 14:
-[DEBUG] Arestas não cobertas: 
-(r, 0) (L, s) (f, Y) (e, 7) (0, 3) (s, I) (b, T) (w, I) (w, x) (y, Q) (5, M) (X, l) 
-
-[DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
-[DEBUG] Aresta: (r, 0)
-[DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: 0, Grau: 1
-[DEBUG] Aresta: (L, s)
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: s, Grau: 1
-[DEBUG] Aresta: (f, Y)
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Aresta: (e, 7)
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Aresta: (0, 3)
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Aresta: (s, I)
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: I, Grau: 1
-[DEBUG] Aresta: (b, T)
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Aresta: (w, I)
-[DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Aresta: (w, x)
-[DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Aresta: (y, Q)
-[DEBUG] Nó: y, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Aresta: (5, M)
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Aresta: (X, l)
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-
-[DEBUG] Grau dos vertices das arestas não cobertas: 
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Nó: I, Grau: 2
-[DEBUG] Nó: L, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-[DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: s, Grau: 2
-[DEBUG] Nó: w, Grau: 2
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Nó: y, Grau: 1
-
-[DEBUG] Selecionando a aresta com maior grau...
-[DEBUG] Aresta: (r, 0), Grau: 3
-[DEBUG] Aresta: (L, s), Grau: 3
-[DEBUG] Aresta: (f, Y), Grau: 2
-[DEBUG] Aresta: (e, 7), Grau: 2
-[DEBUG] Aresta: (0, 3), Grau: 3
-[DEBUG] Aresta: (s, I), Grau: 4
-[DEBUG] Aresta: (b, T), Grau: 2
-[DEBUG] Aresta: (w, I), Grau: 4
-[DEBUG] Aresta: (w, x), Grau: 3
-[DEBUG] Aresta: (y, Q), Grau: 2
-[DEBUG] Aresta: (5, M), Grau: 2
-[DEBUG] Aresta: (X, l), Grau: 2
-[DEBUG] Aresta selecionada: (s, I) com grau 4
-[DEBUG] Solução:  (i, S)  (Z, K)  (m, 1)  (O, z)  (V, n)  (R, P)  (W, j)  (6, F)  (k, g)  (N, p)  (C, G)  (c, D)  (H, u)  (s, I) 
-
-[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (s, I)
-
-[DEBUG] Verificando aresta: (X, l)
-
-[DEBUG] Verificando aresta: (5, M)
-
-[DEBUG] Verificando aresta: (y, Q)
-
-[DEBUG] Verificando aresta: (w, x)
-
-[DEBUG] Verificando aresta: (w, I)
-[DEBUG] Removendo aresta: (w, I)
-
-[DEBUG] Verificando aresta: (b, T)
-
-[DEBUG] Verificando aresta: (s, I)
-[DEBUG] Removendo aresta: (s, I)
-
-[DEBUG] Verificando aresta: (0, 3)
-
-[DEBUG] Verificando aresta: (e, 7)
-
-[DEBUG] Verificando aresta: (f, Y)
-
-[DEBUG] Verificando aresta: (L, s)
-[DEBUG] Removendo aresta: (L, s)
-
-[DEBUG] Verificando aresta: (r, 0)
-
-[DEBUG] Arestas não cobertas após remoção: 
-(r, 0) (f, Y) (e, 7) (0, 3) (b, T) (w, x) (y, Q) (5, M) (X, l) 
-
-[DEBUG] Execução 15:
-[DEBUG] Arestas não cobertas: 
-(r, 0) (f, Y) (e, 7) (0, 3) (b, T) (w, x) (y, Q) (5, M) (X, l) 
-
-[DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
-[DEBUG] Aresta: (r, 0)
-[DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: 0, Grau: 1
-[DEBUG] Aresta: (f, Y)
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Aresta: (e, 7)
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Aresta: (0, 3)
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Aresta: (b, T)
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Aresta: (w, x)
-[DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Aresta: (y, Q)
-[DEBUG] Nó: y, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Aresta: (5, M)
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Aresta: (X, l)
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-
-[DEBUG] Grau dos vertices das arestas não cobertas: 
-[DEBUG] Nó: 0, Grau: 2
-[DEBUG] Nó: 3, Grau: 1
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-[DEBUG] Nó: r, Grau: 1
-[DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Nó: y, Grau: 1
-
-[DEBUG] Selecionando a aresta com maior grau...
-[DEBUG] Aresta: (r, 0), Grau: 3
-[DEBUG] Aresta: (f, Y), Grau: 2
-[DEBUG] Aresta: (e, 7), Grau: 2
-[DEBUG] Aresta: (0, 3), Grau: 3
-[DEBUG] Aresta: (b, T), Grau: 2
-[DEBUG] Aresta: (w, x), Grau: 2
-[DEBUG] Aresta: (y, Q), Grau: 2
-[DEBUG] Aresta: (5, M), Grau: 2
-[DEBUG] Aresta: (X, l), Grau: 2
-[DEBUG] Aresta selecionada: (r, 0) com grau 3
-[DEBUG] Solução:  (i, S)  (Z, K)  (m, 1)  (O, z)  (V, n)  (R, P)  (W, j)  (6, F)  (k, g)  (N, p)  (C, G)  (c, D)  (H, u)  (s, I)  (r, 0) 
-
-[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (r, 0)
-
-[DEBUG] Verificando aresta: (X, l)
-
-[DEBUG] Verificando aresta: (5, M)
-
-[DEBUG] Verificando aresta: (y, Q)
-
-[DEBUG] Verificando aresta: (w, x)
-
-[DEBUG] Verificando aresta: (b, T)
-
-[DEBUG] Verificando aresta: (0, 3)
-[DEBUG] Removendo aresta: (0, 3)
-
-[DEBUG] Verificando aresta: (e, 7)
-
-[DEBUG] Verificando aresta: (f, Y)
-
-[DEBUG] Verificando aresta: (r, 0)
-[DEBUG] Removendo aresta: (r, 0)
-
-[DEBUG] Arestas não cobertas após remoção: 
-(f, Y) (e, 7) (b, T) (w, x) (y, Q) (5, M) (X, l) 
-
-[DEBUG] Execução 16:
-[DEBUG] Arestas não cobertas: 
-(f, Y) (e, 7) (b, T) (w, x) (y, Q) (5, M) (X, l) 
-
-[DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
-[DEBUG] Aresta: (f, Y)
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Aresta: (e, 7)
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Aresta: (b, T)
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Aresta: (w, x)
-[DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Aresta: (y, Q)
-[DEBUG] Nó: y, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Aresta: (5, M)
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Aresta: (X, l)
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-
-[DEBUG] Grau dos vertices das arestas não cobertas: 
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: Y, Grau: 1
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: f, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-[DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Nó: y, Grau: 1
-
-[DEBUG] Selecionando a aresta com maior grau...
-[DEBUG] Aresta: (f, Y), Grau: 2
-[DEBUG] Aresta: (e, 7), Grau: 2
-[DEBUG] Aresta: (b, T), Grau: 2
-[DEBUG] Aresta: (w, x), Grau: 2
-[DEBUG] Aresta: (y, Q), Grau: 2
-[DEBUG] Aresta: (5, M), Grau: 2
-[DEBUG] Aresta: (X, l), Grau: 2
-[DEBUG] Aresta selecionada: (f, Y) com grau 2
-[DEBUG] Solução:  (i, S)  (Z, K)  (m, 1)  (O, z)  (V, n)  (R, P)  (W, j)  (6, F)  (k, g)  (N, p)  (C, G)  (c, D)  (H, u)  (s, I)  (r, 0)  (f, Y) 
-
-[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (f, Y)
-
-[DEBUG] Verificando aresta: (X, l)
-
-[DEBUG] Verificando aresta: (5, M)
-
-[DEBUG] Verificando aresta: (y, Q)
-
-[DEBUG] Verificando aresta: (w, x)
-
-[DEBUG] Verificando aresta: (b, T)
-
-[DEBUG] Verificando aresta: (e, 7)
-
-[DEBUG] Verificando aresta: (f, Y)
-[DEBUG] Removendo aresta: (f, Y)
-
-[DEBUG] Arestas não cobertas após remoção: 
-(e, 7) (b, T) (w, x) (y, Q) (5, M) (X, l) 
-
-[DEBUG] Execução 17:
-[DEBUG] Arestas não cobertas: 
-(e, 7) (b, T) (w, x) (y, Q) (5, M) (X, l) 
-
-[DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
-[DEBUG] Aresta: (e, 7)
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Aresta: (b, T)
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Aresta: (w, x)
-[DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Aresta: (y, Q)
-[DEBUG] Nó: y, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Aresta: (5, M)
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Aresta: (X, l)
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-
-[DEBUG] Grau dos vertices das arestas não cobertas: 
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: 7, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Nó: e, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-[DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Nó: y, Grau: 1
-
-[DEBUG] Selecionando a aresta com maior grau...
-[DEBUG] Aresta: (e, 7), Grau: 2
-[DEBUG] Aresta: (b, T), Grau: 2
-[DEBUG] Aresta: (w, x), Grau: 2
-[DEBUG] Aresta: (y, Q), Grau: 2
-[DEBUG] Aresta: (5, M), Grau: 2
-[DEBUG] Aresta: (X, l), Grau: 2
-[DEBUG] Aresta selecionada: (e, 7) com grau 2
-[DEBUG] Solução:  (i, S)  (Z, K)  (m, 1)  (O, z)  (V, n)  (R, P)  (W, j)  (6, F)  (k, g)  (N, p)  (C, G)  (c, D)  (H, u)  (s, I)  (r, 0)  (f, Y)  (e, 7) 
-
-[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (e, 7)
-
-[DEBUG] Verificando aresta: (X, l)
-
-[DEBUG] Verificando aresta: (5, M)
-
-[DEBUG] Verificando aresta: (y, Q)
-
-[DEBUG] Verificando aresta: (w, x)
-
-[DEBUG] Verificando aresta: (b, T)
-
-[DEBUG] Verificando aresta: (e, 7)
-[DEBUG] Removendo aresta: (e, 7)
-
-[DEBUG] Arestas não cobertas após remoção: 
-(b, T) (w, x) (y, Q) (5, M) (X, l) 
-
-[DEBUG] Execução 18:
-[DEBUG] Arestas não cobertas: 
-(b, T) (w, x) (y, Q) (5, M) (X, l) 
-
-[DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
-[DEBUG] Aresta: (b, T)
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Aresta: (w, x)
-[DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Aresta: (y, Q)
-[DEBUG] Nó: y, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Aresta: (5, M)
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Aresta: (X, l)
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-
-[DEBUG] Grau dos vertices das arestas não cobertas: 
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Nó: T, Grau: 1
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: b, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-[DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Nó: y, Grau: 1
-
-[DEBUG] Selecionando a aresta com maior grau...
-[DEBUG] Aresta: (b, T), Grau: 2
-[DEBUG] Aresta: (w, x), Grau: 2
-[DEBUG] Aresta: (y, Q), Grau: 2
-[DEBUG] Aresta: (5, M), Grau: 2
-[DEBUG] Aresta: (X, l), Grau: 2
-[DEBUG] Aresta selecionada: (b, T) com grau 2
-[DEBUG] Solução:  (i, S)  (Z, K)  (m, 1)  (O, z)  (V, n)  (R, P)  (W, j)  (6, F)  (k, g)  (N, p)  (C, G)  (c, D)  (H, u)  (s, I)  (r, 0)  (f, Y)  (e, 7)  (b, T) 
-
-[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (b, T)
-
-[DEBUG] Verificando aresta: (X, l)
-
-[DEBUG] Verificando aresta: (5, M)
-
-[DEBUG] Verificando aresta: (y, Q)
-
-[DEBUG] Verificando aresta: (w, x)
-
-[DEBUG] Verificando aresta: (b, T)
-[DEBUG] Removendo aresta: (b, T)
-
-[DEBUG] Arestas não cobertas após remoção: 
-(w, x) (y, Q) (5, M) (X, l) 
-
-[DEBUG] Execução 19:
-[DEBUG] Arestas não cobertas: 
-(w, x) (y, Q) (5, M) (X, l) 
-
-[DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
-[DEBUG] Aresta: (w, x)
-[DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Aresta: (y, Q)
-[DEBUG] Nó: y, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Aresta: (5, M)
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Aresta: (X, l)
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-
-[DEBUG] Grau dos vertices das arestas não cobertas: 
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-[DEBUG] Nó: w, Grau: 1
-[DEBUG] Nó: x, Grau: 1
-[DEBUG] Nó: y, Grau: 1
-
-[DEBUG] Selecionando a aresta com maior grau...
-[DEBUG] Aresta: (w, x), Grau: 2
-[DEBUG] Aresta: (y, Q), Grau: 2
-[DEBUG] Aresta: (5, M), Grau: 2
-[DEBUG] Aresta: (X, l), Grau: 2
-[DEBUG] Aresta selecionada: (w, x) com grau 2
-[DEBUG] Solução:  (i, S)  (Z, K)  (m, 1)  (O, z)  (V, n)  (R, P)  (W, j)  (6, F)  (k, g)  (N, p)  (C, G)  (c, D)  (H, u)  (s, I)  (r, 0)  (f, Y)  (e, 7)  (b, T)  (w, x) 
-
-[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (w, x)
-
-[DEBUG] Verificando aresta: (X, l)
-
-[DEBUG] Verificando aresta: (5, M)
-
-[DEBUG] Verificando aresta: (y, Q)
-
-[DEBUG] Verificando aresta: (w, x)
-[DEBUG] Removendo aresta: (w, x)
-
-[DEBUG] Arestas não cobertas após remoção: 
-(y, Q) (5, M) (X, l) 
-
-[DEBUG] Execução 20:
-[DEBUG] Arestas não cobertas: 
-(y, Q) (5, M) (X, l) 
-
-[DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
-[DEBUG] Aresta: (y, Q)
-[DEBUG] Nó: y, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Aresta: (5, M)
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Aresta: (X, l)
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-
-[DEBUG] Grau dos vertices das arestas não cobertas: 
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Nó: Q, Grau: 1
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-[DEBUG] Nó: y, Grau: 1
-
-[DEBUG] Selecionando a aresta com maior grau...
-[DEBUG] Aresta: (y, Q), Grau: 2
-[DEBUG] Aresta: (5, M), Grau: 2
-[DEBUG] Aresta: (X, l), Grau: 2
-[DEBUG] Aresta selecionada: (y, Q) com grau 2
-[DEBUG] Solução:  (i, S)  (Z, K)  (m, 1)  (O, z)  (V, n)  (R, P)  (W, j)  (6, F)  (k, g)  (N, p)  (C, G)  (c, D)  (H, u)  (s, I)  (r, 0)  (f, Y)  (e, 7)  (b, T)  (w, x)  (y, Q) 
-
-[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (y, Q)
-
-[DEBUG] Verificando aresta: (X, l)
-
-[DEBUG] Verificando aresta: (5, M)
-
-[DEBUG] Verificando aresta: (y, Q)
-[DEBUG] Removendo aresta: (y, Q)
-
-[DEBUG] Arestas não cobertas após remoção: 
-(5, M) (X, l) 
-
-[DEBUG] Execução 21:
-[DEBUG] Arestas não cobertas: 
-(5, M) (X, l) 
-
-[DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
-[DEBUG] Aresta: (5, M)
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Aresta: (X, l)
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-
-[DEBUG] Grau dos vertices das arestas não cobertas: 
-[DEBUG] Nó: 5, Grau: 1
-[DEBUG] Nó: M, Grau: 1
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-
-[DEBUG] Selecionando a aresta com maior grau...
-[DEBUG] Aresta: (5, M), Grau: 2
-[DEBUG] Aresta: (X, l), Grau: 2
-[DEBUG] Aresta selecionada: (5, M) com grau 2
-[DEBUG] Solução:  (i, S)  (Z, K)  (m, 1)  (O, z)  (V, n)  (R, P)  (W, j)  (6, F)  (k, g)  (N, p)  (C, G)  (c, D)  (H, u)  (s, I)  (r, 0)  (f, Y)  (e, 7)  (b, T)  (w, x)  (y, Q)  (5, M) 
-
-[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (5, M)
-
-[DEBUG] Verificando aresta: (X, l)
-
-[DEBUG] Verificando aresta: (5, M)
-[DEBUG] Removendo aresta: (5, M)
-
-[DEBUG] Arestas não cobertas após remoção: 
-(X, l) 
-
-[DEBUG] Execução 22:
-[DEBUG] Arestas não cobertas: 
-(X, l) 
-
-[DEBUG] Cálculo o grau dos vertices das arestas não cobertas: 
-[DEBUG] Aresta: (X, l)
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-
-[DEBUG] Grau dos vertices das arestas não cobertas: 
-[DEBUG] Nó: X, Grau: 1
-[DEBUG] Nó: l, Grau: 1
-
-[DEBUG] Selecionando a aresta com maior grau...
-[DEBUG] Aresta: (X, l), Grau: 2
-[DEBUG] Aresta selecionada: (X, l) com grau 2
-[DEBUG] Solução:  (i, S)  (Z, K)  (m, 1)  (O, z)  (V, n)  (R, P)  (W, j)  (6, F)  (k, g)  (N, p)  (C, G)  (c, D)  (H, u)  (s, I)  (r, 0)  (f, Y)  (e, 7)  (b, T)  (w, x)  (y, Q)  (5, M)  (X, l) 
-
-[DEBUG] Removendo arestas incidentes aos vértices da aresta selecionada: (X, l)
-
-[DEBUG] Verificando aresta: (X, l)
-[DEBUG] Removendo aresta: (X, l)
+[DEBUG] Verificando aresta: (c, r)
+[DEBUG] Removendo aresta: (c, r)
 
 [DEBUG] Arestas não cobertas após remoção: 
 
-[DEBUG] Solução final: (i, S) (Z, K) (m, 1) (O, z) (V, n) (R, P) (W, j) (6, F) (k, g) (N, p) (C, G) (c, D) (H, u) (s, I) (r, 0) (f, Y) (e, 7) (b, T) (w, x) (y, Q) (5, M) (X, l) 
-[DEBUG] Tamanho do Conjunto de Arestas do Grafo: 118
-[DEBUG] Tamanho do Conjunto Dominante: 22
+[DEBUG] Solução final: (i, h) (p, s) (j, x) (w, v) (q, u) (y, o) (d, f) (k, m) (l, a) (c, r) 
+[DEBUG] Tamanho do Conjunto de Arestas do Grafo: 48
+[DEBUG] Tamanho do Conjunto Dominante: 10
 [DEBUG] Solução conectada? SIM

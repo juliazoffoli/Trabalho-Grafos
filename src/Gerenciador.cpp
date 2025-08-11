@@ -470,19 +470,14 @@ void Gerenciador::comandos(Grafo* grafo) {
         case 'n': {
             cout << "Teste Multiplo - Algoritmo Guloso:" << endl;
             
-            int k = 300; // Número de execuções padrão
+            int k = 10; // Número de execuções padrão
             
             cout << "Executando " << k << " vezes o algoritmo guloso..." << endl;
             
             Guloso guloso;
 
-            clock_t inicio = clock();
             guloso.executar_multiplas_vezes_guloso(grafo, k);
-            clock_t fim = clock();
-
-            double tempo = double(fim - inicio) / CLOCKS_PER_SEC;
-            cout << "Tempo de execucao: " << tempo << " segundos" << endl;
-            break;
+            
         }
 
         case 'o': {

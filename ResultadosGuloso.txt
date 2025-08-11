@@ -1,0 +1,27 @@
+Teste Multiplo - Algoritmo Guloso:
+Executando 10 vezes o algoritmo guloso...
+Tempo de execucao (1 execucao): 0.02 segundos
+Tamanho da solucao: 10
+Tempo de execucao (2 execucao): 0.01 segundos
+Tamanho da solucao: 10
+Tempo de execucao (3 execucao): 0.01 segundos
+Tamanho da solucao: 10
+Tempo de execucao (4 execucao): 0.007 segundos
+Tamanho da solucao: 10
+Tempo de execucao (5 execucao): 0.008 segundos
+Tamanho da solucao: 10
+Tempo de execucao (6 execucao): 0.009 segundos
+Tamanho da solucao: 10
+Tempo de execucao (7 execucao): 0.009 segundos
+Tamanho da solucao: 10
+Tempo de execucao (8 execucao): 0.01 segundos
+Tamanho da solucao: 10
+Tempo de execucao (9 execucao): 0.013 segundos
+Tamanho da solucao: 10
+Tempo de execucao (10 execucao): 0.007 segundos
+Tamanho da solucao: 10
+Solucoes validas: 10/10 (100%)
+Melhor tamanho: 10
+Pior tamanho: 10
+Media: 10.00
+Desvio padrao: 0.00

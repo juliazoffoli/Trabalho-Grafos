@@ -427,9 +427,15 @@ void Guloso::executar_multiplas_vezes_guloso(Grafo* grafo, int k) {
     int solucoes_validas = 0;
     
     for (int i = 1; i <= k; i++) {
-        
+        clock_t inicio = clock();        
         vector<pair<char, char>> solucao = algoritmo_guloso(grafo);
+        clock_t fim = clock();
+
+        double tempo = double(fim - inicio) / CLOCKS_PER_SEC;
+        cout << "Tempo de execucao (" << i << " execucao): " << tempo << " segundos" << endl;
+
         int tamanho = solucao.size();
+        cout << "Tamanho da solucao: " << tamanho << endl; 
         tamanhos.push_back(tamanho);
         
         // Verifica se a solução é válida
