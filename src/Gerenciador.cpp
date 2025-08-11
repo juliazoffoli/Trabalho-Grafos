@@ -366,6 +366,19 @@ void Gerenciador::comandos(Grafo* grafo) {
             }
 
             cout << endl;
+            cout << "Tamanho do Conjunto Dominante: " << solucao.size() << endl;
+
+            // Imprime a solução em um arquivo
+            if (pergunta_imprimir_arquivo("solucao_guloso.txt")) {
+                ofstream arquivo("solucao_guloso.txt");
+                arquivo << "Solução do algoritmo guloso: " << endl;
+                arquivo << "Tamanho do Conjunto Dominante: " << solucao.size() << endl;
+                for (const auto& aresta : solucao) {
+                    arquivo << "(" << aresta.first << ", " << aresta.second << ") " << endl;
+                }   
+            }
+
+            cout << endl;
 
 
             break;
@@ -380,6 +393,18 @@ void Gerenciador::comandos(Grafo* grafo) {
             
             for (const auto& aresta : solucao) {
                 cout << "(" << aresta.first << ", " << aresta.second << ") ";
+            }
+            cout << endl;
+            cout << "Tamanho do Conjunto Dominante: " << solucao.size() << endl;
+
+            // Imprime a solução em um arquivo
+            if (pergunta_imprimir_arquivo("solucao_guloso_randomizado_adaptativo.txt")) {
+                ofstream arquivo("solucao_guloso_randomizado_adaptativo.txt");
+                arquivo << "Solução do algoritmo guloso adaptativo: " << endl;
+                arquivo << "Tamanho do Conjunto Dominante: " << solucao.size() << endl;
+                for (const auto& aresta : solucao) {
+                    arquivo << "(" << aresta.first << ", " << aresta.second << ") " << endl;
+                }   
             }
 
             cout << endl;
@@ -400,6 +425,19 @@ void Gerenciador::comandos(Grafo* grafo) {
                 cout << "(" << aresta.first << ", " << aresta.second << ") ";
             }
             
+            cout << endl;
+            cout << "Tamanho do Conjunto Dominante: " << solucao.size() << endl;
+
+            // Imprime a solução em um arquivo
+            if (pergunta_imprimir_arquivo("solucao_guloso_randomizado_adaptativo_reativo.txt")) {
+                ofstream arquivo("solucao_guloso_randomizado_adaptativo_reativo.txt");
+                arquivo << "Solução do algoritmo guloso adaptativo reativo: " << endl;    
+                arquivo << "Tamanho do Conjunto Dominante: " << solucao.size() << endl;
+                for (const auto& aresta : solucao) {
+                    arquivo << "(" << aresta.first << ", " << aresta.second << ") " << endl;;
+                }   
+        }
+
             cout << endl;
             break;
         }

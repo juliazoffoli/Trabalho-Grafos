@@ -96,11 +96,12 @@ vector<pair<char, char>> Guloso::algoritmo_guloso_randomizado_adaptativo(Grafo* 
         
         // Obtem a aresta com maior grau
         // Parte randomizada
-        int lim_superior = (alfa * arestas_com_grau.size()); // limite superior do intervalo a ser escolhido aleatoriamente
+        //int lim_superior = (alfa * arestas_com_grau.size()); // limite superior do intervalo a ser escolhido aleatoriamente
+        // int lim_superior = (alfa * arestas_com_grau.size() - 1) + 1; // limite superior do intervalo a ser escolhido aleatoriamente
+        int lim_superior = max(1, (int)ceil(alfa * arestas_com_grau.size())); // garante que o limite superior seja pelo menos 1 (ceil arredonda para cima e evita ignorar uma aresta)
         int K = rand() % lim_superior; // índice do vetor ordenado de arestas, escolhido aleatoriamente entre o intervalo do vetor, determinada por alfa.
         this->arquivo << "[DEBUG] Valor do i entre 0 e " << lim_superior << ". Valor escolhido: " << K << "." << endl;
 
-        // int lim_superior = (alfa * arestas_com_grau.size() - 1) + 1; // limite superior do intervalo a ser escolhido aleatoriamente
   
    
         pair<char, char> aresta_escolhida = arestas_com_grau[K].first;
@@ -133,7 +134,7 @@ vector<pair<char, char>> Guloso::algoritmo_guloso_randomizado_adaptativo(Grafo* 
 
     this->arquivo << "[DEBUG] Tamanho do Conjunto de Arestas do Grafo: " << quant_arestas << endl;
     this->arquivo << "[DEBUG] Tamanho do Conjunto Dominante: " << solucao.size() << endl;
-    return solucao;
+ return solucao;
 
 }
 
