@@ -485,15 +485,24 @@ void Guloso::executar_multiplas_vezes_guloso(Grafo* grafo, int k) {
 }
 
 void Guloso::executar_multiplas_vezes_guloso_randomizado(Grafo* grafo, double alfa, int k) {
-    
+    vector<double> tempos;
     vector<int> tamanhos;
     int solucoes_validas = 0;
     
     srand(time(NULL));
     
     for (int i = 1; i <= k; i++) {
+        clock_t inicio = clock();     
         vector<pair<char, char>> solucao = algoritmo_guloso_randomizado_adaptativo(grafo, alfa);
+        clock_t fim = clock();
+
+
+        double tempo = double(fim - inicio) / CLOCKS_PER_SEC;
+        tempos.push_back(tempo);
+        cout << "Tempo de execucao (" << i << " execucao): " << tempo << " segundos" << endl;
+
         int tamanho = solucao.size();
+        cout << "Tamanho da solucao: " << tamanho << endl; 
         tamanhos.push_back(tamanho);
         
         // Verifica se a solução é válida
@@ -517,9 +526,23 @@ void Guloso::executar_multiplas_vezes_guloso_randomizado(Grafo* grafo, double al
         soma_quadrados += pow(tamanho - media, 2);
     }
     double desvio_padrao = sqrt(soma_quadrados / tamanhos.size());
+
+        // Calculos de tempo
+    double pior_tempo = *max_element(tempos.begin(), tempos.end());
+    double melhor_tempo = *min_element(tempos.begin(), tempos.end());
+    double soma_tempo = 0.0;
+    for(double t : tempos) soma_tempo += t;
+    double media_tempo = soma_tempo / tempos.size();
     
-    // Imprime estatísticas finais
+
+     // Imprime estatísticas finais
+    cout << "\n=========================================================" << endl;
+    cout << "\nEstatisticas do algoritmo Guloso:" << endl;
     cout << "Solucoes validas: " << solucoes_validas << "/" << k << " (" << (100.0 * solucoes_validas / k) << "%)" << endl;
+    cout << "Melhor tempo: " << fixed << setprecision(5) << melhor_tempo << " segundos" << endl;
+    cout << "Pior tempo: " << fixed << setprecision(5) << pior_tempo << " segundos" << endl;
+    cout << "Media tempo: " << fixed << setprecision(5) << media_tempo << " segundos" << endl;
+
     cout << "Melhor tamanho: " << melhor << endl;
     cout << "Pior tamanho: " << pior << endl;
     cout << "Media: " << fixed << setprecision(2) << media << endl;
