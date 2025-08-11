@@ -6,6 +6,9 @@
 #include <ctime>
 #include <limits.h>
 #include <cmath>
+#include <queue>
+#include <set>
+#include <iomanip>
 
 
 using namespace std;
@@ -64,6 +67,10 @@ vector<pair<char, char>> Guloso::algoritmo_guloso(Grafo* grafo) {
 
     this->arquivo << "[DEBUG] Tamanho do Conjunto de Arestas do Grafo: " << quant_arestas << endl;
     this->arquivo << "[DEBUG] Tamanho do Conjunto Dominante: " << solucao.size() << endl;
+
+    bool valido = verificar_conectividade(grafo, solucao);
+    this->arquivo << "[DEBUG] Solução conectada? " << (valido ? "SIM" : "NÃO") << endl;
+
     return solucao;
 }
 
@@ -134,6 +141,9 @@ vector<pair<char, char>> Guloso::algoritmo_guloso_randomizado_adaptativo(Grafo* 
 
     this->arquivo << "[DEBUG] Tamanho do Conjunto de Arestas do Grafo: " << quant_arestas << endl;
     this->arquivo << "[DEBUG] Tamanho do Conjunto Dominante: " << solucao.size() << endl;
+    bool valido = verificar_conectividade(grafo, solucao);
+    this->arquivo << "[DEBUG] Solução conectada? " << (valido ? "SIM" : "NÃO") << endl;
+
  return solucao;
 
 }
@@ -262,6 +272,10 @@ vector<pair<char, char>> Guloso::algoritmo_guloso_randomizado_adaptativo_reativo
         this->arquivo << "(" << a.first << ", " << a.second << ") ";
     this->arquivo << endl;
 
+    bool valido = verificar_conectividade(grafo, melhor_sol);
+    this->arquivo << "[DEBUG] Solução conectada? " << (valido ? "SIM" : "NÃO") << endl;
+
+
     return melhor_sol;
 }
 
@@ -332,6 +346,7 @@ vector<pair<pair<char, char>, int>> Guloso::obter_arestas_ordenadas(map<char, in
 }
 
 void Guloso::remove_arestas_incidentes(pair<char, char> aresta_selecionada) {
+
     char u = aresta_selecionada.first;
     char v = aresta_selecionada.second;
 
@@ -350,4 +365,188 @@ void Guloso::remove_arestas_incidentes(pair<char, char> aresta_selecionada) {
     for (pair<char, char> aresta : this->arestas_nao_cobertas)
         this->arquivo << "(" << aresta.first << ", " << aresta.second << ") ";
     this->arquivo << endl;
+}
+
+bool Guloso::verificar_conectividade(Grafo* grafo, const vector<pair<char, char>>& solucao) {
+    // 1. Obter todas as arestas do grafo original
+    vector<pair<char, char>> todas_arestas_originais;
+    
+    for (No* no : grafo->lista_nos) {
+        for (Aresta* aresta : no->get_arestas()) {
+            char id_origem = aresta->no_origem->get_id();
+            char id_destino = aresta->no_destino->get_id();
+
+            // Evita duplicatas (aresta bidirecional)
+            if (find(todas_arestas_originais.begin(), todas_arestas_originais.end(), make_pair(id_origem, id_destino)) == todas_arestas_originais.end() &&
+                find(todas_arestas_originais.begin(), todas_arestas_originais.end(), make_pair(id_destino, id_origem)) == todas_arestas_originais.end()) {
+                todas_arestas_originais.push_back(make_pair(id_origem, id_destino));
+            }
+        }
+    }
+
+    // 2. Para cada aresta do grafo original, verificar se ela é dominada pela solução
+    for (auto& aresta_original : todas_arestas_originais) {
+        bool aresta_dominada = false;
+        
+        // Verifica se a aresta está na solução (domina a si mesma)
+        for (auto& aresta_solucao : solucao) {
+            if ((aresta_original.first == aresta_solucao.first && aresta_original.second == aresta_solucao.second) ||
+                (aresta_original.first == aresta_solucao.second && aresta_original.second == aresta_solucao.first)) {
+                aresta_dominada = true;
+                break;
+            }
+        }
+        
+        // Se não está na solução, verifica se compartilha vértice com alguma aresta da solução
+        if (!aresta_dominada) {
+            for (auto& aresta_solucao : solucao) {
+                if (aresta_original.first == aresta_solucao.first || 
+                    aresta_original.first == aresta_solucao.second ||
+                    aresta_original.second == aresta_solucao.first || 
+                    aresta_original.second == aresta_solucao.second) {
+                    aresta_dominada = true;
+                    break;
+                }
+            }
+        }
+        
+        // Se alguma aresta não foi dominada, a solução é inválida
+        if (!aresta_dominada) {
+            this->arquivo << "[DEBUG] Aresta (" << aresta_original.first << ", " << aresta_original.second 
+                          << ") não foi dominada pela solução!" << endl;
+            return false;
+        }
+    }
+    
+    return true; // Todas as arestas foram dominadas
+}
+
+
+void Guloso::executar_multiplas_vezes_guloso(Grafo* grafo, int k) { 
+    vector<int> tamanhos;
+    int solucoes_validas = 0;
+    
+    for (int i = 1; i <= k; i++) {
+        
+        vector<pair<char, char>> solucao = algoritmo_guloso(grafo);
+        int tamanho = solucao.size();
+        tamanhos.push_back(tamanho);
+        
+        // Verifica se a solução é válida
+        bool valida = verificar_conectividade(grafo, solucao);
+        if (valida) solucoes_validas++;
+    }
+    
+    // Calcula estatísticas DEPOIS do loop
+    double soma = 0.0;
+    for (int tamanho : tamanhos) {
+        soma += tamanho;
+    }
+    double media = soma / tamanhos.size();
+    
+    int melhor = *min_element(tamanhos.begin(), tamanhos.end());
+    int pior = *max_element(tamanhos.begin(), tamanhos.end());
+    
+    // Calcula desvio padrão
+    double soma_quadrados = 0.0;
+    for (int tamanho : tamanhos) {
+        soma_quadrados += pow(tamanho - media, 2);
+    }
+    double desvio_padrao = sqrt(soma_quadrados / tamanhos.size());
+    
+    // Imprime estatísticas finais
+    cout << "=== RESULTADOS - ALGORITMO GULOSO ===" << endl;
+    cout << "Solucoes validas: " << solucoes_validas << "/" << k << " (" << (100.0 * solucoes_validas / k) << "%)" << endl;
+    cout << "Melhor tamanho: " << melhor << endl;
+    cout << "Pior tamanho: " << pior << endl;
+    cout << "Media: " << fixed << setprecision(2) << media << endl;
+    cout << "Desvio padrao: " << fixed << setprecision(2) << desvio_padrao << endl;
+}
+
+void Guloso::executar_multiplas_vezes_guloso_randomizado(Grafo* grafo, double alfa, int k) {
+    
+    vector<int> tamanhos;
+    int solucoes_validas = 0;
+    
+    srand(time(NULL));
+    
+    for (int i = 1; i <= k; i++) {
+        vector<pair<char, char>> solucao = algoritmo_guloso_randomizado_adaptativo(grafo, alfa);
+        int tamanho = solucao.size();
+        tamanhos.push_back(tamanho);
+        
+        // Verifica se a solução é válida
+        bool valida = verificar_conectividade(grafo, solucao);
+        if (valida) solucoes_validas++;
+    
+    }
+    
+    // Calcula estatísticas
+    double soma = 0.0;
+    for (int tamanho : tamanhos) {
+        soma += tamanho;
+    }
+    double media = soma / tamanhos.size();
+    
+    int melhor = *min_element(tamanhos.begin(), tamanhos.end());
+    int pior = *max_element(tamanhos.begin(), tamanhos.end());
+    
+    double soma_quadrados = 0.0;
+    for (int tamanho : tamanhos) {
+        soma_quadrados += pow(tamanho - media, 2);
+    }
+    double desvio_padrao = sqrt(soma_quadrados / tamanhos.size());
+    
+    // Imprime estatísticas finais
+    cout << "=== RESULTADOS - ALGORITMO GULOSO RANDOMIZADO (α=" << alfa << ") ===" << endl;
+    cout << "Solucoes validas: " << solucoes_validas << "/" << k << " (" << (100.0 * solucoes_validas / k) << "%)" << endl;
+    cout << "Melhor tamanho: " << melhor << endl;
+    cout << "Pior tamanho: " << pior << endl;
+    cout << "Media: " << fixed << setprecision(2) << media << endl;
+    cout << "Desvio padrao: " << fixed << setprecision(2) << desvio_padrao << endl;
+}
+
+void Guloso::executar_multiplas_vezes_guloso_reativo(Grafo* grafo, vector<double> alfas, int num_iter, int bloco, int k) {
+   
+    vector<int> tamanhos;
+    int solucoes_validas = 0;
+     
+    srand(time(NULL));
+    
+    for (int i = 1; i <= k; i++) {
+        
+        vector<pair<char, char>> solucao = algoritmo_guloso_randomizado_adaptativo_reativo(grafo, alfas, num_iter, bloco);
+        int tamanho = solucao.size();
+        tamanhos.push_back(tamanho);
+        
+        // Verifica se a solução é válida
+        bool valida = verificar_conectividade(grafo, solucao);
+        if (valida) solucoes_validas++;
+        
+    }
+    
+    // Calcula estatísticas DEPOIS do loop
+    double soma = 0.0;
+    for (int tamanho : tamanhos) {
+        soma += tamanho;
+    }
+    double media = soma / tamanhos.size();
+    
+    int melhor = *min_element(tamanhos.begin(), tamanhos.end());
+    int pior = *max_element(tamanhos.begin(), tamanhos.end());
+    
+    // Calcula desvio padrão
+    double soma_quadrados = 0.0;
+    for (int tamanho : tamanhos) {
+        soma_quadrados += pow(tamanho - media, 2);
+    }
+    double desvio_padrao = sqrt(soma_quadrados / tamanhos.size());
+    
+    // Imprime estatísticas finais
+    cout << "=== RESULTADOS - ALGORITMO GULOSO REATIVO ===" << endl;
+    cout << "Soluçoes validas: " << solucoes_validas << "/" << k << " (" << (100.0 * solucoes_validas / k) << "%)" << endl;
+    cout << "Melhor tamanho: " << melhor << endl;
+    cout << "Pior tamanho: " << pior << endl;
+    cout << "Media: " << fixed << setprecision(2) << media << endl;
+    cout << "Desvio padrao: " << fixed << setprecision(2) << desvio_padrao << endl;
 }

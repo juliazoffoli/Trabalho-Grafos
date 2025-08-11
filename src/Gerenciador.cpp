@@ -19,6 +19,12 @@ void Gerenciador::comandos(Grafo* grafo) {
     cout<<"(k) Algoritmo Guloso" << endl;
     cout<<"(l) Algoritmo Guloso Randomizado Adaptativo" << endl;
     cout<<"(m) Algoritmo Guloso Randomizado Adaptativo Reativo;" << endl << endl;
+
+    cout<<"Testes Multiplos dos Algoritmos Gulosos:" << endl;
+    cout<<"(n) Teste Multiplo - Algoritmo Guloso" << endl;
+    cout<<"(o) Teste Multiplo - Algoritmo Guloso Randomizado Adaptativo" << endl;
+    cout<<"(p) Teste Multiplo - Algoritmo Guloso Randomizado Adaptativo Reativo" << endl << endl;
+    
     
     cout<<"(0) Sair;"<<endl<<endl;
 
@@ -439,6 +445,51 @@ void Gerenciador::comandos(Grafo* grafo) {
         }
 
             cout << endl;
+            break;
+        }
+
+        case 'n': {
+            cout << "Teste Multiplo - Algoritmo Guloso:" << endl;
+            
+            int k = 300; // Número de execuções padrão
+            
+            cout << "Executando " << k << " vezes o algoritmo guloso..." << endl;
+            
+            Guloso guloso;
+            guloso.executar_multiplas_vezes_guloso(grafo, k);
+            
+            cout << "Teste concluido! Verifique o terminal para ver as estatísticas" << endl;
+            break;
+        }
+
+        case 'o': {
+            cout << "Teste Multiplo - Algoritmo Guloso Randomizado Adaptativo:" << endl;
+            
+            int k = 300;
+            double alfa = 0.3;
+            
+            cout << "Executando " << k << " vezes o algoritmo guloso randomizado (alfa=" << alfa << ")..." << endl;
+            
+            Guloso guloso;
+            guloso.executar_multiplas_vezes_guloso_randomizado(grafo, alfa, k);
+            
+            cout << "Teste concluido! Verifique o terminal para ver as estatísticas" << endl;
+            break;
+        }
+
+        case 'p': {
+            cout << "Teste Multiplo - Algoritmo Guloso Randomizado Adaptativo Reativo:" << endl;
+            Guloso guloso;
+            int k = 300;
+            int num_iter = 10; 
+            int bloco = 5;
+            
+            cout << "Executando " << k << " vezes o algoritmo guloso reativo..." << endl;
+            
+            vector<double> alfas = {0.05, 0.10, 0.15, 0.30, 0.50}; // valores padrão
+            guloso.executar_multiplas_vezes_guloso_reativo(grafo, alfas, num_iter, bloco, k);
+            
+            cout << "Teste concluido! Verifique o terminal para ver as estatísticas" << endl;
             break;
         }
 
