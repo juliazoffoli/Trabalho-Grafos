@@ -477,7 +477,8 @@ void Gerenciador::comandos(Grafo* grafo) {
             Guloso guloso;
 
             guloso.executar_multiplas_vezes_guloso(grafo, k);
-            
+
+            break;
         }
 
         case 'o': {

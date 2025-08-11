@@ -424,6 +424,7 @@ bool Guloso::verificar_conectividade(Grafo* grafo, const vector<pair<char, char>
 
 void Guloso::executar_multiplas_vezes_guloso(Grafo* grafo, int k) { 
     vector<int> tamanhos;
+    vector<double> tempos;
     int solucoes_validas = 0;
     
     for (int i = 1; i <= k; i++) {
@@ -432,6 +433,7 @@ void Guloso::executar_multiplas_vezes_guloso(Grafo* grafo, int k) {
         clock_t fim = clock();
 
         double tempo = double(fim - inicio) / CLOCKS_PER_SEC;
+        tempos.push_back(tempo);
         cout << "Tempo de execucao (" << i << " execucao): " << tempo << " segundos" << endl;
 
         int tamanho = solucao.size();
@@ -459,9 +461,23 @@ void Guloso::executar_multiplas_vezes_guloso(Grafo* grafo, int k) {
         soma_quadrados += pow(tamanho - media, 2);
     }
     double desvio_padrao = sqrt(soma_quadrados / tamanhos.size());
+
+    // Calculos de tempo
+    double pior_tempo = *max_element(tempos.begin(), tempos.end());
+    double melhor_tempo = *min_element(tempos.begin(), tempos.end());
+    double soma_tempo = 0.0;
+    for(double t : tempos) soma_tempo += t;
+    double media_tempo = soma_tempo / tempos.size();
     
     // Imprime estatísticas finais
+    cout << "\n=========================================================" << endl;
+    cout << "\nEstatisticas do algoritmo Guloso:" << endl;
     cout << "Solucoes validas: " << solucoes_validas << "/" << k << " (" << (100.0 * solucoes_validas / k) << "%)" << endl;
+
+    cout << "Melhor tempo: " << fixed << setprecision(5) << melhor_tempo << " segundos" << endl;
+    cout << "Pior tempo: " << fixed << setprecision(5) << pior_tempo << " segundos" << endl;
+    cout << "Media tempo: " << fixed << setprecision(5) << media_tempo << " segundos" << endl;
+    
     cout << "Melhor tamanho: " << melhor << endl;
     cout << "Pior tamanho: " << pior << endl;
     cout << "Media: " << fixed << setprecision(2) << media << endl;

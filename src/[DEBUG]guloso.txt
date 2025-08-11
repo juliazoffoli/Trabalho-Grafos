@@ -1,4 +1,4 @@
-..\instancias\instancias_t2\g_25_0.16_0_1_0.txt
+../instancias/instancias_t2/g_25_0.16_0_1_0.txt
 
 [DEBUG] Arestas não cobertas (antes de iniciar a execução): 
 (w, v) (w, t) (q, u) (q, h) (q, l) (l, a) (l, h) (j, f) (j, d) (j, x) (j, a) (y, o) (y, b) (d, s) (d, f) (t, o) (t, s) (t, i) (b, h) (b, s) (b, u) (a, s) (a, h) (f, p) (f, e) (k, x) (k, m) (k, h) (p, m) (p, g) (p, s) (p, r) (s, u) (o, i) (c, r) (m, n) (m, h) (u, i) (g, x) (n, h) (n, i) (i, x) (i, h) (i, v) (r, h) (h, v) (x, v) (e, v) 
