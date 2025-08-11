@@ -1,6 +1,8 @@
 #include "Gerenciador.h"
 #include <fstream>
 #include "Guloso.h"
+#include <iomanip>
+#include <ctime>
 
 void Gerenciador::comandos(Grafo* grafo) {
     cout<<"Digite uma das opcoes abaixo e pressione enter:"<<endl<<endl;
@@ -364,8 +366,12 @@ void Gerenciador::comandos(Grafo* grafo) {
             cout << "Algoritmo Guloso:" << endl;
 
             Guloso guloso;
-            vector<pair<char, char>> solucao = guloso.algoritmo_guloso(grafo);
             
+            clock_t inicio = clock();
+            vector<pair<char, char>> solucao = guloso.algoritmo_guloso(grafo);
+            clock_t fim = clock();
+
+            double tempo = double(fim - inicio) / CLOCKS_PER_SEC;
             
             for (const auto& aresta : solucao) {
                 cout << "(" << aresta.first << ", " << aresta.second << ") ";
@@ -373,6 +379,8 @@ void Gerenciador::comandos(Grafo* grafo) {
 
             cout << endl;
             cout << "Tamanho do Conjunto Dominante: " << solucao.size() << endl;
+
+            cout << "Tempo de execucao: " << fixed << setprecision(5) << tempo << " segundos" << endl;
 
             // Imprime a solução em um arquivo
             if (pergunta_imprimir_arquivo("solucao_guloso.txt")) {
@@ -394,14 +402,20 @@ void Gerenciador::comandos(Grafo* grafo) {
             cout << "Algoritmo Randomizado Adaptativo:" << endl;
             
             Guloso guloso_rand_adap;
+
+            clock_t inicio = clock();
             vector<pair<char, char>> solucao = guloso_rand_adap.algoritmo_guloso_randomizado_adaptativo(grafo, 0.5);
-            
+            clock_t fim = clock();
+
+            double tempo = double(fim - inicio) / CLOCKS_PER_SEC;
             
             for (const auto& aresta : solucao) {
                 cout << "(" << aresta.first << ", " << aresta.second << ") ";
             }
             cout << endl;
             cout << "Tamanho do Conjunto Dominante: " << solucao.size() << endl;
+
+            cout << "Tempo de execucao: " << fixed << setprecision(5) << tempo << " segundos" << endl;
 
             // Imprime a solução em um arquivo
             if (pergunta_imprimir_arquivo("solucao_guloso_randomizado_adaptativo.txt")) {
@@ -424,8 +438,12 @@ void Gerenciador::comandos(Grafo* grafo) {
             vector<double> alfas = {0.05, 0.10, 0.15, 0.30, 0.50};
             int iteracoes = 10;
             int bloco = 5;
+
+            clock_t inicio = clock();
             vector<pair<char, char>> solucao = guloso_rand_adap_reat.algoritmo_guloso_randomizado_adaptativo_reativo(grafo, alfas, iteracoes, bloco);
-            
+            clock_t fim = clock();
+
+            double tempo = double(fim - inicio) / CLOCKS_PER_SEC;
             
             for (const auto& aresta : solucao) {
                 cout << "(" << aresta.first << ", " << aresta.second << ") ";
@@ -433,6 +451,7 @@ void Gerenciador::comandos(Grafo* grafo) {
             
             cout << endl;
             cout << "Tamanho do Conjunto Dominante: " << solucao.size() << endl;
+            cout << "Tempo de execucao: " << fixed << setprecision(5) << tempo << " segundos" << endl;
 
             // Imprime a solução em um arquivo
             if (pergunta_imprimir_arquivo("solucao_guloso_randomizado_adaptativo_reativo.txt")) {
@@ -456,9 +475,13 @@ void Gerenciador::comandos(Grafo* grafo) {
             cout << "Executando " << k << " vezes o algoritmo guloso..." << endl;
             
             Guloso guloso;
+
+            clock_t inicio = clock();
             guloso.executar_multiplas_vezes_guloso(grafo, k);
-            
-            cout << "Teste concluido! Verifique o terminal para ver as estatísticas" << endl;
+            clock_t fim = clock();
+
+            double tempo = double(fim - inicio) / CLOCKS_PER_SEC;
+            cout << "Tempo de execucao: " << tempo << " segundos" << endl;
             break;
         }
 
@@ -471,9 +494,14 @@ void Gerenciador::comandos(Grafo* grafo) {
             cout << "Executando " << k << " vezes o algoritmo guloso randomizado (alfa=" << alfa << ")..." << endl;
             
             Guloso guloso;
+
+            clock_t inicio = clock();
             guloso.executar_multiplas_vezes_guloso_randomizado(grafo, alfa, k);
+            clock_t fim = clock();
+
+            double tempo = double(fim - inicio) / CLOCKS_PER_SEC;
+            cout << "Tempo de execucao: " << tempo << " segundos" << endl;
             
-            cout << "Teste concluido! Verifique o terminal para ver as estatísticas" << endl;
             break;
         }
 
@@ -487,9 +515,14 @@ void Gerenciador::comandos(Grafo* grafo) {
             cout << "Executando " << k << " vezes o algoritmo guloso reativo..." << endl;
             
             vector<double> alfas = {0.05, 0.10, 0.15, 0.30, 0.50}; // valores padrão
+
+            clock_t inicio = clock();
             guloso.executar_multiplas_vezes_guloso_reativo(grafo, alfas, num_iter, bloco, k);
+            clock_t fim = clock();
+
+            double tempo = double(fim - inicio) / CLOCKS_PER_SEC;
+            cout << "Tempo de execucao: " << tempo << " segundos" << endl;
             
-            cout << "Teste concluido! Verifique o terminal para ver as estatísticas" << endl;
             break;
         }
 

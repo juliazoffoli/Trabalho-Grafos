@@ -455,7 +455,6 @@ void Guloso::executar_multiplas_vezes_guloso(Grafo* grafo, int k) {
     double desvio_padrao = sqrt(soma_quadrados / tamanhos.size());
     
     // Imprime estatísticas finais
-    cout << "=== RESULTADOS - ALGORITMO GULOSO ===" << endl;
     cout << "Solucoes validas: " << solucoes_validas << "/" << k << " (" << (100.0 * solucoes_validas / k) << "%)" << endl;
     cout << "Melhor tamanho: " << melhor << endl;
     cout << "Pior tamanho: " << pior << endl;
@@ -498,7 +497,6 @@ void Guloso::executar_multiplas_vezes_guloso_randomizado(Grafo* grafo, double al
     double desvio_padrao = sqrt(soma_quadrados / tamanhos.size());
     
     // Imprime estatísticas finais
-    cout << "=== RESULTADOS - ALGORITMO GULOSO RANDOMIZADO (α=" << alfa << ") ===" << endl;
     cout << "Solucoes validas: " << solucoes_validas << "/" << k << " (" << (100.0 * solucoes_validas / k) << "%)" << endl;
     cout << "Melhor tamanho: " << melhor << endl;
     cout << "Pior tamanho: " << pior << endl;
@@ -543,7 +541,6 @@ void Guloso::executar_multiplas_vezes_guloso_reativo(Grafo* grafo, vector<double
     double desvio_padrao = sqrt(soma_quadrados / tamanhos.size());
     
     // Imprime estatísticas finais
-    cout << "=== RESULTADOS - ALGORITMO GULOSO REATIVO ===" << endl;
     cout << "Soluçoes validas: " << solucoes_validas << "/" << k << " (" << (100.0 * solucoes_validas / k) << "%)" << endl;
     cout << "Melhor tamanho: " << melhor << endl;
     cout << "Pior tamanho: " << pior << endl;
