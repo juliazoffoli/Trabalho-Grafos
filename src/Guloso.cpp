@@ -492,8 +492,21 @@ void Guloso::executar_multiplas_vezes_guloso_randomizado(Grafo* grafo, double al
     srand(time(NULL));
     
     for (int i = 1; i <= k; i++) {
+        int melhor_tamanho = INT_MAX;
+        vector<pair<char, char>> melhor_solucao;
+
         clock_t inicio = clock();     
-        vector<pair<char, char>> solucao = algoritmo_guloso_randomizado_adaptativo(grafo, alfa);
+        
+        for(int j = 0; j < 30; j++) {
+            vector<pair<char, char>> solucao = algoritmo_guloso_randomizado_adaptativo(grafo, alfa);
+            int tamanho = solucao.size();
+            
+            if (tamanho < melhor_tamanho) {
+                melhor_tamanho = tamanho;
+                melhor_solucao = solucao;
+            }
+        }
+
         clock_t fim = clock();
 
 
@@ -501,12 +514,12 @@ void Guloso::executar_multiplas_vezes_guloso_randomizado(Grafo* grafo, double al
         tempos.push_back(tempo);
         cout << "Tempo de execucao (" << i << " execucao): " << tempo << " segundos" << endl;
 
-        int tamanho = solucao.size();
+        int tamanho = melhor_solucao.size();
         cout << "Tamanho da solucao: " << tamanho << endl; 
         tamanhos.push_back(tamanho);
         
         // Verifica se a solução é válida
-        bool valida = verificar_conectividade(grafo, solucao);
+        bool valida = verificar_conectividade(grafo, melhor_solucao);
         if (valida) solucoes_validas++;
     
     }

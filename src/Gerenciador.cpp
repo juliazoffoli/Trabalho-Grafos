@@ -484,19 +484,14 @@ void Gerenciador::comandos(Grafo* grafo) {
         case 'o': {
             cout << "Teste Multiplo - Algoritmo Guloso Randomizado Adaptativo:" << endl;
             
-            int k = 300;
+            int k = 10;
             double alfa = 0.3;
             
             cout << "Executando " << k << " vezes o algoritmo guloso randomizado (alfa=" << alfa << ")..." << endl;
             
             Guloso guloso;
 
-            clock_t inicio = clock();
             guloso.executar_multiplas_vezes_guloso_randomizado(grafo, alfa, k);
-            clock_t fim = clock();
-
-            double tempo = double(fim - inicio) / CLOCKS_PER_SEC;
-            cout << "Tempo de execucao: " << tempo << " segundos" << endl;
             
             break;
         }
@@ -504,20 +499,15 @@ void Gerenciador::comandos(Grafo* grafo) {
         case 'p': {
             cout << "Teste Multiplo - Algoritmo Guloso Randomizado Adaptativo Reativo:" << endl;
             Guloso guloso;
-            int k = 300;
-            int num_iter = 10; 
-            int bloco = 5;
+            int k = 10;
+            int num_iter = 300;
+            int bloco = 50;
             
             cout << "Executando " << k << " vezes o algoritmo guloso reativo..." << endl;
             
             vector<double> alfas = {0.05, 0.10, 0.15, 0.30, 0.50}; // valores padrão
 
-            clock_t inicio = clock();
             guloso.executar_multiplas_vezes_guloso_reativo(grafo, alfas, num_iter, bloco, k);
-            clock_t fim = clock();
-
-            double tempo = double(fim - inicio) / CLOCKS_PER_SEC;
-            cout << "Tempo de execucao: " << tempo << " segundos" << endl;
             
             break;
         }
