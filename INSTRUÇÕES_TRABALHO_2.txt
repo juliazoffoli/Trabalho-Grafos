@@ -1,0 +1,16 @@
+LINHAS DE COMANDO TERMINAL:
+cd ./src
+g++ *.cpp -o main.exe
+./main.exe "caminho_instancia"
+
+OPÇÕES TRABALHO 3:
+k) Algoritmo Guloso.
+i) Algoritmo Guloso Randomizado Adaptativo, com entrada do alfa.
+j) Algoritmo Guloso Randomizado Adaptativo Reativo com entrada do número de alfas, dos alfas, número de iterações e tamanho do bloco.
+
+SAÍDA EM ARQUIVO:
+k) ./src/solucao_guloso.txt
+i) ./src/solucao_guloso_randomizado_adaptativo.txt
+j) ./src/solucao_guloso_randomizado_adaptativo_reativo.txt
+
+Nos arquivos de saída, estará presente o tamanho da solução, seguido do ID das arestas no conjunto dominante
