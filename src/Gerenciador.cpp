@@ -404,7 +404,10 @@ void Gerenciador::comandos(Grafo* grafo) {
             Guloso guloso_rand_adap;
 
             clock_t inicio = clock();
-            vector<pair<char, char>> solucao = guloso_rand_adap.algoritmo_guloso_randomizado_adaptativo(grafo, 0.5);
+            double alfa;
+            cout<<"\nValor de alfa: ";
+            cin>>alfa;
+            vector<pair<char, char>> solucao = guloso_rand_adap.algoritmo_guloso_randomizado_adaptativo(grafo, alfa);
             clock_t fim = clock();
 
             double tempo = double(fim - inicio) / CLOCKS_PER_SEC;
@@ -420,7 +423,7 @@ void Gerenciador::comandos(Grafo* grafo) {
             // Imprime a solução em um arquivo
             if (pergunta_imprimir_arquivo("solucao_guloso_randomizado_adaptativo.txt")) {
                 ofstream arquivo("solucao_guloso_randomizado_adaptativo.txt");
-                arquivo << "Solução do algoritmo guloso adaptativo: " << endl;
+                arquivo << "Solução do algoritmo guloso adaptativo com alfa = "<< alfa << ":" << endl;
                 arquivo << "Tamanho do Conjunto Dominante: " << solucao.size() << endl;
                 for (const auto& aresta : solucao) {
                     arquivo << "(" << aresta.first << ", " << aresta.second << ") " << endl;
@@ -435,10 +438,23 @@ void Gerenciador::comandos(Grafo* grafo) {
             cout << "Algoritmo Randomizado Adaptativo Reativo:" << endl;
             
             Guloso guloso_rand_adap_reat;
-            vector<double> alfas = {0.05, 0.10, 0.15, 0.30, 0.50};
-            int iteracoes = 10;
-            int bloco = 5;
+            vector<double> alfas;
+            double alfa;
+            int num_alfas;
+            cout << "Numero de alfas: ";
+            cin >> num_alfas;
+            for(int i = 0; i < num_alfas; i++){
+                cout << "Alfa " << i+1 << ": ";
+                cin >> alfa;
+                alfas.push_back(alfa);
+            }
+            int iteracoes;
+            int bloco;
 
+            cout << "Numero de iteracoes: ";
+            cin >> iteracoes;
+            cout <<"Tamanho do bloco: ";
+            cin >> bloco;
             clock_t inicio = clock();
             vector<pair<char, char>> solucao = guloso_rand_adap_reat.algoritmo_guloso_randomizado_adaptativo_reativo(grafo, alfas, iteracoes, bloco);
             clock_t fim = clock();
@@ -456,7 +472,14 @@ void Gerenciador::comandos(Grafo* grafo) {
             // Imprime a solução em um arquivo
             if (pergunta_imprimir_arquivo("solucao_guloso_randomizado_adaptativo_reativo.txt")) {
                 ofstream arquivo("solucao_guloso_randomizado_adaptativo_reativo.txt");
-                arquivo << "Solução do algoritmo guloso adaptativo reativo: " << endl;    
+                arquivo << "Solução do algoritmo guloso adaptativo reativo com alfas: {";
+                    for(double alfa : alfas) {
+                        arquivo << alfa;
+                        if(alfa != alfas.back())
+                            arquivo<< ", ";
+                    }
+                arquivo << "}\n";
+                arquivo << iteracoes << " iteracoes, de bloco igual a " <<bloco<<endl;
                 arquivo << "Tamanho do Conjunto Dominante: " << solucao.size() << endl;
                 for (const auto& aresta : solucao) {
                     arquivo << "(" << aresta.first << ", " << aresta.second << ") " << endl;;
